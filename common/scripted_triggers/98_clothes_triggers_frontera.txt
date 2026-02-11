@@ -1,0 +1,68 @@
+﻿INJECT:native_american_clothes_trigger = {
+	exists = scope:character
+	scope:character = {
+		culture = {
+			NOT = { this = cu:californio_mestizo }
+			has_discrimination_trait_group = heritage_group_indigenous_american
+		}
+	}
+}
+
+INJECT:native_north_american_clothes_trigger = {
+	exists = scope:character
+	scope:character = {
+		culture = {
+			NOT = { this = cu:californio_mestizo }
+			OR = {
+				has_discrimination_trait = heritage_californian_indian
+				has_discrimination_trait = heritage_eastern_woodlands_indian
+				has_discrimination_trait = heritage_great_basin_indian
+				has_discrimination_trait = heritage_northwest_coast_indian
+				has_discrimination_trait = heritage_plains_indian
+				has_discrimination_trait = heritage_plateau_indian
+				has_discrimination_trait = heritage_southeast_indian
+				has_discrimination_trait = heritage_southwest_indian
+				has_discrimination_trait = heritage_subarctic_indian
+			}
+		}
+	}
+}
+INJECT:south_american_clothes_character_trigger = {
+	exists = scope:character
+	scope:character = {
+		culture = {
+			OR = {
+			this = cu:californio_mestizo
+			has_discrimination_trait_group = heritage_group_european
+			}
+			OR = {
+				has_discrimination_trait = language_lusophone
+				has_discrimination_trait = language_hispanophone
+			}
+			NOT = { has_discrimination_trait = heritage_iberian }
+		}
+	}
+}
+
+INJECT:integrated_south_american_natives_pop_trigger = { # Represents those South American native groups that had long been integrated into wider South and Central American society.
+	exists = scope:pop
+	scope:pop = {
+		culture = {
+			OR = {
+				this = cu:californio_mestizo
+				has_discrimination_trait = heritage_mesoamerican
+				has_discrimination_trait = heritage_atlantic
+				has_discrimination_trait = heritage_guarani
+				has_discrimination_trait = heritage_andean
+				has_discrimination_trait = heritage_caribbean
+			}
+			NOT = {
+				OR = {
+					this = cu:patagonian
+					this = cu:amazonian
+				}
+			}
+		}
+	}
+}
+

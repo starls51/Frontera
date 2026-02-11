@@ -1,0 +1,10 @@
+﻿CHARACTERS = {
+	c:NMX ?= {
+		create_character = {
+			template = nmx_albino_perez_template
+		}
+		create_character = {
+			template = nmx_manuel_armijo_template
+		}
+	}
+}

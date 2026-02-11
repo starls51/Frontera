@@ -1,0 +1,97 @@
+﻿### California character template file ###
+
+# California - CAL
+
+#DNA probably needs updating
+cal_nicolas_gutierrez_template = {
+    # LtCol Nicolás Gutiérrez - governer of las californias before coup by Juan Batista Alverado later in 1836
+    first_name = Nicolas_2
+    last_name =  Gutierrez
+    historical = yes
+    culture = cu:spanish
+    ruler = yes
+    #ig_leader = yes
+    interest_group = ig_armed_forces
+    ideology = ideology_authoritarian
+    # Guessing age based on rank as LtCol would put him somewhere between 30-50 years old, possibly younger
+    birth_date = 1793.6.1
+    dna = dna_cal_nicolas_gutierrez
+    traits = {
+        reserved # Accused of being two faced, he was surrounded by enemies and seen as an outsider loyal to spain
+        cautious # give the man a fighting chance
+    }
+}
+
+cal_juan_batista_alverado_template = {
+    # Juan Batista Alverado, future governer or president of Alta California
+    first_name = Juan_Bautista
+    last_name =  Alvarado
+    is_general = yes
+    hq = region_pacific_coast
+    historical = yes
+    culture = cu:californio
+    ig_leader = yes
+    interest_group = ig_landowners
+    ideology = ideology_sovereignist_leader
+    birth_date = 1809.2.14
+    dna = dna_cal_juan_bautista_alvarado
+    traits = {
+        ambitious # desires an independent california, willing to revolt
+        tactful # compromises with mexico in the end, negotiates a sweet deal to remain governer
+        alcoholic # may have missed his own wedding to get blitzed, had his half-brother stand in as groom
+    }
+}
+
+cal_isaac_graham_template = {
+    # Isaac Graham fur trader turned distillery owner in socal, assisted in coup, later sent with other xpats to prison by alvarado
+    first_name = Isaac
+    last_name =  Graham
+    historical = yes
+    culture = cu:yankee
+    ig_leader = yes
+    interest_group = ig_industrialists
+    ideology = ideology_republican_leader
+    birth_date = 1800.4.15
+    dna = dna_cal_isaac_graham
+    traits = {
+        persistent
+        tactful
+    }
+}
+
+cal_pio_pico_template = {
+    # Pio Pico prominent ranchero, politician, entrepreneur, and last serving governer of Mexican California
+    first_name = Pio
+    last_name =  Pico
+    historical = yes
+    culture = cu:californio_mestizo
+    ig_leader = yes
+    interest_group = ig_rural_folk
+    ideology = ideology_market_liberal
+    birth_date = 1801.5.5
+    dna = dna_cal_pio_pico
+    traits = {
+        ambitious #accrued wealth, supported autonomy, but also advocated to become british protectorate, complicated guy
+        direct
+    }
+}
+
+cal_william_hartnell_template = {
+    # British expat, schoolmaster and govt official who helped translate mexican laws into english
+    first_name = William
+    last_name =  Hartnell
+    historical = yes
+    culture = cu:british
+    religion = rel:catholic
+    ig_leader = yes
+    interest_group = ig_intelligentsia
+    ideology = ideology_liberal_leader
+    birth_date = 1798.4.24
+    dna = dna_cal_william_hartnell
+    traits = {
+        honorable #seemed to be well liked, requested as representative for various organizations, including russian american co
+        pious
+    }
+}
+
+#Narciso Durán

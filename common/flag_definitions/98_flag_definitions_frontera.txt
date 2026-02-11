@@ -1,0 +1,167 @@
+﻿REPLACE:CAL = { # California
+	flag_definition = {
+		coa = CAL
+		subject_canton = CAL_star
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = CAL_subject
+		priority = 1
+		trigger = {
+			scope:actor ?= {
+				country_has_primary_culture = cu:yankee
+			}
+		}
+	}
+	flag_definition = {
+		coa = CAL_mexican_colony
+		allow_overlord_canton = no
+		priority = 2
+		trigger = {
+			coa_def_mexican_ensign_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = CAL_star
+		subject_canton = CAL_star
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = CAL_subject_star
+		priority = 0
+	}
+	flag_definition = {
+		coa = CAL_baj
+		allow_overlord_canton = no
+		subject_canton = CAL_star
+		coa_with_overlord_canton = CAL_subject_star
+		priority = 10
+		trigger = {
+			scope:actor ?= {
+				has_state_in_state_region = STATE_CALIFORNIA
+				has_state_in_state_region = STATE_BAJA_CALIFORNIA
+			}
+		}
+	}
+	flag_definition = {
+		coa = CAL_ussr
+		allow_overlord_canton = no
+		subject_canton = CAL_ussr
+		priority = 2000
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = CAL
+		allow_overlord_canton = no
+		priority = 50
+		trigger = {
+			coa_def_american_ensign_trigger = yes
+		}
+	}
+}
+REPLACE:FLR = { # Florida
+	flag_definition = {
+		coa = FLR
+		subject_canton = FLR
+		priority = 1
+	}
+	flag_definition = {
+		coa = FLR_communist
+		priority = 1500
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = FLR_USA_territory
+		subject_canton = FLR
+		trigger = {
+			coa_def_american_ensign_trigger = yes
+		}
+		priority = 10
+	}
+}
+NMX = {
+	flag_definition = {
+		coa = PUE
+		allow_overlord_canton = no
+		priority = 0
+	}
+	flag_definition = {
+		coa = NMX_mexican_colony
+		allow_overlord_canton = no
+		priority = 2
+		trigger = {
+			coa_def_mexican_ensign_trigger = yes
+		}
+	}
+}
+REPLACE:MEX = { # Mexico
+	flag_definition = {
+		coa = MEX
+		subject_canton = MEX
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = MEX_subject
+		priority = 1
+	}
+	flag_definition = {
+		coa = MEX_absolute_monarchy
+		subject_canton = MEX_absolute_monarchy
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = MEX_subject
+		priority = 20
+		trigger = {
+			coa_def_absolute_monarchy_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = MEX_dictatorship
+		subject_canton = MEX_dictatorship
+		priority = 20
+		trigger = {
+			coa_def_dictatorship_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = MEX_communist
+		priority = 1500
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = MEX_subject_USA
+		priority = 50
+		trigger = {
+			coa_def_american_ensign_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = CAL_formed_mexico
+		subject_canton = CAL_star
+		allow_overlord_canton = yes
+		coa_with_overlord_canton = MEX_subject
+		priority = 21
+		trigger = {
+			scope:actor ?= {
+				capital = {
+					state_region = {
+						this = s:STATE_CALIFORNIA
+					}
+				}
+			}
+		}
+	}
+}
+REPLACE:UOM = { # Michigam
+	flag_definition = {
+		coa = UOM_state_of_michigan
+		priority = 5
+	}
+	flag_definition = {
+		coa = US_territory_default
+		subject_canton = UOM_state_of_michigan
+		trigger = {
+			coa_def_american_ensign_trigger = yes
+		}
+		priority = 10
+	}
+}

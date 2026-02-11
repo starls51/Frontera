@@ -1,0 +1,45 @@
+﻿### New Mexico character template file ###
+
+# New Mexico - NMX
+
+#DNA probably needs updating
+nmx_albino_perez_template = {
+    # disliked initial governer of new mexico under santa ana
+    first_name = Albino
+    last_name =  Perez
+    historical = yes
+    is_general = yes
+    culture = primary_culture
+    hq = region_great_plains
+    ruler = yes
+    #ig_leader = yes
+    interest_group = ig_armed_forces
+    ideology = ideology_authoritarian
+    #estimating age as Col makes him around 50
+    birth_date = 1785.1.1
+    dna = dna_nmx_albino_perez
+    traits = {
+        imperious
+        honorable # not well liked, but dedicated to carrying out will of mexican govt
+    }
+}
+
+nmx_manuel_armijo_template = {
+    # manuel armijo takes over as governer in 1837 after assassin kills albino perez
+    first_name = Manuel
+    last_name =  Armijo
+    historical = yes
+    is_general = yes
+    culture = primary_culture
+    hq = region_great_plains
+    interest_group = ig_landowners
+    ig_leader = yes
+    ideology = ideology_traditionalist
+    birth_date = 1793.9.21
+    dna = dna_nmx_manuel_armijo
+    traits = {
+        meticulous
+        imperious
+        grifter
+    }
+}

@@ -1,0 +1,57 @@
+﻿# Important note: Only use capital letters and numbers for tags, or else you may get weird bugs in civil wars
+REPLACE:CAL = {
+	color = { 253 192 86 }
+
+	country_type = colonial
+
+	tier = principality
+
+	cultures = { californio }
+	capital = STATE_CALIFORNIA
+}
+REPLACE:MEX = {
+	color = { 114  192  114 } # Just right avocado Mexico woohoo
+
+	country_type = recognized
+
+	# 172 242 175 Vic2 Mexico Color
+	# 56 143 53 New green apple flavored Mexico
+
+	tier = kingdom
+
+	cultures = { mexican }
+	capital = STATE_MEXICO
+	is_named_from_capital = yes
+}
+# Michigan
+REPLACE:UOM = {
+	color = { 0 39 76 }
+
+	country_type = colonial
+
+	tier = principality
+
+	cultures = { yankee }
+	capital = STATE_MICHIGAN
+	is_named_from_capital = yes
+}
+REPLACE:FLR = {
+	color = { 255 198 142 }
+
+	country_type = colonial
+
+	tier = principality
+
+	cultures = { dixie }
+	capital = STATE_FLORIDA
+}
+NMX = {
+	color = { 144  181  106 }
+
+	country_type = colonial
+
+	tier = principality
+
+	cultures = { mexican }
+	capital = STATE_NEW_MEXICO
+}

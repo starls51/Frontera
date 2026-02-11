@@ -1,0 +1,14 @@
+﻿COUNTRIES = {
+	c:FLR ?= {
+		set_tax_level = low
+		effect_starting_technology_tier_1_tech = yes
+		effect_starting_politics_territory_slavery_frontera = yes
+		ig:ig_armed_forces ?= {
+			add_ruling_interest_group = yes
+		}
+		ig:ig_rural_folk ?= {
+			add_ruling_interest_group = yes
+		}
+		add_journal_entry = { type = je_seminole_wars }
+	}
+}

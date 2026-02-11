@@ -1,0 +1,242 @@
+@semy = 0.25
+@third = @[1/3]
+@fifth = @[1/5]
+@sixth = @[1/6]
+
+@canton_scale_cross_x = @[ ( 333 / 768 ) + 0.001 ]
+@canton_scale_cross_y = @[ ( 205 / 512 ) + 0.001 ]
+
+@canton_scale_sweden_x = @[ ( 255 / 768 ) + 0.001 ]
+@canton_scale_sweden_y = @[ ( 204 / 512 ) + 0.001 ]
+
+@uru_canton_height = 0.556
+@NZL_coa_offset = @[3/16]
+@sm_fra = 0.16
+REPLACE:CAL = { # California Bear Flag
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+	color2 = "black"
+
+	colored_emblem = {
+		texture = "ce_star_05.dds"
+		color1 = "red"
+		color2 = "red"
+		instance = { scale = { 0.25 0.25 } position = { 0.12 0.18 } }
+	}
+	colored_emblem = {
+		texture = "ce_bear_california.dds"
+		color1 = "tan"
+		color2 = "brown"
+		color3 = "white"
+		instance = { scale = { 0.65 0.65 } position = { 0.5 0.4 } }
+	}
+    sub = {
+        parent = "sub_legend_california"
+        instance = { scale = { 0.55 0.55 } offset = { 0.15 0.28 } }
+    }
+    sub = {
+        parent = "sub_legend_republic"
+        instance = { scale = { 0.55 0.55 } offset = { 0.31 0.28 } }
+    }
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = "red"
+		color2 = "red"
+		instance = { scale = { 1.0 0.25 } position = { 0.5 0.875 } }
+	}
+}
+
+CAL_star = { # California Red Star on White
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_star_05.dds"
+		color1 = "red"
+		color2 = "red"
+		instance = { scale = { 0.75 0.75 } position = { 0.5 0.5 } }
+	}
+}
+
+CAL_subject = { # California subject flag with yankees
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_star_05.dds"
+		color1 = "red"
+		color2 = "red"
+		instance = { scale = { 0.25 0.25 } position = { 0.75 0.23 } }
+	}
+	colored_emblem = {
+		texture = "ce_bear_california.dds"
+		color1 = "tan"
+		color2 = "brown"
+		color3 = "white"
+		instance = { scale = { 0.65 0.65 } position = { 0.75 0.55 } }
+	}
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = "red"
+		color2 = "red"
+		instance = { scale = { 1.0 0.25 } position = { 0.5 0.875 } }
+	}
+}
+
+CAL_subject_star = { # California subject flag no yanks
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+	color2 = "red"
+
+	colored_emblem = {
+		texture = "ce_star_05.dds"
+		color1 = "red"
+		color2 = "red"
+		instance = { scale = { 0.3 0.3 } position = { 0.75 0.35 } }
+	}
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = "red"
+		color2 = "red"
+		instance = { scale = { 1.0 0.25 } position = { 0.5 0.875 } }
+	}
+}
+
+CAL_mexican_colony = { # administered territory of mexico
+	pattern = "pattern_solid.tga"
+	color1 = "green_light"
+
+	colored_emblem = {
+		texture = "ce_tricolor_vertical.dds"
+		color1 = "white"
+		color2 = "red_light"
+	}
+
+	textured_emblem = {
+		texture = "te_eagle_california_customs_frontera.dds"
+		instance = { scale = { 0.75 0.75 } position = { 0.73 0.5 } }
+	}
+}
+
+CAL_formed_mexico = { # Mexican flag with Californian characteristics
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+	color2 = "black"
+
+	colored_emblem = {
+		texture = "ce_star_05.dds"
+		color1 = "red"
+		color2 = "red"
+		instance = { scale = { 0.25 0.25 } position = { 0.12 0.18 } }
+	}
+	textured_emblem = {
+		texture = "te_coa_mexico.dds"
+		instance = { scale = { 0.62 0.62 } position = { 0.53 0.37 } }
+	}
+    sub = {
+        parent = "sub_legend_estados_frontera"
+        instance = { scale = { 0.55 0.55 } offset = { 0.086 0.284 } }
+    }
+    sub = {
+        parent = "sub_legend_unidos_frontera"
+        instance = { scale = { 0.55 0.55 } offset = { 0.403 0.284 } }
+    }
+	sub = {
+        parent = "sub_legend_mexicanos_frontera"
+        instance = { scale = { 0.55 0.55 } offset = { 0.67 0.284 } }
+    }
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = "green"
+		color2 = "green"
+		instance = { scale = { 1.0 0.245 } position = { 0.5 0.88 } }
+	}
+}
+FLR_USA_territory = {
+	pattern = "pattern_solid.tga"
+	color1 = "blue"
+
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = "orange"
+		instance = { scale = { 1.0 @[1/5] } position = { 0.5 0.3 } }
+	}
+
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = "red"
+		instance = { scale = { 1.0 @[1/5] } position = { 0.5 0.5 } }
+	}
+
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = "white"
+		instance = { scale = { 1.0 @[1/5] } position = { 0.5 0.7 } }
+	}
+
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = "green"
+		instance = { scale = { 1.0 @[1/5] } position = { 0.5 0.9 } }
+	}
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = "white"
+		color2 = "white"
+		instance = { scale = { 0.4 @[4/10] } position = { 0.198 @[2/10] } }
+	}
+	sub = {
+        parent = "sub_USA_stripes"
+        instance = { scale = { 0.4 @[4/10] }  }
+    }
+	sub = {
+        parent = "sub_usa_eagle_canton"
+        instance = { scale = { 0.215 0.215 }  }
+    }
+	textured_emblem = {
+		texture = "te_florida_let_us_alone_frontera.dds"
+		instance = { scale = { 0.6 0.6 } position = { 0.78 0.53 } }
+	}
+	#sub = {
+    #    parent = "sub_USA_canton_24"
+    #    instance = { scale = { 0.215 0.215 }  }
+    #}
+	#sub = {
+    #    parent = "sub_USA_canton_star"
+    #    instance = { scale = { 0.215 0.215 }  }
+    #}
+}
+NMX_mexican_colony = { # New Mexico using mexican army guidon emblem
+	pattern = "pattern_solid.tga"
+	color1 = "green"
+
+	colored_emblem = {
+		texture = "ce_tricolor_thick.dds"
+		color1 = "white"
+		color2 = "red"
+	}
+
+	textured_emblem = {
+		texture = "te_eagle_mexico_guidon_frontera.dds"
+		instance = { scale = { 0.63 0.63 } position = { 0.495 0.5 } }
+	}
+}
+US_territory_default = {
+	@usa_canton_width = 0.5
+	@usa_canton_height = @[ 1 / 13 * 7 ]
+
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+
+	colored_emblem = {
+		texture = "ce_stripes_13.dds"
+		color1 = "red"
+		color2 = "red"
+	}
+    sub = {
+        parent = "sub_usa_eagle_canton"
+        instance = { scale = { @usa_canton_width @usa_canton_height }  } # top left
+    }
+}

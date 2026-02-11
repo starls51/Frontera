@@ -1,0 +1,67 @@
+﻿je_organized_territories_frontera  = {
+	icon = "gfx/interface/icons/invention_icons/colonization.dds"
+
+	group = je_group_foreign_affairs
+
+	is_shown_when_inactive = {
+		NOT = { is_country_type = unrecognized }
+		OR = {
+			has_interest_marker_in_region = sr:region_pacific_coast
+			has_interest_marker_in_region = sr:region_great_plains
+			has_interest_marker_in_region = sr:region_the_midwest
+			has_interest_marker_in_region = sr:region_dixie
+		}
+	}
+
+	#has laws - frontier colonization and homesteading
+	possible = {
+		NOT = { is_country_type = unrecognized }
+		is_subject = no
+		any_scope_state = {
+			is_in_geographic_region = geographic_region_north_america
+		}
+	}
+
+	immediate = {
+		random_state_region = {
+			limit = {
+				region = sr:region_pacific_coast
+			}
+			save_scope_as = pacific_coast_region_scope_frontera
+		}
+		random_state_region = {
+			limit = {
+				region = sr:region_great_plains
+			}
+			save_scope_as = great_plains_region_scope_frontera
+		}
+		random_state_region = {
+			limit = {
+				region = sr:region_the_midwest
+			}
+			save_scope_as = the_midwest_region_scope_frontera
+		}
+		random_state_region = {
+			limit = {
+				region = sr:region_dixie
+			}
+			save_scope_as = dixie_region_scope_frontera
+		}
+
+	}
+
+	# Establish Colonial Administration
+	scripted_button = je_organize_territory_button_pacific
+	#scripted_button = je_organize_territory_button_plains
+	#scripted_button = je_organize_territory_button_midwest
+	#scripted_button = je_organize_territory_button_dixie
+
+	# Expand Colonial Administration
+	scripted_button = je_organize_territory_button_expand_pacific
+	#scripted_button = je_organize_territory_button_expand_plains
+	#scripted_button = je_organize_territory_button_expand_midwest
+	#scripted_button = je_organize_territory_button_expand_dixie
+	weight = 100
+
+	should_be_pinned_by_default = yes
+}

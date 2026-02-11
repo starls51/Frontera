@@ -1,0 +1,122 @@
+﻿### Try to keep tags in alphabetical order if it's not too far gone, please.
+
+################################################################
+## DEFAULT COUNTRY NAMES EXAMPLE CAN BE USED WITH ANY COUNTRY ##
+################################################################
+
+# Uncomment when need a dynamic_country_name for any country
+REPLACE:CAL = {
+	dynamic_country_name = {
+		name = dyn_c_alta_california
+		adjective = dyn_c_alta_california_adj
+
+		is_main_tag_only = yes
+		priority = 1
+
+		trigger = {
+			coa_def_mexican_ensign_trigger = yes
+		}
+	}
+
+	dynamic_country_name = {
+		name = dyn_c_two_californias
+		adjective = dyn_c_two_californias_adj
+
+		is_main_tag_only = yes
+		priority = 0
+
+		trigger = {
+			scope:actor ?= {
+				owns_entire_state_region = STATE_CALIFORNIA
+				owns_entire_state_region = STATE_BAJA_CALIFORNIA
+			}
+		}
+	}
+
+	dynamic_country_name = {
+		name = dyn_c_ussr_californias
+		adjective = dyn_c_ussr_californias_adj
+
+		is_main_tag_only = yes
+		priority = 10000
+
+		trigger = {
+			coa_def_communist_flag_trigger = yes
+		}
+	}
+}
+
+UOM = {
+	dynamic_country_name = {
+		name = dyn_minnesota_territory
+		adjective = dyn_minnesota_territory_adj
+
+		priority = 0
+
+		trigger = {
+			scope:actor ?= {
+				has_government_type = gov_frontier_territory_frontera
+				NAND = {
+					owns_entire_state_region = STATE_MICHIGAN
+					owns_entire_state_region = STATE_WISCONSIN
+					owns_entire_state_region = STATE_IOWA
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_iowa_territory
+		adjective = UOM_ADJ
+
+		priority = 2
+
+		trigger = {
+			scope:actor ?= {
+				has_government_type = gov_frontier_territory_frontera
+				owns_entire_state_region = STATE_IOWA
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_wisconsin_territory
+		adjective = dyn_wisconsin_territory_adj
+
+		priority = 3
+
+		trigger = {
+			scope:actor ?= {
+				has_government_type = gov_frontier_territory_frontera
+				owns_entire_state_region = STATE_WISCONSIN
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = dyn_michigan_territory
+		adjective = UOM_ADJ
+
+		priority = 4
+
+		trigger = {
+			scope:actor ?= {
+				has_government_type = gov_frontier_territory_frontera
+				owns_entire_state_region = STATE_MICHIGAN
+			}
+		}
+	}
+
+}
+FLR = {
+	dynamic_country_name = {
+		name = dyn_florida_territory
+		adjective = FLR_ADJ
+
+		is_main_tag_only = yes
+		priority = 1
+
+		trigger = {
+			scope:actor ?= {
+				has_government_type = gov_frontier_territory_frontera
+			}
+		}
+	}
+}
