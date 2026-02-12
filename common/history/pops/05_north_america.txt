@@ -441,6 +441,12 @@
 		}
 	}
 	s:STATE_OKLAHOMA = {
+		region_state:USA = {
+			create_pop = {
+				culture = siouan
+				size = 500
+			}
+		}
 		region_state:SEQ = {
 			create_pop = {
 				culture = siouan
@@ -463,7 +469,7 @@
 		region_state:COM = {
 			create_pop = {
 				culture = siouan
-				size = 17000
+				size = 16500
 			}
 		}
 		region_state:NMX = {

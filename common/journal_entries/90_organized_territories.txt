@@ -5,6 +5,9 @@
 
 	is_shown_when_inactive = {
 		NOT = { is_country_type = unrecognized }
+		any_scope_state = {
+			is_in_geographic_region = geographic_region_north_america
+		}
 		OR = {
 			has_interest_marker_in_region = sr:region_pacific_coast
 			has_interest_marker_in_region = sr:region_great_plains
@@ -17,6 +20,8 @@
 	possible = {
 		NOT = { is_country_type = unrecognized }
 		is_subject = no
+		has_law = law_type:law_frontier_colonization
+		has_law = law_type:law_homesteading
 		any_scope_state = {
 			is_in_geographic_region = geographic_region_north_america
 		}
@@ -57,7 +62,7 @@
 	#scripted_button = je_organize_territory_button_dixie
 
 	# Expand Colonial Administration
-	scripted_button = je_organize_territory_button_expand_pacific
+	#scripted_button = je_organize_territory_button_expand_pacific
 	#scripted_button = je_organize_territory_button_expand_plains
 	#scripted_button = je_organize_territory_button_expand_midwest
 	#scripted_button = je_organize_territory_button_expand_dixie

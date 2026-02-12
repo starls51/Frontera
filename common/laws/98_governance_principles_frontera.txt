@@ -31,7 +31,6 @@ law_frontier_territorial_administration = {
 
 	modifier = {
 		# Territories incentivise certain migrants avoiding centralized authority or settlement
-		state_migration_quota_mult = 0.1
 		country_legitimacy_headofstate_add = 20
 		country_legitimacy_ideological_incoherence_mult = 0.1
 		interest_group_ig_rural_folk_pol_str_mult = 0.5

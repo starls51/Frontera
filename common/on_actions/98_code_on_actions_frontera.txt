@@ -1,0 +1,17 @@
+﻿# Modded on action
+check_organized_territories_frontera = {
+	effect = {
+		if = { # Check territories to see if one is ready for incorporation
+			limit = {
+				has_government_type = gov_frontier_territory_frontera
+			}
+			trigger_event = frontera_ot_homeland.1
+		}
+	}
+}
+
+on_monthly_pulse_country = {
+  on_actions = {
+    check_organized_territories_frontera
+  }
+}

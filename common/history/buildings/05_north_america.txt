@@ -590,6 +590,8 @@
 				activate_production_methods={ "default_building_cotton_plantation" "pm_road_carts"  }
 			}
 		}
+		region_state:USA={
+		}
 		region_state:COM={
 		}
 		region_state:NMX={
