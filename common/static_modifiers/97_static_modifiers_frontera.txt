@@ -1,0 +1,7 @@
+﻿
+modifier_frontierlands_frontera = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	state_pop_pol_str_mult = 0.50
+	state_migration_pull_mult = 0.25
+	state_expected_sol_mult = -0.25
+}

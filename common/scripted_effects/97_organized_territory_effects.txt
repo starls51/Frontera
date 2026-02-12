@@ -1,0 +1,43 @@
+﻿# Maintains a list of state_regions owned by Organized Territories
+state_organized_territory_listcheck_frontera = {
+	if = {
+		limit = {
+			exists = THIS
+			owner = {
+				has_government_type = gov_frontier_territory_frontera
+			}
+			is_incorporated = yes
+		}
+		if = {
+			limit = {
+				NOT = {
+					is_target_in_global_variable_list = {
+						name = ot_state_frontera_list
+						target = THIS
+					}
+				}
+			}
+			add_to_global_variable_list = {
+				name = ot_state_frontera_list
+				target = THIS
+			}
+			add_modifier = {
+				name = modifier_frontierlands_frontera
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			is_target_in_global_variable_list = {
+				name = ot_state_frontera_list
+				target = THIS
+			}
+		}
+		remove_modifier = modifier_frontierlands_frontera
+		remove_list_global_variable = {
+			name = ot_state_frontera_list
+			target = THIS
+		}
+	}
+	else = {}
+}

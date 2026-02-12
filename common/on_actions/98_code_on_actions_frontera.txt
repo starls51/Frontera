@@ -1,17 +1,80 @@
-﻿# Modded on action
-check_organized_territories_frontera = {
-	effect = {
-		if = { # Check territories to see if one is ready for incorporation
-			limit = {
-				has_government_type = gov_frontier_territory_frontera
-			}
-			trigger_event = frontera_ot_homeland.1
-		}
+﻿# OLD on_action, now I will try to make one that forms and checks a list of states
+#check_organized_territories_frontera = {
+#	effect = {
+#		if = { # Check territories to see if one is ready for incorporation
+#			limit = {
+#				has_government_type = gov_frontier_territory_frontera
+#			}
+#			trigger_event = frontera_ot_homeland.1
+#		}
+#	}
+#}
+#
+
+### Scripted state list
+# Used to keep track of states belonging to organized territories
+#clear_global_variable_list = ot_state_frontera_list
+#every_country = {
+#	limit = {
+#		has_law_or_variant = law_type:law_council_republic
+#		country_rank > rank_value:minor_power
+#	}
+#	add_to_global_variable_list = {
+#		name = ot_state_frontera_list
+#		target = THIS
+#	}
+#}
+
+
+#init_check_organized_territory_list_frontera = {
+#	effect = {
+#		every_state = {
+#			state_organized_territory_listcheck_frontera = yes
+#		}
+#	}
+#}
+#
+#on_game_started = {
+#	on_actions = {
+#		init_check_organized_territory_list_frontera
+#	}
+#}
+
+on_monthly_pulse_state = {
+	on_actions = {
+	  check_organized_territory_list_frontera_monthly
 	}
 }
 
-on_monthly_pulse_country = {
-  on_actions = {
-    check_organized_territories_frontera
-  }
+# Root = state
+on_state_incorporation = {
+	on_actions = {
+	  check_organized_territory_list_frontera
+	}
+}
+
+on_state_owner_change = {
+	on_actions = {
+	  check_organized_territory_list_frontera
+	}
+}
+
+on_state_created = {
+	on_actions = {
+	  check_organized_territory_list_frontera
+	}
+}
+
+check_organized_territory_list_frontera = {
+	effect = {
+		state_organized_territory_listcheck_frontera = yes
+	}
+}
+check_organized_territory_list_frontera_monthly = {
+	effect = {
+		every_in_global_list = {
+			variable = ot_state_frontera_list
+		}
+		state_organized_territory_listcheck_frontera = yes
+	}
 }
