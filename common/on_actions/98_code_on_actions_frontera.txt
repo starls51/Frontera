@@ -47,11 +47,18 @@ on_monthly_pulse_country = {
 	}
 	on_actions = {
     	check_for_OT_homelands_frontera
+		check_for_OT_giveaway_states_frontera
     }
 }
 
 check_for_OT_homelands_frontera = {
 	effect = {
 		country_OT_homelands_check_frontera = yes
+	}
+}
+
+check_for_OT_giveaway_states_frontera = {
+	effect = {
+		country_OT_transfer_homeland_to_overlord = yes
 	}
 }

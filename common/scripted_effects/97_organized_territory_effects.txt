@@ -3,6 +3,7 @@ state_OT_modifier_check_frontera = {
 	if = {
 		limit = {
 			exists = THIS
+			is_incorporated = yes
 			owner = {
 				has_government_type = gov_frontier_territory_frontera
 			}
@@ -23,21 +24,21 @@ state_OT_modifier_check_frontera = {
 	}
 }
 
-# Check if a state in organized territory is ready to be a homeland
+#TODO replace the add_homeland effect with a proper narrative event
+# make any ready states within organized territories into a homeland
 country_OT_homelands_check_frontera = {
-	#Im inside an Organized Territory country scope
 	if = {
 		limit = {
-			any_state = {
+			any_scope_state = {
 				NOT = {is_homeland_of_country_cultures = root.overlord}
 				state_population > 85000
 				any_scope_culture = {
 					is_primary_culture_of = root.overlord
-					culture_percent_state = {
-		   				target = this
-		    			value > 0.6
-					}
 					save_temporary_scope_as = new_homelander_culture
+				}
+				culture_percent_state = {
+		   			target = scope:new_homelander_culture
+		    		value > 0.6
 				}
 				save_temporary_scope_as = new_homeland_state
 			}
@@ -46,6 +47,28 @@ country_OT_homelands_check_frontera = {
 			state_region = {
 				add_homeland = scope:new_homelander_culture
 			}
+		}
+	}
+}
+
+#TODO replace the change state owner effect with a proper narrative event
+# make homelands in organized territories be annexed by the overlord
+country_OT_transfer_homeland_to_overlord = {
+	if = {
+		limit = {
+			root.overlord = {
+				is_diplomatic_play_committed_participant = no
+				is_at_war = no
+			}
+			is_diplomatic_play_committed_participant = no
+			is_at_war = no
+			any_scope_state = {
+				is_homeland_of_country_cultures = root.overlord
+				save_temporary_scope_as = giveaway_state
+			}
+		}
+		scope:giveaway_state = {
+			set_state_owner = root.overlord
 		}
 	}
 }
