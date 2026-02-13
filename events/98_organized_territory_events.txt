@@ -8,7 +8,6 @@ frontera_ot_homeland.1 = {
 	flavor = frontera_ot_homeland.1.f
 
 	event_image = {
-		# REPLACE with image of flag raising if found
 		video = "europenorthamerica_native_american"
 	}
 
@@ -21,47 +20,11 @@ frontera_ot_homeland.1 = {
 	cooldown = { days = very_long_modifier_time }
 
 	trigger = {
-		is_subject = yes
-		is_at_war = no
-		any_scope_state = {
-			custom_tooltip = {
-				text = debug_req_pop_ct
-				state_population > 85000
-			}
-			custom_tooltip = {
-				text = debug_req_primary_perc
-				any_scope_culture = {
-					is_primary_culture_of = ROOT.overlord
-					save_temporary_scope_as = overlord_culture_scope
-				}
-				culture_percent_state = {
-					target = scope:overlord_culture_scope
-					value > 0.6
-				}
-			}
-		}
+		#triggered by event
 	}
 
 	immediate = {
-		ROOT.overlord ?= {
-			save_scope_as = overlord_scope
-		}
-		random_scope_state = {
-			limit = {
-				state_population > 85000
-				any_scope_culture = {
-					is_primary_culture_of = scope:overlord_scope
-					save_temporary_scope_as = overlord_culture_scope
-				}
-				culture_percent_state = {
-					target = scope:overlord_culture_scope
-					value > 0.6
-				}
-			}
-			save_scope_as = ascendent_state
-			#set_state_owner = ROOT.overlord
-			state_region = {add_homeland = scope:overlord_culture_scope}
-		}
+
 	}
 
 	option = {
