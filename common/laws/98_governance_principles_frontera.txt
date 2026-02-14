@@ -33,9 +33,13 @@ law_frontier_territorial_administration = {
 		# Territories incentivise certain migrants avoiding centralized authority or settlement
 		country_legitimacy_headofstate_add = 20
 		country_legitimacy_ideological_incoherence_mult = 0.1
-		interest_group_ig_rural_folk_pol_str_mult = 0.5
-		country_officers_pol_str_mult = 0.25
+		interest_group_ig_rural_folk_pol_str_mult = 0.25
+		country_officers_pol_str_mult = 0.15
 		country_authority_add = 50
+		country_mass_migration_attraction_mult = -0.75
+		
+		#applies to states in a country it seems
+		state_migration_quota_mult = 0.25
 	}
 
 	ai_will_do = {
