@@ -4,7 +4,7 @@
 
 	visible = {}
 
-	cooldown = { days = 90 }
+	cooldown = { days = 35 }
 
 	possible = {
 		any_scope_state = {
@@ -34,85 +34,116 @@
 	}
 
 	effect = {
-		if = {
-			limit = {
-				any_scope_state = {
-					state_region = {
-						is_in_geographic_region = geographic_region_louisiana_purchase
-					}
-					NOT = {is_homeland_of_country_cultures = root}
-					is_incorporated = no
-					has_decree = decree_greener_grass_campaign
-				}
-			}
-			random_scope_state = {
-				limit = {
-					state_region = {
-						is_in_geographic_region = geographic_region_louisiana_purchase
-					}
-					NOT = {is_homeland_of_country_cultures = root}
-					is_incorporated = no
-					has_decree = decree_greener_grass_campaign
-				}
-				save_scope_as = newly_formed_colonial_nation_capital_scope
-			}
-		}
-		else = {
+		custom_tooltip = {
+			text = ""
 			ordered_state = {
 				limit = {
-					state_region = {
-						is_in_geographic_region = geographic_region_louisiana_purchase
-					}
+					owner = ROOT
 					is_incorporated = no
 					NOT = {is_homeland_of_country_cultures = root}
 				}
 				order_by = gdp
 				position = 0
 				check_range_bounds = no
-				save_scope_as = newly_formed_colonial_nation_capital_scope
+				save_scope_as = newly_formed_colonial_nation_anchor_state
+				#Beginning of if-checks for any region I would like to make Organized Territories from that are NOT strategic regions
+				if = {
+					limit = {
+						state_region = {
+							is_in_geographic_region = geographic_region_louisiana_purchase
+						}
+					}
+					every_state = {
+						limit = {
+							is_incorporated = no
+							NOT = {is_homeland_of_country_cultures = root}
+							OR = {
+								owner = ROOT
+								owner = {
+									is_subject_of = ROOT
+									has_government_type = gov_frontier_territory_frontera
+								}
+							}
+							is_in_geographic_region = geographic_region_louisiana_purchase
+						}
+						set_variable = state_to_cede
+					}
+				}
+				# I am in the state scope of my anchor state
+				else = {
+					every_state = {
+						limit = {
+							is_incorporated = no
+							NOT = {is_homeland_of_country_cultures = root}
+							region = scope:newly_formed_colonial_nation_anchor_state.region
+							OR = {
+								owner = ROOT
+								owner = {
+									is_subject_of = ROOT
+									has_government_type = gov_frontier_territory_frontera
+								}
+							}
+						}
+						set_variable = state_to_cede
+					}
+				}
+			}
+
+
+			if = {
+				limit = {
+					any_scope_state = {
+						has_variable = state_to_cede
+						has_decree = decree_greener_grass_campaign
+					}
+				}
+				random_scope_state = {
+					limit = {
+						has_variable = state_to_cede
+						has_decree = decree_greener_grass_campaign
+					}
+					save_scope_as = newly_formed_colonial_nation_anchor_state
+				}
 			}
 		}
-		every_scope_state = {
-			limit = {
-				state_region = {
-					is_in_geographic_region = geographic_region_louisiana_purchase
+		custom_tooltip = {
+			text = creating_OT_frontera_tt
+			create_dynamic_country = {
+				origin = root
+				country_type = colonial
+				tier = principality
+				capital = scope:newly_formed_colonial_nation_anchor_state
+				cede_state_trigger = {
+					has_variable = state_to_cede
 				}
-				NOT = {is_homeland_of_country_cultures = ROOT}
-				is_incorporated = no
+				on_created = {
+					effect_starting_politics_territory_free_frontera = yes
+					every_scope_state = {
+						add_modifier = {
+							name = modifier_frontierlands_frontera
+						}
+					}
+					set_variable = {
+						name = newly_formed_colonial_nation_var
+						months = 1
+					}
+					every_scope_state = {
+						remove_variable = state_to_cede
+					}
+					add_modifier = {
+						name = colonial_administration
+					}
+				}
 			}
-			set_variable = state_to_cede
+			hidden_effect = {
+				create_diplomatic_pact = {
+					country = scope:newly_formed_colonial_nation_anchor_state.owner
+					type = colony
+				}
+			}
+			#trigger_event = { id = colonial_administration_events.1 days = 1 popup = yes }
+			#custom_tooltip = je_colonial_administration_button_tt_1
+			#custom_tooltip = je_colonial_administration_button_tt_2
 		}
-		create_dynamic_country = {
-			origin = root
-			country_type = colonial
-			tier = principality
-			capital = scope:newly_formed_colonial_nation_capital_scope
-			cede_state_trigger = {
-				has_variable = state_to_cede
-			}
-			on_created = {
-				set_variable = midwest_subject_var
-				set_variable = {
-					name = newly_formed_colonial_nation_var
-					months = 3
-				}
-				every_scope_state = {
-					remove_variable = state_to_cede
-				}
-				effect_starting_politics_territory_free_frontera = yes
-				add_modifier = {
-					name = colonial_administration
-				}
-			}
-		}
-		hidden_effect = {
-			create_diplomatic_pact = {
-				country = scope:newly_formed_colonial_nation_capital_scope.owner
-				type = colony
-			}
-		}
-		#trigger_event = { id = colonial_administration_events.1 days = 1 popup = yes }
-		#custom_tooltip = je_colonial_administration_button_tt_1
-		#custom_tooltip = je_colonial_administration_button_tt_2
 	}
 }

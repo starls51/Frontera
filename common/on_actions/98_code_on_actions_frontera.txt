@@ -1,9 +1,13 @@
 ﻿# Root = state
-on_state_incorporation = {
-	on_actions = {
-		check_for_OT_state_modifier_frontera
-	}
-}
+
+####This one is broken, so I will isntead make it so OTs cannot integrate states
+#   due to super high modifier penalty- avoids edge case of OTs integrating states
+#   and not getting their respective modifiers.
+#on_state_incorporation = {
+#	on_actions = {
+#		check_for_OT_state_modifier_frontera
+#	}
+#}
 
 on_state_owner_change = {
 	on_actions = {
@@ -31,6 +35,14 @@ init_check_for_OT_state_modifier_frontera = {
 	}
 }
 
+country_check_for_OT_state_modifier_frontera = {
+	effect = {
+		every_scope_state = {
+			state_OT_modifier_check_frontera = yes
+		}
+	}
+}
+
 
 check_for_OT_state_modifier_frontera = {
 	effect = {
@@ -39,6 +51,16 @@ check_for_OT_state_modifier_frontera = {
 }
 
 # Root = Country
+
+on_yearly_pulse_country = {
+	trigger = {
+		is_subject = yes
+		has_government_type = gov_frontier_territory_frontera
+	}
+	on_actions = {
+    	country_check_for_OT_state_modifier_frontera
+    }
+}
 
 on_monthly_pulse_country = {
 	trigger = {

@@ -126,10 +126,21 @@ REPLACE:DEFAULT = {
 		priority = 100
 		trigger = {
 			exists = scope:actor
-			coa_def_organized_territory_ensign_frontera_trigger = yes
-			scope:actor ?= {
-				has_variable = midwest_subject_var
+			scope:actor = {
+				has_government_type = gov_frontier_territory_frontera
 			}
+		}
+	}
+	flag_definition = {
+		coa = US_territory_default
+		allow_overlord_canton = no
+		priority = 101
+		trigger = {
+			exists = scope:actor
+			scope:actor = {
+				has_government_type = gov_frontier_territory_frontera
+			}
+			coa_def_american_ensign_trigger = yes
 		}
 	}
 
