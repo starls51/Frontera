@@ -14,7 +14,6 @@
 		has_law = law_type:law_homesteading
 		any_scope_state = {
 			is_incorporated = no
-			is_split_state = no
 			custom_tooltip = {
 				text = je_tooltip_no_homelands_frontera
 				NOT = {is_homeland_of_country_cultures = ROOT}

@@ -33,6 +33,18 @@ geographic_region_mexican_north = {
 	}
 }
 
+geographic_region_greater_columbia = {
+	short_key = "greater_columbia"
+
+	state_regions = {
+		STATE_WASHINGTON
+		STATE_OREGON
+		STATE_IDAHO
+		STATE_ALBERTA
+		STATE_BRITISH_COLUMBIA
+	}
+}
+
 geographic_region_rocky_mountains = {
 	short_key = "rocky_mountains"
 

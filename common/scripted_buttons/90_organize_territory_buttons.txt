@@ -13,12 +13,15 @@
 				text = je_tooltip_no_homelands_frontera
 				NOT = {is_homeland_of_country_cultures = root}
 			}
+			custom_tooltip = {
+				text = je_tooltip_homeland_adjacency_frontera
+				any_neighbouring_state = {
+					is_homeland_of_country_cultures = root
+				}
+			}
 		}
-
-		#prevents splitting off during diplo play or war as it invalidates wargoals. is_at_war is there for clarity for players even though it's technically included in the former
 		is_diplomatic_play_committed_participant = no
 		is_at_war = no
-
 		custom_tooltip = {
 			text = colonial_administration_cooldown
 			NOT = {
@@ -35,18 +38,67 @@
 
 	effect = {
 		custom_tooltip = {
-			text = ""
-			ordered_state = {
+			text = creating_OT_frontera_tt
+			if = {
 				limit = {
-					owner = ROOT
+					any_scope_state = {
+						has_decree = decree_greener_grass_campaign
+						is_incorporated = no
+						NOT = {is_homeland_of_country_cultures = root}
+						any_neighbouring_state = {
+							is_homeland_of_country_cultures = root
+						}
+					}
+				}
+				ordered_scope_state = {
+					limit = {
+						has_decree = decree_greener_grass_campaign
+						is_incorporated = no
+						NOT = {is_homeland_of_country_cultures = root}
+						any_neighbouring_state = {
+							is_homeland_of_country_cultures = root
+						}
+					}
+					order_by = gdp
+					position = 0
+					check_range_bounds = no
+					save_scope_as = newly_formed_colonial_nation_anchor_state
+				}
+			}
+			else_if = {
+				ordered_scope_state = {
+				limit = {
+					is_under_colonization = no
 					is_incorporated = no
 					NOT = {is_homeland_of_country_cultures = root}
+					any_neighbouring_state = {
+						is_homeland_of_country_cultures = root
+					}
 				}
 				order_by = gdp
 				position = 0
 				check_range_bounds = no
 				save_scope_as = newly_formed_colonial_nation_anchor_state
-				#Beginning of if-checks for any region I would like to make Organized Territories from that are NOT strategic regions
+				}
+			}
+			else = {
+				ordered_scope_state = {
+				limit = {
+					is_incorporated = no
+					NOT = {is_homeland_of_country_cultures = root}
+					any_neighbouring_state = {
+						is_homeland_of_country_cultures = root
+					}
+				}
+				order_by = gdp
+				position = 0
+				check_range_bounds = no
+				save_scope_as = newly_formed_colonial_nation_anchor_state
+				}
+			}
+			# Beginning of if-checks for any defined geographic region I would like to make Organized Territories from
+			# the order matters because some regions overlap, and OTs in regions higher up will be generated with higher priority
+			scope:newly_formed_colonial_nation_anchor_state = {
 				if = {
 					limit = {
 						state_region = {
@@ -69,13 +121,81 @@
 						set_variable = state_to_cede
 					}
 				}
-				# I am in the state scope of my anchor state
+				else_if = {
+					limit = {
+						state_region = {
+							is_in_geographic_region = geographic_region_mexican_north
+						}
+					}
+					every_state = {
+						limit = {
+							is_incorporated = no
+							NOT = {is_homeland_of_country_cultures = root}
+							OR = {
+								owner = ROOT
+								owner = {
+									is_subject_of = ROOT
+									has_government_type = gov_frontier_territory_frontera
+								}
+							}
+							is_in_geographic_region = geographic_region_mexican_north
+						}
+						set_variable = state_to_cede
+					}
+				}
+				else_if = {
+					limit = {
+						state_region = {
+							is_in_geographic_region = geographic_region_greater_columbia
+						}
+					}
+					every_state = {
+						limit = {
+							is_incorporated = no
+							NOT = {is_homeland_of_country_cultures = root}
+							OR = {
+								owner = ROOT
+								owner = {
+									is_subject_of = ROOT
+									has_government_type = gov_frontier_territory_frontera
+								}
+							}
+							is_in_geographic_region = geographic_region_greater_columbia
+						}
+						set_variable = state_to_cede
+					}
+				}
+				else_if = {
+					limit = {
+						state_region = {
+							is_in_geographic_region = geographic_region_rocky_mountains
+						}
+					}
+					every_state = {
+						limit = {
+							is_incorporated = no
+							NOT = {is_homeland_of_country_cultures = root}
+							OR = {
+								owner = ROOT
+								owner = {
+									is_subject_of = ROOT
+									has_government_type = gov_frontier_territory_frontera
+								}
+							}
+							is_in_geographic_region = geographic_region_rocky_mountains
+						}
+						set_variable = state_to_cede
+					}
+				}
+				# end of geographic regions, default back to paradox's strategic regions
 				else = {
 					every_state = {
 						limit = {
 							is_incorporated = no
 							NOT = {is_homeland_of_country_cultures = root}
-							region = scope:newly_formed_colonial_nation_anchor_state.region
+							region = {
+								scope:newly_formed_colonial_nation_anchor_state.region = THIS
+							}
 							OR = {
 								owner = ROOT
 								owner = {
@@ -88,26 +208,9 @@
 					}
 				}
 			}
-
-
-			if = {
-				limit = {
-					any_scope_state = {
-						has_variable = state_to_cede
-						has_decree = decree_greener_grass_campaign
-					}
-				}
-				random_scope_state = {
-					limit = {
-						has_variable = state_to_cede
-						has_decree = decree_greener_grass_campaign
-					}
-					save_scope_as = newly_formed_colonial_nation_anchor_state
-				}
-			}
 		}
 		custom_tooltip = {
-			text = creating_OT_frontera_tt
+			text = creating_OT_frontera_2_tt
 			create_dynamic_country = {
 				origin = root
 				country_type = colonial
@@ -132,6 +235,14 @@
 					}
 					add_modifier = {
 						name = colonial_administration
+					}
+					every_scope_state = {
+						limit = {
+							is_capital = no
+							is_split_state = yes
+						}
+						remove_modifier = modifier_frontierlands_frontera
+						set_state_type = unincorporated
 					}
 				}
 			}

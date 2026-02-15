@@ -5,6 +5,23 @@
 ################################################################
 
 # Uncomment when need a dynamic_country_name for any country
+INJECT:DEFAULT = {
+	dynamic_country_name = {
+		name = generic_organized_territory
+		adjective = generic_organized_territory_adj
+
+		priority = 1
+
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				has_government_type = gov_frontier_territory_frontera
+			}
+		}
+	}
+}
+
+
 REPLACE:CAL = {
 	dynamic_country_name = {
 		name = dyn_c_alta_california
@@ -51,7 +68,7 @@ UOM = {
 		name = dyn_minnesota_territory
 		adjective = dyn_minnesota_territory_adj
 
-		priority = 0
+		priority = 100
 
 		trigger = {
 			scope:actor ?= {

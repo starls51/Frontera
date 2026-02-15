@@ -2061,7 +2061,7 @@ STATES = {
 		create_state = {
 			country = c:COM
 			owned_provinces = {
-				x810C1A x256AEE x74C317 x92D597 x2EE19C xB7D6F2 xE27DFB x418B71 x9660D3 x40B080 xF9F60A xC03297
+				x810C1A x256AEE x74C317 x92D597 x2EE19C xB7D6F2 xE27DFB x418B71 x9660D3 xF9F60A xC03297
 				}
 		}
 		create_state = {
@@ -2073,7 +2073,6 @@ STATES = {
 		}
 
 		add_homeland = cu:navajo
-		add_homeland = cu:mexican
 		add_homeland = cu:pueblo
 		add_homeland = cu:comanche
 		add_homeland = cu:apache

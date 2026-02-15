@@ -3,10 +3,11 @@ state_OT_modifier_check_frontera = {
 	if = {
 		limit = {
 			exists = THIS
-			is_incorporated = yes
 			owner = {
 				has_government_type = gov_frontier_territory_frontera
 			}
+			is_incorporated = yes
+			is_split_state = no
 		}
 		if = {
 			limit = {
