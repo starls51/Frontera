@@ -1,8 +1,69 @@
-﻿je_organize_territory_button_pacific = {
-	name = "je_organize_territory_button_pacific"
-	desc = "je_organize_territory_button_pacific_desc"
+﻿je_reorganize_colony_button = {
+	name = "je_reorganize_territory_button"
+	desc = "je_reorganize_territory_button_desc"
 
-	visible = {}
+	visible = {
+		any_direct_subject = {
+			NOT = {has_government_type = gov_frontier_territory_frontera}
+			any_neighbouring_state = {
+				is_homeland_of_country_cultures = root
+			}
+		}
+	}
+
+	cooldown = { days = 35 }
+
+	possible = {
+		is_diplomatic_play_committed_participant = no
+		is_at_war = no
+		any_direct_subject = {
+			# If I am only allowing colonies to become subjects
+			#ROOT= {
+			#	has_diplomatic_pact = {
+			#		who = THIS
+			#		type = colony
+			#		is_initiator = yes
+			#	}
+			#}
+			NOT = {has_government_type = gov_frontier_territory_frontera}
+			custom_tooltip = {
+				text = je_tooltip_homeland_adjacency_frontera
+					any_neighbouring_state = {
+					is_homeland_of_country_cultures = root
+				}
+			}
+		}
+	}
+
+	ai_chance = {
+		value = 100
+	}
+
+	effect = {
+		random_direct_subject  = {
+			limit = {
+				NOT = {has_government_type = gov_frontier_territory_frontera}
+				any_neighbouring_state = {
+					is_homeland_of_country_cultures = root
+				}
+			}
+			create_diplomatic_pact = {
+				country = ROOT
+				type = colony
+			}
+			custom_tooltip = {
+				text = ""
+				effect_starting_politics_territory_free_frontera = yes
+			}
+		}
+	}
+}
+je_organize_territory_button = {
+	name = "je_organize_territory_button"
+	desc = "je_organize_territory_button_desc"
+
+	visible = {
+	}
 
 	cooldown = { days = 35 }
 
@@ -40,16 +101,10 @@
 	effect = {
 		custom_tooltip = {
 			text = creating_OT_frontera_tt
-			random_scope_state = {
-				limit = {
-					is_incorporated = no
-					NOT = {is_homeland_of_country_cultures = root}
-				}
-				save_scope_as = newly_formed_colonial_nation_anchor_state
-			}
 			if = {
 				limit = {
 					any_scope_state = {
+						is_under_colonization = no
 						has_decree = decree_greener_grass_campaign
 						is_incorporated = no
 						NOT = {is_homeland_of_country_cultures = root}
@@ -60,6 +115,7 @@
 				}
 				ordered_scope_state = {
 					limit = {
+						is_under_colonization = no
 						has_decree = decree_greener_grass_campaign
 						is_incorporated = no
 						NOT = {is_homeland_of_country_cultures = root}
@@ -74,6 +130,16 @@
 				}
 			}
 			else_if = {
+				limit = {
+					any_scope_state = {
+						is_under_colonization = no
+						is_incorporated = no
+						NOT = {is_homeland_of_country_cultures = root}
+						any_neighbouring_state = {
+							is_homeland_of_country_cultures = root
+						}
+					}
+				}
 				ordered_scope_state = {
 					limit = {
 						is_under_colonization = no
@@ -92,6 +158,7 @@
 			else = {
 				ordered_scope_state = {
 					limit = {
+						is_under_colonization = no
 						is_incorporated = no
 						NOT = {is_homeland_of_country_cultures = root}
 						any_neighbouring_state = {
@@ -104,7 +171,7 @@
 					save_scope_as = newly_formed_colonial_nation_anchor_state
 				}
 			}
-			# Beginning of if-checks for any defined geographic region I would like to make Organized Territories from
+			# Beginning of geographic region checks for historically viable OTs
 			# the order matters because some regions overlap, and OTs in regions higher up will be generated with higher priority
 			scope:newly_formed_colonial_nation_anchor_state = {
 				if = {
@@ -116,7 +183,6 @@
 					every_state = {
 						limit = {
 							is_incorporated = no
-							NOT = {is_homeland_of_country_cultures = root}
 							OR = {
 								owner = ROOT
 								owner = {
@@ -124,6 +190,7 @@
 									has_government_type = gov_frontier_territory_frontera
 								}
 							}
+							NOT = {is_homeland_of_country_cultures = root}
 							is_in_geographic_region = geographic_region_louisiana_purchase
 						}
 						set_variable = state_to_cede
@@ -138,7 +205,6 @@
 					every_state = {
 						limit = {
 							is_incorporated = no
-							NOT = {is_homeland_of_country_cultures = root}
 							OR = {
 								owner = ROOT
 								owner = {
@@ -146,6 +212,7 @@
 									has_government_type = gov_frontier_territory_frontera
 								}
 							}
+							NOT = {is_homeland_of_country_cultures = root}
 							is_in_geographic_region = geographic_region_mexican_north
 						}
 						set_variable = state_to_cede
@@ -160,7 +227,6 @@
 					every_state = {
 						limit = {
 							is_incorporated = no
-							NOT = {is_homeland_of_country_cultures = root}
 							OR = {
 								owner = ROOT
 								owner = {
@@ -168,6 +234,7 @@
 									has_government_type = gov_frontier_territory_frontera
 								}
 							}
+							NOT = {is_homeland_of_country_cultures = root}
 							is_in_geographic_region = geographic_region_greater_columbia
 						}
 						set_variable = state_to_cede
@@ -182,7 +249,6 @@
 					every_state = {
 						limit = {
 							is_incorporated = no
-							NOT = {is_homeland_of_country_cultures = root}
 							OR = {
 								owner = ROOT
 								owner = {
@@ -190,17 +256,18 @@
 									has_government_type = gov_frontier_territory_frontera
 								}
 							}
+							NOT = {is_homeland_of_country_cultures = root}
 							is_in_geographic_region = geographic_region_rocky_mountains
 						}
 						set_variable = state_to_cede
 					}
 				}
-				# end of geographic regions, default back to paradox's strategic regions
+				# end of geographic region checks, default back to paradox's strategic regions
 				else = {
 					every_state = {
 						limit = {
 							exists = THIS
-							region = scope:newly_formed_colonial_nation_anchor_state.region
+							scope:newly_formed_colonial_nation_anchor_state.region ?= region
 							is_incorporated = no
 							NOT = {is_homeland_of_country_cultures = root}
 							OR = {

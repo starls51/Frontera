@@ -25,17 +25,11 @@
 
 	}
 
-	# Establish Colonial Administration
-	scripted_button = je_organize_territory_button_pacific
-	#scripted_button = je_organize_territory_button_plains
-	#scripted_button = je_organize_territory_button_midwest
-	#scripted_button = je_organize_territory_button_dixie
+	# Establish an Organized Territory
+	scripted_button = je_organize_territory_button
 
-	# Expand Colonial Administration
-	#scripted_button = je_organize_territory_button_expand_pacific
-	#scripted_button = je_organize_territory_button_expand_plains
-	#scripted_button = je_organize_territory_button_expand_midwest
-	#scripted_button = je_organize_territory_button_expand_dixie
+	# Re-Organize A Colonial Administration into an Organized Territory
+	scripted_button = je_reorganize_colony_button
 	weight = 100
 
 	should_be_pinned_by_default = yes

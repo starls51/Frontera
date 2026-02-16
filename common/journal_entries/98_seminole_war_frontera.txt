@@ -1,0 +1,34 @@
+﻿REPLACE:je_seminole_wars = {
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+	group = je_group_usa_manifest_destiny
+
+	complete = {
+
+	}
+
+	on_complete = {
+
+	}
+
+	immediate = {
+
+	}
+
+	fail = {
+
+	}
+
+	on_fail = {
+
+	}
+
+	on_monthly_pulse = {
+	}
+	on_yearly_pulse = {
+	}
+
+	weight = 100
+
+	should_be_pinned_by_default = yes
+}

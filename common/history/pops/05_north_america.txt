@@ -1616,6 +1616,29 @@
 				culture = californio_mestizo
 				size = 7700
 			}
+			create_pop = {
+				culture = yankee
+				religion = catholic
+				pop_type = clerks
+				size = 50
+			}
+			create_pop = {
+				culture = yankee
+				religion = catholic
+				pop_type = laborers
+				size = 150
+			}
+			create_pop = {
+				culture = yankee
+				religion = catholic
+				pop_type = farmers
+				size = 150
+			}
+			create_pop = {
+				culture = russian
+				pop_type = farmers
+				size = 190
+			}
 		}
 	}
 	# 97864 in 1830, 127586 in 1840

@@ -592,7 +592,7 @@ STATES = {
 			}
 			state_type = unincorporated
 		}
-
+		add_claim = c:SEQ
 		add_homeland = cu:cherokee
 		add_homeland = cu:siouan
 	}
@@ -624,7 +624,7 @@ STATES = {
 		}
 
 		add_homeland = cu:dakota
-		add_claim = c:UOM
+		add_claim = c:USA
 	}
 	s:STATE_MINNESOTA = {
 		create_state = {
@@ -643,7 +643,7 @@ STATES = {
 
 		add_homeland = cu:dakota
 		add_homeland = cu:algonquian
-		add_claim = c:UOM
+		add_claim = c:USA
 	}
 	s:STATE_WISCONSIN = {
 		create_state = {
@@ -653,7 +653,7 @@ STATES = {
 
 		add_homeland = cu:dakota
 		add_homeland = cu:algonquian
-		add_claim = c:UOM
+		add_claim = c:USA
 	}
 	s:STATE_INDIANA = {
 		create_state = {
@@ -672,6 +672,7 @@ STATES = {
 		add_homeland = cu:algonquian
 		#add_homeland = cu:yankee
 		add_claim = c:UOM
+		add_claim = c:USA
 	}
 	s:STATE_OHIO = {
 		create_state = {
