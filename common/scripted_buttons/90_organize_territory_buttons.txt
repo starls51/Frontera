@@ -1,64 +1,4 @@
-﻿je_reorganize_colony_button = {
-	name = "je_reorganize_territory_button"
-	desc = "je_reorganize_territory_button_desc"
-
-	visible = {
-		any_direct_subject = {
-			NOT = {has_government_type = gov_frontier_territory_frontera}
-			any_neighbouring_state = {
-				is_homeland_of_country_cultures = root
-			}
-		}
-	}
-
-	cooldown = { days = 35 }
-
-	possible = {
-		is_diplomatic_play_committed_participant = no
-		is_at_war = no
-		any_direct_subject = {
-			# If I am only allowing colonies to become subjects
-			#ROOT= {
-			#	has_diplomatic_pact = {
-			#		who = THIS
-			#		type = colony
-			#		is_initiator = yes
-			#	}
-			#}
-			NOT = {has_government_type = gov_frontier_territory_frontera}
-			custom_tooltip = {
-				text = je_tooltip_homeland_adjacency_frontera
-					any_neighbouring_state = {
-					is_homeland_of_country_cultures = root
-				}
-			}
-		}
-	}
-
-	ai_chance = {
-		value = 100
-	}
-
-	effect = {
-		random_direct_subject  = {
-			limit = {
-				NOT = {has_government_type = gov_frontier_territory_frontera}
-				any_neighbouring_state = {
-					is_homeland_of_country_cultures = root
-				}
-			}
-			create_diplomatic_pact = {
-				country = ROOT
-				type = colony
-			}
-			custom_tooltip = {
-				text = ""
-				effect_starting_politics_territory_free_frontera = yes
-			}
-		}
-	}
-}
-je_organize_territory_button = {
+﻿je_organize_territory_button = {
 	name = "je_organize_territory_button"
 	desc = "je_organize_territory_button_desc"
 
@@ -68,6 +8,7 @@ je_organize_territory_button = {
 	cooldown = { days = 35 }
 
 	possible = {
+		NOT = {has_law = law_type:law_frontier_territorial_administration}
 		any_scope_state = {
 			is_incorporated = no
 			is_under_colonization = no
@@ -173,7 +114,7 @@ je_organize_territory_button = {
 			}
 			# Beginning of geographic region checks for historically viable OTs
 			# the order matters because some regions overlap, and OTs in regions higher up will be generated with higher priority
-			scope:newly_formed_colonial_nation_anchor_state = {
+			scope:newly_formed_colonial_nation_anchor_state ?= {
 				if = {
 					limit = {
 						state_region = {

@@ -1,0 +1,102 @@
+﻿da_organize_territory_from_subject = {
+	groups= { overlord }
+
+	requires_approval = no
+	should_notify_third_parties = yes
+	show_effect_in_tooltip = yes
+
+	texture = "gfx/interface/icons/diplomatic_action_icons/doctrine_of_lapse.dds"
+	#confirmation_sound = "event:/SFX/UI/MapInteraction/SubjectInteractions/diplomatic_action_subjects_04_appoint_governor_benign"
+
+	potential = {
+		scope:target_country = {
+			NOT = { is_diplomatic_play_enemy_of = root }
+		}
+	}
+
+	possible = {
+		is_revolutionary = no
+		has_law = law_type:law_frontier_colonization
+		scope:target_country = {
+			NOT = {has_government_type = gov_frontier_territory_frontera}
+			is_revolutionary = no
+			any_scope_state = {
+				is_incorporated = yes
+				OR = {
+					custom_tooltip = {
+						text = je_tooltip_homeland_required_frontera
+						is_homeland_of_country_cultures = root
+					}
+					custom_tooltip = {
+						text = je_tooltip_homeland_adjacency_frontera
+						any_neighbouring_state = {
+							is_homeland_of_country_cultures = root
+						}
+					}
+				}
+			}
+		}
+	}
+
+	accept_effect = {
+		custom_tooltip = {
+			text = da_organize_territory_from_subject_effect
+			scope:target_country = {
+				#change starting effects based on US slavery policy choices
+				effect_starting_politics_territory_free_frontera = yes
+				#each homeland culture gets radical
+				every_scope_state = {
+					every_scope_culture = {
+						limit = {
+							has_homeland = prev
+						}
+						scope:target_country = {
+							add_radicals = {
+								value = medium_radicals
+								culture = prev
+							}
+						}
+					}
+				}
+				every_scope_state = {
+					limit = {
+						is_incorporated = yes
+					}
+					add_modifier = {
+						name = modifier_frontierlands_frontera
+					}
+				}
+				create_diplomatic_pact = {
+					country = root
+					type = colony
+				}
+				if = {
+					limit = {
+						NOT = {has_modifier = colonial_administration}
+					}
+					add_modifier = {
+						name = colonial_administration
+					}
+				}
+			}
+		}
+	}
+
+	ai = {
+		evaluation_chance = {
+			value = 0.5
+		}
+
+		propose_score = {
+			value = 10
+		}
+
+		will_propose = {
+			OR = {
+				has_strategy = ai_strategy_colonial_expansion
+				has_strategy = ai_strategy_territorial_expansion
+				has_strategy = ai_strategy_nationalist_agenda
+			}
+		}
+	}
+}

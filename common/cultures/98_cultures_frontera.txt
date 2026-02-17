@@ -225,7 +225,7 @@ californio_mestizo = {
 		meat
 	}
 
-	traditions = { tradition_vaqueros }
+	traditions = {}
 	male_common_first_names = {
 		Adrian_2
 		Agustin

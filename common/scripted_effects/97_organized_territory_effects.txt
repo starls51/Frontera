@@ -25,8 +25,6 @@ state_OT_modifier_check_frontera = {
 	}
 }
 
-#TODO replace the add_homeland effect with a proper narrative event
-# make any ready states within organized territories into a homeland
 country_OT_homelands_check_frontera = {
 	if = {
 		limit = {
@@ -52,8 +50,6 @@ country_OT_homelands_check_frontera = {
 	}
 }
 
-#TODO replace the change state owner effect with a proper narrative event
-# make homelands in organized territories be annexed by the overlord
 country_OT_transfer_homeland_to_overlord = {
 	if = {
 		limit = {
@@ -69,7 +65,7 @@ country_OT_transfer_homeland_to_overlord = {
 			}
 		}
 		scope:giveaway_state = {
-			set_state_owner = root.overlord
+			trigger_event = frontera_ot_homeland.1
 		}
 	}
 }

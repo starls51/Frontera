@@ -13,9 +13,44 @@ INJECT:DEFAULT = {
 		priority = 1
 
 		trigger = {
-			exists = scope:actor
 			scope:actor ?= {
 				has_government_type = gov_frontier_territory_frontera
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = eng_organized_territory
+		adjective = eng_organized_territory_adj
+
+		priority = 2
+
+		trigger = {
+			scope:actor ?= {
+				has_government_type = gov_frontier_territory_frontera
+				any_primary_culture = {
+					shares_language_trait_with_culture = cu:british
+				}
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = de_organized_territory
+		adjective = de_organized_territory_adj
+
+		priority = 3
+
+		trigger = {
+			scope:actor ?= {
+				has_government_type = gov_frontier_territory_frontera
+				any_primary_culture = {
+				shares_language_trait_with_culture = cu:north_german
+				}
+				overlord ?= {
+					OR = {
+						has_law = law_type:law_monarchy
+						has_law = law_type:law_corporate_state
+					}
+				}
 			}
 		}
 	}

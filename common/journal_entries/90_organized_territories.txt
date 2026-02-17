@@ -29,7 +29,7 @@
 	scripted_button = je_organize_territory_button
 
 	# Re-Organize A Colonial Administration into an Organized Territory
-	scripted_button = je_reorganize_colony_button
+	# scripted_button = je_reorganize_colony_button
 	weight = 100
 
 	should_be_pinned_by_default = yes

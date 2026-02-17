@@ -1,6 +1,6 @@
 ﻿namespace = frontera_ot_homeland
 frontera_ot_homeland.1 = {
-	type = country_event
+	type = state_event
 	placement = ROOT
 
 	title = frontera_ot_homeland.1.t
@@ -17,17 +17,99 @@ frontera_ot_homeland.1 = {
 
 	duration = 3
 
-	cooldown = { days = very_long_modifier_time }
+	cooldown = { days = -1 }
 
 	trigger = {
 		#triggered by event
 	}
 
 	immediate = {
-
+		save_scope_as = ascendent_state
+		owner = {
+			save_scope_as = subject_scope
+			owner.overlord = {
+				save_scope_as = overlord_scope
+			}
+		}
 	}
 
 	option = {
 		name = frontera_ot_homeland.1.a
+		trigger = {
+			scope:subject_scope = {
+				OR = {
+					is_ai = yes
+					any_scope_state = {
+						count >= 2
+					}
+				}
+			}
+		}
+		default_option = yes
+		custom_tooltip = {
+			text = frontera_ot_homeland_gained_homeland
+			scope:overlord_scope = {
+				trigger_event = frontera_ot_homeland.2
+			}
+		}
+	}
+	option = {
+		name = frontera_ot_homeland.1.b
+		ai_chance = {
+			base = 0 # AI will never do this
+		}
+		scope:subject_scope = {
+			play_as = scope:overlord_scope
+		}
+		scope:ascendent_state = {
+			set_state_owner = scope:overlord_scope
+		}
+		custom_tooltip = {
+			text = frontera_ot_homeland_gained_homeland
+			scope:ascendent_state = {
+				set_state_type = unincorporated
+			}
+		}
+	}
+}
+#same event for the overlord
+frontera_ot_homeland.2 = {
+	type = state_event
+	placement = scope:ascendent_state
+
+	title = frontera_ot_homeland.1.t
+	desc = frontera_ot_homeland.1.d
+	flavor = frontera_ot_homeland.1.f
+
+	event_image = {
+		video = "europenorthamerica_native_american"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+	duration = 3
+
+	cooldown = { days = -1 }
+
+	trigger = {
+		#triggered by event
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = frontera_ot_homeland.1.a
+		scope:ascendent_state = {
+			set_state_owner = scope:overlord_scope
+			}
+		custom_tooltip = {
+			text = frontera_ot_homeland_gained_homeland
+			scope:ascendent_state = {
+				set_state_type = unincorporated
+			}
+		}
 	}
 }
