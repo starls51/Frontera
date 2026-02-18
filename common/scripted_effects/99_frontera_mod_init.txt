@@ -1,0 +1,698 @@
+﻿effect_frontera_mod_init = {
+
+	### COUNTRIES ###
+
+	# ALTA CALIFORNIA
+	create_country = {
+		tag = CAL
+		origin = c:MEX
+		province = p:x2F8F36
+	}
+	c:MEX = {
+		create_diplomatic_pact = {
+			country = c:CAL
+			type = colony
+		}
+	}
+	c:CAL = {
+		effect_starting_technology_tier_3_tech = yes
+		effect_starting_politics_liberal = yes
+		add_technology_researched = empiricism
+		
+		activate_law = law_type:law_colonial_administration
+		activate_law = law_type:law_oligarchy
+		activate_law = law_type:law_cultural_exclusion
+		activate_law = law_type:law_mercantilism
+		activate_law = law_type:law_tenant_farmers
+		activate_law = law_type:law_agrarianism
+		activate_law = law_type:law_censorship
+		activate_law = law_type:law_frontier_colonization
+		activate_law = law_type:law_land_based_taxation
+		activate_law = law_type:law_no_schools
+		activate_law = law_type:law_no_police
+		
+		ig:ig_rural_folk ?= {
+			add_ruling_interest_group = yes
+		}
+
+		ig:ig_landowners ?= {
+			add_ruling_interest_group = yes
+		}
+		add_modifier = {
+			name = age_of_caudillos_modifier
+		}
+		
+		initialise_caciquismo_effect = yes
+	}
+	# NEW MEXICO
+	create_country = {
+		tag = NMX
+		origin = c:MEX
+		province = p:xDF1965
+	}
+	c:MEX = {
+		create_diplomatic_pact = {
+			country = c:NMX
+			type = colony
+		}
+	}
+	c:NMX ?= {
+		effect_starting_technology_tier_3_tech = yes
+		effect_starting_politics_conservative = yes
+		add_technology_researched = empiricism
+		
+		activate_law = law_type:law_colonial_administration
+		activate_law = law_type:law_oligarchy
+		activate_law = law_type:law_cultural_exclusion
+		activate_law = law_type:law_mercantilism
+		activate_law = law_type:law_traditionalism
+		activate_law = law_type:law_censorship
+		activate_law = law_type:law_frontier_colonization
+		activate_law = law_type:law_land_based_taxation
+		activate_law = law_type:law_no_schools
+		activate_law = law_type:law_no_police
+
+		ig:ig_landowners ?= {
+			add_ruling_interest_group = yes
+		}
+
+		add_modifier = {
+			name = age_of_caudillos_modifier
+		}
+		
+		initialise_caciquismo_effect = yes
+	}
+	# FLORIDA TERRITORY
+	create_country = {
+		tag = FLR
+		origin = c:USA
+		province = p:x4407A0
+	}
+	c:USA = {
+		create_diplomatic_pact = {
+			country = c:FLR
+			type = colony
+		}
+	}
+	c:FLR ?= {
+		set_tax_level = low
+		effect_starting_technology_tier_1_tech = yes
+		effect_starting_politics_territory_slavery_frontera = yes
+		ig:ig_armed_forces ?= {
+			add_ruling_interest_group = yes
+		}
+		ig:ig_rural_folk ?= {
+			add_ruling_interest_group = yes
+		}
+	}
+	# MICHIGAN TERRITORY
+	create_country = {
+		tag = UOM
+		origin = c:USA
+		province = p:x0B0C98
+	}
+	c:USA = {
+		create_diplomatic_pact = {
+			country = c:UOM
+			type = colony
+		}
+	}
+	c:UOM ?= {
+		set_tax_level = low
+		effect_starting_technology_tier_1_tech = yes
+		effect_starting_politics_territory_free_frontera = yes
+		ig:ig_rural_folk ?= {
+			add_ruling_interest_group = yes
+		}
+	}
+
+	###STATE REGIONS###
+	s:STATE_CALIFORNIA = {
+		#homelands
+		add_homeland = cu:californio
+		add_homeland = cu:californio_mestizo
+		set_owner_of_provinces = {
+			country = c:CAL
+			provinces = {
+				xAB1AA2 x108080 xE4FC42 x5EF8F5 x1116AA xD6A835 x3F27C8 xDBCBC6 x4160C1 x2D1B0B
+				x2A91D8 xC4A8E9 x108000 xC1F518 x42B7D9 xC78CD3 xE97768 xE6440D x33EE3B x4AB8EE
+				x0425B3 x1C6782 xDAABF7 x370658 xFE6E88 x908000 xAF199E xC9F623 xB8F452 xA45ACA
+				x56F5CB x5A4650 xD401D0 x307D50 xC54807 xB72458 x577D08 x9C28A4 xA65FC5 x8A35D2
+				x25A37F xA24DA3 x607BA8 xBFE3A4 x1169B8 xF7DB50 x908080 x6B8E78 x7B005B xEBF5A0
+				x2F3B45 x76A57D x8CFB9B x8F1372 xA06435 x2099C1 x0898A3 x6CCFDB xCC07D4 xFD4509
+				x7A5DA6 xF49BCD x7E8E1A x61A555 x8D4E6D xFDC502 x500CAD xC5390E x032BE2 x508000
+				x2B1204 x914E48 x2CE673 x995E0F x5EAA35 xCBA1C9 x209FC3 x298876 x783D1D x2A2B04
+				xDE208B xF6B075 xF16E88 x93A4C5 x1FE069 x161979 xCA5813 x864B45 xB881EE xCD0B47
+				x0AE895 x441749 x519529 x6E6D40 xBD0F03 x2C84C4 x6F44CB x0AF8FD x7BCC6D xC2E1AA
+				x4C2D30 xD00000 xD507FA x5625EF x8CC57E x25842F x3117AA xB21AB9 x0E8D26
+			}
+		}
+		region_state:CAL = {
+			create_building={
+				building="building_livestock_ranch"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:CAL"
+						levels=1
+						region="STATE_CALIFORNIA"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_open_air_stockyards" "pm_simple_ranch" "pm_standard_fences" "pm_unrefrigerated"  }
+			}
+			create_building={
+				building="building_port"
+				add_ownership={
+					country={
+						country="c:MEX"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_basic_port" }
+			}
+			every_scope_pop = {
+				limit = {
+					culture = cu:mexican
+				}
+				change_pop_culture = {
+					target = cu:californio
+					value = 0.9
+				}
+			}
+			every_scope_pop = {
+				limit = {
+					culture = cu:californio
+				}
+				change_pop_culture = {
+					target = cu:californio_mestizo
+					value = 0.7
+				}
+			}
+			create_pop = {
+				culture = yankee
+				religion = catholic
+				pop_type = clerks
+				size = 50
+			}
+			create_pop = {
+				culture = yankee
+				religion = catholic
+				pop_type = laborers
+				size = 150
+			}
+			create_pop = {
+				culture = yankee
+				religion = catholic
+				pop_type = farmers
+				size = 150
+			}
+			create_pop = {
+				culture = russian
+				pop_type = farmers
+				size = 190
+			}
+		}
+	}
+	s:STATE_FLORIDA = {
+		set_owner_of_provinces = {
+			country = c:FLR
+			provinces = {
+				x5B1199 xED77FB xE58A3D x5CD014 x7BCB55 xC60D66 x4070C0 x3556E5 xAAF2AF xF0B481
+				x9088D5 xFE627B x65ECBE xC000F0 x2E5E47 x3126CA x88BDEA x31C481 xB06E20 xDAE3CC
+				x0C1D7F x1714EE xA03000 xD0761D x23B4D0 x8C16F9 x6E31DE x976584 xE3533E
+			}
+		}
+		add_claim = c:FLR
+		remove_claim = c:USA
+		remove_homeland = cu:dixie
+	}
+	s:STATE_IOWA = {
+		set_owner_of_provinces = {
+			country = c:UOM
+			provinces = {
+				x71153F x9080C0 x9DE484 x002D4B x9A3850 x91CECE xC6264B xAB3179 x5BA80C x606DBE
+				x5832CE xE8429C x1080C0 x6EE453 x4F3BC6 x764D7B xD348EA xE31CFC x356047 xE08573
+				x9F7290 xC24F5B x9000C0 xD0ED5A x996F37 x97AC4F x83139C x63CD4F x25962B xCA1F38
+				xAF2D84 xCD67AD xCF483D x4C181C x03E9D3 xDD39CE x4A5F7A xF90AE8 x1E7531 xAC772A
+				x2BB21D xE46361 x8DB752 x3E306D xD4B435 xB4D320 x72D1EA
+			}
+		}
+		remove_homeland = cu:yankee
+		region_state:UOM = { set_state_type = incorporated }
+	}
+	s:STATE_NEVADA = {
+		set_owner_of_provinces = {
+			country = c:BNN
+			provinces = {
+				xF3223E
+			}
+		}
+		set_owner_of_provinces = {
+			country = c:CAL
+			provinces = {
+				xB312C1 xDBA111 x5CC000 x7C1958 x6CF688 x455838 x6D645C x8B11E1 x5BE036 x227FEB
+				x4934EE xEAB9B1 x80BCA8 x48E8C5 xEF5007 xF13FC2 xA7D253 x7C7251 x91EF0D xCA0467
+				xA72957 x7D25E6 x187093 xF0C923 xE076DB x3F791B xEDCBF4 x60609D xA8DB62 x8A5945
+				x012DC1 xE15291 xB2D968 xEC5DC5 xCCDB4C x7F60DB xB2CC01 x163861 x4C4586 x1BAC1A
+				xB6ED0A xAEE311 xE3A018 x2D6DBC x1B4789 x10C000 x7DE699 x832FF7 x5AD9C0 xC351DC
+				x25439E x2A9CAC x780763 x9FF17F x0DF43E xAEE5AB x4736B3 x47F30A x00D336 x8F30EA
+				x68B95E x1741A2 x005C93 xD66C7A xBB2109 xCC1818 x374A87 xB8C75E xA4D6D1 x80FCE4
+				xAF4B58 x8B17C5 xD3B4EB
+			}
+		}
+		set_owner_of_provinces = {
+			country = c:UTE
+			provinces = {
+				xBB2109 xD66C7A xD3B4EB x227FEB x1741A2 x8B17C5
+			}
+		}
+		add_claim = c:CAL
+	}
+	s:STATE_ARIZONA = {
+		set_owner_of_provinces = {
+			country = c:APC
+			provinces = {
+				xAB6EDB x900E30 x8F17E5 x911882 xC6C267 x6685A7 xF38C8A x428B93 x3B1B46 x1B31B7
+				x8C162F
+			}
+		}
+		set_owner_of_provinces = {
+			country = c:CAL
+			provinces = {
+				x2FD5DD xDCBAE1 xD29C90 x4DA90F xA615B6 xC98675 x078B25 x2E93C4 xE857ED
+				x093F42 x1A5AE7 x5B065E x1546DA xF31ACC
+			}
+		}
+		set_owner_of_provinces = {
+			country = c:MEX
+			provinces = {
+				x104080 x77EF15 xA8531A
+			}
+		}
+		set_owner_of_provinces = {
+			country = c:NVJ
+			provinces = {
+				xC79CD0 x40437B x8C8183
+			}
+		}
+		add_claim = c:CAL
+		remove_claim = c:MEX
+		every_scope_state = {
+			limit = {
+				NOT = { owner = c:MEX }
+				has_cultural_community = cu:oodham
+			}
+			every_scope_pop = {
+				limit = {
+					culture = cu:oodham
+				}
+				move_pop = s:STATE_ARIZONA.region_state:MEX
+			}
+		}
+		every_scope_state = {
+			limit = {
+				NOT = { owner = c:MEX }
+				NOT = { owner = c:CAL }
+				has_cultural_community = cu:mexican
+			}
+			every_scope_pop = {
+				limit = {
+					culture = cu:mexican
+				}
+				move_pop = s:STATE_ARIZONA.region_state:MEX
+			}
+		}
+	}
+	s:STATE_UTAH = {
+		set_owner_of_provinces = {
+			country = c:BNN
+			provinces = {
+				x7E6D79
+			}
+		}
+		set_owner_of_provinces = {
+			country = c:CAL
+			provinces = {
+				x7F33D3 xD4D9A8 x83E7A7 xF480A1 x3F5E68 x5708EE xD9ABAF xA3BC1C xC3F179 xCBA4C1
+				x37D3FD xA54D29
+			}
+		}
+		set_owner_of_provinces = {
+			country = c:UTE
+			provinces = {
+				x8F9823 xA9B917 x3FB458 xF3B4BA x9ADC65 x52FA0B x326026 x23017D x567651 xB3AE0B
+				xEC4FF4 x5708EE xD9ABAF xC3F179 x37D3FD xA54D29 xCBA4C1
+			}
+		}
+		add_claim = c:CAL
+		remove_claim = c:MEX
+	}
+	s:STATE_MICHIGAN = {
+		set_owner_of_provinces = {
+			country = c:UOM
+			provinces = {
+				x70C000 x055AA0 x28FA31 x95E27E x6486DD xF01A7B x50412A x286086 x319D44 x43FD92
+				x7F1133 x2455A8 x83AA0C x94D7BA xE51181 xF62CC4 x40E080 x42E736 x69C402 x87E8D4
+				xF0C000 x8E8D40 xC1AE21 x569D0A x1BA1F4 x5F7EE0 xB41FE2 x4FD630 x649AB4 x53CE7E
+				xECE19B xE76A88 xE24063 xE65320 x11C5A2 xAE4DDC x700040 x8BD355 x9293C6 xC44B48
+				xB34192 x4017DC xD49785 x35EAD6 x96E11B x781E75 x5E05A9 xFDA0D8 x4D1908
+			}
+		}
+		remove_homeland = cu:yankee
+	}
+	s:STATE_MINNESOTA = {
+		set_owner_of_provinces = {
+			country = c:UOM
+			provinces = {
+				x5A4A79 x450FD3 x7B3020 xC2D863 x1B5ADB x108E46 x21D67D x2F06FA x54C77A x096804
+				xDF2B35 xE649BF x70957E xD0C080 x4FFFFC x84B824 x5CFCFE x658093 x5D35AB x929D22
+				x7388CD xBE054B x282692 x59C9CA x45FBF5 x865EB8 x289431 x28022C xE7EF56 x9D934A
+				xA8B1F6 x1B6243 x0FAD27 x36ECCB xDE887C x1B5B1A xCDECF0 x373F2F xF09A2C x6AD1DD
+			}
+		}
+		add_claim = c:UOM
+		remove_homeland = cu:yankee
+		region_state:UOM = { set_state_type = incorporated }
+	}
+	s:STATE_NORTH_DAKOTA = {
+		set_owner_of_provinces = {
+			country = c:UOM
+			provinces = {
+				x8F0750 xF3EC53 x76F55B x17983F x8C905E xC1C5C5 xCDE122 x20A1FA xAB458E xA4C2F6
+				xFAD908 x2D7D62 xAA3B6E x298347 xE24F6E x30BADD x5BED05 xAF6E5B xA5A929
+			}
+		}
+		add_claim = c:UOM
+	}
+	s:STATE_SOUTH_DAKOTA = {
+		set_owner_of_provinces = {
+			country = c:UOM
+			provinces = {
+				x844BD6 x0D6439 x49577A
+			}
+		}
+		add_claim = c:UOM
+	}
+	s:STATE_WISCONSIN = {
+		set_owner_of_provinces = {
+			country = c:UOM
+			provinces = {
+				xD0C040 xAFF4FA xAA87FB xEF4297 x0F38D4 x397AA3 xEB502A x794B5B x887276 x9F4495
+				xE3903C x3C47F9 x24883A x16E7BF xD04040 x89F507 x941A5A xE6D0B8 x5FE739 xA6AF2F
+				x3E0D88 x5816B1 xD5A704 x520EFD x618762 xE49CB0 x68A47D x049BAB xBFF7BC xCB7277
+				x80A0C0 xA5C179 xF54CF0 x9C97B2 x49B5A8 x900040 xE2A342 x4A71CA xF6BC89 x092B18
+				x657999 x779B77 x52A5FD x39FC40 xF57B6E x4B51EB x3E86B7
+			}
+		}
+		add_claim = c:UOM
+		remove_homeland = cu:yankee
+		region_state:UOM = { set_state_type = incorporated }
+
+	}
+	s:STATE_WYOMING = {
+		set_owner_of_provinces = {
+			country = c:BNN
+			provinces = {
+				x2CC9D7
+			}
+		}
+		set_owner_of_provinces = {
+			country = c:CAL
+			provinces = {
+				x89656E x0EB61F x319B3E x465DC8 x3DC80A x93B583 x2403EF x57FDB7
+			}
+		}
+		set_owner_of_provinces = {
+			country = c:USA
+			provinces = {
+				xF2DFDC x1DF2FD x27F79C x952F3F x58C850 x36DEC9
+			}
+		}
+		set_owner_of_provinces = {
+			country = c:UTE
+			provinces = {
+				x0DE2A6 x1AC89E x84DF43 x867348
+			}
+		}
+		remove_claim = c:USA
+	}
+	s:STATE_COLORADO = {
+		set_owner_of_provinces = {
+			country = c:APC
+			provinces = {
+				xB1E3F4 xD0C000 xD5F00A xF2C402 x4E209F x34EDA2 x52EB7C xF642DA x07E17F x31580F
+			}
+		}
+		set_owner_of_provinces = {
+			country = c:ARP
+			provinces = {
+				x61CB37 xC97B5E x88B597
+			}
+		}
+		set_owner_of_provinces = {
+			country = c:CAL
+			provinces = {
+				xAB4C21 xEBAEAA x63F85D x86F203 xDE4C96 x5AE64F
+			}
+		}
+		set_owner_of_provinces = {
+			country = c:COM
+			provinces = {
+				x433C79 x904040 x904040
+			}
+		}
+		set_owner_of_provinces = {
+			country = c:LKT
+			provinces = {
+				x742D27 xE85180 x704257
+			}
+		}
+		set_owner_of_provinces = {
+			country = c:NMX
+			provinces = {
+				x150652 x9F53C7 x904040 xEBE9CE x687718 x66CBE4 xA891E3 xCEB851 x83741F xBF0C47
+				x719099 x669059 x22BFC4 xC8FA49 x15CB9B x72823F
+			}
+		}
+		set_owner_of_provinces = {
+			country = c:NVJ
+			provinces = {
+				x4F6919
+			}
+		}
+		set_owner_of_provinces = {
+			country = c:USA
+			provinces = {
+				x129391 x26A01D x348ACD x32230C x812CF7 xA90729 x017E79 xA69111 x307992 xEB212F
+			}
+		}
+		every_scope_state = {
+			limit = {
+				NOT = { owner = c:USA }
+				has_cultural_community = cu:yankee
+			}
+			every_scope_pop = {
+				limit = {
+					culture = cu:yankee
+				}
+				move_pop = s:STATE_COLORADO.region_state:USA
+			}
+		}
+		every_scope_state = {
+			limit = {
+				NOT = { owner = c:CAL }
+				NOT = { owner = c:NMX }
+				has_cultural_community = cu:mexican
+			}
+			every_scope_pop = {
+				limit = {
+					culture = cu:mexican
+				}
+				move_pop = s:STATE_COLORADO.region_state:NMX
+			}
+		}
+	}
+	s:STATE_NEW_MEXICO = {
+		set_owner_of_provinces = {
+			country = c:APC
+			provinces = {
+				x90EA7D x851687 xA156C7 x3CC82C xA84AFD x0DAC3E x00E2A7 x79844B x23E585 x67B298 
+			}
+		}
+		set_owner_of_provinces = {
+			country = c:COM
+			provinces = {
+				x810C1A x256AEE x74C317 x92D597 x2EE19C xB7D6F2 xE27DFB x418B71 x9660D3 xF9F60A
+				xC03297
+			}
+		}
+		set_owner_of_provinces = {
+			country = c:NMX
+			provinces = {
+				x3385DD x1B611D x0B1E97 x940839 x5DA018 x17660E x7C809B x38BB61 xAE2568 xEED52D
+				xB0BB90 x99C48C xB636E0 x40B080 xD3611A x0E8A94 x8C6FA5 x3CD2D7 x59E5C4 x7D2451
+				xA858F4 xCAEC7A xAE76ED x8A526A xFD2B9D xD78928 x4BBEE7 xF59F44 x7EA360 xC50565
+				xDBA81D x5967A1 x5E769A x50DED9 x504080 xC32AF4 xE9C718 x0957D1
+			}
+		}
+		remove_homeland = cu:mexican
+		add_claim = c:NMX
+		remove_claim = c:MEX
+		every_scope_state = {
+			limit = {
+				NOT = { owner = c:MEX }
+				NOT = { owner = c:NMX }
+				has_cultural_community = cu:mexican
+			}
+			every_scope_pop = {
+				limit = {
+					culture = cu:mexican
+				}
+				move_pop = s:STATE_NEW_MEXICO.region_state:NMX
+			}
+		}
+	}
+	s:STATE_KANSAS = {
+		set_owner_of_provinces = {
+			country = c:COM
+			provinces = {
+				x432B51 x6377BB x5A143B xA00FE0 x10C0C0 xE80F7D xA00FE0 x0364B8
+			}
+		}
+		set_owner_of_provinces = {
+			country = c:NMX
+			provinces = {
+				xD3D517 xEB0DEB x405BB7
+			}
+		}
+		set_owner_of_provinces = {
+			country = c:USA
+			provinces = {
+				x94CB2D x49EB3C x17C2F0 xAF6622 x231FA5 
+			}
+		}
+	}
+	s:STATE_OKLAHOMA = {
+		set_owner_of_provinces = {
+			country = c:COM
+			provinces = {
+				x3A130C xF3AC52 xE43B98 x3449B1 xCF0284 x51621D xA1D6F3 x13C47E x4034FA x70D146
+				x7A74B8 x155091 x90C0C0 x37CCC2 x3DC254 x5F2DBA xCE7722 xE64C00 xC62026 x7507ED 
+				x384259 xEB66DA xE0ACB6 xD545C6 xF98E99 xD72549
+			}
+		}
+		set_owner_of_provinces = {
+			country = c:NMX
+			provinces = {
+				xDAABDA
+			}
+		}
+		set_owner_of_provinces = {
+			country = c:USA
+			provinces = {
+				x5C449B
+			}
+		}
+	}
+	### CULTURAL FERVOR ###
+	# California was not well controlled by Mexico, had an independent identity
+	cu:californio = {
+		set_fervor = 25
+	}
+	cu:californio_mestizo = {
+		set_fervor = 25
+	}
+	### CHARACTERS ###
+	c:CAL ?= {
+		create_character = {
+			template = cal_nicolas_gutierrez_template
+		}
+
+		create_character = {
+			template = cal_juan_batista_alverado_template
+		}
+
+		create_character = {
+			template = cal_isaac_graham_template
+		}
+
+		create_character = {
+			template = cal_pio_pico_template
+		}
+
+		create_character = {
+			template = cal_william_hartnell_template
+		}
+	}
+	c:NMX ?= {
+		create_character = {
+			template = nmx_albino_perez_template
+		}
+		create_character = {
+			template = nmx_manuel_armijo_template
+		}
+	}
+	### WARS ###
+	# changing war goals in Texan Independence war, less aggressive texas
+	random_diplomatic_play = {
+		limit = {
+			initiator_is = c:TEX
+		}
+		end_play = yes
+	}
+	c:MEX ?= {
+		create_diplomatic_play = {
+			name = texan_war_of_independence
+
+			target_state = s:STATE_TEXAS.region_state:TEX
+			escalation = 98
+			war = no
+
+			type = dp_return_state
+			add_war_goal = {
+				holder = c:TEX
+				type = revoke_claim
+				target_country = c:MEX
+				target_state = s:STATE_TEXAS.region_state:TEX
+			}
+		}
+		random_scope_general = {
+			limit = {
+				has_template = MEX_antonio_lopez_de_santa_anna
+			}
+			commander_military_formation ?= {
+				fully_mobilize_army = yes
+				add_organization = -90
+				every_combat_unit = {
+					add_morale = -0.9
+				}
+			}
+		}
+		random_scope_general = {
+			limit = {
+				NOT = {has_template = MEX_antonio_lopez_de_santa_anna}
+			}
+			commander_military_formation ?= {
+				add_organization = -85
+				every_combat_unit = {
+					add_morale = -0.8
+				}
+			}
+		}
+	}
+	c:TEX ?= {
+		add_technology_researched = general_staff
+		add_technology_researched = napoleonic_warfare
+		add_technology_researched = field_works
+		random_scope_general = {
+			limit = {
+				has_template = TEX_William_Travis
+			}
+			commander_military_formation ?= {
+				fully_mobilize_army = yes
+			}
+		}
+	}
+}
