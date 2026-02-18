@@ -44,25 +44,7 @@ on_state_created = {
 
 on_game_started = {
 	on_actions = {
-		init_frontera_mod
 		init_check_for_OT_state_modifier_frontera
-	}
-}
-
-#initialize all game history that I am overwriting. I do this so as not to overwrite existing history files
-init_frontera_mod = {
-	effect = {
-		effect_frontera_mod_init = yes
-		clear_global_variable_list = great_power_country_list
-		every_country = {
-			limit = {
-				country_rank >= rank_value:great_power
-			}
-			add_to_global_variable_list = {
-				name = great_power_country_list
-				target = THIS
-			}
-		}
 	}
 }
 

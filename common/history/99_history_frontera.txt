@@ -1,18 +1,41 @@
-﻿effect_frontera_mod_init = {
-
-	### COUNTRIES ###
-
+﻿# 8 Setup California Ranches - doing them here so they begin the game with full employment
+BUILDINGS = {
+	s:STATE_CALIFORNIA={
+		region_state:MEX={
+			create_building={
+				building="building_livestock_ranch"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:MEX"
+						levels=1
+						region="STATE_CALIFORNIA"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_open_air_stockyards" "pm_simple_ranch" "pm_standard_fences" "pm_unrefrigerated"  }
+			}
+			create_building={
+				building="building_port"
+				add_ownership={
+					country={
+						country="c:MEX"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_basic_port" }
+			}
+		}
+	}
+}
+# Initialize mod history - Here is to safely overwrite anything in vanilla history
+GLOBAL = {
 	# ALTA CALIFORNIA
 	create_country = {
 		tag = CAL
 		origin = c:MEX
 		province = p:x2F8F36
-	}
-	c:MEX = {
-		create_diplomatic_pact = {
-			country = c:CAL
-			type = colony
-		}
 	}
 	c:CAL = {
 		effect_starting_technology_tier_3_tech = yes
@@ -50,12 +73,6 @@
 		origin = c:MEX
 		province = p:xDF1965
 	}
-	c:MEX = {
-		create_diplomatic_pact = {
-			country = c:NMX
-			type = colony
-		}
-	}
 	c:NMX ?= {
 		effect_starting_technology_tier_3_tech = yes
 		effect_starting_politics_conservative = yes
@@ -88,12 +105,6 @@
 		origin = c:USA
 		province = p:x4407A0
 	}
-	c:USA = {
-		create_diplomatic_pact = {
-			country = c:FLR
-			type = colony
-		}
-	}
 	c:FLR ?= {
 		set_tax_level = low
 		effect_starting_technology_tier_1_tech = yes
@@ -111,12 +122,6 @@
 		origin = c:USA
 		province = p:x0B0C98
 	}
-	c:USA = {
-		create_diplomatic_pact = {
-			country = c:UOM
-			type = colony
-		}
-	}
 	c:UOM ?= {
 		set_tax_level = low
 		effect_starting_technology_tier_1_tech = yes
@@ -125,7 +130,32 @@
 			add_ruling_interest_group = yes
 		}
 	}
-
+	# Mexican Federalist/Decentralized States
+	c:MEX = {
+		create_diplomatic_pact = {
+			country = c:CAL
+			type = colony
+		}
+	}
+	c:MEX = {
+		create_diplomatic_pact = {
+			country = c:NMX
+			type = colony
+		}
+	}
+	# USA has organized territories
+	c:USA = {
+		create_diplomatic_pact = {
+			country = c:UOM
+			type = colony
+		}
+	}
+	c:USA = {
+		create_diplomatic_pact = {
+			country = c:FLR
+			type = colony
+		}
+	}
 	###STATE REGIONS###
 	s:STATE_CALIFORNIA = {
 		#homelands
@@ -148,30 +178,6 @@
 			}
 		}
 		region_state:CAL = {
-			create_building={
-				building="building_livestock_ranch"
-				add_ownership={
-					building={
-						type="building_manor_house"
-						country="c:CAL"
-						levels=1
-						region="STATE_CALIFORNIA"
-					}
-				}
-				reserves=1
-				activate_production_methods={ "pm_open_air_stockyards" "pm_simple_ranch" "pm_standard_fences" "pm_unrefrigerated"  }
-			}
-			create_building={
-				building="building_port"
-				add_ownership={
-					country={
-						country="c:MEX"
-						levels=1
-					}
-				}
-				reserves=1
-				activate_production_methods={ "pm_basic_port" }
-			}
 			every_scope_pop = {
 				limit = {
 					culture = cu:mexican
@@ -636,63 +642,27 @@
 	}
 	### WARS ###
 	# changing war goals in Texan Independence war, less aggressive texas
-	random_diplomatic_play = {
-		limit = {
-			initiator_is = c:TEX
-		}
-		end_play = yes
-	}
-	c:MEX ?= {
-		create_diplomatic_play = {
-			name = texan_war_of_independence
-
-			target_state = s:STATE_TEXAS.region_state:TEX
-			escalation = 98
-			war = no
-
-			type = dp_return_state
-			add_war_goal = {
-				holder = c:TEX
-				type = revoke_claim
-				target_country = c:MEX
-				target_state = s:STATE_TEXAS.region_state:TEX
-			}
-		}
-		random_scope_general = {
-			limit = {
-				has_template = MEX_antonio_lopez_de_santa_anna
-			}
-			commander_military_formation ?= {
-				fully_mobilize_army = yes
-				add_organization = -90
-				every_combat_unit = {
-					add_morale = -0.9
-				}
-			}
-		}
-		random_scope_general = {
-			limit = {
-				NOT = {has_template = MEX_antonio_lopez_de_santa_anna}
-			}
-			commander_military_formation ?= {
-				add_organization = -85
-				every_combat_unit = {
-					add_morale = -0.8
-				}
-			}
-		}
-	}
-	c:TEX ?= {
-		add_technology_researched = general_staff
-		add_technology_researched = napoleonic_warfare
-		add_technology_researched = field_works
-		random_scope_general = {
-			limit = {
-				has_template = TEX_William_Travis
-			}
-			commander_military_formation ?= {
-				fully_mobilize_army = yes
-			}
-		}
-	}
+	#random_diplomatic_play = {
+	#	limit = {
+	#		initiator_is = c:TEX
+	#	}
+	#	end_play = yes
+	#}
+	#c:MEX ?= {
+	#	create_diplomatic_play = {
+	#		name = texan_war_of_independence
+	#
+	#		target_state = s:STATE_TEXAS.region_state:TEX
+	#		escalation = 98
+	#		war = no
+	#
+	#		type = dp_return_state
+	#		add_war_goal = {
+	#			holder = c:TEX
+	#			type = revoke_claim
+	#			target_country = c:MEX
+	#			target_state = s:STATE_TEXAS.region_state:TEX
+	#		}
+	#	}
+	#}
 }
