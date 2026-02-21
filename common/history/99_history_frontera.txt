@@ -452,7 +452,14 @@ GLOBAL = {
 		remove_claim = c:USA
 		add_claim = c:UOM
 		remove_homeland = cu:yankee
-		region_state:UOM = { set_state_type = incorporated }
+		# under 1000 Americans living in minnesota
+		region_state:UOM = {
+			set_state_type = incorporated
+			create_pop = {
+				culture = yankee
+				size = 500
+			}
+		}
 	}
 	s:STATE_NORTH_DAKOTA = {
 		set_owner_of_provinces = {
@@ -674,6 +681,142 @@ GLOBAL = {
 			}
 		}
 	}
+	### STATE MODIFIERS STARTING ###
+	s:STATE_CALIFORNIA = {
+		every_scope_state = {
+			limit = {NOT = {owner = {is_country_type = decentralized}}}
+			add_modifier = {
+				name = modifier_oregon_trail_frontera
+				years = 74
+				}
+			}
+		}
+	s:STATE_NEBRASKA = {
+		every_scope_state = {
+			limit = {NOT = {owner = {is_country_type = decentralized}}}
+			add_modifier = {
+				name = modifier_oregon_trail_frontera
+				years = 74
+				}
+			}
+		}
+	s:STATE_IDAHO = {
+		every_scope_state = {
+			limit = {NOT = {owner = {is_country_type = decentralized}}}
+			add_modifier = {
+				name = modifier_oregon_trail_frontera
+				years = 74
+				}
+			}
+		}
+	s:STATE_MONTANA = {
+		every_scope_state = {
+			limit = {NOT = {owner = {is_country_type = decentralized}}}
+			add_modifier = {
+				name = modifier_oregon_trail_frontera
+				years = 74
+				}
+			}
+		}
+	s:STATE_NEVADA = {
+		every_scope_state = {
+			limit = {NOT = {owner = {is_country_type = decentralized}}}
+			add_modifier = {
+				name = modifier_oregon_trail_frontera
+				years = 74
+				}
+			}
+		}
+	s:STATE_OREGON = {
+		every_scope_state = {
+			limit = {NOT = {owner = {is_country_type = decentralized}}}
+			add_modifier = {
+				name = modifier_oregon_trail_frontera
+				years = 74
+				}
+			}
+		}
+	s:STATE_UTAH = {
+		every_scope_state = {
+			limit = {NOT = {owner = {is_country_type = decentralized}}}
+			add_modifier = {
+				name = modifier_oregon_trail_frontera
+				years = 74
+				}
+			}
+		}
+	s:STATE_WASHINGTON = {
+		every_scope_state = {
+			limit = {NOT = {owner = {is_country_type = decentralized}}}
+			add_modifier = {
+				name = modifier_oregon_trail_frontera
+				years = 74
+				}
+			}
+		}
+	s:STATE_WYOMING = {
+		every_scope_state = {
+			limit = {NOT = {owner = {is_country_type = decentralized}}}
+			add_modifier = {
+				name = modifier_oregon_trail_frontera
+				years = 74
+				}
+			}
+		}
+	s:STATE_ARIZONA = {
+		every_scope_state = {
+			limit = {NOT = {owner = {is_country_type = decentralized}}}
+			add_modifier = {
+				name = modifier_santafe_trail_frontera
+				years = 74
+				}
+			}
+		}
+	s:STATE_COLORADO = {
+		every_scope_state = {
+			limit = {NOT = {owner = {is_country_type = decentralized}}}
+			add_modifier = {
+				name = modifier_santafe_trail_frontera
+				years = 74
+				}
+			}
+		}
+	s:STATE_KANSAS = {
+		every_scope_state = {
+			limit = {NOT = {owner = {is_country_type = decentralized}}}
+			add_modifier = {
+				name = modifier_santafe_trail_frontera
+				years = 74
+				}
+			}
+		}
+	s:STATE_NEW_MEXICO = {
+		every_scope_state = {
+			limit = {NOT = {owner = {is_country_type = decentralized}}}
+			add_modifier = {
+				name = modifier_santafe_trail_frontera
+				years = 74
+				}
+			}
+		}
+	s:STATE_OKLAHOMA = {
+		every_scope_state = {
+			limit = {NOT = {owner = {is_country_type = decentralized}}}
+			add_modifier = {
+				name = modifier_santafe_trail_frontera
+				years = 74
+				}
+			}
+		}
+	s:STATE_TEXAS = {
+		every_scope_state = {
+			limit = {NOT = {owner = {is_country_type = decentralized}}}
+			add_modifier = {
+				name = modifier_santafe_trail_frontera
+				years = 74
+				}
+			}
+		}
 	### CULTURAL FERVOR ###
 	# California was not well controlled by Mexico, had an independent identity
 	cu:californio = {
@@ -721,6 +864,9 @@ GLOBAL = {
 	# Stopgap fix so that tens of thousands of Russians dont move to Ft Ross.
 	c:ALK = {
 		activate_law = law_type:law_closed_borders
+		set_strategy = ai_strategy_subject_overlord_compliance
+		set_strategy = ai_strategy_resource_expansion
+		set_strategy = ai_strategy_conservative_agenda
 	}
 	# Mexican centralists vs federalists
 	c:MEX  = {
@@ -739,6 +885,9 @@ GLOBAL = {
 				value = 0.25
 			}
 		}
+		set_strategy = ai_strategy_conservative_agenda
+		set_strategy = ai_strategy_maintain_power_balance
+		set_strategy = ai_strategy_plantation_economy
 		every_scope_state = {
 			add_radicals_in_state = {
 				value = 0.05
@@ -747,6 +896,10 @@ GLOBAL = {
 		}
 	}
 	c:CAL = {
+		every_scope_state = {
+			set_state_type = incorporated
+		}
+		create_political_movement = { type = movement_frontera_mexican_centralist }
 		create_political_movement = { type = movement_frontera_mexican_federalist }
 		every_scope_state = {
 			add_radicals_in_state = {
@@ -754,15 +907,25 @@ GLOBAL = {
 				religion = rel:catholic
 			}
 		}
+		set_strategy = ai_strategy_agricultural_expansion
+		set_strategy = ai_strategy_subject_maintain_autonomy
+		set_strategy = ai_strategy_territorial_expansion
 	}
 	c:NMX = {
+		every_scope_state = {
+			set_state_type = incorporated
+		}
 		create_political_movement = { type = movement_frontera_mexican_centralist }
+		create_political_movement = { type = movement_frontera_mexican_federalist }
 		every_scope_state = {
 			add_radicals_in_state = {
 				value = 0.2
 				religion = rel:catholic
 			}
 		}
+		set_strategy = ai_strategy_agricultural_expansion
+		set_strategy = ai_strategy_conservative_agenda
+		set_strategy = ai_strategy_subject_overlord_compliance
 	}
 	### WARS ###
 	# changing war goals in Texan Independence war, less aggressive texas

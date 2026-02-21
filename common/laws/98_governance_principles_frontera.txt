@@ -33,7 +33,6 @@ law_frontier_territorial_administration = {
 		country_officers_pol_str_mult = 0.15
 		country_authority_add = 50
 		country_mass_migration_attraction_mult = -0.75
-		
 		#applies to states in a country it seems
 		state_migration_quota_mult = 0.25
 	}

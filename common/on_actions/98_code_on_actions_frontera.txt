@@ -14,7 +14,8 @@ country_fort_ross_event_check = {
 		if = {
 			limit = {
 				game_date < 1865.4.9
-				game_date > 1840.4.1
+				#game_date > 1836.01.01
+				game_date > 1840.04.11
 				s:STATE_CALIFORNIA = {
 					NOT = { has_variable = frontera_fort_ross_sale_initiated }
 					any_state = {
@@ -46,9 +47,38 @@ country_fort_ross_event_check = {
 on_yearly_pulse = {
 	on_actions = {
 		country_fort_ross_event_check
+		#every year, every country, IF IS OT, add modifier to capital for a year
 	}
 }
 #OTs
+add_yearly_OT_migration_modifier = {
+	effect = {
+		if = {
+			limit = {
+				has_law = law_type:law_frontier_territorial_administration
+			}
+			every_scope_state = {
+				limit = {
+					is_capital = no
+				}
+				add_modifier = {
+					name = modifier_frontierlands_frontera
+					months = 8
+				}
+			}
+			random_scope_state = {
+				limit = {
+					is_capital = yes
+				}
+				add_modifier = {
+					name = modifier_frontierlands_frontera
+					months = 12
+				}
+			}
+		}
+	}
+}
+
 include_OT_in_colonial_freedom = {
 	effect = {
 		if = {
@@ -61,39 +91,6 @@ include_OT_in_colonial_freedom = {
 				days = long_modifier_time
 			}
 		}
-	}
-}
-
-init_check_for_OT_state_modifier_frontera = {
-	effect = {
-		every_state = {
-			state_OT_modifier_check_frontera = yes
-		}
-	}
-}
-
-country_check_for_OT_state_modifier_frontera = {
-	effect = {
-		every_scope_state = {
-			state_OT_modifier_check_frontera = yes
-		}
-	}
-}
-
-subject_country_check_for_OT_state_modifier_frontera = {
-	trigger = {
-		is_subject = yes
-	}
-	effect = {
-		every_scope_state = {
-			state_OT_modifier_check_frontera = yes
-		}
-	}
-}
-
-check_for_OT_state_modifier_frontera = {
-	effect = {
-		state_OT_modifier_check_frontera = yes
 	}
 }
 
@@ -117,26 +114,6 @@ check_for_OT_giveaway_states_frontera = {
 	}
 }
 
-# Root = State
-
-on_state_owner_change = {
-	on_actions = {
-		check_for_OT_state_modifier_frontera
-	}
-}
-
-on_state_created = {
-	on_actions = {
-		check_for_OT_state_modifier_frontera
-	}
-}
-
-on_game_started = {
-	on_actions = {
-		init_check_for_OT_state_modifier_frontera
-	}
-}
-
 # Root = Country
 
 on_become_independent = {
@@ -145,21 +122,15 @@ on_become_independent = {
 	}
 }
 
-on_yearly_pulse_country = {
-	on_actions = {
-    	subject_country_check_for_OT_state_modifier_frontera
-    }
-}
-
-on_become_subject = {
-	on_actions = {
-    	country_check_for_OT_state_modifier_frontera
-    }
-}
-
-on_monthly_pulse_country = {
+on_half_yearly_pulse_country = {
 	on_actions = {
     	check_for_OT_homelands_frontera
 		check_for_OT_giveaway_states_frontera
     }
+}
+
+on_yearly_pulse_country = {
+	on_actions = {
+		add_yearly_OT_migration_modifier
+	}
 }

@@ -44,9 +44,9 @@ frontera_fort_ross.1 = {
 					create_character = {
 						template = cal_john_sutter_template
 						on_created = {
+							set_home_country_definition = cd:SWI
 							add_character_role = agitator
 							# Yes he is Swiss but he abandoned his wife and children due to legal and debt issues- if exiled he will return to USA
-							set_home_country = c:SWI
 						}
 						save_scope_as = john_sutter_scope
 					}
@@ -75,26 +75,57 @@ frontera_fort_ross.1 = {
 			base = 0
 		}
 	}
-	# AGREE SALE
+	# AGREE SALE FOR SUBJECT
 	option = {
-		name = frontera_fort_ross.1.b
-		if = {
-			limit = {
-				overlord ?= { exists = THIS }
-			}
-			scope:overlord_scope ?= {
-				trigger_event = { id = frontera_fort_ross.2 days = -1 popup = no }
-			}
+		trigger = {
+			overlord ?= { exists = THIS }
+			scope:seller_scope = { is_subject = yes }
 		}
-		else = {
-			scope:buyer_scope = {
-				trigger_event = { id = frontera_fort_ross.4 days = -1 popup = yes }
-			}
+		name = frontera_fort_ross.1.b
+		scope:overlord_scope ?= {
+			trigger_event = { id = frontera_fort_ross.2 days = -1 popup = no }
 		}
 		ai_chance = {
 			base = 1
 		}
 		default_option = yes
+	}
+	# AGREE SALE AS OVERLORD
+	option = {
+		trigger = {
+			scope:seller_scope = { is_subject = no }
+		}
+		name = frontera_fort_ross.1.b
+		scope:buyer_scope = {
+			trigger_event = { id = frontera_fort_ross.4 days = -1 popup = yes }
+		}
+		ai_chance = {
+			base = 1
+		}
+		default_option = yes
+	}
+	# Wait I am actually mexico
+	option = {
+		trigger = {
+			THIS = c:MEX
+		}
+		name = frontera_fort_ross.1.c
+		scope:buyer_scope = {
+			trigger_event = { id = frontera_fort_ross.3 days = -1 popup = yes }
+		}
+		s:STATE_CALIFORNIA = {
+			add_claim = scope:seller_scope
+			add_homeland = cu:mexican
+			random_scope_state = {
+				limit = {
+					owner = scope:seller_scope
+				}
+				set_state_type = incorporated
+			}
+		}
+		ai_chance = {
+			base = 0
+		}
 	}
 }
 # overlord if they exist, Russia probably, can refuse sale of fort ross
@@ -272,13 +303,14 @@ frontera_fort_ross.4 = {
 				c:USA ?= { exists = THIS }
 			}
 			scope:john_sutter_scope = {
-				transfer_character = c:USA
-				change_character_culture = cu:yankee
 				set_home_country = c:USA
+				change_character_culture = cu:yankee
+				transfer_character = c:USA
 			}
 		}
 		else = {
 			scope:john_sutter_scope = {
+				change_character_culture = cu:hawaiian
 				exile_character = yes
 			}
 		}
@@ -294,8 +326,9 @@ frontera_fort_ross.4 = {
 				c:USA ?= { exists = THIS }
 			}
 			scope:john_sutter_scope = {
-				change_character_culture = cu:yankee
 				set_home_country = c:USA
+				change_character_culture = cu:yankee
+				transfer_character = scope:buyer_scope
 			}
 			s:STATE_CALIFORNIA = {
 				add_homeland = cu:yankee
@@ -304,7 +337,8 @@ frontera_fort_ross.4 = {
 		else = {
 			scope:john_sutter_scope = {
 				change_character_culture = cu:mexican
-				set_home_country = scope:buyer_scope
+				set_home_country_definition = cd:MEX
+				transfer_character = scope:buyer_scope
 			}
 			s:STATE_CALIFORNIA = {
 				add_homeland = cu:mexican

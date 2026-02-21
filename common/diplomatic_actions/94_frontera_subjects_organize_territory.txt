@@ -17,6 +17,7 @@
 	possible = {
 		is_revolutionary = no
 		has_law = law_type:law_frontier_colonization
+		has_law = law_type:law_homesteading
 		scope:target_country = {
 			relations:root >= relations_threshold:amicable
 			NOT = {has_government_type = gov_frontier_territory_frontera}

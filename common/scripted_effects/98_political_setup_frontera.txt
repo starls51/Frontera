@@ -11,7 +11,7 @@
 	activate_law = law_type:law_free_trade
 	activate_law = law_type:law_racial_segregation
 	activate_law = law_type:law_national_militia
-	activate_law = law_type:law_no_migration_controls
+	activate_law = law_type:law_migration_controls
 	activate_law = law_type:law_homesteading
 	activate_law = law_type:law_anti_strike_laws
 	activate_law = law_type:law_no_womens_rights
@@ -33,7 +33,7 @@ effect_starting_politics_territory_slavery_frontera = {
 	activate_law = law_type:law_mercantilism
 	activate_law = law_type:law_racial_segregation
 	activate_law = law_type:law_national_militia
-	activate_law = law_type:law_no_migration_controls
+	activate_law = law_type:law_migration_controls
 	activate_law = law_type:law_homesteading
 	activate_law = law_type:law_anti_strike_laws
 	activate_law = law_type:law_no_womens_rights

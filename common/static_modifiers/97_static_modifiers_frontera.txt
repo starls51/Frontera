@@ -1,8 +1,25 @@
 ﻿
 modifier_frontierlands_frontera = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	state_pop_pol_str_mult = 0.5
+	state_pop_pol_str_mult = 0.1
 	state_migration_pull_add = 10
 	state_migration_pull_mult = 0.75
 	state_expected_sol_mult = -0.2
+}
+
+modifier_santafe_trail_frontera = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	state_infrastructure_add = 5
+	state_trade_capacity_add = 1
+	state_import_advantage_mult = 0.05
+	state_dixie_standard_of_living_add = 0.1
+	state_mexican_standard_of_living_add = 0.1
+}
+
+modifier_oregon_trail_frontera = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+	state_infrastructure_add = 5
+	state_trade_capacity_add = 1
+	state_import_advantage_mult = 0.05
+	state_yankee_standard_of_living_add = 0.1
 }

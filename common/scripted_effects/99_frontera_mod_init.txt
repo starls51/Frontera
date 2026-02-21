@@ -1,2 +1,0 @@
-﻿effect_frontera_mod_init = {
-}

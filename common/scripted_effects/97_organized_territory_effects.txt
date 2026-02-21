@@ -1,31 +1,4 @@
-﻿# Maintains a list of state_regions owned by Organized Territories
-state_OT_modifier_check_frontera = {
-	if = {
-		limit = {
-			exists = THIS
-			owner = {
-				has_government_type = gov_frontier_territory_frontera
-			}
-			is_capital = yes
-			is_split_state = no
-		}
-		if = {
-			limit = {
-				has_modifier = modifier_frontierlands_frontera
-			}
-		}
-		else = {
-			add_modifier = {
-				name = modifier_frontierlands_frontera
-			}
-		}
-	}
-	else = {
-		remove_modifier = modifier_frontierlands_frontera
-	}
-}
-
-country_OT_homelands_check_frontera = {
+﻿country_OT_homelands_check_frontera = {
 	if = {
 		limit = {
 			any_scope_state = {
