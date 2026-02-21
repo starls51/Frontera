@@ -76,7 +76,7 @@ REPLACE:FLR = { # Florida
 		trigger = {
 			coa_def_american_ensign_trigger = yes
 		}
-		priority = 10
+		priority = 1500
 	}
 }
 NMX = {

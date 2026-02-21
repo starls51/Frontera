@@ -5,7 +5,7 @@
  frontera_ot_homeland.1.t:0 "Home, Sweet Home"
  frontera_ot_homeland.1.d:0 "Settler populations in [SCOPE.sState('ascendent_state').GetName] have grown considerably. Despite any unresolved conflicts with the natives, it appears this place will be a [Concept('concept_homeland','$concept_homeland$')] for many [SCOPE.sCountry('overlord_scope').GetAdjectiveNoFormatting] generations to come."
  frontera_ot_homeland.1.f:0 "\"I was born on the prairies where the wind blew free and there was nothing to break the light of the sun.\" — Geronimo"
- frontera_ot_homeland.1.a:0 "Splendid!"
+ frontera_ot_homeland.1.a:0 "[SCOPE.sState('ascendent_state').GetName] will make a fine addition to my collection."
  frontera_ot_homeland.1.b:0 "My work here is done."
  frontera_ot_homeland_gained_homeland:0 "Has happened:\n#indent_newline:3 [SCOPE.sState('ascendent_state').GetName] became a [Concept('concept_homeland','$concept_homeland$')] to its majority [SCOPE.sCountry('overlord_scope').GetAdjectiveNoFormatting] [Concept('concept_primary_cultures','$concept_primary_culture$')]#!"
  frontera_fort_ross.1:0 "Cutting our Losses"
