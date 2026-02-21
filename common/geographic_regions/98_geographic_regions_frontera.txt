@@ -18,6 +18,27 @@
 	}
 }
 
+geographic_region_nebraska_territory = {
+	short_key = "nebraska_territory"
+
+	state_regions = {
+		STATE_NEBRASKA
+		STATE_SOUTH_DAKOTA
+		STATE_NORTH_DAKOTA
+		STATE_WYOMING
+		STATE_MONTANA
+	}
+}
+
+geographic_region_kansas_territory = {
+	short_key = "kansas_territory"
+
+	state_regions = {
+		STATE_KANSAS
+		STATE_COLORADO
+	}
+}
+
 geographic_region_mexican_north = {
 	short_key = "mexican_north"
 
@@ -49,8 +70,8 @@ geographic_region_rocky_mountains = {
 	short_key = "rocky_mountains"
 
 	state_regions = {
-		STATE_NEVADA
 		STATE_UTAH
+		STATE_NEVADA
 		STATE_COLORADO
 		STATE_WYOMING
 		STATE_MONTANA

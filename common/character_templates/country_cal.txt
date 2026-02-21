@@ -2,7 +2,23 @@
 
 # California - CAL
 
-#DNA probably needs updating
+cal_carlos_antonio_carrillo_template = {
+    # Carlos Antonio Carrillo, ranchero, soldier, politician elected to serve as governer in 1837-1838
+    first_name = Carlos
+    last_name =  Carillo
+    historical = yes
+    culture = cu:californio
+    ig_leader = yes
+    interest_group = ig_landowners
+    ideology = ideology_liberal_leader
+    birth_date = 1783.12.24
+    dna = dna_cal_carlos_carillo
+    traits = {
+        brave # Military, joined expeditions north
+        romantic # pursued judicial reform, idealistic maybe
+    }
+}
+
 cal_nicolas_gutierrez_template = {
     # LtCol Nicolás Gutiérrez - governer of las californias before coup by Juan Batista Alverado later in 1836
     first_name = Nicolas_2
@@ -31,7 +47,7 @@ cal_juan_batista_alverado_template = {
     historical = yes
     culture = cu:californio
     ig_leader = yes
-    interest_group = ig_landowners
+    interest_group = ig_armed_forces
     ideology = ideology_sovereignist_leader
     birth_date = 1809.2.14
     dna = dna_cal_juan_bautista_alvarado
@@ -73,6 +89,24 @@ cal_pio_pico_template = {
     traits = {
         ambitious #accrued wealth, supported autonomy, but also advocated to become british protectorate, complicated guy
         direct
+    }
+}
+
+cal_john_sutter_template = {
+    # Swiss pioneer who established the colony of New Helvetia (now Sacramento) in Mexican-controlled California. He is primarily known because gold was discovered on his property in 1848, triggering the California Gold Rush
+    first_name = John
+    last_name =  Sutter
+    historical = yes
+    culture = cu:alemannic
+    religion = rel:protestant
+    interest_group = ig_industrialists
+    ideology = ideology_slaver
+    birth_date = 1803.2.23
+    dna = dna_cal_john_sutter
+    traits = {
+        charismatic # helpful to and liked by colonists
+        ruthless # the only reason I am not saying cruel is because his starting popularity would be too low, truly awful to the natives
+        grifter # ran away from his debts, even left his wife and 5 children behind in europe
     }
 }
 

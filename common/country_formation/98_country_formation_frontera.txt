@@ -1,0 +1,26 @@
+﻿YUC = {
+	states = {
+		STATE_YUCATAN
+	}
+
+	required_states_fraction = 1.0
+
+	ai_will_do = { always = yes }
+
+	possible = {
+		country_has_primary_culture = cu:mexican
+	}
+}
+RIO = {
+	states = {
+		STATE_RIO_GRANDE
+	}
+
+	required_states_fraction = 1.0
+
+	ai_will_do = { always = yes }
+
+	possible = {
+		country_has_primary_culture = cu:mexican
+	}
+}

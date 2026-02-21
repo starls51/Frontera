@@ -1,0 +1,120 @@
+﻿ideology_frontera_mexican_centralist = {
+	icon = "gfx/interface/icons/ideology_icons/despotic_utopian.dds"
+
+	lawgroup_taxation = {
+		law_per_capita_based_taxation = strongly_approve
+		law_land_based_taxation = approve
+		law_proportional_taxation = neutral
+		law_consumption_based_taxation = strongly_disapprove
+	}
+
+	lawgroup_army_model = {
+		law_professional_army = strongly_approve
+		law_mass_conscription = strongly_approve
+		law_national_militia = strongly_disapprove
+	}
+
+	lawgroup_free_speech = {
+		law_outlawed_dissent = approve
+		law_censorship = approve
+		law_right_of_assembly = neutral
+		law_protected_speech = strongly_disapprove
+	}
+
+	lawgroup_internal_security = {
+		law_guaranteed_liberties = strongly_disapprove
+	}
+
+	lawgroup_church_and_state = {
+		law_state_religion = strongly_approve
+		law_freedom_of_conscience = disapprove
+		law_total_separation = strongly_disapprove
+	}
+
+	lawgroup_governance_principles = {
+		law_presidential_republic = approve
+		law_monarchy = neutral
+		law_theocracy = neutral
+		law_council_republic = strongly_disapprove
+		law_parliamentary_republic =  disapprove
+	}
+
+	lawgroup_citizenship = {
+		law_national_supremacy = approve
+		law_racial_segregation = strongly_approve
+		law_cultural_exclusion = neutral
+		law_multicultural = strongly_disapprove
+	}
+
+	lawgroup_distribution_of_power = {
+		law_landed_voting = approve
+		law_oligarchy = approve
+		law_wealth_voting = neutral
+		law_census_voting = disapprove
+		law_universal_suffrage = strongly_disapprove
+		law_technocracy = approve
+	}
+
+	lawgroup_bureaucracy = {
+		law_hereditary_bureaucrats = neutral
+		law_appointed_bureaucrats = approve
+		law_elected_bureaucrats = strongly_disapprove
+	}
+}
+
+ideology_frontera_mexican_federalist = {
+	icon = "gfx/interface/icons/ideology_icons/republican_paternalistic.dds"
+
+	lawgroup_taxation = {
+		law_per_capita_based_taxation = strongly_disapprove
+		law_land_based_taxation = neutral
+		law_proportional_taxation = disapprove
+		law_consumption_based_taxation = strongly_approve
+	}
+
+	lawgroup_army_model = {
+		law_mass_conscription = strongly_disapprove
+		law_professional_army = neutral
+		law_national_militia = strongly_approve
+	}
+
+	lawgroup_citizenship = {
+		law_national_supremacy = strongly_disapprove
+		law_racial_segregation = disapprove
+		law_cultural_exclusion = strongly_approve
+		law_multicultural = approve
+	}
+
+	lawgroup_church_and_state = {
+		law_state_religion = strongly_disapprove
+		law_freedom_of_conscience = neutral
+		law_total_separation = approve
+	}
+
+	lawgroup_education_system = {
+		law_religious_schools = strongly_disapprove
+	}
+
+	lawgroup_governance_principles = {
+		law_monarchy = disapprove
+		law_theocracy = strongly_disapprove
+		law_parliamentary_republic =  strongly_approve
+		law_presidential_republic =  strongly_approve
+	}
+
+	lawgroup_distribution_of_power = {
+		law_landed_voting = strongly_disapprove
+		law_autocracy = strongly_disapprove
+		law_oligarchy = strongly_disapprove
+		law_wealth_voting = disapprove
+		law_census_voting = strongly_approve
+		law_universal_suffrage = strongly_approve
+		law_technocracy = disapprove
+	}
+
+	lawgroup_bureaucracy = {
+		law_hereditary_bureaucrats = strongly_disapprove
+		law_appointed_bureaucrats = disapprove
+		law_elected_bureaucrats = strongly_approve
+	}
+}

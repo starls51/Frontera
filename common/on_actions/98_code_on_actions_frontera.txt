@@ -1,6 +1,4 @@
-﻿# Root = state
-
-####This one is broken, so I will isntead make it so OTs cannot integrate states
+﻿####This one is broken, so I will isntead make it so OTs cannot integrate states
 #   due to super high modifier penalty- avoids edge case of OTs integrating states
 #   and not getting their respective modifiers.
 #on_state_incorporation = {
@@ -9,12 +7,48 @@
 #	}
 #}
 
-on_become_independent = {
-	on_actions = {
-		include_OT_in_colonial_freedom
+#Ft Ross
+country_fort_ross_event_check = {
+	effect = {
+		# 1839 03 01 for trigger in april
+		if = {
+			limit = {
+				game_date < 1865.4.9
+				game_date > 1840.4.1
+				s:STATE_CALIFORNIA = {
+					NOT = { has_variable = frontera_fort_ross_sale_initiated }
+					any_state = {
+						is_split_state = yes
+						is_treaty_port = no
+						owner = {
+							NOT = { is_diplomatic_play_committed_participant = no }
+							NOT = { is_at_war = no }
+						}
+					}
+				}
+			}
+			s:STATE_CALIFORNIA = {
+				set_variable = {
+					name = frontera_fort_ross_sale_initiated
+				}
+				ordered_scope_state = {
+        	        order_by = arable_land 
+					position = 1
+					check_range_bounds = no
+        	        owner = {
+						trigger_event = { id = frontera_fort_ross.1 days = -1 popup = no }
+					}
+				}
+			}
+		}
 	}
 }
-
+on_yearly_pulse = {
+	on_actions = {
+		country_fort_ross_event_check
+	}
+}
+#OTs
 include_OT_in_colonial_freedom = {
 	effect = {
 		if = {
@@ -27,24 +61,6 @@ include_OT_in_colonial_freedom = {
 				days = long_modifier_time
 			}
 		}
-	}
-}
-
-on_state_owner_change = {
-	on_actions = {
-		check_for_OT_state_modifier_frontera
-	}
-}
-
-on_state_created = {
-	on_actions = {
-		check_for_OT_state_modifier_frontera
-	}
-}
-
-on_game_started = {
-	on_actions = {
-		init_check_for_OT_state_modifier_frontera
 	}
 }
 
@@ -64,6 +80,16 @@ country_check_for_OT_state_modifier_frontera = {
 	}
 }
 
+subject_country_check_for_OT_state_modifier_frontera = {
+	trigger = {
+		is_subject = yes
+	}
+	effect = {
+		every_scope_state = {
+			state_OT_modifier_check_frontera = yes
+		}
+	}
+}
 
 check_for_OT_state_modifier_frontera = {
 	effect = {
@@ -71,37 +97,69 @@ check_for_OT_state_modifier_frontera = {
 	}
 }
 
-# Root = Country
-
-on_yearly_pulse_country = {
-	trigger = {
-		is_subject = yes
-		has_government_type = gov_frontier_territory_frontera
-	}
-	on_actions = {
-    	country_check_for_OT_state_modifier_frontera
-    }
-}
-
-on_monthly_pulse_country = {
-	trigger = {
-		is_subject = yes
-		has_government_type = gov_frontier_territory_frontera
-	}
-	on_actions = {
-    	check_for_OT_homelands_frontera
-		check_for_OT_giveaway_states_frontera
-    }
-}
-
 check_for_OT_homelands_frontera = {
+	trigger = {
+		is_subject = yes
+		has_government_type = gov_frontier_territory_frontera
+	}
 	effect = {
 		country_OT_homelands_check_frontera = yes
 	}
 }
 
 check_for_OT_giveaway_states_frontera = {
+	trigger = {
+		is_subject = yes
+		has_government_type = gov_frontier_territory_frontera
+	}
 	effect = {
 		country_OT_transfer_homeland_to_overlord = yes
 	}
+}
+
+# Root = State
+
+on_state_owner_change = {
+	on_actions = {
+		check_for_OT_state_modifier_frontera
+	}
+}
+
+on_state_created = {
+	on_actions = {
+		check_for_OT_state_modifier_frontera
+	}
+}
+
+on_game_started = {
+	on_actions = {
+		init_check_for_OT_state_modifier_frontera
+	}
+}
+
+# Root = Country
+
+on_become_independent = {
+	on_actions = {
+		include_OT_in_colonial_freedom
+	}
+}
+
+on_yearly_pulse_country = {
+	on_actions = {
+    	subject_country_check_for_OT_state_modifier_frontera
+    }
+}
+
+on_become_subject = {
+	on_actions = {
+    	country_check_for_OT_state_modifier_frontera
+    }
+}
+
+on_monthly_pulse_country = {
+	on_actions = {
+    	check_for_OT_homelands_frontera
+		check_for_OT_giveaway_states_frontera
+    }
 }

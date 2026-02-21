@@ -3,25 +3,6 @@
 
 # enable = {} trigger for whether laws in this group should be possible at all
 
-REPLACE:lawgroup_governance_principles = {
-	law_group_category = power_structure
-	base_enactment_days = 200
-	enactment_approval_mult = 2.0
-	ideological_opinion_impact = 2.0
-	affected_by_regime_change = yes
-
-	change_allowed_trigger = {
-		NAND = {
-			is_subject = yes
-			OR = {
-				is_subject_type = subject_type_colony
-				is_subject_type = subject_type_personal_union
-				has_government_type = gov_chartered_company
-			}
-		}
-	}
-}
-
 REPLACE:lawgroup_economic_system = {
 	law_group_category = economy
 	ideological_opinion_impact = 2.0

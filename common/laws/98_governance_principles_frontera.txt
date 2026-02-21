@@ -15,18 +15,14 @@ law_frontier_territorial_administration = {
 		law_anarchy
 	}
 
+	# In the future allowing enactment as a colony, maybe
 	can_enact = {
-		country_is_colonial_or_company = yes
 	}
 
 	is_visible = {
 		country_is_colonial_or_company = yes
 	}
 	can_impose = {
-		scope:target_country ?= {
-			country_is_colonial_or_company = yes
-			is_subject_of = root
-		}
 	}
 
 	modifier = {

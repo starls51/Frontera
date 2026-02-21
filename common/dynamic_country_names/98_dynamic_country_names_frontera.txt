@@ -54,6 +54,36 @@ INJECT:DEFAULT = {
 			}
 		}
 	}
+	dynamic_country_name = {
+		name = generic_revolt_centralist_frontera
+		adjective = generic_revolt_centralist_frontera_adj
+
+		is_revolutionary = yes
+		priority = 10
+
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				is_secessionist = no
+				var:civil_war_type_var ?= movement_type:movement_frontera_mexican_centralist
+			}
+		}
+	}
+	dynamic_country_name = {
+		name = generic_revolt_federalist_frontera
+		adjective = generic_revolt_federalist_frontera_adj
+
+		is_revolutionary = yes
+		priority = 10
+
+		trigger = {
+			exists = scope:actor
+			scope:actor ?= {
+				is_secessionist = no
+				var:civil_war_type_var ?= movement_type:movement_frontera_mexican_federalist
+			}
+		}
+	}
 }
 
 
@@ -62,7 +92,7 @@ REPLACE:CAL = {
 		name = dyn_c_alta_california
 		adjective = dyn_c_alta_california_adj
 
-		is_main_tag_only = yes
+		is_main_tag_only = no
 		priority = 1
 
 		trigger = {
@@ -103,7 +133,7 @@ UOM = {
 		name = dyn_minnesota_territory
 		adjective = dyn_minnesota_territory_adj
 
-		priority = 100
+		priority = 1
 
 		trigger = {
 			scope:actor ?= {
@@ -163,9 +193,10 @@ FLR = {
 		adjective = FLR_ADJ
 
 		is_main_tag_only = yes
-		priority = 1
+		priority = 10000
 
 		trigger = {
+			exists = scope:actor
 			scope:actor ?= {
 				has_government_type = gov_frontier_territory_frontera
 			}

@@ -6,7 +6,7 @@ state_OT_modifier_check_frontera = {
 			owner = {
 				has_government_type = gov_frontier_territory_frontera
 			}
-			is_incorporated = yes
+			is_capital = yes
 			is_split_state = no
 		}
 		if = {

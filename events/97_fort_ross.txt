@@ -1,0 +1,317 @@
+﻿namespace = frontera_fort_ross
+frontera_fort_ross.1 = {
+	type = country_event
+	placement = p:x3F27C8
+
+	title = frontera_fort_ross.1.t
+	desc = frontera_fort_ross.1.d
+	flavor = frontera_fort_ross.1.f
+
+	event_image = {
+		video = "europenorthamerica_capitalists_meeting"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	duration = 3
+
+	cooldown = { days = -1 }
+
+	trigger = {
+		#triggered by on_action
+	}
+
+	immediate = {
+		owner = {
+			save_scope_as = seller_scope
+			overlord ?= { save_scope_as = overlord_scope }
+		}
+		s:STATE_CALIFORNIA = {
+			random_scope_state = {
+				limit = {
+					owner = scope:seller_scope
+				}
+				save_scope_as = california_scope
+			}
+			ordered_scope_state = {
+                order_by = arable_land 
+				position = 0
+				check_range_bounds = no
+                owner = {
+					save_scope_as = buyer_scope
+					create_character = {
+						template = cal_john_sutter_template
+						on_created = {
+							add_character_role = agitator
+							# Yes he is Swiss but he abandoned his wife and children due to legal and debt issues- if exiled he will return to USA
+							set_home_country = c:SWI
+						}
+						save_scope_as = john_sutter_scope
+					}
+				}
+			}
+		}
+	}
+	# REFUSE SALE
+	option = {
+		name = frontera_fort_ross.1.a
+		# trigger = {} Add a trigger here to require a certain number of pops in Sonoma before player is allowed to stake claims
+		# seller will gain claim on California
+		scope:buyer_scope = {
+			trigger_event = { id = frontera_fort_ross.3 days = -1 popup = yes }
+		}
+		s:STATE_CALIFORNIA = {
+			add_claim = scope:seller_scope
+			random_scope_state = {
+				limit = {
+					owner = scope:seller_scope
+				}
+				set_state_type = incorporated
+			}
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+	# AGREE SALE
+	option = {
+		name = frontera_fort_ross.1.b
+		if = {
+			limit = {
+				overlord ?= { exists = THIS }
+			}
+			scope:overlord_scope ?= {
+				trigger_event = { id = frontera_fort_ross.2 days = -1 popup = no }
+			}
+		}
+		else = {
+			scope:buyer_scope = {
+				trigger_event = { id = frontera_fort_ross.4 days = -1 popup = yes }
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+		default_option = yes
+	}
+}
+# overlord if they exist, Russia probably, can refuse sale of fort ross
+frontera_fort_ross.2 = {
+	type = country_event
+	placement = p:x3F27C8
+
+	title = frontera_fort_ross.2.t
+	desc = frontera_fort_ross.2.d
+	flavor = frontera_fort_ross.2.f
+
+	event_image = {
+		video = "europenorthamerica_capitalists_meeting"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	duration = 3
+
+	cooldown = { days = -1 }
+
+	trigger = {
+		#triggered by 1.b if seller has an overlord and tries to give up Ft Ross
+	}
+
+	immediate = {
+	}
+	# Overlord takes custody of Fort Ross
+	option = {
+		name = frontera_fort_ross.2.a
+		s:STATE_CALIFORNIA = {
+			add_claim = scope:overlord_scope
+			random_scope_state = {
+				limit = {
+					owner = scope:seller_scope
+				}
+				set_state_owner = scope:overlord_scope
+				save_scope_as = california_scope
+			}
+		}
+		scope:overlord_scope = {
+			save_scope_as = seller_scope
+		}
+		scope:buyer_scope = {
+			trigger_event = { id = frontera_fort_ross.3 days = -1 popup = yes }
+		}
+		ai_chance = {
+			#change this so an aggressive Russia with high country rank WILL hold Ft Ross against Mexico
+			base = 0
+		}
+	}
+	# The Czar was okay with selling, should usually happen unless Russia is Super Charged
+	option = {
+		name = frontera_fort_ross.2.b
+		scope:buyer_scope = {
+			trigger_event = { id = frontera_fort_ross.4 days = -1 popup = yes }
+		}
+		default_option = yes
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+# Scope to the owner of big california, if seller refuses to sell
+frontera_fort_ross.3 = {
+	type = country_event
+	placement = p:x3F27C8
+
+	title = frontera_fort_ross.3.t
+	desc = frontera_fort_ross.3.d
+	flavor = frontera_fort_ross.3.f
+
+	event_image = {
+		video = "europenorthamerica_gold_prospectors"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	duration = 3
+
+	cooldown = { days = -1 }
+
+	trigger = {
+		#triggered by event
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = frontera_fort_ross.3.a
+		if = {
+			limit = {
+				any_primary_culture = {
+					shares_heritage_trait_with_culture  = cu:mexican
+				}
+			}
+			add_primary_culture = cu:californio_mestizo
+		}
+		default_option = yes
+	}
+}
+# Scope to the owner of big california, if seller decides yes to sell
+frontera_fort_ross.4 = {
+	type = country_event
+	placement = p:x3F27C8
+
+	title = frontera_fort_ross.4.t
+	desc = frontera_fort_ross.4.d
+	flavor = frontera_fort_ross.4.f
+
+	event_image = {
+		video = "europenorthamerica_capitalists_meeting"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	gui_window = event_window_1char_tabloid
+
+	left_icon = scope:john_sutter_scope
+
+	duration = 3
+
+	cooldown = { days = -1 }
+
+	trigger = {
+		#triggered by event
+	}
+
+	immediate = {
+		s:STATE_CALIFORNIA = {
+			random_scope_state = {
+				limit = {
+					owner = scope:seller_scope
+				}
+				set_state_owner = scope:buyer_scope
+				save_scope_as = california_scope
+			}
+		}
+	}
+	option = {
+		trigger = {
+			OR = {
+				AND = {
+					has_law = law_type:law_guaranteed_liberties
+					NOT = { has_law = law_type:law_no_police }
+					OR = {
+						has_law = law_type:law_cultural_exclusion
+						has_law = law_type:law_multicultural
+					}
+				}
+				AND = {
+					OR = {
+						has_law = law_type:law_cultural_exclusion
+						has_law = law_type:law_multicultural
+					}
+					any_primary_culture = {
+						shares_heritage_trait_with_culture  = cu:mexican
+					}
+				}
+			}
+		}
+		name = frontera_fort_ross.4.a
+		scope:buyer_scope = {
+			add_primary_culture = cu:californio_mestizo
+		}
+		if = {
+			limit = {
+				c:USA ?= { exists = THIS }
+			}
+			scope:john_sutter_scope = {
+				transfer_character = c:USA
+				change_character_culture = cu:yankee
+				set_home_country = c:USA
+			}
+		}
+		else = {
+			scope:john_sutter_scope = {
+				exile_character = yes
+			}
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+	option = {
+		name = frontera_fort_ross.4.b
+		default_option = yes
+		if = {
+			limit = {
+				c:USA ?= { exists = THIS }
+			}
+			scope:john_sutter_scope = {
+				change_character_culture = cu:yankee
+				set_home_country = c:USA
+			}
+			s:STATE_CALIFORNIA = {
+				add_homeland = cu:yankee
+			}
+		}
+		else = {
+			scope:john_sutter_scope = {
+				change_character_culture = cu:mexican
+				set_home_country = scope:buyer_scope
+			}
+			s:STATE_CALIFORNIA = {
+				add_homeland = cu:mexican
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}

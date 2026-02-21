@@ -2,7 +2,6 @@
 
 # New Mexico - NMX
 
-#DNA probably needs updating
 nmx_albino_perez_template = {
     # disliked initial governer of new mexico under santa ana
     first_name = Albino
@@ -32,7 +31,7 @@ nmx_manuel_armijo_template = {
     is_general = yes
     culture = primary_culture
     hq = region_great_plains
-    interest_group = ig_landowners
+    interest_group = ig_armed_forces
     ig_leader = yes
     ideology = ideology_traditionalist
     birth_date = 1793.9.21

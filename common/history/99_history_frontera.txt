@@ -1,4 +1,5 @@
-﻿# 8 Setup California Ranches - doing them here so they begin the game with full employment
+﻿
+# 8 Setup California Ranches - doing them here so they begin the game with full employment
 BUILDINGS = {
 	s:STATE_CALIFORNIA={
 		region_state:MEX={
@@ -24,7 +25,20 @@ BUILDINGS = {
 					}
 				}
 				reserves=1
-				activate_production_methods={ "pm_basic_port" }
+				activate_production_methods={ "pm_anchorage" }
+			}
+			create_building={
+				building="building_trade_center"
+				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:MEX"
+						levels=1
+						region="STATE_MEXICO"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_trade_center_trade_quantity_limited" }
 			}
 		}
 	}
@@ -38,6 +52,7 @@ GLOBAL = {
 		province = p:x2F8F36
 	}
 	c:CAL = {
+		add_primary_culture = cu:mexican
 		effect_starting_technology_tier_3_tech = yes
 		effect_starting_politics_liberal = yes
 		add_technology_researched = empiricism
@@ -48,6 +63,7 @@ GLOBAL = {
 		activate_law = law_type:law_mercantilism
 		activate_law = law_type:law_tenant_farmers
 		activate_law = law_type:law_agrarianism
+		activate_law = law_type:law_peasant_levies
 		activate_law = law_type:law_censorship
 		activate_law = law_type:law_frontier_colonization
 		activate_law = law_type:law_land_based_taxation
@@ -84,6 +100,7 @@ GLOBAL = {
 		activate_law = law_type:law_mercantilism
 		activate_law = law_type:law_traditionalism
 		activate_law = law_type:law_censorship
+		activate_law = law_type:law_peasant_levies
 		activate_law = law_type:law_frontier_colonization
 		activate_law = law_type:law_land_based_taxation
 		activate_law = law_type:law_no_schools
@@ -147,13 +164,13 @@ GLOBAL = {
 	c:USA = {
 		create_diplomatic_pact = {
 			country = c:UOM
-			type = colony
+			type = frontera_organized_territory
 		}
 	}
 	c:USA = {
 		create_diplomatic_pact = {
 			country = c:FLR
-			type = colony
+			type = frontera_organized_territory
 		}
 	}
 	###STATE REGIONS###
@@ -161,6 +178,7 @@ GLOBAL = {
 		#homelands
 		add_homeland = cu:californio
 		add_homeland = cu:californio_mestizo
+		add_claim = c:CAL
 		set_owner_of_provinces = {
 			country = c:CAL
 			provinces = {
@@ -214,10 +232,63 @@ GLOBAL = {
 				pop_type = farmers
 				size = 150
 			}
+		}
+		# Fort Ross area in Sonoma county where Russians set up farms and trapping
+		set_owner_of_provinces = {
+			country = c:ALK
+			provinces = {
+				x3F27C8
+			}
+		}
+		region_state:ALK = {
+			# not a treaty port, this was an illegal colony
+			set_state_type = unincorporated
+			# further from mexican control, more local interaction with californios and yanks
+			every_scope_pop = {
+				limit = {
+					OR = {
+						culture = cu:mexican
+						culture = cu:californio_mestizo
+					}
+				}
+				change_pop_culture = {
+					target = cu:californio
+					value = 1
+				}
+			}
+			every_scope_pop = {
+				limit = {
+					culture = cu:hokan
+				}
+				change_pop_culture = {
+					target = cu:californio_mestizo
+					value = 0.6
+				}
+			}
 			create_pop = {
 				culture = russian
 				pop_type = farmers
-				size = 190
+				size = 100
+			}
+			create_pop = {
+				culture = athabaskan
+				size = 75
+			}
+			create_pop = {
+				culture = athabaskan
+				size = 75
+				religion = orthodox
+			}
+			create_building={
+				building="building_port"
+				add_ownership={
+					country={
+						country="c:ALK"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_anchorage" }
 			}
 		}
 	}
@@ -378,6 +449,7 @@ GLOBAL = {
 				xA8B1F6 x1B6243 x0FAD27 x36ECCB xDE887C x1B5B1A xCDECF0 x373F2F xF09A2C x6AD1DD
 			}
 		}
+		remove_claim = c:USA
 		add_claim = c:UOM
 		remove_homeland = cu:yankee
 		region_state:UOM = { set_state_type = incorporated }
@@ -584,9 +656,9 @@ GLOBAL = {
 		set_owner_of_provinces = {
 			country = c:COM
 			provinces = {
-				x3A130C xF3AC52 xE43B98 x3449B1 xCF0284 x51621D xA1D6F3 x13C47E x4034FA x70D146
-				x7A74B8 x155091 x90C0C0 x37CCC2 x3DC254 x5F2DBA xCE7722 xE64C00 xC62026 x7507ED 
-				x384259 xEB66DA xE0ACB6 xD545C6 xF98E99 xD72549
+				x3A130C xF3AC52 xE43B98 x3449B1 x51621D xA1D6F3 x13C47E x70D146 xF98E99 xD72549
+				x7A74B8 x90C0C0 x3DC254 x5F2DBA xCE7722 xE64C00 xC62026 x7507ED xD545C6 xE0ACB6
+				x384259 xEB66DA
 			}
 		}
 		set_owner_of_provinces = {
@@ -621,6 +693,10 @@ GLOBAL = {
 		}
 
 		create_character = {
+			template = cal_carlos_antonio_carrillo_template
+		}
+
+		create_character = {
 			template = cal_isaac_graham_template
 		}
 
@@ -638,6 +714,54 @@ GLOBAL = {
 		}
 		create_character = {
 			template = nmx_manuel_armijo_template
+		}
+	}
+	### POLITICS ###
+	
+	# Stopgap fix so that tens of thousands of Russians dont move to Ft Ross.
+	c:ALK = {
+		activate_law = law_type:law_closed_borders
+	}
+	# Mexican centralists vs federalists
+	c:MEX  = {
+		create_political_movement = { type = movement_frontera_mexican_centralist }
+		create_political_movement = { type = movement_frontera_mexican_federalist }
+		every_scope_state = {
+			limit = {
+				OR = {
+					is_capital = no
+					any_neighbouring_state = {
+						is_capital = no
+					}
+				}
+			}
+			add_radicals_in_state  = {
+				value = 0.25
+			}
+		}
+		every_scope_state = {
+			add_radicals_in_state = {
+				value = 0.05
+				religion = rel:catholic
+			}
+		}
+	}
+	c:CAL = {
+		create_political_movement = { type = movement_frontera_mexican_federalist }
+		every_scope_state = {
+			add_radicals_in_state = {
+				value = 0.3
+				religion = rel:catholic
+			}
+		}
+	}
+	c:NMX = {
+		create_political_movement = { type = movement_frontera_mexican_centralist }
+		every_scope_state = {
+			add_radicals_in_state = {
+				value = 0.2
+				religion = rel:catholic
+			}
 		}
 	}
 	### WARS ###
