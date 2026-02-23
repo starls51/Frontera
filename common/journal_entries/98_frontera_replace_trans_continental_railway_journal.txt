@@ -1,0 +1,57 @@
+﻿REPLACE:je_trans_continental_railway = {
+	icon = "gfx/interface/icons/event_icons/event_industry.dds"
+
+	group = je_group_usa_manifest_destiny
+
+	is_shown_when_inactive = {
+		NOT = { has_global_variable = trans_continental_done }
+		owns_entire_state_region = STATE_NEW_YORK
+		any_scope_state = {
+			state_region = s:STATE_NEBRASKA
+		}
+	}
+
+	possible = {
+		has_technology_researched = railways
+		owns_entire_state_region = STATE_NEBRASKA
+		owns_entire_state_region = STATE_CALIFORNIA
+	}
+
+	complete = {
+		any_scope_state = {
+			state_region = s:STATE_NEBRASKA
+			has_building = building_railway
+		}
+		any_scope_state = {
+			state_region = s:STATE_WYOMING
+			has_building = building_railway
+		}
+		any_scope_state = {
+			state_region = s:STATE_UTAH
+			has_building = building_railway
+		}
+		any_scope_state = {
+			state_region = s:STATE_NEVADA
+			has_building = building_railway
+		}
+		any_scope_state = {
+			state_region = s:STATE_CALIFORNIA
+			has_building = building_railway
+		}
+	}
+
+	on_complete = {
+		set_global_variable = trans_continental_done
+		trigger_event = { id = major_railways.2 }
+		hidden_effect = { 
+			every_state = {
+				limit = {
+					has_modifier = modifier_oregon_trail_frontera
+				}
+				remove_modifier = modifier_oregon_trail_frontera
+			}
+		}
+	}
+
+	weight = 50
+}

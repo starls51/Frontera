@@ -32,3 +32,8 @@
  frontera_fort_ross.4.f:0 "[SCOPE.sCharacter('john_sutter_scope').GetFullName] has purchased all [SCOPE.sCountry('seller_scope').GetNameNoFlag]-owned assets in [SCOPE.sState('california_scope').GetName] for his grand settlement of #bold New Helvetia#!. With our blessing, the colony may serve as a buffer against unruly natives. [SCOPE.sCharacter('john_sutter_scope').GetLastName] claims that #bold New Helvetia#! will be a beacon of civilization for the frontier. However, there are concerning reports of his violent abuse toward natives under his employ and in the surrounding villages. \n\n #italic "The old world is dying, and the new world struggles to be born: now is the time of monsters.\" — Antonio Gramsci#!"
  frontera_fort_ross.4.a:0 "Return this lunatic to wherever he came from."
  frontera_fort_ross.4.b:0 "He will help us tame the wilderness!"
+ frontera_sunset_route_event.1:0 "The Sunset Route"
+ frontera_sunset_route_event.1.t:0 "The Sunset Route"
+ frontera_sunset_route_event.1.d:0 "The sunset route has been created by COUNTRY NAME"
+ frontera_sunset_route_event.1.f:0 "More things about the sunset route"
+ frontera_sunset_route_event.1.a:0 "Response to THE SUNSET ROUTE WOOHOO"

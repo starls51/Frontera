@@ -1,0 +1,69 @@
+﻿je_sunset_route_frontera_button = {
+	name = "je_sunset_route_frontera_button"
+	desc = "je_sunset_route_frontera_button_desc"
+
+	visible = {
+	}
+
+	cooldown = { days = 730 }
+
+	possible = {
+		#has_technology_researched = steel_railway_cars
+		save_temporary_scope_as = root_scope
+		s:STATE_ARIZONA = {
+			NOT = {
+				any_scope_state = {
+					OR = {
+						NOT = { has_building = building_railway }
+						NOR = {
+							owner ?= scope:root_scope
+							owner ?= {
+								"relations(scope:root_scope)" >= 25
+							}
+						}
+					}
+				}
+			}
+		}
+		s:STATE_NEW_MEXICO = {
+			NOT = {
+				any_scope_state = {
+					OR = {
+						NOT = { has_building = building_railway }
+						NOR = {
+							owner ?= scope:root_scope
+							owner ?= {
+								"relations(scope:root_scope)" >= 25
+							}
+						}
+					}
+				}
+			}
+		}
+		s:STATE_TEXAS = {
+			NOT = {
+				any_scope_state = {
+					OR = {
+						NOT = { has_building = building_railway }
+						NOR = {
+							owner ?= scope:root_scope
+							owner ?= {
+								"relations(scope:root_scope)" >= 25
+							}
+						}
+					}
+				}
+			}
+		}
+
+	}
+
+	ai_chance = {
+		value = 100
+	}
+
+	effect = {
+		set_global_variable = sunset_route_built
+		trigger_event = { id = frontera_sunset_route_event.1 }
+	}
+}
