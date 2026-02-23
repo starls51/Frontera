@@ -130,10 +130,22 @@ REPLACE:CAL = {
 
 UOM = {
 	dynamic_country_name = {
+		name = dyn_northwest_territory
+		adjective = dyn_northwest_territory_adj
+
+		priority = 1
+
+		trigger = {
+			scope:actor ?= {
+				has_government_type = gov_frontier_territory_frontera
+			}
+		}
+	}
+	dynamic_country_name = {
 		name = dyn_minnesota_territory
 		adjective = dyn_minnesota_territory_adj
 
-		priority = 1
+		priority = 2
 
 		trigger = {
 			scope:actor ?= {
@@ -150,7 +162,7 @@ UOM = {
 		name = dyn_iowa_territory
 		adjective = UOM_ADJ
 
-		priority = 2
+		priority = 3
 
 		trigger = {
 			scope:actor ?= {
@@ -163,7 +175,7 @@ UOM = {
 		name = dyn_wisconsin_territory
 		adjective = dyn_wisconsin_territory_adj
 
-		priority = 3
+		priority = 4
 
 		trigger = {
 			scope:actor ?= {
@@ -176,7 +188,7 @@ UOM = {
 		name = dyn_michigan_territory
 		adjective = UOM_ADJ
 
-		priority = 4
+		priority = 5
 
 		trigger = {
 			scope:actor ?= {

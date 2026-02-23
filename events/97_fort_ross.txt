@@ -228,6 +228,7 @@ frontera_fort_ross.3 = {
 				}
 			}
 			add_primary_culture = cu:californio_mestizo
+			remove_primary_culture = cu:mexican
 		}
 		default_option = yes
 	}
@@ -241,11 +242,8 @@ frontera_fort_ross.4 = {
 	desc = frontera_fort_ross.4.d
 	flavor = frontera_fort_ross.4.f
 
-	event_image = {
-		video = "europenorthamerica_capitalists_meeting"
-	}
-
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/misc/1Character_Banner"
 
 	icon = "gfx/interface/icons/event_icons/event_map.dds"
 
@@ -297,6 +295,7 @@ frontera_fort_ross.4 = {
 		name = frontera_fort_ross.4.a
 		scope:buyer_scope = {
 			add_primary_culture = cu:californio_mestizo
+			remove_primary_culture = cu:mexican
 		}
 		if = {
 			limit = {

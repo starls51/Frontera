@@ -680,6 +680,7 @@ GLOBAL = {
 				x5C449B
 			}
 		}
+		add_claim = c:SEQ
 	}
 	### STATE MODIFIERS STARTING ###
 	s:STATE_CALIFORNIA = {

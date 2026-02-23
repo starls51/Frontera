@@ -4,9 +4,9 @@
     "version" : "0.0.1",
     "game_id" : "victoria3",
     "picture" : "thumbnail.png",
-    "supported_game_version" : "1.12",
+    "supported_game_version" : "1.12.4",
     "short_description" : "Frontera expands upon Victoria 3's North American frontier.",
-    "tags" : [],
+    "tags" : ["migration", "frontier", "expansion", "western", "California"],
     "relationships" : [],
     "game_custom_data" : {
       "multiplayer_synchronized" : true

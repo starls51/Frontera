@@ -8,7 +8,7 @@ frontera_ot_homeland.1 = {
 	flavor = frontera_ot_homeland.1.f
 
 	event_image = {
-		video = "europenorthamerica_native_american"
+		video = "asia_poor_people_moving"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
