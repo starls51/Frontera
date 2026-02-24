@@ -1,7 +1,8 @@
 ﻿namespace = frontera_sunset_route_event
 frontera_sunset_route_event.1 = {
 	type = country_event
-	placement = s:STATE_NEW_MEXICO
+	placement = scope:california_scope
+	#p:4BBEE7
 
 	title = frontera_sunset_route_event.1.t
 	desc = frontera_sunset_route_event.1.d
@@ -36,27 +37,34 @@ frontera_sunset_route_event.1 = {
 	option = {
 		name = frontera_sunset_route_event.1.a
 		default_option = yes
-		every_country = {
-			limit = {
-				OR = {
-					has_state_in_state_region = STATE_CALIFORNIA
-					has_state_in_state_region = STATE_NEVADA
-					has_state_in_state_region = STATE_ARIZONA
-					has_state_in_state_region = STATE_NEW_MEXICO
-					has_state_in_state_region = STATE_TEXAS
-				}
+		add_modifier = {
+				name = sunset_route_frontera_reward_int
+				days = long_modifier_time
 			}
-			trigger_event = { id = frontera_sunset_route_event.2 }
+		hidden_effect = {
+			every_country = {
+				limit = {
+					NOT = {root = this}
+					OR = {
+						has_state_in_state_region = STATE_CALIFORNIA
+						has_state_in_state_region = STATE_NEVADA
+						has_state_in_state_region = STATE_ARIZONA
+						has_state_in_state_region = STATE_NEW_MEXICO
+						has_state_in_state_region = STATE_TEXAS
+					}
+				}
+				trigger_event = { id = frontera_sunset_route_event.2 }
+			}
 		}
 	}
 }
 
 frontera_sunset_route_event.2 = {
 	type = country_event
-	placement = s:STATE_NEW_MEXICO
+	placement = scope:california_scope
 
 	title = frontera_sunset_route_event.1.t
-	desc = frontera_sunset_route_event.1.d
+	desc = frontera_sunset_route_event.2.d
 	flavor = frontera_sunset_route_event.1.f
 
 	event_image = {
@@ -79,7 +87,7 @@ frontera_sunset_route_event.2 = {
 	}
 
 	option = {
-		name = frontera_sunset_route_event.1.a
+		name = frontera_sunset_route_event.2.a
 		default_option = yes
 	}
 }

@@ -8,7 +8,6 @@
 	cooldown = { days = 730 }
 
 	possible = {
-		#has_technology_researched = steel_railway_cars
 		save_temporary_scope_as = root_scope
 		s:STATE_ARIZONA = {
 			NOT = {
@@ -63,7 +62,7 @@
 	}
 
 	effect = {
-		set_global_variable = sunset_route_built
 		trigger_event = { id = frontera_sunset_route_event.1 }
+		set_global_variable = sunset_route_built
 	}
 }

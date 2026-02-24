@@ -14,6 +14,7 @@
 			text = sunset_route_built_no_tt
 			NOT = { has_global_variable = sunset_route_built }
 		}
+		has_technology_researched = steel_railway_cars
 		any_scope_state = {
 			state_region = s:STATE_CALIFORNIA
 			has_building = building_railway
@@ -35,25 +36,27 @@
 	}
 
 	on_complete = {
+		every_state = {
+			limit = {
+				OR = {
+					state_region = s:STATE_CALIFORNIA
+					state_region = s:STATE_NEVADA
+					state_region = s:STATE_ARIZONA
+					state_region = s:STATE_NEW_MEXICO
+					state_region = s:STATE_TEXAS
+				}
+			}
+			add_modifier = {
+				name = sunset_route_frontera
+				days = long_modifier_time
+			}
+		}
 		hidden_effect = {
 			every_state = {
 				limit = {
 					has_modifier = modifier_santafe_trail_frontera
 				}
 				remove_modifier = modifier_santafe_trail_frontera
-			}
-		}
-		every_state = {
-			limit = {
-				state_region = s:STATE_CALIFORNIA
-				state_region = s:STATE_NEVADA
-				state_region = s:STATE_ARIZONA
-				state_region = s:STATE_NEW_MEXICO
-				state_region = s:STATE_TEXAS
-			}
-			add_modifier = {
-				name = sunset_route_frontera
-				days = normal_modifier_time
 			}
 		}
 	}
