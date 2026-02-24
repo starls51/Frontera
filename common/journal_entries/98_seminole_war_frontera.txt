@@ -17,21 +17,25 @@
 				}
 				custom_tooltip = {
 					text = je_seminole_wars_removal
-					s:STATE_FLORIDA.region_state:USA ?= {
-						every_scope_pop = {
-							limit = {
-								culture = cu:muskogean
+					s:STATE_FLORIDA = {
+						every_scope_state = {
+							every_scope_pop = {
+								limit = {
+									culture = cu:muskogean
+								}
+								move_pop = s:STATE_OKLAHOMA.region_state:SEQ
 							}
-							move_pop = s:STATE_OKLAHOMA.region_state:SEQ
 						}
 					}
 				}
 			}
 			else = {
-				s:STATE_FLORIDA.region_state:USA ?= {
-					add_modifier = {
-						name = florida_resettlement
-						days = long_modifier_time
+				s:STATE_FLORIDA = {
+					every_scope_state = {
+						add_modifier = {
+							name = florida_resettlement
+							days = long_modifier_time
+						}
 					}
 				}
 			}
@@ -52,9 +56,7 @@
 		c:SEQ ?= {
 			save_scope_as = indian_territory
 		}
-		s:STATE_FLORIDA.region_state:USA = {
-			save_scope_as = flarda
-		}
+		s:STATE_FLORIDA.region_state:SML = { save_scope_as = flarda }
 	}
 
 	fail = {

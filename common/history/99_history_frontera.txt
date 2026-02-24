@@ -663,15 +663,14 @@ GLOBAL = {
 		set_owner_of_provinces = {
 			country = c:COM
 			provinces = {
-				x3A130C xF3AC52 xE43B98 x3449B1 x51621D xA1D6F3 x13C47E x70D146 xF98E99 xD72549
-				x7A74B8 x90C0C0 x3DC254 x5F2DBA xCE7722 xE64C00 xC62026 x7507ED xD545C6 xE0ACB6
-				x384259 xEB66DA
+				x3449B1 x51621D xA1D6F3 x13C47E x70D146 xF98E99 xD72549 x384259 xEB66DA xE0ACB6
+				x7A74B8 x90C0C0 x3DC254 x5F2DBA xCE7722 xE64C00 xC62026 x7507ED xD545C6
 			}
 		}
 		set_owner_of_provinces = {
 			country = c:NMX
 			provinces = {
-				xDAABDA
+				xDAABDA xE43B98 xF3AC52 x3A130C
 			}
 		}
 		set_owner_of_provinces = {
@@ -929,6 +928,26 @@ GLOBAL = {
 		set_strategy = ai_strategy_subject_overlord_compliance
 	}
 	### WARS ###
+	c:USA ?= {
+		set_secret_goal = {
+			country = c:CAL
+			secret_goal = dominate
+		}
+		set_secret_goal = {
+			country = c:NMX
+			secret_goal = dominate
+		}
+	}
+	c:MEX ?= {
+		set_secret_goal = {
+			country = c:CAL
+			secret_goal = protect
+		}
+		set_secret_goal = {
+			country = c:NMX
+			secret_goal = protect
+		}
+	}
 	# changing war goals in Texan Independence war, less aggressive texas
 	#random_diplomatic_play = {
 	#	limit = {

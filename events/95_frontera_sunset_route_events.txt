@@ -91,3 +91,369 @@ frontera_sunset_route_event.2 = {
 		default_option = yes
 	}
 }
+
+# This event fires for a country attempting to start the Gadsden purchase
+frontera_sunset_route_event.3 = {
+	type = country_event
+	placement = scope:buyer_new_mexico_scope
+
+	title = frontera_sunset_route_event.3.t
+	desc = frontera_sunset_route_event.3.d
+	flavor = frontera_sunset_route_event.3.f
+
+	event_image = {
+		video = "europenorthamerica_gold_prospectors"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	duration = 3
+
+	cooldown = { days = -1 }
+
+	trigger = {
+		# triggered by button press
+	}
+
+	immediate = {
+		save_scope_as = buyer_scope
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_ARIZONA
+			}
+			save_scope_as = buyer_arizona_scope
+		}
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_NEW_MEXICO
+			}
+			save_scope_as = buyer_new_mexico_scope
+		}
+		ordered_country = {
+			limit = {
+				NOT = {root = this}
+				OR = {
+					has_state_in_state_region = STATE_ARIZONA
+					has_state_in_state_region = STATE_NEW_MEXICO
+				}
+			}
+			order_by = gdp
+			position = 0
+			check_range_bounds = no
+			save_scope_as = angry_country_scope
+		}
+	}
+
+	option = {
+		name = frontera_sunset_route_event.3.a
+		every_country = {
+			limit = {
+				NOT = {root = this}
+				NOT = { is_subject_of = root }
+				OR = {
+					has_state_in_state_region = STATE_ARIZONA
+					has_state_in_state_region = STATE_NEW_MEXICO
+				}
+			}
+			trigger_event = { id = frontera_sunset_route_event.4 }
+			custom_tooltip = {
+				text = mesilla_treaty_creation_tt
+			}
+		}
+		default_option = yes
+	}
+	option = {
+		name = frontera_sunset_route_event.3.b
+		every_country = {
+			limit = {
+				NOT = {root = this}
+				NOT = { is_subject_of = root }
+				OR = {
+					has_state_in_state_region = STATE_ARIZONA
+					has_state_in_state_region = STATE_NEW_MEXICO
+				}
+			}
+			change_relations = {
+				country = root
+				value = 30
+			}
+			trigger_event = { id = frontera_sunset_route_event.5 }
+		}
+	}
+}
+# Reaction to the Gadsden Purchase aggressive
+frontera_sunset_route_event.4 = {
+	type = country_event
+	placement = scope:buyer_new_mexico_scope
+
+	title = frontera_sunset_route_event.4.t
+	desc = frontera_sunset_route_event.4.d
+	flavor = frontera_sunset_route_event.4.f
+
+	event_image = {
+		video = "europenorthamerica_gold_prospectors"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	duration = 3
+
+	cooldown = { days = -1 }
+
+	trigger = {
+		# triggered by event.3 choice .a when the player chooses the aggressive option
+	}
+
+	immediate = {
+		save_scope_as = seller_scope
+	}
+
+	option = {
+		name = frontera_sunset_route_event.4.a
+		custom_tooltip = {
+			text = mesilla_treaty_creation_tt
+			if = {
+				limit = {
+					has_state_in_state_region = STATE_ARIZONA
+					has_state_in_state_region = STATE_NEW_MEXICO
+				}
+				random_scope_state = {
+					limit = {
+						state_region = s:STATE_ARIZONA
+					}
+					save_scope_as = arizona_scope
+				}
+				random_scope_state = {
+					limit = {
+						state_region = s:STATE_NEW_MEXICO
+					}
+					save_scope_as = new_mexico_scope
+				}
+				create_treaty = {
+					name = treaty_name_treaty_of_mesilla
+					first_country = scope:seller_scope
+					second_country = scope:buyer_scope
+					is_draft = no
+					binding_period = { years = 5 }
+					articles_to_create = {
+						{
+							article = money_transfer
+							source_country = scope:buyer_scope
+							target_country = scope:seller_scope
+							inputs = {
+								{ quantity = 7000 }
+							}
+						}
+						{
+							article = state_transfer
+							source_country = scope:seller_scope
+							target_country = scope:buyer_scope
+							inputs = {
+								{ state = scope:arizona_scope }
+							}
+						}
+						# This article is here so that the treaty reflects a state transfer. Ignore the error.
+						{
+							article = state_transfer
+							source_country = scope:seller_scope
+							target_country = scope:buyer_scope
+							inputs = {
+								{ state = scope:buyer_arizona_scope }
+							}
+						}
+						{
+							article = state_transfer
+							source_country = scope:seller_scope
+							target_country = scope:buyer_scope
+							inputs = {
+								{ state = scope:new_mexico_scope }
+							}
+						}
+						# This article is here so that the treaty reflects a state transfer. Ignore the error.
+						{
+							article = state_transfer
+							source_country = scope:seller_scope
+							target_country = scope:buyer_scope
+							inputs = {
+								{ state = scope:buyer_new_mexico_scope }
+							}
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_state_in_state_region = STATE_ARIZONA
+				}
+				random_scope_state = {
+					limit = {
+						state_region = s:STATE_ARIZONA
+					}
+					save_scope_as = arizona_scope
+				}
+				create_treaty = {
+					name = treaty_name_treaty_of_mesilla
+					first_country = scope:seller_scope
+					second_country = scope:buyer_scope
+					is_draft = no
+					binding_period = { years = 5 }
+					articles_to_create = {
+						{
+							article = money_transfer
+							source_country = scope:buyer_scope
+							target_country = scope:seller_scope
+							inputs = {
+								{ quantity = 3500 }
+							}
+						}
+						{
+							article = state_transfer
+							source_country = scope:seller_scope
+							target_country = scope:buyer_scope
+							inputs = {
+								{ state = scope:arizona_scope }
+							}
+						}
+						#This article is here so that the treaty reflects a state transfer. Ignore the error.
+						{
+							article = state_transfer
+							source_country = scope:seller_scope
+							target_country = scope:buyer_scope
+							inputs = {
+								{ state = scope:buyer_arizona_scope }
+							}
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_state_in_state_region = STATE_NEW_MEXICO
+				}
+				random_scope_state = {
+					limit = {
+						state_region = s:STATE_NEW_MEXICO
+					}
+					save_scope_as = new_mexico_scope
+				}
+				create_treaty = {
+					name = treaty_name_treaty_of_mesilla
+					first_country = scope:seller_scope
+					second_country = scope:buyer_scope
+					is_draft = no
+					binding_period = { years = 5 }
+					articles_to_create = {
+						{
+							article = money_transfer
+							source_country = scope:buyer_scope
+							target_country = scope:seller_scope
+							inputs = {
+								{ quantity = 3500 }
+							}
+						}
+						{
+							article = state_transfer
+							source_country = scope:seller_scope
+							target_country = scope:buyer_scope
+							inputs = {
+								{ state = scope:new_mexico_scope }
+							}
+						}
+						#This article is here so that the treaty reflects a state transfer. Ignore the error.
+						{
+							article = state_transfer
+							source_country = scope:seller_scope
+							target_country = scope:buyer_scope
+							inputs = {
+								{ state = scope:buyer_new_mexico_scope }
+							}
+						}
+					}
+				}
+			}
+		}
+		# TO DO - AI can refuse if they are more powerful than the buyer, or if they have an overlord stronger than the buyer
+		ai_chance = {
+			base = 1
+		}
+		default_option = yes
+	}
+	option = {
+		name = frontera_sunset_route_event.4.b
+		if = {
+			limit = {
+				has_state_in_state_region = STATE_ARIZONA
+			}
+			s:STATE_ARIZONA = {
+				add_claim = scope:buyer_scope
+			}
+		}
+		if = {
+			limit = {
+				has_state_in_state_region = STATE_NEW_MEXICO
+			}
+			s:STATE_NEW_MEXICO = {
+				add_claim = scope:buyer_scope
+			}
+		}
+		# TO DO - AI might hold out if they are more powerful than the buyer, or if they have an overlord stronger than the buyer
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+# Reaction to the Gadsden Purchase friendly
+frontera_sunset_route_event.5 = {
+	type = country_event
+	placement = scope:buyer_new_mexico_scope
+
+	title = frontera_sunset_route_event.5.t
+	desc = frontera_sunset_route_event.5.d
+	flavor = frontera_sunset_route_event.5.f
+
+	event_image = {
+		video = "europenorthamerica_gold_prospectors"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	duration = 3
+
+	cooldown = { days = -1 }
+
+	trigger = {
+		# triggered by event.3 choice .b when the player chooses the friendly option
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = frontera_sunset_route_event.5.a
+		if = {
+			limit = {
+				NOT = { has_technology_researched = railways }
+			}
+			add_technology_progress = { progress = 3500 technology = railways }
+		}
+		else_if = {
+			limit = {
+				NOT = { has_technology_researched = steel_railway_cars }
+			}
+			add_technology_progress = { progress = 2500 technology = steel_railway_cars }
+		}
+		else = {
+			add_modifier = {
+				name = cultural_exchange_research_speed
+				days = long_modifier_time
+			}
+		}
+		default_option = yes
+	}
+}

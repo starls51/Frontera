@@ -9,6 +9,7 @@
 
 	possible = {
 		save_temporary_scope_as = root_scope
+		has_technology_researched = steel_railway_cars
 		s:STATE_ARIZONA = {
 			NOT = {
 				any_scope_state = {
@@ -16,6 +17,9 @@
 						NOT = { has_building = building_railway }
 						NOR = {
 							owner ?= scope:root_scope
+							owner ?= {
+								is_subject_of = scope:root_scope
+							}
 							owner ?= {
 								"relations(scope:root_scope)" >= 25
 							}
@@ -32,6 +36,9 @@
 						NOR = {
 							owner ?= scope:root_scope
 							owner ?= {
+								is_subject_of = scope:root_scope
+							}
+							owner ?= {
 								"relations(scope:root_scope)" >= 25
 							}
 						}
@@ -46,6 +53,9 @@
 						NOT = { has_building = building_railway }
 						NOR = {
 							owner ?= scope:root_scope
+							owner ?= {
+								is_subject_of = scope:root_scope
+							}
 							owner ?= {
 								"relations(scope:root_scope)" >= 25
 							}
@@ -64,5 +74,73 @@
 	effect = {
 		trigger_event = { id = frontera_sunset_route_event.1 }
 		set_global_variable = sunset_route_built
+	}
+}
+
+je_gadsden_purchase_frontera_button = {
+	name = "je_gadsden_purchase_frontera_button"
+	desc = "je_gadsden_purchase_frontera_button_desc"
+
+	visible = {
+		NOT = { has_variable = gadsden_purchase_attempted }
+		OR = {
+			s:STATE_ARIZONA = {
+				any_scope_state = {
+					is_split_state = yes
+					NOT = { owner ?= root }
+					owner = { NOT = { is_subject_of = root } }
+				}
+			}
+			s:STATE_NEW_MEXICO = {
+				any_scope_state = {
+					is_split_state = yes
+					NOT = { owner ?= root }
+					owner = { NOT = { is_subject_of = root } }
+				}
+			}
+		}
+	}
+
+	cooldown = { days = 365 }
+
+	possible = {
+		OR = {
+			has_state_in_state_region = STATE_ARIZONA
+			has_state_in_state_region = STATE_NEW_MEXICO
+		}
+		NOT = {
+			s:STATE_ARIZONA = {
+				any_scope_state = {
+					owner = {
+						OR = {
+							is_country_type = decentralized
+							is_diplomatic_play_committed_participant = yes
+						}
+					}
+				}
+			}
+		}
+		NOT = {
+			s:STATE_NEW_MEXICO = {
+				any_scope_state = {
+					owner = {
+						OR = {
+							is_country_type = decentralized
+							is_diplomatic_play_committed_participant = yes
+						}
+					}
+				}
+			}
+		}
+	}
+
+	# AI should do this
+	ai_chance = {
+		value = 100
+	}
+
+	effect = {
+		set_variable = gadsden_purchase_attempted
+		trigger_event = { id = frontera_sunset_route_event.3 popup = yes }
 	}
 }
