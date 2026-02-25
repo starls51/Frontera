@@ -213,14 +213,14 @@ NMX_mexican_colony = { # New Mexico using mexican army guidon emblem
 	color1 = "green"
 
 	colored_emblem = {
-		texture = "ce_tricolor_thick.dds"
+		texture = "ce_tricolor_vertical.dds"
 		color1 = "white"
 		color2 = "red"
 	}
 
 	textured_emblem = {
 		texture = "te_eagle_mexico_guidon_frontera.dds"
-		instance = { scale = { 0.63 0.63 } position = { 0.495 0.5 } }
+		instance = { scale = { 0.5 0.5 } position = { 0.48 0.5 } }
 	}
 }
 US_territory_default = {
