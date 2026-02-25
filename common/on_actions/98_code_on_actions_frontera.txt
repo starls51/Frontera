@@ -47,7 +47,6 @@ country_fort_ross_event_check = {
 on_yearly_pulse = {
 	on_actions = {
 		country_fort_ross_event_check
-		#every year, every country, IF IS OT, add modifier to capital for a year
 	}
 }
 #OTs

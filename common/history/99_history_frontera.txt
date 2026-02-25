@@ -1,50 +1,4 @@
-﻿
-# 8 Setup California Ranches - doing them here so they begin the game with full employment
-BUILDINGS = {
-	s:STATE_CALIFORNIA={
-		region_state:MEX={
-			create_building={
-				building="building_livestock_ranch"
-				add_ownership={
-					building={
-						type="building_manor_house"
-						country="c:MEX"
-						levels=1
-						region="STATE_CALIFORNIA"
-					}
-				}
-				reserves=1
-				activate_production_methods={ "pm_open_air_stockyards" "pm_simple_ranch" "pm_standard_fences" "pm_unrefrigerated"  }
-			}
-			create_building={
-				building="building_port"
-				add_ownership={
-					country={
-						country="c:MEX"
-						levels=1
-					}
-				}
-				reserves=1
-				activate_production_methods={ "pm_anchorage" }
-			}
-			create_building={
-				building="building_trade_center"
-				add_ownership={
-					building={
-						type="building_financial_district"
-						country="c:MEX"
-						levels=1
-						region="STATE_MEXICO"
-					}
-				}
-				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_limited" }
-			}
-		}
-	}
-}
-# Initialize mod history - Here is to safely overwrite anything in vanilla history
-GLOBAL = {
+﻿COUNTRIES = {
 	# ALTA CALIFORNIA
 	create_country = {
 		tag = CAL
@@ -53,6 +7,8 @@ GLOBAL = {
 	}
 	c:CAL = {
 		add_primary_culture = cu:mexican
+		remove_primary_culture = cu:californio
+		add_primary_culture = cu:californio
 		effect_starting_technology_tier_3_tech = yes
 		effect_starting_politics_liberal = yes
 		add_technology_researched = empiricism
@@ -70,13 +26,15 @@ GLOBAL = {
 		activate_law = law_type:law_no_schools
 		activate_law = law_type:law_no_police
 		
-		ig:ig_rural_folk ?= {
-			add_ruling_interest_group = yes
+		py:conservative_party ?= {
+			disband_party = yes
 		}
-
-		ig:ig_landowners ?= {
-			add_ruling_interest_group = yes
+		py:military_party ?= {
+			add_ig_to_party = ig:ig_armed_forces
+			add_momentum = 0.3
+			set_ruling_party = yes
 		}
+		set_ruling_interest_groups = { ig_armed_forces }
 		add_modifier = {
 			name = age_of_caudillos_modifier
 		}
@@ -147,17 +105,65 @@ GLOBAL = {
 			add_ruling_interest_group = yes
 		}
 	}
+}
+
+# 8 Setup California Ranches - doing them here so they begin the game with full employment
+BUILDINGS = {
+	s:STATE_CALIFORNIA={
+		region_state:MEX={
+			create_building={
+				building="building_livestock_ranch"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:MEX"
+						levels=1
+						region="STATE_CALIFORNIA"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_open_air_stockyards" "pm_simple_ranch" "pm_standard_fences" "pm_unrefrigerated"  }
+			}
+			create_building={
+				building="building_port"
+				add_ownership={
+					country={
+						country="c:MEX"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_anchorage" }
+			}
+			create_building={
+				building="building_trade_center"
+				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:MEX"
+						levels=1
+						region="STATE_MEXICO"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_trade_center_trade_quantity_limited" }
+			}
+		}
+	}
+}
+# Initialize mod history - Here is to safely overwrite anything in vanilla history
+GLOBAL = {
 	# Mexican Federalist/Decentralized States
 	c:MEX = {
 		create_diplomatic_pact = {
 			country = c:CAL
-			type = colony
+			type = frontera_organized_territory
 		}
 	}
 	c:MEX = {
 		create_diplomatic_pact = {
 			country = c:NMX
-			type = colony
+			type = frontera_organized_territory
 		}
 	}
 	# USA has organized territories
@@ -828,10 +834,6 @@ GLOBAL = {
 	### CHARACTERS ###
 	c:CAL ?= {
 		create_character = {
-			template = cal_nicolas_gutierrez_template
-		}
-
-		create_character = {
 			template = cal_juan_batista_alverado_template
 		}
 
@@ -849,6 +851,10 @@ GLOBAL = {
 
 		create_character = {
 			template = cal_william_hartnell_template
+		}
+
+		create_character = {
+			template = cal_nicolas_gutierrez_template
 		}
 	}
 	c:NMX ?= {
