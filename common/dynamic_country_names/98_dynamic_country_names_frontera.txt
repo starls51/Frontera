@@ -14,7 +14,7 @@ INJECT:DEFAULT = {
 
 		trigger = {
 			scope:actor ?= {
-				has_government_type = gov_frontier_territory_frontera
+				has_law = law_type:law_frontier_territorial_administration
 			}
 		}
 	}
@@ -26,7 +26,7 @@ INJECT:DEFAULT = {
 
 		trigger = {
 			scope:actor ?= {
-				has_government_type = gov_frontier_territory_frontera
+				has_law = law_type:law_frontier_territorial_administration
 				any_primary_culture = {
 					shares_language_trait_with_culture = cu:british
 				}
@@ -41,7 +41,7 @@ INJECT:DEFAULT = {
 
 		trigger = {
 			scope:actor ?= {
-				has_government_type = gov_frontier_territory_frontera
+				has_law = law_type:law_frontier_territorial_administration
 				any_primary_culture = {
 				shares_language_trait_with_culture = cu:north_german
 				}
@@ -137,7 +137,7 @@ UOM = {
 
 		trigger = {
 			scope:actor ?= {
-				has_government_type = gov_frontier_territory_frontera
+				has_law = law_type:law_frontier_territorial_administration
 			}
 		}
 	}
@@ -149,7 +149,7 @@ UOM = {
 
 		trigger = {
 			scope:actor ?= {
-				has_government_type = gov_frontier_territory_frontera
+				has_law = law_type:law_frontier_territorial_administration
 				NAND = {
 					owns_entire_state_region = STATE_MICHIGAN
 					owns_entire_state_region = STATE_WISCONSIN
@@ -166,7 +166,7 @@ UOM = {
 
 		trigger = {
 			scope:actor ?= {
-				has_government_type = gov_frontier_territory_frontera
+				has_law = law_type:law_frontier_territorial_administration
 				owns_entire_state_region = STATE_IOWA
 			}
 		}
@@ -179,7 +179,7 @@ UOM = {
 
 		trigger = {
 			scope:actor ?= {
-				has_government_type = gov_frontier_territory_frontera
+				has_law = law_type:law_frontier_territorial_administration
 				owns_entire_state_region = STATE_WISCONSIN
 			}
 		}
@@ -192,7 +192,7 @@ UOM = {
 
 		trigger = {
 			scope:actor ?= {
-				has_government_type = gov_frontier_territory_frontera
+				has_law = law_type:law_frontier_territorial_administration
 				owns_entire_state_region = STATE_MICHIGAN
 			}
 		}
@@ -210,7 +210,7 @@ FLR = {
 		trigger = {
 			exists = scope:actor
 			scope:actor ?= {
-				has_government_type = gov_frontier_territory_frontera
+				has_law = law_type:law_frontier_territorial_administration
 			}
 		}
 	}

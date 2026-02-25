@@ -20,7 +20,8 @@
 		has_law = law_type:law_homesteading
 		scope:target_country = {
 			relations:root >= relations_threshold:amicable
-			NOT = {has_government_type = gov_frontier_territory_frontera}
+			NOT = {has_law = law_type:law_frontier_territorial_administration}
+			government_transfer_of_power = dictatorial
 			is_revolutionary = no
 			any_scope_state = {
 				is_incorporated = yes
@@ -44,8 +45,9 @@
 		custom_tooltip = {
 			text = da_organize_territory_from_subject_effect
 			scope:target_country = {
-				#change starting effects based on US slavery policy choices
-				effect_starting_politics_territory_free_frontera = yes
+				# change starting effects based on US slavery policy choices
+				# effect_starting_politics_territory_free_frontera = yes
+				activate_law = law_type:law_frontier_territorial_administration
 				#each homeland culture gets radical
 				every_scope_state = {
 					every_scope_culture = {

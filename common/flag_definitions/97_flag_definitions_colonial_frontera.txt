@@ -127,7 +127,7 @@ REPLACE:DEFAULT = {
 		trigger = {
 			exists = scope:actor
 			scope:actor = {
-				has_government_type = gov_frontier_territory_frontera
+				has_law = law_type:law_frontier_territorial_administration
 			}
 		}
 	}
@@ -138,7 +138,7 @@ REPLACE:DEFAULT = {
 		trigger = {
 			exists = scope:actor
 			scope:actor = {
-				has_government_type = gov_frontier_territory_frontera
+				has_law = law_type:law_frontier_territorial_administration
 			}
 			coa_def_american_ensign_trigger = yes
 		}

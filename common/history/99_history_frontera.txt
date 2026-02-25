@@ -57,8 +57,8 @@ GLOBAL = {
 		effect_starting_politics_liberal = yes
 		add_technology_researched = empiricism
 		
-		activate_law = law_type:law_colonial_administration
-		activate_law = law_type:law_oligarchy
+		activate_law = law_type:law_frontier_territorial_administration
+		activate_law = law_type:law_wealth_voting
 		activate_law = law_type:law_cultural_exclusion
 		activate_law = law_type:law_mercantilism
 		activate_law = law_type:law_tenant_farmers
@@ -94,7 +94,7 @@ GLOBAL = {
 		effect_starting_politics_conservative = yes
 		add_technology_researched = empiricism
 		
-		activate_law = law_type:law_colonial_administration
+		activate_law = law_type:law_frontier_territorial_administration
 		activate_law = law_type:law_oligarchy
 		activate_law = law_type:law_cultural_exclusion
 		activate_law = law_type:law_mercantilism

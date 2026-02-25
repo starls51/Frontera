@@ -20,11 +20,13 @@
 	possible = {
 		scope:target_country = {
 			any_primary_culture = {
-					NOT = {is_primary_culture_of = ROOT}
-					OR = {
-						NOT = {shares_language_trait_with_any_primary_culture = ROOT}
-						scope:target_country = {has_law = law_type:law_frontier_territorial_administration}
+				NOT = {is_primary_culture_of = ROOT}
+				OR = {
+					NOT = {shares_language_trait_with_any_primary_culture = ROOT}
+					scope:target_country = {
+						has_law = law_type:law_frontier_territorial_administration
 					}
+				}
 			}
 		}
 		is_revolutionary = no
@@ -178,7 +180,7 @@
 		will_propose = {
 			OR = {
 				scope:target_country = {
-					has_government_type = gov_frontier_territory_frontera
+					has_law = law_type:law_frontier_territorial_administration
 				}
 				AND = {
 					"ai_ideological_opinion(scope:target_country)" <= -25

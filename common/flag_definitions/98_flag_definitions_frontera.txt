@@ -14,8 +14,11 @@
 	flag_definition = {
 		coa = CAL_mexican_colony
 		allow_overlord_canton = no
-		priority = 2
+		priority = 150
 		trigger = {
+			scope:actor = {
+				has_law = law_type:law_frontier_territorial_administration
+			}
 			coa_def_mexican_ensign_trigger = yes
 		}
 	}
@@ -88,8 +91,11 @@ NMX = {
 	flag_definition = {
 		coa = NMX_mexican_colony
 		allow_overlord_canton = no
-		priority = 2
+		priority = 150
 		trigger = {
+			scope:actor = {
+				has_law = law_type:law_frontier_territorial_administration
+			}
 			coa_def_mexican_ensign_trigger = yes
 		}
 	}

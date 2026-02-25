@@ -5,7 +5,7 @@
 	visible = {
 	}
 
-	cooldown = { days = 35 }
+	cooldown = { months = 3 }
 
 	possible = {
 		NOT = {has_law = law_type:law_frontier_territorial_administration}
@@ -131,7 +131,7 @@
 								owner = ROOT
 								owner = {
 									is_subject_of = ROOT
-									has_government_type = gov_frontier_territory_frontera
+									has_law = law_type:law_frontier_territorial_administration
 								}
 							}
 							NOT = {is_homeland_of_country_cultures = root}
@@ -153,7 +153,7 @@
 								owner = ROOT
 								owner = {
 									is_subject_of = ROOT
-									has_government_type = gov_frontier_territory_frontera
+									has_law = law_type:law_frontier_territorial_administration
 								}
 							}
 							NOT = {is_homeland_of_country_cultures = root}
@@ -175,7 +175,7 @@
 								owner = ROOT
 								owner = {
 									is_subject_of = ROOT
-									has_government_type = gov_frontier_territory_frontera
+									has_law = law_type:law_frontier_territorial_administration
 								}
 							}
 							NOT = {is_homeland_of_country_cultures = root}
@@ -197,7 +197,7 @@
 								owner = ROOT
 								owner = {
 									is_subject_of = ROOT
-									has_government_type = gov_frontier_territory_frontera
+									has_law = law_type:law_frontier_territorial_administration
 								}
 							}
 							NOT = {is_homeland_of_country_cultures = root}
@@ -219,7 +219,7 @@
 								owner = ROOT
 								owner = {
 									is_subject_of = ROOT
-									has_government_type = gov_frontier_territory_frontera
+									has_law = law_type:law_frontier_territorial_administration
 								}
 							}
 							NOT = {is_homeland_of_country_cultures = root}
@@ -240,7 +240,7 @@
 								owner = ROOT
 								owner = {
 									is_subject_of = ROOT
-									has_government_type = gov_frontier_territory_frontera
+									has_law = law_type:law_frontier_territorial_administration
 								}
 							}
 						}
@@ -260,7 +260,7 @@
 					has_variable = state_to_cede
 				}
 				on_created = {
-					effect_starting_politics_territory_free_frontera = yes
+					activate_law = law_type:law_frontier_territorial_administration
 					every_scope_state = {
 						limit = {
 							is_capital = yes

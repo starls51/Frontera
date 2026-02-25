@@ -1,4 +1,24 @@
 ﻿gov_frontier_territory_frontera = {
+	transfer_of_power = parliamentary_elective
+	new_leader_on_reform_government = no
+
+	male_ruler = "RULER_TITLE_GOVERNOR"
+	female_ruler = "RULER_TITLE_GOVERNOR"
+
+	possible = {
+		has_law = law_type:law_frontier_territorial_administration
+		country_has_voting_franchise = yes
+	}
+
+	on_government_type_change = {
+		change_to_presidential_elective = yes
+	}
+	on_post_government_type_change = {
+		post_change_to_presidential_elective = yes
+	}
+}
+
+gov_occupied_territory_frontera = {
 	transfer_of_power = dictatorial
 	new_leader_on_reform_government = no
 
@@ -7,6 +27,7 @@
 
 	possible = {
 		has_law = law_type:law_frontier_territorial_administration
+		country_has_voting_franchise = no
 	}
 
 	on_government_type_change = {
