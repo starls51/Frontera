@@ -228,7 +228,6 @@ frontera_fort_ross.3 = {
 				}
 			}
 			add_primary_culture = cu:californio_mestizo
-			remove_primary_culture = cu:mexican
 		}
 		default_option = yes
 	}
@@ -295,7 +294,6 @@ frontera_fort_ross.4 = {
 		name = frontera_fort_ross.4.a
 		scope:buyer_scope = {
 			add_primary_culture = cu:californio_mestizo
-			remove_primary_culture = cu:mexican
 		}
 		if = {
 			limit = {

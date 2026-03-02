@@ -21,6 +21,8 @@
 		}
 	}
 
+	can_deactivate = yes
+
 	immediate = {
 
 	}

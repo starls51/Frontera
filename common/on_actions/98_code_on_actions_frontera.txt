@@ -14,16 +14,17 @@ country_fort_ross_event_check = {
 		if = {
 			limit = {
 				game_date < 1865.4.9
-				#game_date > 1836.01.01
 				game_date > 1840.04.11
 				s:STATE_CALIFORNIA = {
 					NOT = { has_variable = frontera_fort_ross_sale_initiated }
-					any_state = {
+					any_scope_state = {
 						is_split_state = yes
-						is_treaty_port = no
-						owner = {
-							NOT = { is_diplomatic_play_committed_participant = no }
-							NOT = { is_at_war = no }
+					}
+					NOT = {
+						any_scope_state = {
+							owner = {
+								is_diplomatic_play_committed_participant = yes
+							}
 						}
 					}
 				}
@@ -56,26 +57,15 @@ add_yearly_OT_migration_modifier = {
 			limit = {
 				has_law = law_type:law_frontier_territorial_administration
 				has_law = law_type:law_homesteading
-				any_scope_culture = {
-					is_primary_culture_of = overlord
-				}
 			}
-			every_scope_state = {
-				limit = {
-					is_capital = no
-				}
-				add_modifier = {
+			ordered_scope_state = {
+        	    order_by = gdp
+				min = 0
+				max = 2
+				check_range_bounds = no
+        	    add_modifier = {
 					name = modifier_frontierlands_frontera
-					months = 8
-				}
-			}
-			random_scope_state = {
-				limit = {
-					is_capital = yes
-				}
-				add_modifier = {
-					name = modifier_frontierlands_frontera
-					months = 12
+					months = 11
 				}
 			}
 		}

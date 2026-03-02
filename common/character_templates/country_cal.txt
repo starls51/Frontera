@@ -26,7 +26,7 @@ cal_nicolas_gutierrez_template = {
     historical = yes
     culture = cu:spanish
     ruler = yes
-    #ig_leader = yes
+    ig_leader = yes
     interest_group = ig_armed_forces
     ideology = ideology_authoritarian
     # Guessing age based on rank as LtCol would put him somewhere between 30-50 years old, possibly younger
@@ -46,7 +46,6 @@ cal_juan_batista_alverado_template = {
     hq = region_pacific_coast
     historical = yes
     culture = cu:californio
-    ig_leader = yes
     interest_group = ig_armed_forces
     ideology = ideology_sovereignist_leader
     birth_date = 1809.2.14

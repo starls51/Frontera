@@ -84,11 +84,8 @@
 		set_tax_level = low
 		effect_starting_technology_tier_1_tech = yes
 		effect_starting_politics_territory_slavery_frontera = yes
-		ig:ig_armed_forces ?= {
-			add_ruling_interest_group = yes
-		}
-		ig:ig_rural_folk ?= {
-			add_ruling_interest_group = yes
+		ruler = {
+			set_as_interest_group_leader = yes
 		}
 	}
 	# MICHIGAN TERRITORY
@@ -101,8 +98,8 @@
 		set_tax_level = low
 		effect_starting_technology_tier_1_tech = yes
 		effect_starting_politics_territory_free_frontera = yes
-		ig:ig_rural_folk ?= {
-			add_ruling_interest_group = yes
+		ruler = {
+			set_as_interest_group_leader = yes
 		}
 	}
 }
@@ -664,6 +661,7 @@ GLOBAL = {
 				x94CB2D x49EB3C x17C2F0 xAF6622 x231FA5 
 			}
 		}
+		remove_claim = c:USA
 	}
 	s:STATE_OKLAHOMA = {
 		set_owner_of_provinces = {

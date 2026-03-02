@@ -5,6 +5,14 @@
 			any_scope_culture = {
 				is_primary_culture_of = root.overlord
 			}
+			# Disables states gaining homeland if state is not fully colonized by Recognized Countries - this should be MIGRATION
+			#state_region = {
+			#	NOT = {
+			#		any_scope_state = {
+			#			owner = { is_country_type = decentralized }
+			#		}
+			#	}
+			#}
 		}
 		set_variable = {
 			name = accepted_percent
@@ -12,13 +20,23 @@
 		}
 		save_scope_as = state_to_check_scope
 		every_scope_culture = {
+			save_scope_as = culture_to_check
 			if = {
 				limit = {
-					is_primary_culture_of = root.overlord
+					OR = {
+						is_primary_culture_of = root.overlord
+						AND = {
+							NOT = { is_primary_culture_of = root }
+							ROOT = {
+								country_average_cultural_acceptance = {
+									target = scope:culture_to_check
+									value >= 65
+								}
+							}
+						}
+					}
 				}
-				save_scope_as = culture_to_check
 				scope:state_to_check_scope = {
-					# put an else statement in this to check for more cultures
 					if = {
 						limit = {
 							culture_percent_state = {
@@ -105,7 +123,6 @@
 	scope:state_to_be_homeland_scope ?= {
 		ordered_scope_pop = {
 			limit = {
-				# I AM WORKING ON THIS PART STILL - these parts below i can try moving them, from being triggers, to effects, so i dont use temp scopes with them
 				culture = { is_primary_culture_of = root.overlord }
 			}
 			order_by = total_size
@@ -120,61 +137,6 @@
 		}
 	}
 }
-#	random_scope_state = {
-#		limit = {
-#			has_variable = accepted_percent
-#			var:accepted_percent > 0.6
-#		}
-#		# this can be moved into an event where the player can choose between the top 3 cultures in the state
-#		ordered_scope_pop = {
-#			limit = {
-#				save_temporary_scope_as = pop_scope
-#				root.overlord = {
-#					any_primary_culture = {
-#						save_temporary_scope_as = overlord_culture_scope
-#						scope:pop_scope = {
-#							has_pop_culture = scope:overlord_culture_scope
-#						}
-#					}
-#				}
-#			}
-#			order_by = total_size
-#			position = 0
-#			check_range_bounds = no
-#			save_temporary_scope_as = new_homelander_culture
-#		}
-#		state_region = {
-#			add_homeland = scope:new_homelander_culture
-#		}
-#	}
-
-	#if = {
-	#	limit = {
-	#		any_scope_state = {
-	#			NOT = {is_homeland_of_country_cultures = root.overlord}
-	#			state_population > 85000
-	#			any_scope_culture = {
-	#				is_primary_culture_of = root.overlord
-	#				save_temporary_scope_as = new_homelander_culture
-	#			}
-	#			culture_percent_state = {
-	#	   			target = scope:new_homelander_culture
-	#	    		value > 0.6
-	#			}
-	#			# add value to variable
-	#			# create global value
-	#			save_temporary_scope_as = new_homeland_state
-	#		}
-	#		# erase variable value
-	#	}
-	#	# add homeland for whoever the majority accepted culture is
-	#	scope:new_homeland_state = {
-	#		state_region = {
-	#			add_homeland = scope:new_homelander_culture
-	#		}
-	#	}
-	#}
-	#}
 
 country_OT_transfer_homeland_to_overlord = {
 	if = {

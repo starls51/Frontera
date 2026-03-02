@@ -265,9 +265,6 @@
 						limit = {
 							is_capital = yes
 						}
-						add_modifier = {
-							name = modifier_frontierlands_frontera
-						}
 					}
 					set_variable = {
 						name = newly_formed_colonial_nation_var
@@ -278,13 +275,6 @@
 					}
 					add_modifier = {
 						name = colonial_administration
-					}
-					every_scope_state = {
-						limit = {
-							is_split_state = yes
-						}
-						remove_modifier = modifier_frontierlands_frontera
-						set_state_type = unincorporated
 					}
 				}
 			}

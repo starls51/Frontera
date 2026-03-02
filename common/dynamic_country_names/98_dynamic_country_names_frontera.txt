@@ -27,9 +27,10 @@ INJECT:DEFAULT = {
 		trigger = {
 			scope:actor ?= {
 				has_law = law_type:law_frontier_territorial_administration
-				any_primary_culture = {
-					shares_language_trait_with_culture = cu:british
-				}
+				#only in english
+				#any_primary_culture = {
+				#	shares_language_trait_with_culture = cu:british
+				#}
 			}
 		}
 	}
@@ -93,9 +94,12 @@ REPLACE:CAL = {
 		adjective = dyn_c_alta_california_adj
 
 		is_main_tag_only = no
-		priority = 1
+		priority = 1005
 
 		trigger = {
+			scope:actor ?= {
+				has_state_in_state_region = STATE_CALIFORNIA
+			}
 			coa_def_mexican_ensign_trigger = yes
 		}
 	}
@@ -124,6 +128,21 @@ REPLACE:CAL = {
 
 		trigger = {
 			coa_def_communist_flag_trigger = yes
+		}
+	}
+
+	dynamic_country_name = {
+		name = dyn_c_utah_territory
+		adjective = dyn_c_utah_territory_adj
+
+		is_main_tag_only = yes
+		priority = 1000
+
+		trigger = {
+			scope:actor ?= {
+				has_law = law_type:law_frontier_territorial_administration
+				NOT = { has_state_in_state_region = STATE_CALIFORNIA }
+			}
 		}
 	}
 }

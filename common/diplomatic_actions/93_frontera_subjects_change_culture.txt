@@ -19,12 +19,16 @@
 
 	possible = {
 		scope:target_country = {
-			any_primary_culture = {
-				NOT = {is_primary_culture_of = ROOT}
-				OR = {
-					NOT = {shares_language_trait_with_any_primary_culture = ROOT}
-					scope:target_country = {
-						has_law = law_type:law_frontier_territorial_administration
+			NOT = {
+				any_primary_culture = {
+					OR = {
+						is_primary_culture_of = ROOT
+						AND = {
+							shares_language_trait_with_any_primary_culture = ROOT
+							scope:target_country = {
+								NOT = { has_law = law_type:law_frontier_territorial_administration }
+							}
+						}
 					}
 				}
 			}

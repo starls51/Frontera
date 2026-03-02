@@ -15,7 +15,7 @@ REPLACE:law_frontier_colonization = {
 				}
 			}
 			any_scope_state = {
-				is_homeland_of_country_cultures = ROOT
+				is_incorporated = yes
 				any_neighbouring_state = {
 					owner = {
 						is_country_type = decentralized
@@ -23,11 +23,29 @@ REPLACE:law_frontier_colonization = {
 				}
 			}
 			AND = {
-				has_law = law_type:law_homesteading
-				OR = {
-					has_law = law_type:law_racial_segregation
-					has_law = law_type:law_national_supremacy
-					has_law = law_type:law_ethnostate
+				NOT = { has_law = law_type:law_subjecthood }
+				NOT = { has_law = law_type:law_multicultural }
+				custom_tooltip = {
+					text = colonial_affairs_owner_is_discriminated_country_tt
+					any_scope_state = {
+						is_homeland_of_country_cultures = ROOT
+						any_neighbouring_state = {
+							NOT = { owner = root }
+							owner = {
+								NOT = {
+									any_primary_culture = {
+										save_temporary_scope_as = culture_scope
+										root = {
+											country_average_cultural_acceptance = {
+												target = scope:culture_scope
+												value > 60
+											}
+										}
+									}
+								}
+							}
+						}
+					}
 				}
 			}
 		}

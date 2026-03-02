@@ -31,9 +31,10 @@
 						is_homeland_of_country_cultures = root
 					}
 					custom_tooltip = {
-						text = je_tooltip_homeland_adjacency_frontera
+						text = je_tooltip_incorporated_adjacency_frontera
 						any_neighbouring_state = {
-							is_homeland_of_country_cultures = root
+							owner = ROOT
+							is_incorporated = yes
 						}
 					}
 				}
@@ -45,10 +46,11 @@
 		custom_tooltip = {
 			text = da_organize_territory_from_subject_effect
 			scope:target_country = {
-				# change starting effects based on US slavery policy choices
+				# HERE would be to change starting effects based on US slavery policy choices
 				# effect_starting_politics_territory_free_frontera = yes
 				activate_law = law_type:law_frontier_territorial_administration
-				#each homeland culture gets radical
+				activate_law = law_type:law_homesteading # required to activate frontier guides modifier
+				activate_law = law_type:law_frontier_colonization # copy the overlords colonization charter
 				every_scope_state = {
 					every_scope_culture = {
 						limit = {
@@ -60,14 +62,6 @@
 								culture = prev
 							}
 						}
-					}
-				}
-				every_scope_state = {
-					limit = {
-						is_incorporated = yes
-					}
-					add_modifier = {
-						name = modifier_frontierlands_frontera
 					}
 				}
 				create_diplomatic_pact = {
