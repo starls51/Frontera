@@ -1,0 +1,71 @@
+﻿l_turkish:
+ Albino: "Albino" #deepl:4096260
+ Alvarado: "Alvarado" #deepl:2651717518
+ Armijo: "Armijo" #deepl:2904734236
+ Hartnell: "Hartnell" #deepl:3013980238
+ Sutter: "Sutter" #deepl:3431356359
+ californio: "Kaliforniyalı" #deepl:3509864768
+ californio_adj: "Kaliforniyalı" #deepl:3509864768
+ californio_mestizo: "Kaliforniyalı Mestizo" #deepl:263075456
+ californio_mestizo_adj: "Kaliforniyalı Mestizo" #deepl:263075456
+ dyn_c_alta_california: "Yüksek Kaliforniya" #deepl:2718655753
+ dyn_c_alta_california_adj: "Kaliforniyalı" #deepl:230681887
+ dyn_michigan_territory: "Michigan Bölgesi" #deepl:3433257000
+ dyn_wisconsin_territory: "Wisconsin Bölgesi" #deepl:2122556499
+ dyn_wisconsin_territory_adj: "Wisconsinli" #deepl:1988775082
+ dyn_minnesota_territory: "Minnesota Bölgesi" #deepl:2712883016
+ dyn_minnesota_territory_adj: "Minnesotalı" #deepl:2642244691
+ dyn_iowa_territory: "Iowa Bölgesi" #deepl:2578029042
+ dyn_iowa_territory_adj: "Iowan" #deepl:2527579376
+ dyn_northwest_territory: "Kuzeybatı Bölgesi" #deepl:905356594
+ dyn_northwest_territory_adj: "Kuzeybatı Bölgesi" #deepl:905356594
+ dyn_c_utah_territory: "Utah Bölgesi" #deepl:1157070552
+ dyn_c_utah_territory_adj: "Utah Bölgesi" #deepl:1157070552
+ dyn_florida_territory: "Florida Bölgesi" #deepl:246124055
+ NMX: "Yeni Meksika" #deepl:27763770
+ NMX_ADJ: "Yeni Meksikalı" #deepl:2909205373
+ modifier_frontierlands_frontera: "Sınır Rehberleri" #deepl:1536403044
+ modifier_oregon_trail_frontera: "Oregon Yolu" #deepl:1130619855
+ modifier_santafe_trail_frontera: "Santa Fe Yolu" #deepl:3532834792
+ geographic_region_louisiana_purchase: "Louisiana Satın Alımı" #deepl:1628975508
+ geographic_region_nebraska_territory: "Nebraska Bölgesi" #deepl:245903829
+ geographic_region_kansas_territory: "Kansas Bölgesi" #deepl:2490102990
+ geographic_region_mexican_north: "Meksika'nın kuzeyi" #deepl:1926221193
+ geographic_region_rocky_mountains: "Sarp Dağlar" #deepl:3487678637
+ geographic_region_greater_columbia: "Büyük Kolombiya" #deepl:3068876322
+ generic_organized_territory: "$NAME$" #deepl:1008351533
+ generic_organized_territory_adj: "$ADJECTIVE$" #deepl:1624419671
+ eng_organized_territory: "$ADJECTIVE$ Bölge" #deepl:2924367184
+ eng_organized_territory_adj: "$ADJECTIVE$ Bölge" #deepl:2924367184
+ de_organized_territory: "$NAME$ Reich Komiserliği" #deepl:2134933361
+ de_organized_territory_adj: "$ADJECTIVE$ Komiserlik" #deepl:1154235138
+ creating_OT_frontera_tt: "#indent_newline:2 Bir #bold  Organize Bölge #! aşağıdaki kurallara göre bir [concept_capital_state] verilecektir: \n $EFFECT_LIST_BULLET$ [Concept('concept_unincorporated_state','$concept_unincorporated_state$')] \n $EFFECT_LIST_BULLET$ #bold  #! [ROOT.GetCountry.GetAdjectiveNoFormatting] [Concept('concept_homeland','$concept_homeland$')] \n $EFFECT_LIST_BULLET$ #bold  #! [ROOT.GetCountry.GetAdjectiveNoFormatting] [Concept('concept_incorporated_state','$concept_incorporated_state$')]. \n $EFFECT_LIST_BULLET$ [GetDecreeType('decree_greener_grass_campaign').GetName] , veya [concept_state] en yüksek [Concept('concept_gdp','$concept_gdp_short$')]" #deepl:2335454090
+ creating_OT_frontera_2_tt: "#italic  İlk iki kuralı izleyen ve yeni [concept_capital_state] ile [concept_strategic_region] paylaşan tüm eyaletler, #bold  Organized Territory #! #!'a devredilecektir." #deepl:1399382270
+ je_tooltip_no_homelands_frontera: "#bold , #! [ROOT.GetCountry.GetAdjectiveNoFormatting] [Concept('concept_homeland', '$concept_homeland$')] değil mi?" #deepl:2389861123
+ je_tooltip_homeland_required_frontera: "[ROOT.GetCountry.GetAdjectiveNoFormatting] [Concept('concept_homeland', '$concept_homeland$')]." #deepl:3505402040
+ je_tooltip_incorporated_adjacency_frontera: "#bold , [ROOT.GetCountry.GetAdjectiveNoFormatting] [Concept('concept_incorporated_state','$concept_incorporated_state$')] ile bitişik midir? #!" #deepl:215185147
+ je_organized_territories_frontera: "Organize Bölge Oluşturmak" #deepl:1625332565
+ je_organized_territories_frontera_reason: "Ülkemizi genişletmek amacıyla, bazı [Concept('concept_unincorporated_state','$concept_unincorporated_states$')] bölgelerimizden bir #bold  Organized Territory #! kurulabilir. Bunlar, #bold  Organized Territory #!'ye ait [Concept('concept_incorporated_state','$concept_incorporated_states$')] olacaklardır. \n \n Bir #bold  Organized Territory #!'de [GetLawType('law_homesteading').GetName] yürürlüğe girerken, en yüksek [Concept('concept_gdp','$concept_gdp_short$')]'ye sahip iki [Concept('concept_incorporated_state','$concept_states$')], [Concept('concept_migration','$concept_migration$')]'ye yıllık bonus alacaklardır. Bir #bold  Organized Territory #!'ye ait herhangi bir [Concept('concept_incorporated_state','$concept_incorporated_state$')], sonunda bir [Concept('concept_homeland','$concept_homeland$')]'ye ait [Concept('concept_overlord','$concept_overlord_possessive$')] [Concept('concept_primary_cultures','$concept_primary_culture$')] olabilir. \n #indent_newline:2 \n Bir [concept_state], aşağıdaki durumlarda bir [Concept('concept_homeland','$concept_homeland$')] haline gelir: \n $EFFECT_LIST_BULLET$ [Concept('concept_primary_cultures','$concept_primary_culture$')] \n $EFFECT_LIST_BULLET$ [Concept('concept_pop', '$concept_population$')]'ın %60'ı 65 veya daha fazla [concept_acceptance]'e sahiptir \n $EFFECT_LIST_BULLET$ [concept_state] [Concept('concept_pop', '$concept_population$')] 85.000'in üzerindedir \n \n #lore  Yerleşimciler, tüccarlar, misyonerler ve askerler, genellikle merkezi hükümetin kolayca ulaşamayacağı yerlerde, toprak ve fırsat arayışıyla dışa doğru ilerler. Bu uzak bölgelerin entegre olması için, genişlemenin ardından idare de gelmelidir. Yerleşimlerin büyüdüğü yerlerde, bir gün yeni eyaletler bizim egemenliğimize girebilir. #!" #deepl:544344828
+ je_organize_territory_button: "Bölgeyi Kurmak" #deepl:4044636356
+ je_organize_territory_button_desc: "[Concept('concept_unincorporated_state','$concept_unincorporated_states$')]'den bazılarını #bold  Organized Territory #!'da düzenleyin." #deepl:1558054720
+ da_organize_territory_from_subject: "Sınır Hükümeti Kurmak" #deepl:1624084733
+ da_organize_territory_from_subject_desc: "Bu [concept_subject]'un [Concept('concept_law', '$concept_laws$')] ve [Concept('concept_institution', '$concept_institutions$')] adresleri, #bold  Organized Territory #! adresine değiştirilecektir. Yerleşimciler burada [Concept('concept_migration','$concept_migrate$')] daha fazla yer alacaklar, ancak yerel [Concept('concept_pop', '$Population$')] daha fazla [Concept('concept_radical','$concept_radicalized$')] hale gelecektir." #deepl:2949097403
+ da_organize_territory_from_subject_effect: "[concept_subject], #bold  Organized Territory #! olacak." #deepl:1446860370
+ da_organize_territory_from_subject_action_notification_third_party_name: "[INITIATOR_COUNTRY.GetAdjectiveNoFormatting] - [TARGET_COUNTRY.GetAdjectiveNoFormatting] Formed #bold  Organized Territory #!" #deepl:3641017969
+ da_organize_territory_from_subject_action_notification_third_party_desc: "[INITIATOR_COUNTRY.GetName] [TARGET_COUNTRY.GetName]'yi #bold  Organize Bölgesi olarak kurmuştur. #!" #deepl:3647728949
+ da_organize_territory_from_subject_action_notification_name: "[INITIATOR_COUNTRY.GetName] #bold  Organized Territory olarak yeniden düzenlendi #!" #deepl:1212072590
+ da_organize_territory_from_subject_action_notification_desc: "[INITIATOR_COUNTRY.GetName] [TARGET_COUNTRY.GetName]'yi #bold  Organize Bölgesi olarak kurmuştur. #!" #deepl:3647728949
+ je_sunset_route_frontera: "Gün Batımı Rotası" #deepl:1011417108
+ je_sunset_route_frontera_reason: "Kaliforniya'ya sıcak hava demiryolu bağlantısı, Doğu ve Batı arasında benzeri görülmemiş bir ticaret ve insan akışı sağlayacaktır. Ancak, bu proje önemli bir koordinasyon gerektirmektedir. Mülk sahipleri arasında devam eden #italic  frog wars #! anlaşmazlıklarını çözmenin yanı sıra, ölçüleri, sinyalleri ve zamanlamayı standartlaştırmak da zorunludur. Yabancı ülkeler önerilen güzergah boyunca rayların bulunduğu alanları kontrol ediyorsa bu daha zor olabilir, ancak bu görev hiçbir şekilde imkansız değildir." #deepl:1621464726
+ je_sunset_route_frontera_button: "Gün Batımı Rotasını Bağlayın" #deepl:317884082
+ je_sunset_route_frontera_button_desc: "Kaliforniya'ya yeni bir demiryolu güzergahı oluşturmak için çeşitli paydaşlar arasında arabuluculuk yapmak." #deepl:952386937
+ je_gadsden_purchase_frontera_button: "Sınırları Test Et" #deepl:2467056109
+ je_gadsden_purchase_frontera_button_desc: "Gerekli kara koridorunu fiziksel olarak kontrol altına alırsak, batıya doğru demiryolu genişlemesi daha kolay yönetilebilir hale gelecektir. Siyasi açıdan riskli olsa da, komşularımızla sınır anlaşmazlıkları çıkarmak, projemiz için arazi edinmek üzere daha fazla diplomatik veya askeri seçenek sunabilir." #deepl:1391362877
+ sunset_route_built_yes_tt: "#bold  Gün Batımı Rotası #! mevcuttur." #deepl:4231881481
+ sunset_route_built_no_tt: "#bold  Gün Batımı Rotası #! mevcut değildir" #deepl:1689524445
+ sunset_route_frontera: "Gün Batımı Rotası" #deepl:1965144848
+ sunset_route_reward_frontera: "Gün Batımı Rotası" #deepl:1965144848
+ treaty_name_treaty_of_mesilla: "Mesilla Antlaşması" #deepl:3628424082
+ mesilla_treaty_creation_tt: "[concept_treaty] teklifini ekleyin ve Arizona veya New Mexico'da sahip olduğunuz herhangi bir araziyi [SCOPE.sCountry('buyer_scope').GetName]'a haftalık #bold £3500 #! [concept_state]" #deepl:2192895926
+ je_seminole_wars_removal_frontera: ""
+ colonial_affairs_owner_is_discriminated_country_tt: "[GetPlayer.GetAdjective]'ye bitişik herhangi bir [concept_state] [concept_homeland], [concept_country]'ye aittir ve 'nin [concept_primary_cultures]'leri [GetPlayer.GetName]'de [Concept('concept_discrimination','@acceptance_status_4! $second_rate_citizen$')]'nin altındadır." #deepl:525054957

@@ -1,0 +1,60 @@
+﻿l_simp_chinese:
+ debug_req_pop_ct: "该州人口为X万" #deepl:2150280673
+ debug_req_primary_perc: "该国拥有百分之几的主流文化属于霸权文化" #deepl:695788310
+ frontera_ot_homeland.1: "州地位" #deepl:290487462
+ frontera_ot_homeland.1.t: "甜蜜的家" #deepl:759433816
+ frontera_ot_homeland.1.d: "在阿卡迪亚（[SCOPE.sState('ascendent_state').GetName]）的定居者人口显著增长。尽管与原住民的冲突尚未解决，但此地似乎将成为未来许多代新英格兰（[SCOPE.sCountry('overlord_scope').GetAdjectiveNoFormatting]）移民的"新家园"（[Concept('concept_homeland','$concept_homeland$')]）。" #deepl:1896825475
+ frontera_ot_homeland.1.f: "“我生于草原，那里风自由地吹拂，没有任何东西能阻挡阳光。”——杰罗尼莫" #deepl:2391563847
+ frontera_ot_homeland.1.a: "[SCOPE.sState('ascendent_state').GetName] 可能很快成为一个州。" #deepl:3074916853
+ frontera_ot_homeland.1.b: "我的工作到此结束。" #deepl:1429745245
+ frontera_ot_homeland_gained_homeland: "已发生：\n #indent_newline:3 [SCOPE.sState('ascendent_state').GetName] 对其多数成员而言， 变成了 [Concept('concept_homeland','$concept_homeland$')] [SCOPE.sCountry('overlord_scope').GetAdjectiveNoFormatting] [Concept('concept_primary_cultures','$concept_primary_culture$')] #!" #deepl:1846806708
+ frontera_fort_ross.1: "止损" #deepl:1680067657
+ frontera_fort_ross.1.t: "止损" #deepl:1680067657
+ frontera_fort_ross.1.d: "罗斯堡最初建立是为了向阿拉斯加殖民者提供食物补给。这个初创的美国海军陆战队（[SCOPE.sCountry('seller_scope').GetAdjectiveNoFlag]）前哨站如今已失去战略价值。阿拉斯加土地管理局（[SCOPE.sCountry('buyer_scope').GetAdjectiveNoFlag]）官员近期开始关注我们对这片土地的可疑主张。出售现有建筑物将为我们提供体面撤离的机会，同时缓解该地区的紧张局势。" #deepl:233128330
+ frontera_fort_ross.1.f: "\n"如您所见，此处正是创立我的新赫尔瓦提亚公司（#bold  New Helvatia）的理想之地#!。是的，这片土地确实不错...您将为此获得报酬！啊#italic 当然#!您会得到丰厚的回报，"[SCOPE.sCharacter('john_sutter_scope').GetLastName]先生急切地表示要完成这笔交易。"时机成熟时。哦，是的，时机成熟时..."" #deepl:2218651227
+ frontera_fort_ross.1.a: "绝不！[SCOPE.sState('california_scope').GetName]理应属于我们。" #deepl:1821605251
+ frontera_fort_ross.1.b: "这是一个好计划。" #deepl:3518633261
+ frontera_fort_ross.1.c: "[SCOPE.sState('california_scope').GetName] 始终是 [SCOPE.sCountry('seller_scope').GetAdjectiveNoFlag]..." #deepl:971068779
+ frontera_fort_ross.2: "止损" #deepl:1680067657
+ frontera_fort_ross.2.t: "止损" #deepl:3839667639
+ frontera_fort_ross.2.d: "[SCOPE.sCountry('seller_scope').GetNameNoFlag] 我们的[concept_subject]公司计划出售其在[SCOPE.sState('california_scope').GetName]的持股。" #deepl:221351375
+ frontera_fort_ross.2.f: "当地[SCOPE.sCountry('buyer_scope').GetAdjectiveNoFlag]官员将乐见我们放弃该定居点。出售这些建筑物将使我们得以体面撤离，同时缓解该地区的紧张局势。" #deepl:4219192694
+ frontera_fort_ross.2.a: "不，[SCOPE.sState('california_scope').GetName] 是一个宝贵的立足点。" #deepl:1425941161
+ frontera_fort_ross.2.b: "好，这与伟大的[SCOPE.sCountry('overlord_scope').GetNameNoFlag]无关。" #deepl:2472227683
+ frontera_fort_ross.3: "胆大包天！" #deepl:61601467
+ frontera_fort_ross.3.t: "胆大包天！" #deepl:61601467
+ frontera_fort_ross.3.d: "[SCOPE.sCountry('seller_scope').GetNameNoFlag] 在[SCOPE.sState('california_scope').GetName]中表现得越来越强势。" #deepl:984030691
+ frontera_fort_ross.3.f: "尽管其[concept_claim]的合法性尚存争议，[SCOPE.sCountry('seller_scope').GetAdjectiveNoFlag]殖民者群体仍不断煽动[SCOPE.sCountry('buyer_scope').GetNameNoFlag]与[SCOPE.sCountry('seller_scope').GetNameNoFlag]之间日益激化的领土争端。" #deepl:725587561
+ frontera_fort_ross.3.a: "[SCOPE.sCountry('buyer_scope').GetAdjectiveNoFlag] 人们必须团结一致，共同应对这一威胁。" #deepl:620721478
+ frontera_fort_ross.4: "[SCOPE.sCharacter('john_sutter_scope').GetLastName]堡垒" #deepl:3078921980
+ frontera_fort_ross.4.t: "[SCOPE.sCharacter('john_sutter_scope').GetLastName]堡垒" #deepl:3078921980
+ frontera_fort_ross.4.d: "瑞士裔美国移民、开拓者兼多语者约翰·弗朗西斯·麦克莱伦（[SCOPE.sCharacter('john_sutter_scope').GetFullName]）已抵达弗吉尼亚州南阿勒格尼县（[SCOPE.sState('california_scope').GetName]）。" #deepl:308682427
+ frontera_fort_ross.4.f: "[SCOPE.sCharacter('john_sutter_scope').GetFullName] 已购得新赫尔维蒂亚殖民地（[SCOPE.sState('california_scope').GetName]）内所有由[SCOPE.sCountry('seller_scope').GetNameNoFlag]持有的资产，用于其宏伟的"新赫尔维蒂亚"（#bold ）定居计划（#!）。经我方批准，该殖民地可作为抵御野蛮土著的缓冲区。[SCOPE.sCharacter('john_sutter_scope').GetLastName]宣称新赫尔维蒂亚殖民地（#!）将成为边疆文明的灯塔。然而，有令人担忧的报告指出，他在雇佣的土著劳工及周边村落中实施暴力虐待。\n \n #italic ""旧世界正在消亡，新世界艰难诞生：此刻正是怪兽横行的时代。" ——安东尼奥·葛兰西 #!" #deepl:508408470
+ frontera_fort_ross.4.a: "把这个疯子送回他来的地方去。" #deepl:82128806
+ frontera_fort_ross.4.b: "他将帮助我们征服荒野！" #deepl:3671498773
+ frontera_sunset_route_event.1: "日落路线" #deepl:1011417108
+ frontera_sunset_route_event.1.t: "日落路线" #deepl:1011417108
+ frontera_sunset_route_event.1.d: "[SCOPE.sState('california_scope').GetName] 已通过铁路成功连接至大陆东部地区。这条穿越索诺兰沙漠的暖季路线全年可实现不间断运行。" #deepl:3309601727
+ frontera_sunset_route_event.2.d: "[SCOPE.sCountry('builder_scope').GetNameNoFlag] 该项目率先推动了通过铁路将亚利桑那州（[SCOPE.sState('california_scope').GetName]）与大陆东部地区相连的建设。这条穿越索诺兰沙漠的暖季路线可全年不间断运行。" #deepl:2730146222
+ frontera_sunset_route_event.1.f: ""这就是法律，小伙子们，明明白白，"州长宣告道，他的声音如身后那座钢铁巨像般浑厚有力。狂风横扫沙漠，维吉尔·厄普的手悬在左轮枪上迟疑不决。若非众多无辜的镇民前来围观，或许真会爆发枪战。厄普不情愿的叹息如蒸汽般在烈日炙烤的空气中飘散。 火车呼啸前行，夕阳路线就此开通。" #deepl:295026560
+ frontera_sunset_route_event.1.a: "进步的胜利！" #deepl:2958605196
+ frontera_sunset_route_event.2.a: "他们真走运……" #deepl:2754019974
+ sunset_route_frontera_reward_int: "率先开辟了日落路线" #deepl:1304134101
+ frontera_sunset_route_event.3: "梅西拉谷地之争" #deepl:510184323
+ frontera_sunset_route_event.3.t: "梅西拉谷地之争" #deepl:510184323
+ frontera_sunset_route_event.3.d: "关于梅西拉谷地归属权的争议已升级为美国新墨西哥州与墨西哥瓦哈卡州之间的外交争端。" #deepl:1502838723
+ frontera_sunset_route_event.3.f: ""那些[SCOPE.sCountry('buyer_scope').GetAdjectiveNoFlag]的探子骑马越过我们的边界，仿佛这土地早已属于他们，"[SCOPE.sCountry('angry_country_scope').GetAdjectiveNoFlag]部长愤愤不平地说道。[SCOPE.sCountry('angry_country_scope').GetRuler.GetPrimaryRoleTitle][SCOPE.sCountry('angry_country_scope').GetRuler.GetFullName]沉静地叼着雪茄，微弱的烟光在昏暗中短暂勾勒出他饱经风霜的面容，随即又隐入黑暗。\n\n"若我拒绝出售，他们便会强取豪夺——并宣称这是天命所归。"\n\n"而若你同意呢？"\n\n"我们被迫失去的...终将获得补偿。"" #deepl:87387247
+ frontera_sunset_route_event.3.a: "派遣更多武装远征军" #deepl:3471564856
+ frontera_sunset_route_event.3.b: "尝试更和平的方式" #deepl:990404971
+ frontera_sunset_route_event.4: "梅西拉谷地的入侵" #deepl:3780924556
+ frontera_sunset_route_event.4.t: "梅西拉谷地的入侵" #deepl:3780924556
+ frontera_sunset_route_event.4.d: "外国军事远征队屡次越过梅西利亚谷地附近划定的边界。" #deepl:2990890124
+ frontera_sunset_route_event.4.f: ""那些[SCOPE.sCountry('buyer_scope').GetAdjectiveNoFlag]的探子骑马越过我们的边界，仿佛这土地早已属于他们，"[SCOPE.sCountry('angry_country_scope').GetAdjectiveNoFlag]部长愤愤不平地说道。[SCOPE.sCountry('angry_country_scope').GetRuler.GetPrimaryRoleTitle][SCOPE.sCountry('angry_country_scope').GetRuler.GetFullName]沉静地叼着雪茄，微弱的烟光在昏暗中短暂勾勒出他饱经风霜的面容，随即又隐入黑暗。\n\n"若我拒绝出售，他们便会强取豪夺——并宣称这是天命所归。"\n\n"而若你同意呢？"\n\n"我们被迫失去的...终将获得补偿。"" #deepl:87387247
+ frontera_sunset_route_event.4.a: "出售土地的要约" #deepl:3847002548
+ frontera_sunset_route_event.4.b: "他们若入侵便是愚人" #deepl:346374326
+ frontera_sunset_route_event.5: "沙漠中的测量员" #deepl:1781160719
+ frontera_sunset_route_event.5.t: "沙漠中的测量员" #deepl:1781160719
+ frontera_sunset_route_event.5.d: "[SCOPE.sCountry('buyer_scope').GetAdjectiveNoFlag] 情报人员已将我方部分外交官纳入实地考察任务。他们似乎正试图在我们两国之间建立国际铁路网络。" #deepl:368096293
+ frontera_sunset_route_event.5.f: "无论我们是否认同该计划，这些调查都是规划基础设施改善和交流更先进交通方法知识的绝佳机会。" #deepl:652771437
+ frontera_sunset_route_event.5.a: "确实是邻里间的善意举动" #deepl:1043888935
+ 

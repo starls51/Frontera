@@ -1,0 +1,71 @@
+﻿l_japanese:
+ Albino: "アルビノ" #deepl:4096260
+ Alvarado: "アルバラード" #deepl:2651717518
+ Armijo: "アルミホ" #deepl:2904734236
+ Hartnell: "ハートネル" #deepl:3013980238
+ Sutter: "サッター" #deepl:3431356359
+ californio: "カリフォルニオ" #deepl:3509864768
+ californio_adj: "カリフォルニオ" #deepl:3509864768
+ californio_mestizo: "カリフォルニア系メスティソ" #deepl:263075456
+ californio_mestizo_adj: "カリフォルニア系メスティソ" #deepl:263075456
+ dyn_c_alta_california: "アルタ・カリフォルニア" #deepl:2718655753
+ dyn_c_alta_california_adj: "カリフォルニア州民" #deepl:230681887
+ dyn_michigan_territory: "ミシガン準州" #deepl:3433257000
+ dyn_wisconsin_territory: "ウィスコンシン準州" #deepl:2122556499
+ dyn_wisconsin_territory_adj: "ウィスコンシン州民" #deepl:1988775082
+ dyn_minnesota_territory: "ミネソタ準州" #deepl:2712883016
+ dyn_minnesota_territory_adj: "ミネソタ州民" #deepl:2642244691
+ dyn_iowa_territory: "アイオワ準州" #deepl:2578029042
+ dyn_iowa_territory_adj: "アイオワ州民" #deepl:2527579376
+ dyn_northwest_territory: "北西準州" #deepl:905356594
+ dyn_northwest_territory_adj: "北西準州" #deepl:905356594
+ dyn_c_utah_territory: "ユタ準州" #deepl:1157070552
+ dyn_c_utah_territory_adj: "ユタ準州" #deepl:1157070552
+ dyn_florida_territory: "フロリダ準州" #deepl:246124055
+ NMX: "ニューメキシコ州" #deepl:27763770
+ NMX_ADJ: "ニューメキシコ州民" #deepl:2909205373
+ modifier_frontierlands_frontera: "フロンティアガイド" #deepl:1536403044
+ modifier_oregon_trail_frontera: "オレゴン・トレイル" #deepl:1130619855
+ modifier_santafe_trail_frontera: "サンタフェ街道" #deepl:3532834792
+ geographic_region_louisiana_purchase: "ルイジアナ購入" #deepl:1628975508
+ geographic_region_nebraska_territory: "ネブラスカ準州" #deepl:245903829
+ geographic_region_kansas_territory: "カンザス準州" #deepl:2490102990
+ geographic_region_mexican_north: "メキシコ北部" #deepl:1926221193
+ geographic_region_rocky_mountains: "ロッキー山脈" #deepl:3487678637
+ geographic_region_greater_columbia: "グレーター・コロンビア" #deepl:3068876322
+ generic_organized_territory: "$NAME$" #deepl:1008351533
+ generic_organized_territory_adj: "$形容詞$" #deepl:1624419671
+ eng_organized_territory: "$ADJECTIVE$ 領域" #deepl:2924367184
+ eng_organized_territory_adj: "$ADJECTIVE$ 領域" #deepl:2924367184
+ de_organized_territory: "帝国総督府（$NAME$）" #deepl:2134933361
+ de_organized_territory_adj: "$ADJECTIVE$ コミッサリアート" #deepl:1154235138
+ creating_OT_frontera_tt: "#indent_newline:2 #bold  組織化された領域 #! は以下の規則に従い[concept_capital_state]が与えられる: \n $EFFECT_LIST_BULLET$ [Concept('concept_unincorporated_state','$concept_unincorporated_state$')] \n $EFFECT_LIST_BULLET$ #bold  #! [ROOT.GetCountry.GetAdjectiveNoFormatting] [Concept('concept_homeland','$concept_homeland$')] \n $EFFECT_LIST_BULLET$ #bold  #! [ROOT.GetCountry.GetAdjectiveNoFormatting] [Concept('concept_incorporated_state','$concept_incorporated_state$')] に隣接している。 \n $EFFECT_LIST_BULLET$ [GetDecreeType('decree_greener_grass_campaign').GetName] [concept_state] [Concept('concept_gdp','$concept_gdp_short$')]" #deepl:2335454090
+ creating_OT_frontera_2_tt: "#italic  最初の2つの規則に従い、かつ新たな[concept_capital_state]と[concept_strategic_region]を共有する州は、#bold 組織領土（#! #!）に割譲される。" #deepl:1399382270
+ je_tooltip_no_homelands_frontera: "#bold  は #! ではありませんか？[ROOT.GetCountry.GetAdjectiveNoFormatting][Concept('concept_homeland', '$concept_homeland$')]" #deepl:2389861123
+ je_tooltip_homeland_required_frontera: "[ROOT.GetCountry.GetAdjectiveNoFormatting] [Concept('concept_homeland', '$concept_homeland$')]." #deepl:3505402040
+ je_tooltip_incorporated_adjacency_frontera: "#bold  は #! に隣接していますか？ [ROOT.GetCountry.GetAdjectiveNoFormatting] [Concept('concept_incorporated_state','$concept_incorporated_state$')]" #deepl:215185147
+ je_organized_territories_frontera: "組織化された領域を確立する" #deepl:1625332565
+ je_organized_territories_frontera_reason: "国家拡大を追求するにあたり、#bold  組織領土 #! は、一部の [Concept('concept_unincorporated_state','$concept_unincorporated_states$')] から設立される可能性があります。これらは [Concept('concept_incorporated_state','$concept_incorporated_states$')] となり、#bold  組織領土 #! が所有します。\n \n #bold  組織領土 #! が [GetLawType('law_homesteading').GetName] を制定している間、[Concept('concept_gdp','$concept_gdp_short$')] において最も高い  を有する 2 つの [Concept('concept_incorporated_state','$concept_states$')] は、[Concept('concept_migration','$concept_migration$')] への年間ボーナスを受け取ります。#bold  組織領土 #! に属する [Concept('concept_incorporated_state','$concept_incorporated_state$')] は、最終的に [Concept('concept_overlord','$concept_overlord_possessive$')] [Concept('concept_primary_cultures','$concept_primary_culture$')] の [Concept('concept_homeland','$concept_homeland$')] になる可能性があります。\n #indent_newline:2 \n [concept_state] は以下の条件を満たす場合、[Concept('concept_homeland','$concept_homeland$')] となる： \n $EFFECT_LIST_BULLET$ [Concept('concept_cultural_community','$concept_cultural_community$')] が [Concept('concept_overlord','$concept_overlord_possessive$')] であること [Concept('concept_primary_cultures','$concept_primary_culture$')] \n $EFFECT_LIST_BULLET$ [Concept('concept_pop', '$concept_population$')] の 60% が [concept_acceptance] で 65 以上であること \n $EFFECT_LIST_BULLET$ [concept_state] が [Concept('concept_pop', '$concept_population$')] で 85,000 を超えること \n \n #lore  開拓者、商人、宣教師、兵士たちは土地と機会を求めて外へ外へと進出し、しばしば中央政府の手の届きにくい地域にまで到達する。これらの遠隔地を統合するためには、拡大に続いて行政が行き届かねばならない。入植地が成長する場所では、いずれ新たな州が我々の領域に加わるかもしれない。 #!" #deepl:544344828
+ je_organize_territory_button: "領域を確立する" #deepl:4044636356
+ je_organize_territory_button_desc: "[Concept('concept_unincorporated_state','$concept_unincorporated_states$')]の一部を、#bold の組織化された領域に再編成する。#!" #deepl:1558054720
+ da_organize_territory_from_subject: "フロンティア政府を設立する" #deepl:1624084733
+ da_organize_territory_from_subject_desc: "この[concept_subject]の[Concept('concept_law', '$concept_laws$')]と[Concept('concept_institution', '$concept_institutions$')]は、#bold のOrganized Territory #!へと変更されます。入植者は[Concept('concept_migration','$concept_migrate$')]する可能性が高まりますが、地元の[Concept('concept_pop', '$Population$')]はより[Concept('concept_radical','$concept_radicalized$')]となります。" #deepl:2949097403
+ da_organize_territory_from_subject_effect: "[concept_subject]は、#bold の組織化された地域となります。#!" #deepl:1446860370
+ da_organize_territory_from_subject_action_notification_third_party_name: "[INITIATOR_COUNTRY.GetAdjectiveNoFormatting] - [TARGET_COUNTRY.GetAdjectiveNoFormatting] Formed#bold  Organized Territory#!" #deepl:3641017969
+ da_organize_territory_from_subject_action_notification_third_party_desc: "[INITIATOR_COUNTRY.GetName] [TARGET_COUNTRY.GetName]を#bold の組織地域として設立しました#!" #deepl:3647728949
+ da_organize_territory_from_subject_action_notification_name: "[INITIATOR_COUNTRY.GetName] 私たちを再編成し、#bold  組織化された地域とした#!" #deepl:1212072590
+ da_organize_territory_from_subject_action_notification_desc: "[INITIATOR_COUNTRY.GetName] [TARGET_COUNTRY.GetName]を#bold の組織地域として設立しました#!" #deepl:3647728949
+ je_sunset_route_frontera: "サンセットルート" #deepl:1011417108
+ je_sunset_route_frontera_reason: "温暖な気候のカリフォルニア州への鉄道接続は、東西間の商業と人の流れを前例のない規模で可能にするだろう。しかしこのプロジェクトには大規模な調整が必要だ。土地所有者間の継続的な線路敷設権争い（フロッグ・ウォーズ）の解決（#italic  #!）に加え、軌間・信号・運行スケジュールの標準化も不可欠である。提案ルート沿いの線路区域を外国が管理している場合、この作業はより困難になる可能性があるが、決して不可能ではない。" #deepl:1621464726
+ je_sunset_route_frontera_button: "サンセットルートをつなぐ" #deepl:317884082
+ je_sunset_route_frontera_button_desc: "様々な利害関係者の間を取り持ち、カリフォルニア州への新たな鉄道路線を創設する。" #deepl:952386937
+ je_gadsden_purchase_frontera_button: "境界線を試す" #deepl:2467056109
+ je_gadsden_purchase_frontera_button_desc: "西進する鉄道拡張は、必要な土地回廊を物理的に掌握すればより管理しやすくなる。政治的にはリスクを伴うが、近隣諸国との国境紛争を煽ることで、プロジェクトのための土地取得に向けたさらなる外交的・軍事的選択肢が開ける可能性がある。" #deepl:1391362877
+ sunset_route_built_yes_tt: "#bold  サンセットルート #! が存在します" #deepl:4231881481
+ sunset_route_built_no_tt: "#bold  Sunset Route #! は存在しません" #deepl:1689524445
+ sunset_route_frontera: "サンセットルート" #deepl:1965144848
+ sunset_route_reward_frontera: "サンセットルート" #deepl:1965144848
+ treaty_name_treaty_of_mesilla: "メシラ条約" #deepl:3628424082
+ mesilla_treaty_creation_tt: "アリゾナ州またはニューメキシコ州の所有地を、週額3500ポンド（#bold ）で[SCOPE.sCountry('buyer_scope').GetName]に売却するオファーを追加してください。詳細はこちら：#![concept_state]" #deepl:2192895926
+ je_seminole_wars_removal_frontera: ""
+ colonial_affairs_owner_is_discriminated_country_tt: "任意の[concept_state]が、[GetPlayer.GetAdjective] [concept_homeland] に隣接する場合、そのは[concept_country]に属し、そのの[concept_primary_cultures]は全て、[GetPlayer.GetName]内の[Concept('concept_discrimination','@acceptance_status_4! $second_rate_citizen$')]より下位にある。" #deepl:525054957

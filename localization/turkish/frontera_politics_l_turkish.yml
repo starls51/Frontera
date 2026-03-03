@@ -1,0 +1,23 @@
+﻿l_turkish:
+ movement_frontera_mexican_federalist: "Federalist Hareket" #deepl:2788786836
+ movement_frontera_mexican_federalist_short: "Federalist" #deepl:620747088
+ movement_frontera_mexican_federalist_name: "Federalist Hareket" #deepl:2788786836
+ ideology_frontera_mexican_federalist: "Meksika Federalisti" #deepl:2228111078
+ ideology_frontera_mexican_federalist_desc: "Federalistler, merkezi olmayan bir hükümeti savunurlar ve tek tek eyaletlere önemli ölçüde özerklik tanırlar. Amerika Birleşik Devletleri modelinden esinlenen federalistler, yerel özgürlükleri korumayı ve başkentte tek bir diktatörün yükselişini önlemeyi amaçlarlar." #deepl:3704296238
+ movement_frontera_mexican_centralist: "Merkezci Hareket" #deepl:2210180886
+ movement_frontera_mexican_centralist_short: "Merkezci" #deepl:1675741728
+ movement_frontera_mexican_centralist_name: "Merkezci Hareket" #deepl:2210180886
+ ideology_frontera_mexican_centralist: "Meksika Merkezci" #deepl:1986234739
+ ideology_frontera_mexican_centralist_desc: "Merkezciler, genellikle bölgesel özerkliği feda ederek güçlü, üniter bir ulusal hükümet istemektedirler. Kolonyal dönemin merkezi yapısını taklit ederek, kaotik bir erken cumhuriyet dönemine düzen getirmeye çalışmaktadırlar." #deepl:2906061988
+ state_pop_support_movement_frontera_mexican_federalist_add: "$movement_frontera_mexican_federalist$ $concept_pop$ Çekicilik" #deepl:2340973415
+ state_pop_support_movement_frontera_mexican_federalist_add_desc: "$siyasi_hareket_popüler_çekicilik_çoklu_açıklama$" #deepl:424746024
+ state_pop_support_movement_frontera_mexican_federalist_mult: "$state_pop_support_movement_frontera_mexican_federalist_add$" #deepl:3056203231
+ state_pop_support_movement_frontera_mexican_federalist_mult_desc: "$siyasi_hareket_popüler_çekicilik_çoklu_açıklama$" #deepl:424746024
+ state_pop_support_movement_frontera_mexican_centralist_add: "$movement_frontera_mexican_centralist$ $concept_pop$ Çekicilik" #deepl:2808064350
+ state_pop_support_movement_frontera_mexican_centralist_add_desc: "$siyasi_hareket_popüler_çekicilik_çoklu_açıklama$" #deepl:424746024
+ state_pop_support_movement_frontera_mexican_centralist_mult: "$state_pop_support_movement_frontera_mexican_centralist_add$" #deepl:999402151
+ state_pop_support_movement_frontera_mexican_centralist_mult_desc: "$siyasi_hareket_popüler_çekicilik_çoklu_açıklama$" #deepl:424746024
+ generic_revolt_federalist_frontera: "Federalista $NAME$" #deepl:2886720149
+ generic_revolt_federalist_frontera_adj: "$ADJECTIVE$ Federalist" #deepl:1698099802
+ generic_revolt_centralist_frontera: "$NAME$" #deepl:394110082
+ generic_revolt_centralist_frontera_adj: "$ADJECTIVE$ Merkezci" #deepl:2543533519

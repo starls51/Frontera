@@ -1,0 +1,60 @@
+﻿l_japanese:
+ debug_req_pop_ct: "州には人口が数人いる" #deepl:2150280673
+ debug_req_primary_perc: "国家は支配者の主要文化のパーセントを占める" #deepl:695788310
+ frontera_ot_homeland.1: "州としての地位" #deepl:290487462
+ frontera_ot_homeland.1.t: "わが家、わが家" #deepl:759433816
+ frontera_ot_homeland.1.d: "[SCOPE.sState('ascendent_state').GetName]における入植者人口は著しく増加した。先住民との未解決の紛争があるにもかかわらず、この地は今後何世代にもわたり、[SCOPE.sCountry('overlord_scope').GetAdjectiveNoFormatting]にとって[Concept('concept_homeland','$concept_homeland$')]となるだろう。" #deepl:1896825475
+ frontera_ot_homeland.1.f: "「私は大草原で生まれた。風は自由に吹き抜け、太陽の光を遮るものは何一つなかった。」— ジェロニモ" #deepl:2391563847
+ frontera_ot_homeland.1.a: "[SCOPE.sState('ascendent_state').GetName] まもなく州になるかもしれない。" #deepl:3074916853
+ frontera_ot_homeland.1.b: "私の仕事はこれで終わった。" #deepl:1429745245
+ frontera_ot_homeland_gained_homeland: "発生した事象: \n #indent_newline:3 [SCOPE.sState('ascendent_state').GetName] は、その過半数に対して [Concept('concept_homeland','$concept_homeland$')] となった [SCOPE.sCountry('overlord_scope').GetAdjectiveNoFormatting] [Concept('concept_primary_cultures','$concept_primary_culture$')] #!" #deepl:1846806708
+ frontera_fort_ross.1: "損切り" #deepl:1680067657
+ frontera_fort_ross.1.t: "損切り" #deepl:1680067657
+ frontera_fort_ross.1.d: "フォート・ロスは当初、アラスカの入植者に食糧を供給するために設立された。この未熟な[SCOPE.sCountry('seller_scope').GetAdjectiveNoFlag]の前哨基地は、その後その重要性を失った。[SCOPE.sCountry('buyer_scope').GetAdjectiveNoFlag]当局は最近、我々の土地に対する疑わしい権利主張に注目している。建造物を売却することは、我々の名誉を傷つけずに撤退する機会を提供し、地域の緊張を和らげるだろう。" #deepl:233128330
+ frontera_fort_ross.1.f: "\n「ご覧の通り、ここは私の#bold ニューヘルヴァティア#!を設立するのに理想的な場所だ。そう、これは素晴らしい土地だ…その代金は支払われる！ああ#italic もちろん#!あなたは手厚く報われるだろう」と、購入を急ぐミスター[SCOPE.sCharacter('john_sutter_scope').GetLastName]は言う。「時が来れば。ああ、時が来れば…」" #deepl:2218651227
+ frontera_fort_ross.1.a: "絶対に！[SCOPE.sState('california_scope').GetName]は当然私たちのものだ。" #deepl:1821605251
+ frontera_fort_ross.1.b: "これは良い計画です。" #deepl:3518633261
+ frontera_fort_ross.1.c: "[SCOPE.sState('california_scope').GetName] 常に [SCOPE.sCountry('seller_scope').GetAdjectiveNoFlag]..." #deepl:971068779
+ frontera_fort_ross.2: "損切り" #deepl:1680067657
+ frontera_fort_ross.2.t: "損切り" #deepl:3839667639
+ frontera_fort_ross.2.d: "[SCOPE.sCountry('seller_scope').GetNameNoFlag] 当社の[concept_subject]は、[SCOPE.sState('california_scope').GetName]の保有株を売却する意向である。" #deepl:221351375
+ frontera_fort_ross.2.f: "[SCOPE.sCountry('buyer_scope').GetAdjectiveNoFlag]の現地当局者は、我々がこの入植地を放棄することを大いに歓迎するだろう。建造物を売却すれば、名誉を傷つけずに撤退する機会が得られ、地域の緊張緩和にもつながる。" #deepl:4219192694
+ frontera_fort_ross.2.a: "いいえ、[SCOPE.sState('california_scope').GetName] は貴重な足掛かりです。" #deepl:1425941161
+ frontera_fort_ross.2.b: "結構だ、これは偉大なる[SCOPE.sCountry('overlord_scope').GetNameNoFlag]の知ったことではない。" #deepl:2472227683
+ frontera_fort_ross.3: "なんて厚かましいんだ！" #deepl:61601467
+ frontera_fort_ross.3.t: "なんて厚かましいんだ！" #deepl:61601467
+ frontera_fort_ross.3.d: "[SCOPE.sCountry('seller_scope').GetNameNoFlag] [SCOPE.sState('california_scope').GetName]において、より積極的になっている。" #deepl:984030691
+ frontera_fort_ross.3.f: "彼らの[concept_claim]の法的地位が不安定であるにもかかわらず、[SCOPE.sCountry('seller_scope').GetAdjectiveNoFlag]の入植者グループは、[SCOPE.sCountry('buyer_scope').GetNameNoFlag]と[SCOPE.sCountry('seller_scope').GetNameNoFlag]の間で高まる領土紛争の火に油を注いでいる。" #deepl:725587561
+ frontera_fort_ross.3.a: "[SCOPE.sCountry('buyer_scope').GetAdjectiveNoFlag] 人々は結束してこの脅威に立ち向かわねばならない" #deepl:620721478
+ frontera_fort_ross.4: "[SCOPE.sCharacter('john_sutter_scope').GetLastName]砦" #deepl:3078921980
+ frontera_fort_ross.4.t: "[SCOPE.sCharacter('john_sutter_scope').GetLastName]砦" #deepl:3078921980
+ frontera_fort_ross.4.d: "スイス系アメリカ人移民、開拓者、そして多言語話者である[SCOPE.sCharacter('john_sutter_scope').GetFullName]が、[SCOPE.sState('california_scope').GetName]に到着した。" #deepl:308682427
+ frontera_fort_ross.4.f: "[SCOPE.sCharacter('john_sutter_scope').GetFullName] [SCOPE.sCountry('seller_scope').GetNameNoFlag]が所有する[SCOPE.sState('california_scope').GetName]の全資産を、彼の壮大な植民地計画「#bold ニューヘルヴェティア」#!のために購入した。我々の祝福のもと、この植民地は無法な先住民に対する緩衝地帯として機能するかもしれない。[SCOPE.sCharacter('john_sutter_scope').GetLastName]は、#bold ニューヘルヴェティア#!が辺境における文明の灯台となると主張している。しかし、彼の雇用下にある先住民や周辺村落に対する暴力的な虐待に関する懸念すべき報告が寄せられている。\n \n #italic "旧世界は死に、新世界は生まれようともがいている。今こそ怪物の時代である。」 — アントニオ・グラムシ #!" #deepl:508408470
+ frontera_fort_ross.4.a: "この狂人を元の場所へ返せ。" #deepl:82128806
+ frontera_fort_ross.4.b: "彼は荒野を飼いならす手助けをしてくれるでしょう！" #deepl:3671498773
+ frontera_sunset_route_event.1: "サンセットルート" #deepl:1011417108
+ frontera_sunset_route_event.1.t: "サンセットルート" #deepl:1011417108
+ frontera_sunset_route_event.1.d: "[SCOPE.sState('california_scope').GetName] 大陸の東部地域まで鉄道で接続に成功した。ソノラ砂漠を横断するこの温暖な気候の路線は、年間を通じてノンストップで運行できる。" #deepl:3309601727
+ frontera_sunset_route_event.2.d: "[SCOPE.sCountry('builder_scope').GetNameNoFlag] ソノラ砂漠を横断するこの温暖な気候のルートは、年間を通じてノンストップで運行が可能であり、[SCOPE.sState('california_scope').GetName]を大陸東部と鉄道で結ぶ取り組みを主導してきた。" #deepl:2730146222
+ frontera_sunset_route_event.1.f: "「これが諸君への法だ、明瞭なほどに」と知事は宣言した。その声は背後に立つ鉄の巨像のように力強かった。砂漠を風が吹き抜け、ヴァージル・アープの手がリボルバーの上で止まった。見物に集まった罪なき町民がいなければ、おそらく銃撃戦になっていただろう。アープの渋々とした溜息が、蒸気の音のように日焼けした熱気の中に漂った。 機関車は走り続け、サンセット・ルートが開通した。" #deepl:295026560
+ frontera_sunset_route_event.1.a: "進歩の勝利！" #deepl:2958605196
+ frontera_sunset_route_event.2.a: "彼らにとっては良かった…" #deepl:2754019974
+ sunset_route_frontera_reward_int: "サンセットルートの先頭に立った" #deepl:1304134101
+ frontera_sunset_route_event.3: "メシラ渓谷の紛争" #deepl:510184323
+ frontera_sunset_route_event.3.t: "メシラ渓谷の紛争" #deepl:510184323
+ frontera_sunset_route_event.3.d: "メシラ渓谷の所有権をめぐる問題は、ニューメキシコ州（[SCOPE.sCountry('buyer_scope').GetName]）とアリゾナ州（[SCOPE.sCountry('angry_country_scope').GetName]）の間の外交問題へと発展した。" #deepl:1502838723
+ frontera_sunset_route_event.3.f: "「[SCOPE.sCountry('buyer_scope').GetAdjectiveNoFlag]スカウトたちは国境を越えて乗り込んでくる。まるで既に自分たちのものかのように」[SCOPE.sCountry('angry_country_scope').GetAdjectiveNoFlag]大臣は憤慨した。[SCOPE.sCountry('angry_country_scope').GetRuler.GetPrimaryRoleTitle][SCOPE.sCountry('angry_country_scope').GetRuler.GetFullName]は燻るような静けさの中で葉巻をくゆらせた。かすかな光が彼の風化した顔立ちを一瞬浮かび上がらせ、やがて闇に消えていった。\n\n「もし売らないと言えば、彼らはただ奪い取るだけだ——そして運命の定めだと主張するだろう」\n\n「もし同意したら？」\n\n「我々は代償を受け取る…奪われることを強いられた代償を」" #deepl:87387247
+ frontera_sunset_route_event.3.a: "さらに多くの武装遠征隊を送れ" #deepl:3471564856
+ frontera_sunset_route_event.3.b: "より平和的なアプローチを試みる" #deepl:990404971
+ frontera_sunset_route_event.4: "メシラ渓谷への侵入" #deepl:3780924556
+ frontera_sunset_route_event.4.t: "メシラ渓谷への侵入" #deepl:3780924556
+ frontera_sunset_route_event.4.d: "外国軍による遠征部隊は、メシラ渓谷付近に設定された国境を越えて繰り返し侵入してきた。" #deepl:2990890124
+ frontera_sunset_route_event.4.f: "「[SCOPE.sCountry('buyer_scope').GetAdjectiveNoFlag]スカウトたちは国境を越えて乗り込んでくる。まるで既に自分たちのものかのように」[SCOPE.sCountry('angry_country_scope').GetAdjectiveNoFlag]大臣は憤慨した。[SCOPE.sCountry('angry_country_scope').GetRuler.GetPrimaryRoleTitle][SCOPE.sCountry('angry_country_scope').GetRuler.GetFullName]は燻るような静けさの中で葉巻をくゆらせた。かすかな光が彼の風化した顔立ちを一瞬浮かび上がらせ、やがて闇に消えていった。\n\n「もし売らないと言えば、彼らはただ奪い取るだけだ——そして運命の定めだと主張するだろう」\n\n「もし同意したら？」\n\n「我々は代償を受け取る…奪われることを強いられた代償を」" #deepl:87387247
+ frontera_sunset_route_event.4.a: "土地の売却の申し出" #deepl:3847002548
+ frontera_sunset_route_event.4.b: "彼らが侵略するなんて愚かだ" #deepl:346374326
+ frontera_sunset_route_event.5: "砂漠の測量士たち" #deepl:1781160719
+ frontera_sunset_route_event.5.t: "砂漠の測量士たち" #deepl:1781160719
+ frontera_sunset_route_event.5.d: "[SCOPE.sCountry('buyer_scope').GetAdjectiveNoFlag] 工作員たちは現地調査に我々の外交官数名を巻き込んだ。どうやら両国間に国際鉄道網を構築しようとしているようだ。" #deepl:368096293
+ frontera_sunset_route_event.5.f: "計画に賛成か反対かに関わらず、これらの調査はインフラ整備を計画し、より先進的な交通手段に関する知識を交換する絶好の機会である。" #deepl:652771437
+ frontera_sunset_route_event.5.a: "まさに隣人らしい心遣いだ" #deepl:1043888935
+ 

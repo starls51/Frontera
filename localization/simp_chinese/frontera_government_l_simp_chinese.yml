@@ -1,0 +1,51 @@
+﻿l_simp_chinese:
+ gov_frontier_territory_frontera: "#bold  组织化领地 #!" #deepl:906580571
+ gov_occupied_territory_frontera: "#bold  职业 政府 #!" #deepl:1016260001
+ gov_frontier_territory_frontera_desc: "这是一个由民选立法机构代其领地宗主统治的事实上的国家。[concept_government_type] \n \n $TRANSFER_OF_POWER_NAME_DESC$" #deepl:2530168596
+ gov_occupied_territory_frontera_desc: "这是一个由任命政府代其领土宗主国统治的事实上的国家。[concept_government_type]\n\n$TRANSFER_OF_POWER_NAME_DESC$" #deepl:4281170394
+ law_frontier_territorial_administration: "领地议会" #deepl:2715586447
+ law_frontier_territorial_administration_desc: "该州在法律上属于外国势力的下属行政区划，本身不具备主权。其被授予有限权力以管理零散的领土资产。根据设计，该地区政府旨在促进移民、人口增长或实现地域控制；其职能可能导致该地区逐步与宗主国融合。" #deepl:2928952332
+ frontera_organized_territory: "组织化区域" #deepl:2352668119
+ frontera_organized_territory_action_name: "[概念殖民地主题]" #deepl:3251702515
+ frontera_organized_territory_action_propose_name: "转为 [concept_colony_subject]" #deepl:3174115590
+ frontera_organized_territory_action_break_name: "授予独立权" #deepl:559759927
+ frontera_organized_territory_action_ask_to_break_name: "需求独立性" #deepl:2601711019
+ frontera_organized_territory_desc: "在两个[Concept('concept_country', '$concept_countries$')]之间建立[concept_colony_subject][concept_subject_type]关系。" #deepl:705416797
+ frontera_organized_territory_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName] 是 [SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] 的 [concept_colony_subject]。" #deepl:1373808063
+ frontera_organized_territory_action_notification_name: "[concept_colony_subject] 的需求" #deepl:1515811026
+ frontera_organized_territory_action_notification_desc: "[INITIATOR_COUNTRY.GetName] 要求我们向他们屈服，成为他们的[concept_colony_subject]。" #deepl:2712539620
+ frontera_organized_territory_action_notification_break_name: "独立获准" #deepl:2574177537
+ frontera_organized_territory_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] 我们已终止[concept_colony_subject]的身份。我们再次成为独立实体。" #deepl:3957619773
+ frontera_organized_territory_proposal_notification_break_name: "独立诉求" #deepl:4186398139
+ frontera_organized_territory_proposal_notification_break_desc: "[INITIATOR_COUNTRY.GetName] 要求我们终止他们的[concept_colony_subject]身份。" #deepl:1708328788
+ frontera_organized_territory_proposal_notification_break_effects_desc: "如果我们接受，他们就会完全独立。" #deepl:2906517331
+ frontera_organized_territory_proposal_break_accepted_name: "独立获准" #deepl:2574177537
+ frontera_organized_territory_proposal_break_accepted_desc: "[TARGET_COUNTRY.GetName] 接受了终止我们[concept_colony_subject]身份的要求。我们再次获得了独立。" #deepl:1952871052
+ frontera_organized_territory_proposal_break_declined_name: "拒绝独立" #deepl:653698475
+ frontera_organized_territory_proposal_break_declined_desc: "[TARGET_COUNTRY.GetName] 拒绝了终止我们[concept_colony_subject]状态的要求。" #deepl:3746860557
+ frontera_organized_territory_action_third_party_notification_break_name: "独立获准" #deepl:2574177537
+ frontera_organized_territory_action_third_party_notification_break_desc: "[INITIATOR_COUNTRY.GetName] 终止了[TARGET_COUNTRY.GetName]的[concept_colony_subject]状态，授予其完全独立地位。" #deepl:3771074568
+ frontera_organized_territory_proposal_third_party_break_accepted_name: "独立获准" #deepl:2574177537
+ frontera_organized_territory_proposal_third_party_break_accepted_desc: "[TARGET_COUNTRY.GetName] 终止了[INITIATOR_COUNTRY.GetName]的[concept_colony_subject]状态，授予其完全独立地位。" #deepl:100521671
+ frontera_organized_territory_proposal_third_party_break_declined_name: "拒绝独立" #deepl:653698475
+ frontera_organized_territory_proposal_third_party_break_declined_desc: "[TARGET_COUNTRY.GetName] 拒绝终止[INITIATOR_COUNTRY.GetName]的[concept_colony_subject]状态。" #deepl:3590310999
+ frontera_organized_territory_proposal_notification_name: "征服要求" #deepl:266272033
+ frontera_organized_territory_proposal_notification_desc: "[INITIATOR_COUNTRY.GetName] 要求我们向他们屈服，成为他们的[concept_colony_subject]。" #deepl:2712539620
+ frontera_organized_territory_proposal_notification_effects_desc: "若我们接受，便会成为他们的臣民。" #deepl:852371670
+ frontera_organized_territory_proposal_accepted_name: "臣服接受" #deepl:2584296030
+ frontera_organized_territory_proposal_accepted_desc: "[TARGET_COUNTRY.GetName] 接受了他们成为我们[concept_colony_subject]的要求。" #deepl:1124690513
+ frontera_organized_territory_proposal_declined_name: "征服被拒" #deepl:3425793555
+ frontera_organized_territory_proposal_declined_desc: "[TARGET_COUNTRY.GetName] 拒绝了要求他们成为我们[concept_colony_subject]的请求。" #deepl:3198712008
+ frontera_organized_territory_proposal_third_party_accepted_name: "被征服的国家" #deepl:3333335653
+ frontera_organized_territory_proposal_third_party_accepted_desc: "[TARGET_COUNTRY.GetName] 同意成为[INITIATOR_COUNTRY.GetName]的[concept_colony_subject]。" #deepl:3618292710
+ frontera_organized_territory_proposal_third_party_declined_name: "征服被拒" #deepl:3425793555
+ frontera_organized_territory_proposal_third_party_declined_desc: "[TARGET_COUNTRY.GetName] 拒绝成为[INITIATOR_COUNTRY.GetName]的[concept_colony_subject]。" #deepl:1144786411
+ frontera_organized_territory_effect_desc_global: "成为[concept_colony_subject]" #deepl:2186263610
+ frontera_organized_territory_effect_desc_first: "[TARGET_COUNTRY.GetName] 成为 [COUNTRY.GetAdjectiveNoFlag][concept_colony_subject]" #deepl:812973629
+ frontera_organized_territory_effect_desc_third: "[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)] [AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] 成为 [concept_colony_subject] 的子域名，其父域名是 [COUNTRY.GetName]" #deepl:1164416506
+ frontera_organized_territory_trigger_desc_global: "[concept_colony_subject]" #deepl:281153964
+ frontera_organized_territory_trigger_false_desc_global: "#b  是否为 #! 中的 [concept_colony_subject]" #deepl:4120123678
+ frontera_organized_territory_trigger_desc_first: "[TARGET_COUNTRY.GetName] 是 [COUNTRY.GetAdjectiveNoFlag][concept_colony_subject]" #deepl:3100485644
+ frontera_organized_territory_trigger_false_desc_first: "[TARGET_COUNTRY.GetName] #b  不是 #! 而是 [COUNTRY.GetAdjectiveNoFlag] [concept_colony_subject]" #deepl:3644228541
+ frontera_organized_territory_trigger_desc_third: "[COUNTRY.GetName] 是 [concept_colony_subject] 的 [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)] [AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]" #deepl:1872412249
+ frontera_organized_territory_trigger_false_desc_third: "[COUNTRY.GetNameNoFlag] #b  不是 #! 而是 [concept_colony_subject] 来自 [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetName)] [AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]" #deepl:2909402420

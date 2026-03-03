@@ -1,0 +1,60 @@
+﻿l_turkish:
+ debug_req_pop_ct: "EYALETİN NÜFUS SAYISI" #deepl:2150280673
+ debug_req_primary_perc: "STATE, OVERLORD'un YÜZDELİK BİRİNCİL KÜLTÜRÜNE SAHİPTİR." #deepl:695788310
+ frontera_ot_homeland.1: "Devletlik" #deepl:290487462
+ frontera_ot_homeland.1.t: "Evim, güzel evim" #deepl:759433816
+ frontera_ot_homeland.1.d: "[SCOPE.sState('ascendent_state').GetName]'deki yerleşimci nüfusu önemli ölçüde artmıştır. Yerlilerle çözülmemiş çatışmalara rağmen, bu yer gelecek nesiller için bir "[Concept('concept_homeland','$concept_homeland$')]" () olacak gibi görünüyor. [SCOPE.sCountry('overlord_scope').GetAdjectiveNoFormatting]" #deepl:1896825475
+ frontera_ot_homeland.1.f: ""Rüzgârın özgürce estiği ve güneş ışığını engelleyecek hiçbir şeyin olmadığı çayırlarda doğdum." — Geronimo" #deepl:2391563847
+ frontera_ot_homeland.1.a: "[SCOPE.sState('ascendent_state').GetName] yakında bir eyalet haline gelebilir." #deepl:3074916853
+ frontera_ot_homeland.1.b: "Buradaki işim bitti." #deepl:1429745245
+ frontera_ot_homeland_gained_homeland: "Olanlar: \n #indent_newline:3 [SCOPE.sState('ascendent_state').GetName] çoğunluğu için bir [Concept('concept_homeland','$concept_homeland$')] haline geldi [SCOPE.sCountry('overlord_scope').GetAdjectiveNoFormatting] [Concept('concept_primary_cultures','$concept_primary_culture$')] #!" #deepl:1846806708
+ frontera_fort_ross.1: "Zararlarımızı Azaltmak" #deepl:1680067657
+ frontera_fort_ross.1.t: "Zararlarımızı Azaltmak" #deepl:1680067657
+ frontera_fort_ross.1.d: "Fort Ross, ilk olarak Alaska'daki kolonistlere yiyecek sağlamak amacıyla kuruldu. Bu yeni kurulan [SCOPE.sCountry('seller_scope').GetAdjectiveNoFlag] karakolu, o zamandan beri önemini yitirmiştir. [SCOPE.sCountry('buyer_scope').GetAdjectiveNoFlag] yetkilileri, son zamanlarda bu araziye ilişkin şüpheli iddiamızı fark etmişlerdir. Yapıları satmak, onurumuzu zedelemeden buradan ayrılmamızı ve bölgedeki gerginliği azaltmamızı sağlayacaktır." #deepl:233128330
+ frontera_fort_ross.1.f: "\n"Gördüğünüz gibi, burası benim #bold  New Helvatia #!'ımı kurmak için ideal bir yer. Evet, burası güzel bir arazi... ve bunun için size ödeme yapılacaktır! Ah #italic  Elbette #! size cömert bir ödeme yapılacaktır," diyor satın almaya hevesli Bay [SCOPE.sCharacter('john_sutter_scope').GetLastName]. "Zamanı geldiğinde. Evet, zamanı geldiğinde..."" #deepl:2218651227
+ frontera_fort_ross.1.a: "Asla! [SCOPE.sState('california_scope').GetName] bizimdir." #deepl:1821605251
+ frontera_fort_ross.1.b: "Bu iyi bir plan." #deepl:3518633261
+ frontera_fort_ross.1.c: "[SCOPE.sState('california_scope').GetName] [SCOPE.sCountry('seller_scope').GetAdjectiveNoFlag] olmuştur..." #deepl:971068779
+ frontera_fort_ross.2: "Zararlarımızı Azaltmak" #deepl:1680067657
+ frontera_fort_ross.2.t: "Zararlarımızı Azaltmak" #deepl:3839667639
+ frontera_fort_ross.2.d: "[SCOPE.sCountry('seller_scope').GetNameNoFlag] [concept_subject], [SCOPE.sState('california_scope').GetName]'deki hisselerini devretmeyi planlıyor." #deepl:221351375
+ frontera_fort_ross.2.f: "[SCOPE.sCountry('buyer_scope').GetAdjectiveNoFlag]'ın yerel yetkilileri, yerleşim yerini terk etmemizden büyük memnuniyet duyacaktır. Yapıları satmak, onurumuzu zedelemeden buradan ayrılmamız için bir fırsat sunacak ve bölgedeki gerginliği azaltacaktır." #deepl:4219192694
+ frontera_fort_ross.2.a: "Hayır, [SCOPE.sState('california_scope').GetName] değerli bir dayanak noktasıdır." #deepl:1425941161
+ frontera_fort_ross.2.b: "Peki, bu güçlü [SCOPE.sCountry('overlord_scope').GetNameNoFlag]'yi ilgilendirmez." #deepl:2472227683
+ frontera_fort_ross.3: "Ne cüret!" #deepl:61601467
+ frontera_fort_ross.3.t: "Ne cüret!" #deepl:61601467
+ frontera_fort_ross.3.d: "[SCOPE.sCountry('seller_scope').GetNameNoFlag] [SCOPE.sState('california_scope').GetName]'da giderek daha iddialı hale geliyor." #deepl:984030691
+ frontera_fort_ross.3.f: "[concept_claim]'un yasal statüsü istikrarsız olmasına rağmen, [SCOPE.sCountry('seller_scope').GetAdjectiveNoFlag] kolonist grupları, [SCOPE.sCountry('buyer_scope').GetNameNoFlag] ve [SCOPE.sCountry('seller_scope').GetNameNoFlag] arasında giderek büyüyen toprak anlaşmazlığının alevlerini körüklemiştir." #deepl:725587561
+ frontera_fort_ross.3.a: "[SCOPE.sCountry('buyer_scope').GetAdjectiveNoFlag] insanlar bu tehdide karşı birleşmelidir" #deepl:620721478
+ frontera_fort_ross.4: "[SCOPE.sCharacter('john_sutter_scope').GetLastName]i Kalesi" #deepl:3078921980
+ frontera_fort_ross.4.t: "[SCOPE.sCharacter('john_sutter_scope').GetLastName]i Kalesi" #deepl:3078921980
+ frontera_fort_ross.4.d: "İsviçre-Amerikalı göçmen, öncü ve çok dilli[SCOPE.sCharacter('john_sutter_scope').GetFullName],[SCOPE.sState('california_scope').GetName]'a geldi." #deepl:308682427
+ frontera_fort_ross.4.f: "[SCOPE.sCharacter('john_sutter_scope').GetFullName] [SCOPE.sCountry('seller_scope').GetNameNoFlag]'ın [SCOPE.sState('california_scope').GetName]'daki tüm varlıklarını, #bold  New Helvetia #! adlı büyük yerleşim yeri için satın aldı. Bizim onayımızla, koloni asi yerlilere karşı bir tampon görevi görebilir. [SCOPE.sCharacter('john_sutter_scope').GetLastName], #bold  New Helvetia #!'nin sınır bölgesi için bir medeniyet feneri olacağını iddia ediyor. Ancak, onun istihdam ettiği yerlilere ve çevre köylerdeki yerlilere yönelik şiddetli istismarlarına dair endişe verici raporlar var. \n \n #italic "Eski dünya ölmekte, yeni dünya doğmak için mücadele ediyor: şimdi canavarların zamanıdır." — Antonio Gramsci #!" #deepl:508408470
+ frontera_fort_ross.4.a: "Bu deliyi geldiği yere geri gönderin." #deepl:82128806
+ frontera_fort_ross.4.b: "O, vahşi doğayı evcilleştirmemize yardım edecek!" #deepl:3671498773
+ frontera_sunset_route_event.1: "Gün Batımı Rotası" #deepl:1011417108
+ frontera_sunset_route_event.1.t: "Gün Batımı Rotası" #deepl:1011417108
+ frontera_sunset_route_event.1.d: "[SCOPE.sState('california_scope').GetName] demiryolu ile kıtanın doğu bölgelerine başarıyla bağlanmıştır. Sonora Çölü'nü kesen bu sıcak hava rotası, yıl boyunca kesintisiz olarak çalışabilir." #deepl:3309601727
+ frontera_sunset_route_event.2.d: "[SCOPE.sCountry('builder_scope').GetNameNoFlag] [SCOPE.sState('california_scope').GetName]'ı kıtanın doğu kesimlerine demiryolu ile bağlamak için bir girişim başlattı. Sonora Çölü'nü kesen bu sıcak hava rotası, yıl boyunca kesintisiz olarak çalışabilir." #deepl:2730146222
+ frontera_sunset_route_event.1.f: ""İşte size kanun, gün gibi açık," dedi Vali, sesi arkasındaki demir dev kadar sağlamdı. Rüzgar çölü süpürüyordu ve Virgil Earp'in eli tabancasının üzerinde duruyordu. İzlemeye gelen masum kasaba halkı olmasaydı, belki de bir çatışma çıkacaktı. Earp'in isteksiz iç çekişi, güneşin kavurduğu sıcaklıkta buhar gibi süzüldü. Lokomotif yoluna devam etti ve Sunset Route açıldı." #deepl:295026560
+ frontera_sunset_route_event.1.a: "İlerleme için bir zafer!" #deepl:2958605196
+ frontera_sunset_route_event.2.a: "Onlar için ne güzel..." #deepl:2754019974
+ sunset_route_frontera_reward_int: "Sunset Rotası'nın öncülüğünü yaptı" #deepl:1304134101
+ frontera_sunset_route_event.3: "Mesilla Vadisi'ndeki anlaşmazlık" #deepl:510184323
+ frontera_sunset_route_event.3.t: "Mesilla Vadisi'ndeki anlaşmazlık" #deepl:510184323
+ frontera_sunset_route_event.3.d: "Mesilla Vadisi'nin mülkiyeti konusundaki tartışmalar, [SCOPE.sCountry('buyer_scope').GetName] ve [SCOPE.sCountry('angry_country_scope').GetName] arasında diplomatik bir anlaşmazlığa dönüştü." #deepl:1502838723
+ frontera_sunset_route_event.3.f: ""[SCOPE.sCountry('buyer_scope').GetAdjectiveNoFlag]'ın keşifçileri, sanki zaten kendilerine aitmiş gibi sınırımızı geçiyorlar," diye öfkelendi [SCOPE.sCountry('angry_country_scope').GetAdjectiveNoFlag] bakanı. [SCOPE.sCountry('angry_country_scope').GetRuler.GetPrimaryRoleTitle] [SCOPE.sCountry('angry_country_scope').GetRuler.GetFullName], düşünceli bir sükunet içinde purosu içti, soluk ışık, yıpranmış yüz hatlarını kısa bir süreliğine belirginleştirdikten sonra karanlıkta kayboldu. \n \n"Satmayı reddedersem, onu alıp kaderlerini iddia edecekler."\n \n"Peki ya kabul edersen?"\n \n"Kaybetmek zorunda kaldığımız şeylerin bedeli olarak ödeme alıyoruz."" #deepl:87387247
+ frontera_sunset_route_event.3.a: "Daha fazla silahlı sefer gönderin" #deepl:3471564856
+ frontera_sunset_route_event.3.b: "Daha barışçıl bir yaklaşım denemek" #deepl:990404971
+ frontera_sunset_route_event.4: "Mesilla Vadisi'ne yapılan saldırılar" #deepl:3780924556
+ frontera_sunset_route_event.4.t: "Mesilla Vadisi'ne yapılan saldırılar" #deepl:3780924556
+ frontera_sunset_route_event.4.d: "Yabancı askeri seferler, Mesilla Vadisi yakınlarında belirlenen sınırı defalarca ihlal etti." #deepl:2990890124
+ frontera_sunset_route_event.4.f: ""[SCOPE.sCountry('buyer_scope').GetAdjectiveNoFlag]'ın keşifçileri, sanki zaten kendilerine aitmiş gibi sınırımızı geçiyorlar," diye öfkelendi [SCOPE.sCountry('angry_country_scope').GetAdjectiveNoFlag] bakanı. [SCOPE.sCountry('angry_country_scope').GetRuler.GetPrimaryRoleTitle] [SCOPE.sCountry('angry_country_scope').GetRuler.GetFullName], düşünceli bir sükunet içinde purosu içti, soluk ışık, yıpranmış yüz hatlarını kısa bir süreliğine belirginleştirdikten sonra karanlıkta kayboldu. \n \n"Satmayı reddedersem, onu alıp kaderlerini iddia edecekler."\n \n"Peki ya kabul edersen?"\n \n"Kaybetmek zorunda kaldığımız şeylerin bedeli olarak ödeme alıyoruz."" #deepl:87387247
+ frontera_sunset_route_event.4.a: "Arazinin satış teklifi" #deepl:3847002548
+ frontera_sunset_route_event.4.b: "Onlar istila etmek için aptal olurlar." #deepl:346374326
+ frontera_sunset_route_event.5: "Çöldeki araştırmacılar" #deepl:1781160719
+ frontera_sunset_route_event.5.t: "Çöldeki araştırmacılar" #deepl:1781160719
+ frontera_sunset_route_event.5.d: "[SCOPE.sCountry('buyer_scope').GetAdjectiveNoFlag] ajanlar, bazı diplomatlarımızı saha görevine dahil etmişlerdir. Görünüşe göre, ülkelerimiz arasında uluslararası demiryolu ağları kurmayı umuyorlar." #deepl:368096293
+ frontera_sunset_route_event.5.f: "Bu plana katılıp katılmadığımızdan bağımsız olarak, bu anketler altyapı iyileştirmelerini planlamak ve daha gelişmiş ulaşım yöntemleri hakkında bilgi alışverişinde bulunmak için mükemmel bir fırsattır." #deepl:652771437
+ frontera_sunset_route_event.5.a: "Gerçekten komşulukça bir jest" #deepl:1043888935
+ 

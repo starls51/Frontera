@@ -1,0 +1,71 @@
+﻿l_simp_chinese:
+ Albino: "白化病" #deepl:4096260
+ Alvarado: "阿尔瓦拉多" #deepl:2651717518
+ Armijo: "阿米霍" #deepl:2904734236
+ Hartnell: "哈特内尔" #deepl:3013980238
+ Sutter: "萨特" #deepl:3431356359
+ californio: "加利福尼亚人" #deepl:3509864768
+ californio_adj: "加利福尼亚人" #deepl:3509864768
+ californio_mestizo: "加利福尼亚混血儿" #deepl:263075456
+ californio_mestizo_adj: "加利福尼亚混血儿" #deepl:263075456
+ dyn_c_alta_california: "上加利福尼亚" #deepl:2718655753
+ dyn_c_alta_california_adj: "加利福尼亚人" #deepl:230681887
+ dyn_michigan_territory: "密歇根领地" #deepl:3433257000
+ dyn_wisconsin_territory: "威斯康星领地" #deepl:2122556499
+ dyn_wisconsin_territory_adj: "威斯康星州人" #deepl:1988775082
+ dyn_minnesota_territory: "明尼苏达领地" #deepl:2712883016
+ dyn_minnesota_territory_adj: "明尼苏达人" #deepl:2642244691
+ dyn_iowa_territory: "爱荷华领地" #deepl:2578029042
+ dyn_iowa_territory_adj: "爱荷华州人" #deepl:2527579376
+ dyn_northwest_territory: "西北地区" #deepl:905356594
+ dyn_northwest_territory_adj: "西北地区" #deepl:905356594
+ dyn_c_utah_territory: "犹他领地" #deepl:1157070552
+ dyn_c_utah_territory_adj: "犹他领地" #deepl:1157070552
+ dyn_florida_territory: "佛罗里达领地" #deepl:246124055
+ NMX: "新墨西哥州" #deepl:27763770
+ NMX_ADJ: "新墨西哥人" #deepl:2909205373
+ modifier_frontierlands_frontera: "边疆向导" #deepl:1536403044
+ modifier_oregon_trail_frontera: "俄勒冈小道" #deepl:1130619855
+ modifier_santafe_trail_frontera: "圣塔菲小径" #deepl:3532834792
+ geographic_region_louisiana_purchase: "路易斯安那购地案" #deepl:1628975508
+ geographic_region_nebraska_territory: "内布拉斯加领地" #deepl:245903829
+ geographic_region_kansas_territory: "堪萨斯领地" #deepl:2490102990
+ geographic_region_mexican_north: "墨西哥北部" #deepl:1926221193
+ geographic_region_rocky_mountains: "落基山脉" #deepl:3487678637
+ geographic_region_greater_columbia: "大哥伦比亚地区" #deepl:3068876322
+ generic_organized_territory: "$NAME$" #deepl:1008351533
+ generic_organized_territory_adj: "$形容词$" #deepl:1624419671
+ eng_organized_territory: "$ADJECTIVE$ 领地" #deepl:2924367184
+ eng_organized_territory_adj: "$ADJECTIVE$ 领地" #deepl:2924367184
+ de_organized_territory: "帝国委员会 $NAME$" #deepl:2134933361
+ de_organized_territory_adj: "$ADJECTIVE$ 军需处" #deepl:1154235138
+ creating_OT_frontera_tt: "#缩进换行:2#bold 组织区域#!将遵循以下规则分配[concept_capital_state]：\n$EFFECT_LIST_BULLET$是 [Concept('concept_unincorporated_state','$concept_unincorporated_state$')]\n$EFFECT_LIST_BULLET$是 #bold 非 #![ROOT.GetCountry.GetAdjectiveNoFormatting][Concept('concept_homeland','$concept_homeland$')]\n$EFFECT_LIST_BULLET$是 #bold 毗邻 #!至 [ROOT.GetCountry.GetAdjectiveNoFormatting][Concept('concept_incorporated_state','$concept_incorporated_state$')]\n$EFFECT_LIST_BULLET$拥有 [GetDecreeType('decree_greener_grass_campaign').GetName]或 [concept_state]且拥有最高 [Concept('concept_gdp','$concept_gdp_short$')]" #deepl:2335454090
+ creating_OT_frontera_2_tt: "#italic  遵循前两条规则且与新成立的加勒比海地区（[concept_capital_state]）共享加勒比海地区（[concept_strategic_region]）的任何国家，均将被划归为加勒比地区（#bold ）的组织辖区（Organized Territory）。#!#!" #deepl:1399382270
+ je_tooltip_no_homelands_frontera: "#bold  是否等同于 #! [ROOT.GetCountry.GetAdjectiveNoFormatting] [Concept('concept_homeland', '$concept_homeland$')]？" #deepl:2389861123
+ je_tooltip_homeland_required_frontera: "[ROOT.GetCountry.GetAdjectiveNoFormatting] [Concept('concept_homeland', '$concept_homeland$')]。" #deepl:3505402040
+ je_tooltip_incorporated_adjacency_frontera: "#bold 是否毗邻#!，而该地址又毗邻[ROOT.GetCountry.GetAdjectiveNoFormatting][Concept('concept_incorporated_state','$concept_incorporated_state$')]？" #deepl:215185147
+ je_organized_territories_frontera: "建立有组织的领地" #deepl:1625332565
+ je_organized_territories_frontera_reason: "为拓展国家版图，可从部分[Concept('concept_unincorporated_state','$concept_unincorporated_states$')]中建立#bold 组织领地#!。这些领地将归属[Concept('concept_incorporated_state','$concept_incorporated_states$')]，由#bold 组织领地#!所有。\n\n当#bold 组织领地#!实施[GetLawType('law_homesteading').GetName]政策时，其[Concept('concept_gdp','$concept_gdp_short$')]最高的两名[Concept('concept_incorporated_state','$concept_states$')]将获得年度奖金[Concept('concept_migration','$concept_migration$')]。任何隶属于#bold 组织领地#!的[Concept('concept_incorporated_state','$concept_incorporated_state$')]最终可晋升为[Concept('concept_homeland','$concept_homeland$')]，隶属于[Concept('concept_overlord','$concept_overlord_possessive$')][Concept('concept_primary_cultures','$concept_primary_culture$')]。\n #indent_newline:2 \n 当满足以下条件时，[concept_state]将升级为[Concept('concept_homeland','$concept_homeland$')]： \n $EFFECT_LIST_BULLET$ 该的[Concept('concept_cultural_community','$concept_cultural_community$')]值达到： [Concept('concept_overlord','$concept_overlord_possessive$')] [Concept('concept_primary_cultures','$concept_primary_culture$')] \n $EFFECT_LIST_BULLET$ 且60%的[Concept('concept_pop', '$concept_population$')]拥有[concept_acceptance]值≥65 \n $EFFECT_LIST_BULLET$ 同时[concept_state]值 [Concept('concept_pop', '$concept_population$')]超过85,000 \n \n #lore  拓荒者、商人、传教士和士兵不断向外拓展疆域，寻求土地与机遇，其足迹常超出中央政府有效管辖范围。若要使这些边远地区融入体系，行政管理必须紧随扩张步伐。在定居点蓬勃发展的区域，新州份终将被纳入我们的版图。 #!" #deepl:544344828
+ je_organize_territory_button: "建立领地" #deepl:4044636356
+ je_organize_territory_button_desc: "将我们部分[Concept('concept_unincorporated_state','$concept_unincorporated_states$')]组织为#bold 组织化区域#!。" #deepl:1558054720
+ da_organize_territory_from_subject: "建立边疆政府" #deepl:1624084733
+ da_organize_territory_from_subject_desc: "该[concept_subject]的[Concept('concept_law', '$concept_laws$')]与[Concept('concept_institution', '$concept_institutions$')]将被改制为#bold 管辖的#!。此地居民更可能[Concept('concept_migration','$concept_migrate$')]，但当地[Concept('concept_pop', '$Population$')]将更趋[Concept('concept_radical','$concept_radicalized$')]。" #deepl:2949097403
+ da_organize_territory_from_subject_effect: "[concept_subject]将加入#bold 成为其管辖区域 #!。" #deepl:1446860370
+ da_organize_territory_from_subject_action_notification_third_party_name: "[INITIATOR_COUNTRY.GetAdjectiveNoFormatting] - [TARGET_COUNTRY.GetAdjectiveNoFormatting] Formed#bold  OrganizedTerritory#!" #deepl:3641017969
+ da_organize_territory_from_subject_action_notification_third_party_desc: "[INITIATOR_COUNTRY.GetName] 已将[TARGET_COUNTRY.GetName]确立为#bold 管辖区域#!" #deepl:3647728949
+ da_organize_territory_from_subject_action_notification_name: "[INITIATOR_COUNTRY.GetName] 将我们重组为#bold 管辖的地区#!" #deepl:1212072590
+ da_organize_territory_from_subject_action_notification_desc: "[INITIATOR_COUNTRY.GetName] 已将[TARGET_COUNTRY.GetName]确立为#bold 管辖区域#!" #deepl:3647728949
+ je_sunset_route_frontera: "日落路线" #deepl:1011417108
+ je_sunset_route_frontera_reason: "一条通往加州的暖季铁路连接线，将使东西部之间实现前所未有的商业与人员流动。然而该项目需要高度协调。除了解决土地所有者之间持续的蟾蜍战争（详见：#italic ）外，轨道标准、信号系统和运行时刻表的统一也至关重要。若拟建路线沿途存在外国控制的轨道区域，协调难度可能更大，但这项任务绝非不可能完成。" #deepl:1621464726
+ je_sunset_route_frontera_button: "连接日落路线" #deepl:317884082
+ je_sunset_route_frontera_button_desc: "协调各方利益相关者，共同规划一条通往加利福尼亚州的新铁路线路。" #deepl:952386937
+ je_gadsden_purchase_frontera_button: "测试边界" #deepl:2467056109
+ je_gadsden_purchase_frontera_button_desc: "若能实际掌控所需的陆地走廊，西向铁路扩建将更易实施。尽管存在政治风险，但通过挑起与邻国的边界争端，或可为获取项目用地创造更多外交或军事选项。" #deepl:1391362877
+ sunset_route_built_yes_tt: "#bold 日落路线 #! 存在" #deepl:4231881481
+ sunset_route_built_no_tt: "#bold 日落路线#!不存在" #deepl:1689524445
+ sunset_route_frontera: "日落路线" #deepl:1965144848
+ sunset_route_reward_frontera: "日落路线" #deepl:1965144848
+ treaty_name_treaty_of_mesilla: "梅西利亚条约" #deepl:3628424082
+ mesilla_treaty_creation_tt: "添加[concept_treaty]优惠：将亚利桑那州或新墨西哥州的任何自有土地出售给[SCOPE.sCountry('buyer_scope').GetName]，每周可获#bold £3500 #!（每[concept_state]）" #deepl:2192895926
+ je_seminole_wars_removal_frontera: ""
+ colonial_affairs_owner_is_discriminated_country_tt: "任何与 [GetPlayer.GetAdjective] [concept_homeland] 相邻的 [concept_state] 均属于 [concept_country]，其 [concept_primary_cultures] 均位于 [GetPlayer.GetName] 中 [Concept('concept_discrimination','@acceptance_status_4! $second_rate_citizen$')] 之下。" #deepl:525054957

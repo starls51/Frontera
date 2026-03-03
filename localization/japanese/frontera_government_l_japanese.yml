@@ -1,0 +1,51 @@
+﻿l_japanese:
+ gov_frontier_territory_frontera: "#bold  組織化された領域 #!" #deepl:906580571
+ gov_occupied_territory_frontera: "#bold  職業 政府 #!" #deepl:1016260001
+ gov_frontier_territory_frontera_desc: "これは事実上の国家であり、[concept_government_type] 選出された立法府によって統治され、その領土の宗主国に代わって統治されている。\n \n $TRANSFER_OF_POWER_NAME_DESC$" #deepl:2530168596
+ gov_occupied_territory_frontera_desc: "これは、事実上の国家である[concept_government_type]であり、任命された行政機関が、その領土の宗主国に代わって統治している。\n \n $TRANSFER_OF_POWER_NAME_DESC$" #deepl:4281170394
+ law_frontier_territorial_administration: "地域評議会" #deepl:2715586447
+ law_frontier_territorial_administration_desc: "国家は法的に外国の支配下にある下位区分であり、独自の主権を有しない。それは断片的な領土を管理する限定的な権限を付与されている。設計上、この地域政府は移住促進、人口増加、あるいは地理的支配を目的としており、その機能は次第に宗主国との統合へと導く可能性がある。" #deepl:2928952332
+ frontera_organized_territory: "組織化された領域" #deepl:2352668119
+ frontera_organized_territory_action_name: "[概念コロニー主題]" #deepl:3251702515
+ frontera_organized_territory_action_propose_name: "[concept_colony_subject] に変換する" #deepl:3174115590
+ frontera_organized_territory_action_break_name: "独立を認める" #deepl:559759927
+ frontera_organized_territory_action_ask_to_break_name: "需要の独立性" #deepl:2601711019
+ frontera_organized_territory_desc: "[concept_colony_subject]と[Concept('concept_country', '$concept_countries$')]の間に、[concept_subject_type]関係を確立します。" #deepl:705416797
+ frontera_organized_territory_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName] は [SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] の [concept_colony_subject] です。" #deepl:1373808063
+ frontera_organized_territory_action_notification_name: "[concept_colony_subject] の需要" #deepl:1515811026
+ frontera_organized_territory_action_notification_desc: "[INITIATOR_COUNTRY.GetName] 我々に彼らに従属し、彼らの[concept_colony_subject]となることを要求する。" #deepl:2712539620
+ frontera_organized_territory_action_notification_break_name: "独立が認められた" #deepl:2574177537
+ frontera_organized_territory_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] [concept_colony_subject]のステータスを終了しました。再び独立しました。" #deepl:3957619773
+ frontera_organized_territory_proposal_notification_break_name: "独立への要求" #deepl:4186398139
+ frontera_organized_territory_proposal_notification_break_desc: "[INITIATOR_COUNTRY.GetName] [concept_colony_subject]の地位を終わらせるよう要求している。" #deepl:1708328788
+ frontera_organized_territory_proposal_notification_break_effects_desc: "もし我々が承諾すれば、彼らは完全に独立することになる。" #deepl:2906517331
+ frontera_organized_territory_proposal_break_accepted_name: "独立が認められた" #deepl:2574177537
+ frontera_organized_territory_proposal_break_accepted_desc: "[TARGET_COUNTRY.GetName] [concept_colony_subject]の終了要求を受け入れました。我々は再び独立しました。" #deepl:1952871052
+ frontera_organized_territory_proposal_break_declined_name: "独立拒否" #deepl:653698475
+ frontera_organized_territory_proposal_break_declined_desc: "[TARGET_COUNTRY.GetName] [concept_colony_subject]の地位を終了させる要求を拒否した。" #deepl:3746860557
+ frontera_organized_territory_action_third_party_notification_break_name: "独立が認められた" #deepl:2574177537
+ frontera_organized_territory_action_third_party_notification_break_desc: "[INITIATOR_COUNTRY.GetName] [TARGET_COUNTRY.GetName] の[concept_colony_subject]状態を終了し、完全な独立を認めた。" #deepl:3771074568
+ frontera_organized_territory_proposal_third_party_break_accepted_name: "独立が認められた" #deepl:2574177537
+ frontera_organized_territory_proposal_third_party_break_accepted_desc: "[TARGET_COUNTRY.GetName] [INITIATOR_COUNTRY.GetName] の[concept_colony_subject]状態を終了し、完全な独立を認めた。" #deepl:100521671
+ frontera_organized_territory_proposal_third_party_break_declined_name: "独立拒否" #deepl:653698475
+ frontera_organized_territory_proposal_third_party_break_declined_desc: "[TARGET_COUNTRY.GetName] [INITIATOR_COUNTRY.GetName] の「[concept_colony_subject]」ステータスを終了することを拒否した。" #deepl:3590310999
+ frontera_organized_territory_proposal_notification_name: "服従要求" #deepl:266272033
+ frontera_organized_territory_proposal_notification_desc: "[INITIATOR_COUNTRY.GetName] 我々に彼らに従属し、彼らの[concept_colony_subject]となることを要求する。" #deepl:2712539620
+ frontera_organized_territory_proposal_notification_effects_desc: "もし受け入れるなら、私たちは彼らの支配下に入るだろう。" #deepl:852371670
+ frontera_organized_territory_proposal_accepted_name: "服従を受諾" #deepl:2584296030
+ frontera_organized_territory_proposal_accepted_desc: "[TARGET_COUNTRY.GetName] 彼らに[concept_colony_subject]となるよう要求を受け入れた。" #deepl:1124690513
+ frontera_organized_territory_proposal_declined_name: "服従拒否" #deepl:3425793555
+ frontera_organized_territory_proposal_declined_desc: "[TARGET_COUNTRY.GetName] 彼らに[concept_colony_subject]になるよう求める要求を断った。" #deepl:3198712008
+ frontera_organized_territory_proposal_third_party_accepted_name: "征服された国" #deepl:3333335653
+ frontera_organized_territory_proposal_third_party_accepted_desc: "[TARGET_COUNTRY.GetName] [INITIATOR_COUNTRY.GetName]の[concept_colony_subject]となることに合意した。" #deepl:3618292710
+ frontera_organized_territory_proposal_third_party_declined_name: "服従拒否" #deepl:3425793555
+ frontera_organized_territory_proposal_third_party_declined_desc: "[TARGET_COUNTRY.GetName] 『[INITIATOR_COUNTRY.GetName]』の[concept_colony_subject]になることを拒否した。" #deepl:1144786411
+ frontera_organized_territory_effect_desc_global: "[concept_colony_subject] になる" #deepl:2186263610
+ frontera_organized_territory_effect_desc_first: "[TARGET_COUNTRY.GetName] [COUNTRY.GetAdjectiveNoFlag] となる[concept_colony_subject]" #deepl:812973629
+ frontera_organized_territory_effect_desc_third: "[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)] [AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] は [COUNTRY.GetName] の [concept_colony_subject] になります" #deepl:1164416506
+ frontera_organized_territory_trigger_desc_global: "[concept_colony_subject]" #deepl:281153964
+ frontera_organized_territory_trigger_false_desc_global: "#b  は #! ではないのか？ [concept_colony_subject]" #deepl:4120123678
+ frontera_organized_territory_trigger_desc_first: "[TARGET_COUNTRY.GetName] [COUNTRY.GetAdjectiveNoFlag] [concept_colony_subject]" #deepl:3100485644
+ frontera_organized_territory_trigger_false_desc_first: "[TARGET_COUNTRY.GetName] #b  ではなく #! である [COUNTRY.GetAdjectiveNoFlag] [concept_colony_subject]" #deepl:3644228541
+ frontera_organized_territory_trigger_desc_third: "[COUNTRY.GetName] は [concept_colony_subject] の [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)] [AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]" #deepl:1872412249
+ frontera_organized_territory_trigger_false_desc_third: "[COUNTRY.GetNameNoFlag] #b  ではなく #! である [concept_colony_subject] [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetName)] [AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]" #deepl:2909402420

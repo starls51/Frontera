@@ -1,0 +1,51 @@
+﻿l_korean:
+ gov_frontier_territory_frontera: "#bold  조직화된 영토 #!" #deepl:906580571
+ gov_occupied_territory_frontera: "#bold  직업 정부 #!" #deepl:1016260001
+ gov_frontier_territory_frontera_desc: "이는 선출된 입법부가 영토 지배자를 대신하여 통치하는 사실상의 국가입니다. [concept_government_type] \n \n $TRANSFER_OF_POWER_NAME_DESC$" #deepl:2530168596
+ gov_occupied_territory_frontera_desc: "이는 사실상 국가[concept_government_type]로, 임명된 행정부가 영토 지배자를 대신하여 통치하는 체제이다.\n \n $TRANSFER_OF_POWER_NAME_DESC$" #deepl:4281170394
+ law_frontier_territorial_administration: "지역 의회" #deepl:2715586447
+ law_frontier_territorial_administration_desc: "해당 주(州)는 법적으로 외국 세력의 하위 행정구역으로, 자체 주권을 보유하지 않는다. 이 지역은 여러 영토를 엮어 놓은 형태로 관리하기 위한 제한된 권한만을 부여받았다. 설계상 이 지역 정부는 이주 촉진, 인구 증가 또는 지리적 통제를 목적으로 하며, 그 기능은 점차적으로 상위 통치권자와의 통합으로 이어질 수 있다." #deepl:2928952332
+ frontera_organized_territory: "조직화된 영토" #deepl:2352668119
+ frontera_organized_territory_action_name: "[개념 식민지 주제]" #deepl:3251702515
+ frontera_organized_territory_action_propose_name: "[concept_colony_subject]로 만드세요" #deepl:3174115590
+ frontera_organized_territory_action_break_name: "독립 부여" #deepl:559759927
+ frontera_organized_territory_action_ask_to_break_name: "수요 독립성" #deepl:2601711019
+ frontera_organized_territory_desc: "두 개의 [Concept('concept_country', '$concept_countries$')] 간에 [concept_colony_subject][concept_subject_type] 관계를 설정합니다." #deepl:705416797
+ frontera_organized_territory_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName] [SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName]의 [concept_colony_subject]입니다." #deepl:1373808063
+ frontera_organized_territory_action_notification_name: "[concept_colony_subject]에 대한 수요" #deepl:1515811026
+ frontera_organized_territory_action_notification_desc: "[INITIATOR_COUNTRY.GetName] 그들에게 복종하고 그들의 노예([concept_colony_subject])가 되라고 요구한다." #deepl:2712539620
+ frontera_organized_territory_action_notification_break_name: "독립 승인" #deepl:2574177537
+ frontera_organized_territory_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] [concept_colony_subject]의 지위를 종료했습니다. 우리는 다시 한번 독립했습니다." #deepl:3957619773
+ frontera_organized_territory_proposal_notification_break_name: "독립에 대한 요구" #deepl:4186398139
+ frontera_organized_territory_proposal_notification_break_desc: "[INITIATOR_COUNTRY.GetName] 그들은 우리가 그들의 '[concept_colony_subject]' 지위를 종료할 것을 요구하고 있다." #deepl:1708328788
+ frontera_organized_territory_proposal_notification_break_effects_desc: "우리가 수락하면, 그들은 완전히 독립하게 될 것이다." #deepl:2906517331
+ frontera_organized_territory_proposal_break_accepted_name: "독립 승인" #deepl:2574177537
+ frontera_organized_territory_proposal_break_accepted_desc: "[TARGET_COUNTRY.GetName] 우리의 '[concept_colony_subject]' 지위를 종료하라는 요구를 수락했습니다. 우리는 다시 한번 독립했습니다." #deepl:1952871052
+ frontera_organized_territory_proposal_break_declined_name: "독립 거절" #deepl:653698475
+ frontera_organized_territory_proposal_break_declined_desc: "[TARGET_COUNTRY.GetName] 우리의 '[concept_colony_subject]' 지위를 종료하라는 요구를 거부했다." #deepl:3746860557
+ frontera_organized_territory_action_third_party_notification_break_name: "독립 승인" #deepl:2574177537
+ frontera_organized_territory_action_third_party_notification_break_desc: "[INITIATOR_COUNTRY.GetName] [TARGET_COUNTRY.GetName]의 자치령([concept_colony_subject]) 지위를 종료하고 완전한 독립을 부여했습니다." #deepl:3771074568
+ frontera_organized_territory_proposal_third_party_break_accepted_name: "독립 승인" #deepl:2574177537
+ frontera_organized_territory_proposal_third_party_break_accepted_desc: "[TARGET_COUNTRY.GetName] [INITIATOR_COUNTRY.GetName]의 자치령([concept_colony_subject]) 지위를 종료하고 완전한 독립을 부여했습니다." #deepl:100521671
+ frontera_organized_territory_proposal_third_party_break_declined_name: "독립 거절" #deepl:653698475
+ frontera_organized_territory_proposal_third_party_break_declined_desc: "[TARGET_COUNTRY.GetName] [INITIATOR_COUNTRY.GetName]의 [concept_colony_subject] 상태를 종료하는 것을 거부했습니다." #deepl:3590310999
+ frontera_organized_territory_proposal_notification_name: "복속 요구" #deepl:266272033
+ frontera_organized_territory_proposal_notification_desc: "[INITIATOR_COUNTRY.GetName] 그들에게 복종하고 그들의 노예([concept_colony_subject])가 되라고 요구한다." #deepl:2712539620
+ frontera_organized_territory_proposal_notification_effects_desc: "우리가 받아들인다면, 우리는 그들의 지배를 받게 될 것이다." #deepl:852371670
+ frontera_organized_territory_proposal_accepted_name: "복종 수락" #deepl:2584296030
+ frontera_organized_territory_proposal_accepted_desc: "[TARGET_COUNTRY.GetName] 그들이 우리의 '[concept_colony_subject]'가 되라는 요구를 받아들였다." #deepl:1124690513
+ frontera_organized_territory_proposal_declined_name: "정복 거절" #deepl:3425793555
+ frontera_organized_territory_proposal_declined_desc: "[TARGET_COUNTRY.GetName] 그들이 우리의 '[concept_colony_subject]'가 되라는 요구를 거절했다." #deepl:3198712008
+ frontera_organized_territory_proposal_third_party_accepted_name: "정복당한 국가" #deepl:3333335653
+ frontera_organized_territory_proposal_third_party_accepted_desc: "[TARGET_COUNTRY.GetName] [INITIATOR_COUNTRY.GetName]의 수석 개발자([concept_colony_subject])로 임명되기로 합의했다." #deepl:3618292710
+ frontera_organized_territory_proposal_third_party_declined_name: "정복 거절" #deepl:3425793555
+ frontera_organized_territory_proposal_third_party_declined_desc: "[TARGET_COUNTRY.GetName] [INITIATOR_COUNTRY.GetName]의 [concept_colony_subject]가 되기를 거부했다." #deepl:1144786411
+ frontera_organized_territory_effect_desc_global: "[concept_colony_subject]가 됩니다" #deepl:2186263610
+ frontera_organized_territory_effect_desc_first: "[TARGET_COUNTRY.GetName] [COUNTRY.GetAdjectiveNoFlag]가 됩니다 [concept_colony_subject]" #deepl:812973629
+ frontera_organized_territory_effect_desc_third: "[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)] [AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] [COUNTRY.GetName]의 [concept_colony_subject]가 됩니다." #deepl:1164416506
+ frontera_organized_territory_trigger_desc_global: "[concept_colony_subject]" #deepl:281153964
+ frontera_organized_territory_trigger_false_desc_global: "#b 가 아닌 #!가 [concept_colony_subject]인가요?" #deepl:4120123678
+ frontera_organized_territory_trigger_desc_first: "[TARGET_COUNTRY.GetName] [COUNTRY.GetAdjectiveNoFlag]입니다. [concept_colony_subject]" #deepl:3100485644
+ frontera_organized_territory_trigger_false_desc_first: "[TARGET_COUNTRY.GetName] #b 가 아닌 #!가 [COUNTRY.GetAdjectiveNoFlag]인가요? [concept_colony_subject]" #deepl:3644228541
+ frontera_organized_territory_trigger_desc_third: "[COUNTRY.GetName] 는 [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)]의 [concept_colony_subject]입니다. [AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]" #deepl:1872412249
+ frontera_organized_territory_trigger_false_desc_third: "[COUNTRY.GetNameNoFlag] #b 가 아닌 #!가 [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetName)]의 [concept_colony_subject]입니까? [AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]" #deepl:2909402420

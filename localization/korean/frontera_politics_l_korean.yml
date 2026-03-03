@@ -1,0 +1,23 @@
+﻿l_korean:
+ movement_frontera_mexican_federalist: "연방주의 운동" #deepl:2788786836
+ movement_frontera_mexican_federalist_short: "연방주의자" #deepl:620747088
+ movement_frontera_mexican_federalist_name: "연방주의 운동" #deepl:2788786836
+ ideology_frontera_mexican_federalist: "멕시코 연방주의자" #deepl:2228111078
+ ideology_frontera_mexican_federalist_desc: "연방주의자들은 분권화된 정부를 주창하며 개별 주에 상당한 자치권을 부여한다. 미국의 모델에서 영감을 얻은 연방주의자들은 지역적 자유를 보호하고 수도에서 독재자의 출현을 막는 것을 목표로 한다." #deepl:3704296238
+ movement_frontera_mexican_centralist: "중앙집권주의 운동" #deepl:2210180886
+ movement_frontera_mexican_centralist_short: "중앙집권주의자" #deepl:1675741728
+ movement_frontera_mexican_centralist_name: "중앙집권주의 운동" #deepl:2210180886
+ ideology_frontera_mexican_centralist: "멕시코 중앙집권주의자" #deepl:1986234739
+ ideology_frontera_mexican_centralist_desc: "중앙집권주의자들은 강력한 단일 국가 정부를 원하며, 이는 대개 지역 자치권을 희생시키면서 이루어진다. 그들은 식민지 시대의 중앙집권적 구조를 모방함으로써 혼란스러운 초기 공화국에 질서를 강요하려 한다." #deepl:2906061988
+ state_pop_support_movement_frontera_mexican_federalist_add: "$movement_frontera_mexican_federalist$ $concept_pop$ 매력" #deepl:2340973415
+ state_pop_support_movement_frontera_mexican_federalist_add_desc: "$정치운동_대중적매력_다중설명$" #deepl:424746024
+ state_pop_support_movement_frontera_mexican_federalist_mult: "$state_pop_support_movement_frontera_mexican_federalist_add$" #deepl:3056203231
+ state_pop_support_movement_frontera_mexican_federalist_mult_desc: "$정치운동_대중적매력_다중설명$" #deepl:424746024
+ state_pop_support_movement_frontera_mexican_centralist_add: "$movement_frontera_mexican_centralist$ $concept_pop$ 매력" #deepl:2808064350
+ state_pop_support_movement_frontera_mexican_centralist_add_desc: "$정치운동_대중적매력_다중설명$" #deepl:424746024
+ state_pop_support_movement_frontera_mexican_centralist_mult: "$state_pop_support_movement_frontera_mexican_centralist_add$" #deepl:999402151
+ state_pop_support_movement_frontera_mexican_centralist_mult_desc: "$정치운동_대중적매력_다중설명$" #deepl:424746024
+ generic_revolt_federalist_frontera: "페데랄리스타 $NAME$" #deepl:2886720149
+ generic_revolt_federalist_frontera_adj: "$ADJECTIVE$ 연방주의자" #deepl:1698099802
+ generic_revolt_centralist_frontera: "중앙집권주의자 $NAME$" #deepl:394110082
+ generic_revolt_centralist_frontera_adj: "$ADJECTIVE$ 중앙집권주의자" #deepl:2543533519

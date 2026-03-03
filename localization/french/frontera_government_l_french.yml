@@ -1,0 +1,51 @@
+﻿l_french:
+ gov_frontier_territory_frontera: "#bold  #! du territoire organisé" #deepl:906580571
+ gov_occupied_territory_frontera: "#bold  Profession Gouvernement #!" #deepl:1016260001
+ gov_frontier_territory_frontera_desc: "Il s'agit d'un État de facto [concept_government_type] dirigé par une assemblée législative élue, au nom de son suzerain territorial. \n \n $TRANSFER_OF_POWER_NAME_DESC$" #deepl:2530168596
+ gov_occupied_territory_frontera_desc: "Il s'agit d'un État de facto [concept_government_type] dirigé par une administration nommée, au nom de leur suzerain territorial. \n \n $TRANSFER_OF_POWER_NAME_DESC$" #deepl:4281170394
+ law_frontier_territorial_administration: "Conseil territorial" #deepl:2715586447
+ law_frontier_territorial_administration_desc: "L'État est légalement une subdivision d'une puissance étrangère, ne possédant aucune souveraineté propre. Il s'est vu accorder une autorité limitée pour administrer un ensemble disparate de possessions territoriales. De par sa conception, le gouvernement territorial a pour objectif de favoriser la migration, la croissance démographique ou le contrôle géographique ; sa fonction peut conduire à une intégration progressive avec son suzerain." #deepl:2928952332
+ frontera_organized_territory: "Territoire organisé" #deepl:2352668119
+ frontera_organized_territory_action_name: "[concept_colonie_sujet]" #deepl:3251702515
+ frontera_organized_territory_action_propose_name: "Transformez-le en [concept_colony_subject]" #deepl:3174115590
+ frontera_organized_territory_action_break_name: "Accorder l'indépendance" #deepl:559759927
+ frontera_organized_territory_action_ask_to_break_name: "Indépendance de la demande" #deepl:2601711019
+ frontera_organized_territory_desc: "Établit une relation de type « [concept_colony_subject] » ([concept_subject_type]) entre deux entités de type « [Concept('concept_country', '$concept_countries$')] »." #deepl:705416797
+ frontera_organized_territory_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName] est une version simplifiée ([concept_colony_subject]) de [SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName]." #deepl:1373808063
+ frontera_organized_territory_action_notification_name: "Demande d'[concept_colony_subject]" #deepl:1515811026
+ frontera_organized_territory_action_notification_desc: "[INITIATOR_COUNTRY.GetName] exige que nous nous soumettions à eux et devenions leur [concept_colony_subject]." #deepl:2712539620
+ frontera_organized_territory_action_notification_break_name: "Indépendance accordée" #deepl:2574177537
+ frontera_organized_territory_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] avons mis fin à notre statut d'[concept_colony_subject]. Nous sommes à nouveau indépendants." #deepl:3957619773
+ frontera_organized_territory_proposal_notification_break_name: "Demande d'indépendance" #deepl:4186398139
+ frontera_organized_territory_proposal_notification_break_desc: "[INITIATOR_COUNTRY.GetName] exigent que nous mettions fin à leur statut d'[concept_colony_subject]." #deepl:1708328788
+ frontera_organized_territory_proposal_notification_break_effects_desc: "Si nous acceptons, ils deviendront totalement indépendants." #deepl:2906517331
+ frontera_organized_territory_proposal_break_accepted_name: "Indépendance accordée" #deepl:2574177537
+ frontera_organized_territory_proposal_break_accepted_desc: "[TARGET_COUNTRY.GetName] accepté la demande de mettre fin à notre statut d'[concept_colony_subject]. Nous sommes à nouveau indépendants." #deepl:1952871052
+ frontera_organized_territory_proposal_break_declined_name: "Indépendance refusée" #deepl:653698475
+ frontera_organized_territory_proposal_break_declined_desc: "[TARGET_COUNTRY.GetName] refusé la demande de mettre fin à notre statut d'[concept_colony_subject]." #deepl:3746860557
+ frontera_organized_territory_action_third_party_notification_break_name: "Indépendance accordée" #deepl:2574177537
+ frontera_organized_territory_action_third_party_notification_break_desc: "[INITIATOR_COUNTRY.GetName] a mis fin au statut d'[concept_colony_subject]e de l'[TARGET_COUNTRY.GetName], leur accordant ainsi leur pleine indépendance." #deepl:3771074568
+ frontera_organized_territory_proposal_third_party_break_accepted_name: "Indépendance accordée" #deepl:2574177537
+ frontera_organized_territory_proposal_third_party_break_accepted_desc: "[TARGET_COUNTRY.GetName] a mis fin au statut d'[concept_colony_subject]e de l'[INITIATOR_COUNTRY.GetName], leur accordant ainsi leur pleine indépendance." #deepl:100521671
+ frontera_organized_territory_proposal_third_party_break_declined_name: "Indépendance refusée" #deepl:653698475
+ frontera_organized_territory_proposal_third_party_break_declined_desc: "[TARGET_COUNTRY.GetName] refusé de mettre fin au statut d'[concept_colony_subject]e d'[INITIATOR_COUNTRY.GetName]." #deepl:3590310999
+ frontera_organized_territory_proposal_notification_name: "Demande de soumission" #deepl:266272033
+ frontera_organized_territory_proposal_notification_desc: "[INITIATOR_COUNTRY.GetName] exige que nous nous soumettions à eux et devenions leur [concept_colony_subject]." #deepl:2712539620
+ frontera_organized_territory_proposal_notification_effects_desc: "Si nous acceptons, nous deviendrons leurs sujets." #deepl:852371670
+ frontera_organized_territory_proposal_accepted_name: "Soumission acceptée" #deepl:2584296030
+ frontera_organized_territory_proposal_accepted_desc: "[TARGET_COUNTRY.GetName] ont accepté la demande de devenir nos[concept_colony_subject]s." #deepl:1124690513
+ frontera_organized_territory_proposal_declined_name: "Soumission refusée" #deepl:3425793555
+ frontera_organized_territory_proposal_declined_desc: "[TARGET_COUNTRY.GetName] ont refusé la demande qui leur était faite de devenir nos[concept_colony_subject]s." #deepl:3198712008
+ frontera_organized_territory_proposal_third_party_accepted_name: "Pays soumis" #deepl:3333335653
+ frontera_organized_territory_proposal_third_party_accepted_desc: "[TARGET_COUNTRY.GetName] a accepté de devenir l'[concept_colony_subject]e de [INITIATOR_COUNTRY.GetName]." #deepl:3618292710
+ frontera_organized_territory_proposal_third_party_declined_name: "Soumission refusée" #deepl:3425793555
+ frontera_organized_territory_proposal_third_party_declined_desc: "[TARGET_COUNTRY.GetName] refusé de devenir l'[concept_colony_subject]e de [INITIATOR_COUNTRY.GetName]." #deepl:1144786411
+ frontera_organized_territory_effect_desc_global: "Devient un[concept_colony_subject]" #deepl:2186263610
+ frontera_organized_territory_effect_desc_first: "[TARGET_COUNTRY.GetName] devient un [COUNTRY.GetAdjectiveNoFlag] [concept_colony_subject]" #deepl:812973629
+ frontera_organized_territory_effect_desc_third: "[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)] [AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] devient une[concept_colony_subject] de [COUNTRY.GetName]" #deepl:1164416506
+ frontera_organized_territory_trigger_desc_global: "Est-ce un [concept_colony_subject]" #deepl:281153964
+ frontera_organized_territory_trigger_false_desc_global: "#b  n'est-il pas #! un [concept_colony_subject]" #deepl:4120123678
+ frontera_organized_territory_trigger_desc_first: "[TARGET_COUNTRY.GetName] est un [COUNTRY.GetAdjectiveNoFlag] [concept_colony_subject]" #deepl:3100485644
+ frontera_organized_territory_trigger_false_desc_first: "[TARGET_COUNTRY.GetName] est-ce que #b  n'est pas #! un [COUNTRY.GetAdjectiveNoFlag] [concept_colony_subject]" #deepl:3644228541
+ frontera_organized_territory_trigger_desc_third: "[COUNTRY.GetName] est une [concept_colony_subject] de [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)] [AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]" #deepl:1872412249
+ frontera_organized_territory_trigger_false_desc_third: "[COUNTRY.GetNameNoFlag] est-ce que #b  n'est pas #! un [concept_colony_subject] de [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetName)] [AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]" #deepl:2909402420

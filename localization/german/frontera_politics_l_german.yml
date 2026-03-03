@@ -1,0 +1,23 @@
+﻿l_german:
+ movement_frontera_mexican_federalist: "Föderalistische Bewegung" #deepl:2788786836
+ movement_frontera_mexican_federalist_short: "Föderalist" #deepl:620747088
+ movement_frontera_mexican_federalist_name: "Föderalistische Bewegung" #deepl:2788786836
+ ideology_frontera_mexican_federalist: "Mexikanischer Föderalist" #deepl:2228111078
+ ideology_frontera_mexican_federalist_desc: "Föderalisten befürworten eine dezentrale Regierung, die den einzelnen Staaten weitgehende Autonomie gewährt. Inspiriert vom Modell der Vereinigten Staaten wollen die Föderalisten die lokalen Freiheiten schützen und den Aufstieg eines einzelnen Diktators in der Hauptstadt verhindern." #deepl:3704296238
+ movement_frontera_mexican_centralist: "Zentralistische Bewegung" #deepl:2210180886
+ movement_frontera_mexican_centralist_short: "Zentralist" #deepl:1675741728
+ movement_frontera_mexican_centralist_name: "Zentralistische Bewegung" #deepl:2210180886
+ ideology_frontera_mexican_centralist: "Mexikanischer Zentralist" #deepl:1986234739
+ ideology_frontera_mexican_centralist_desc: "Zentralisten streben eine starke, einheitliche nationale Regierung an, typischerweise auf Kosten der regionalen Autonomie. Sie versuchen, Ordnung in eine chaotische frühe Republik zu bringen, indem sie die zentralisierte Struktur der Kolonialzeit nachahmen." #deepl:2906061988
+ state_pop_support_movement_frontera_mexican_federalist_add: "$movement_frontera_mexican_federalist$ $concept_pop$ Anziehungskraft" #deepl:2340973415
+ state_pop_support_movement_frontera_mexican_federalist_add_desc: "$politische_Bewegung_Populäre_Attraktion_mult_desc$" #deepl:424746024
+ state_pop_support_movement_frontera_mexican_federalist_mult: "$state_pop_support_movement_frontera_mexican_federalist_add$" #deepl:3056203231
+ state_pop_support_movement_frontera_mexican_federalist_mult_desc: "$politische_Bewegung_Populäre_Attraktion_mult_desc$" #deepl:424746024
+ state_pop_support_movement_frontera_mexican_centralist_add: "$movement_frontera_mexican_centralist$ $concept_pop$ Anziehungskraft" #deepl:2808064350
+ state_pop_support_movement_frontera_mexican_centralist_add_desc: "$politische_Bewegung_Populäre_Attraktion_mult_desc$" #deepl:424746024
+ state_pop_support_movement_frontera_mexican_centralist_mult: "$state_pop_support_movement_frontera_mexican_centralist_add$" #deepl:999402151
+ state_pop_support_movement_frontera_mexican_centralist_mult_desc: "$politische_Bewegung_Populäre_Attraktion_mult_desc$" #deepl:424746024
+ generic_revolt_federalist_frontera: "Federalista-$NAME$" #deepl:2886720149
+ generic_revolt_federalist_frontera_adj: "$ADJECTIVE$ Föderalist" #deepl:1698099802
+ generic_revolt_centralist_frontera: "Zentralist $NAME$" #deepl:394110082
+ generic_revolt_centralist_frontera_adj: "$ADJECTIVE$ Zentralist" #deepl:2543533519

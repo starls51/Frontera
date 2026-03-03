@@ -1,0 +1,23 @@
+﻿l_japanese:
+ movement_frontera_mexican_federalist: "フェデラリスト運動" #deepl:2788786836
+ movement_frontera_mexican_federalist_short: "フェデラリスト" #deepl:620747088
+ movement_frontera_mexican_federalist_name: "フェデラリスト運動" #deepl:2788786836
+ ideology_frontera_mexican_federalist: "メキシコ連邦主義者" #deepl:2228111078
+ ideology_frontera_mexican_federalist_desc: "連邦主義者は分散型政府を提唱し、各州に大幅な自治権を認める。アメリカ合衆国のモデルに触発された連邦主義者は、地方の自由を保護し、首都における独裁者の台頭を阻止することを目指している。" #deepl:3704296238
+ movement_frontera_mexican_centralist: "中央集権主義運動" #deepl:2210180886
+ movement_frontera_mexican_centralist_short: "中央集権主義者" #deepl:1675741728
+ movement_frontera_mexican_centralist_name: "中央集権主義運動" #deepl:2210180886
+ ideology_frontera_mexican_centralist: "メキシコ中央集権主義者" #deepl:1986234739
+ ideology_frontera_mexican_centralist_desc: "中央集権主義者は、通常は地域の自治を犠牲にして、強固で統一的な国家政府を望んでいる。彼らは植民地時代の集中化された構造を模倣することで、混沌とした初期共和国の秩序を強制しようとしている。" #deepl:2906061988
+ state_pop_support_movement_frontera_mexican_federalist_add: "$movement_frontera_mexican_federalist$ $concept_pop$ アトラクション" #deepl:2340973415
+ state_pop_support_movement_frontera_mexican_federalist_add_desc: "政治運動・大衆的魅力・複数説明" #deepl:424746024
+ state_pop_support_movement_frontera_mexican_federalist_mult: "メキシコ連邦主義者による国境地帯の移動支援に関する州の政策" #deepl:3056203231
+ state_pop_support_movement_frontera_mexican_federalist_mult_desc: "政治運動・大衆的魅力・複数説明" #deepl:424746024
+ state_pop_support_movement_frontera_mexican_centralist_add: "$movement_frontera_mexican_centralist$ $concept_pop$ アトラクション" #deepl:2808064350
+ state_pop_support_movement_frontera_mexican_centralist_add_desc: "政治運動・大衆的魅力・複数説明" #deepl:424746024
+ state_pop_support_movement_frontera_mexican_centralist_mult: "メキシコ中央集権派による国境地帯の移動支援に関する州の政策" #deepl:999402151
+ state_pop_support_movement_frontera_mexican_centralist_mult_desc: "政治運動・大衆的魅力・複数説明" #deepl:424746024
+ generic_revolt_federalist_frontera: "フェデラリスト $NAME$" #deepl:2886720149
+ generic_revolt_federalist_frontera_adj: "$ADJECTIVE$ フェデラリスト" #deepl:1698099802
+ generic_revolt_centralist_frontera: "セントラリスタ $NAME$" #deepl:394110082
+ generic_revolt_centralist_frontera_adj: "$ADJECTIVE$ 中央集権主義者" #deepl:2543533519

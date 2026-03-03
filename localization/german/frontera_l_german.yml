@@ -1,0 +1,71 @@
+﻿l_german:
+ Albino: "Albino" #deepl:4096260
+ Alvarado: "Alvarado" #deepl:2651717518
+ Armijo: "Armijo" #deepl:2904734236
+ Hartnell: "Hartnell" #deepl:3013980238
+ Sutter: "Sutter" #deepl:3431356359
+ californio: "Kalifornier" #deepl:3509864768
+ californio_adj: "Kalifornier" #deepl:3509864768
+ californio_mestizo: "Kalifornischer Mestize" #deepl:263075456
+ californio_mestizo_adj: "Kalifornischer Mestize" #deepl:263075456
+ dyn_c_alta_california: "Oberkalifornien" #deepl:2718655753
+ dyn_c_alta_california_adj: "Kalifornier" #deepl:230681887
+ dyn_michigan_territory: "Territorium Michigan" #deepl:3433257000
+ dyn_wisconsin_territory: "Wisconsin-Territorium" #deepl:2122556499
+ dyn_wisconsin_territory_adj: "Wisconsinite" #deepl:1988775082
+ dyn_minnesota_territory: "Territorium Minnesota" #deepl:2712883016
+ dyn_minnesota_territory_adj: "Minnesotaner" #deepl:2642244691
+ dyn_iowa_territory: "Territorium Iowa" #deepl:2578029042
+ dyn_iowa_territory_adj: "Iowaner" #deepl:2527579376
+ dyn_northwest_territory: "Nordwest-Territorium" #deepl:905356594
+ dyn_northwest_territory_adj: "Nordwest-Territorium" #deepl:905356594
+ dyn_c_utah_territory: "Territorium Utah" #deepl:1157070552
+ dyn_c_utah_territory_adj: "Territorium Utah" #deepl:1157070552
+ dyn_florida_territory: "Territorium Florida" #deepl:246124055
+ NMX: "New Mexico" #deepl:27763770
+ NMX_ADJ: "Neumexikaner" #deepl:2909205373
+ modifier_frontierlands_frontera: "Grenzführer" #deepl:1536403044
+ modifier_oregon_trail_frontera: "Oregon-Trail" #deepl:1130619855
+ modifier_santafe_trail_frontera: "Santa Fe Trail" #deepl:3532834792
+ geographic_region_louisiana_purchase: "Louisiana-Kauf" #deepl:1628975508
+ geographic_region_nebraska_territory: "Territorium Nebraska" #deepl:245903829
+ geographic_region_kansas_territory: "Kansas-Territorium" #deepl:2490102990
+ geographic_region_mexican_north: "Mexikanischer Norden" #deepl:1926221193
+ geographic_region_rocky_mountains: "Rocky Mountains" #deepl:3487678637
+ geographic_region_greater_columbia: "Großraum Columbia" #deepl:3068876322
+ generic_organized_territory: "$NAME$" #deepl:1008351533
+ generic_organized_territory_adj: "$ADJEKTIV$" #deepl:1624419671
+ eng_organized_territory: "$ADJECTIVE$ Gebiet" #deepl:2924367184
+ eng_organized_territory_adj: "$ADJECTIVE$ Gebiet" #deepl:2924367184
+ de_organized_territory: "Reichskommissariat für die Ausdehnung des deutschen Lebensraums ($NAME$)" #deepl:2134933361
+ de_organized_territory_adj: "$ADJECTIVE$ Kommissariat" #deepl:1154235138
+ creating_OT_frontera_tt: "#indent_newline:2 Ein #bold  Organisiertes Gebiet #! erhält einen [concept_capital_state] gemäß den folgenden Regeln: \n $EFFECT_LIST_BULLET$ Ist [Concept('concept_unincorporated_state','$concept_unincorporated_state$')] \n $EFFECT_LIST_BULLET$ Ist #bold  nicht #! [ROOT.GetCountry.GetAdjectiveNoFormatting] [Concept('concept_homeland','$concept_homeland$')] \n $EFFECT_LIST_BULLET$ Ist #bold  angrenzend #! an [ROOT.GetCountry.GetAdjectiveNoFormatting] [Concept('concept_incorporated_state','$concept_incorporated_state$')]. \n $EFFECT_LIST_BULLET$ Hat [GetDecreeType('decree_greener_grass_campaign').GetName] oder [concept_state] mit höchstem [Concept('concept_gdp','$concept_gdp_short$')]" #deepl:2335454090
+ creating_OT_frontera_2_tt: "#italic  Alle Staaten, die die ersten beiden Regeln befolgen und eine „[concept_strategic_region]“ mit dem neuen „[concept_capital_state]“ teilen, werden an das „#bold  Organized Territory“ #! #! abgetreten." #deepl:1399382270
+ je_tooltip_no_homelands_frontera: "Ist #bold  nicht #! [ROOT.GetCountry.GetAdjectiveNoFormatting] [Concept('concept_homeland', '$concept_homeland$')]." #deepl:2389861123
+ je_tooltip_homeland_required_frontera: "Ist [ROOT.GetCountry.GetAdjectiveNoFormatting] [Concept('concept_homeland', '$concept_homeland$')]." #deepl:3505402040
+ je_tooltip_incorporated_adjacency_frontera: "Ist #bold  eine benachbarte Web#!, die mit [ROOT.GetCountry.GetAdjectiveNoFormatting] [Concept('concept_incorporated_state','$concept_incorporated_state$')] verknüpft ist?" #deepl:215185147
+ je_organized_territories_frontera: "Organisiertes Territorium etablieren" #deepl:1625332565
+ je_organized_territories_frontera_reason: "Im Bestreben, unser Land zu vergrößern, kann aus einigen unserer [Concept('concept_unincorporated_state','$concept_unincorporated_states$')] ein #bold  Organized Territory #! gegründet werden. Diese werden zu [Concept('concept_incorporated_state','$concept_incorporated_states$')] im Besitz des #bold  Organized Territory #!. \n \n Während ein #bold  Organized Territory #! [GetLawType('law_homesteading').GetName] in Kraft gesetzt hat, erhalten seine beiden [Concept('concept_incorporated_state','$concept_states$')] mit dem höchsten [Concept('concept_gdp','$concept_gdp_short$')] einen jährlichen Bonus auf [Concept('concept_migration','$concept_migration$')]. Jedes [Concept('concept_incorporated_state','$concept_incorporated_state$')], das zu einem #bold  Organized Territory #! gehört, kann schließlich zu einem [Concept('concept_homeland','$concept_homeland$')] eines [Concept('concept_overlord','$concept_overlord_possessive$')] [Concept('concept_primary_cultures','$concept_primary_culture$')] werden. \n #indent_newline:2 \n Ein „[concept_state]” wird zu einem „[Concept('concept_homeland','$concept_homeland$')]”, wenn: \n $EFFECT_LIST_BULLET$ Es einen „[Concept('concept_cultural_community','$concept_cultural_community$')]” von [Concept('concept_overlord','$concept_overlord_possessive$')] [Concept('concept_primary_cultures','$concept_primary_culture$')] \n $EFFECT_LIST_BULLET$ 60 % der „[Concept('concept_pop', '$concept_population$')]” einen „[concept_acceptance]” von 65 oder mehr haben \n $EFFECT_LIST_BULLET$ Der „[concept_state]” [Concept('concept_pop', '$concept_population$')] über 85.000 beträgt \n \n #lore  Siedler, Händler, Missionare und Soldaten drängen auf der Suche nach Land und Möglichkeiten nach außen, oft außerhalb der Reichweite der Zentralregierung. Wenn diese entfernten Gebiete integriert werden sollen, muss die Verwaltung der Expansion folgen. Wo Siedlungen wachsen, können eines Tages neue Staaten in unser Herrschaftsgebiet aufgenommen werden. #!" #deepl:544344828
+ je_organize_territory_button: "Gebiet festlegen" #deepl:4044636356
+ je_organize_territory_button_desc: "Organisieren Sie einige unserer „[Concept('concept_unincorporated_state','$concept_unincorporated_states$')]” in einem „#bold ” organisierten Gebiet #!." #deepl:1558054720
+ da_organize_territory_from_subject: "Gründung einer Grenzregierung" #deepl:1624084733
+ da_organize_territory_from_subject_desc: "Die „[Concept('concept_law', '$concept_laws$')]” und „[Concept('concept_institution', '$concept_institutions$')]” dieser „[concept_subject]” werden zu einem „#bold ” umgewandelt. Organisiertes Territorium #!. Siedler werden sich eher hier niederlassen [Concept('concept_migration','$concept_migrate$')], aber die lokale „[Concept('concept_pop', '$Population$')]” wird „[Concept('concept_radical','$concept_radicalized$')]” werden." #deepl:2949097403
+ da_organize_territory_from_subject_effect: "Die „[concept_subject]” wird zu einem organisierten Gebiet der „#bold ” #!." #deepl:1446860370
+ da_organize_territory_from_subject_action_notification_third_party_name: "[INITIATOR_COUNTRY.GetAdjectiveNoFormatting] - [TARGET_COUNTRY.GetAdjectiveNoFormatting] Gegründet #bold  Organisiertes Gebiet #!" #deepl:3641017969
+ da_organize_territory_from_subject_action_notification_third_party_desc: "[INITIATOR_COUNTRY.GetName] hat [TARGET_COUNTRY.GetName] als organisiertes Gebiet von #bold  eingerichtet #!" #deepl:3647728949
+ da_organize_territory_from_subject_action_notification_name: "[INITIATOR_COUNTRY.GetName] uns zu einem organisierten Territorium der Vereinigten Staaten von Amerika (#bold ) umstrukturiert #!" #deepl:1212072590
+ da_organize_territory_from_subject_action_notification_desc: "[INITIATOR_COUNTRY.GetName] hat [TARGET_COUNTRY.GetName] als organisiertes Gebiet von #bold  eingerichtet #!" #deepl:3647728949
+ je_sunset_route_frontera: "Die Sonnenuntergangsroute" #deepl:1011417108
+ je_sunset_route_frontera_reason: "Eine Eisenbahnverbindung nach Kalifornien für die warme Jahreszeit würde einen beispiellosen Handels- und Personenverkehr zwischen Ost und West ermöglichen. Dieses Projekt erfordert jedoch eine erhebliche Koordinierung. Abgesehen von der Beilegung der anhaltenden „Frog Wars“ #! zwischen Grundstückseigentümern ist es auch unerlässlich, Spurweiten, Signale und Fahrpläne zu standardisieren. Dies könnte sich als schwieriger erweisen, wenn ausländische Staaten Abschnitte der geplanten Strecke kontrollieren, aber die Aufgabe ist keineswegs unmöglich." #deepl:1621464726
+ je_sunset_route_frontera_button: "Verbinden Sie die Sunset Route" #deepl:317884082
+ je_sunset_route_frontera_button_desc: "Vermitteln Sie zwischen verschiedenen Interessengruppen, um eine neue Bahnstrecke nach Kalifornien zu schaffen." #deepl:952386937
+ je_gadsden_purchase_frontera_button: "Die Grenzen testen" #deepl:2467056109
+ je_gadsden_purchase_frontera_button_desc: "Die Erweiterung der Eisenbahn nach Westen wird besser zu bewältigen sein, wenn wir den erforderlichen Landkorridor physisch kontrollieren. Auch wenn dies politisch riskant ist, könnten Grenzstreitigkeiten mit unseren Nachbarn weitere diplomatische oder militärische Optionen eröffnen, um Land für unser Projekt zu erwerben." #deepl:1391362877
+ sunset_route_built_yes_tt: "Die Route „#bold “ „#!“ existiert" #deepl:4231881481
+ sunset_route_built_no_tt: "Die Route „#bold  Sunset Route #!“ existiert nicht." #deepl:1689524445
+ sunset_route_frontera: "Sonnenuntergangsroute" #deepl:1965144848
+ sunset_route_reward_frontera: "Sonnenuntergangsroute" #deepl:1965144848
+ treaty_name_treaty_of_mesilla: "Vertrag von Mesilla" #deepl:3628424082
+ mesilla_treaty_creation_tt: "Fügen Sie ein Angebot „[concept_treaty]“ hinzu, um jedes Grundstück in Arizona oder New Mexico an die „[SCOPE.sCountry('buyer_scope').GetName]“ für einen wöchentlichen Betrag von #bold £3500 #! pro [concept_state] zu verkaufen." #deepl:2192895926
+ je_seminole_wars_removal_frontera: ""
+ colonial_affairs_owner_is_discriminated_country_tt: "Jeder [concept_state], der an [GetPlayer.GetAdjective] [concept_homeland] angrenzt, gehört zu einem [concept_country], dessen [concept_primary_cultures] sich alle unterhalb von [Concept('concept_discrimination','@acceptance_status_4! $second_rate_citizen$')] in [GetPlayer.GetName] befinden." #deepl:525054957

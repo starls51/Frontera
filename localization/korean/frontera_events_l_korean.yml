@@ -1,0 +1,60 @@
+﻿l_korean:
+ debug_req_pop_ct: "주(州)에는 인구가 수(수) 명이다." #deepl:2150280673
+ debug_req_primary_perc: "STATE는 PERCENT PRIMARY CULTURE의 OVERLORD를 가진다" #deepl:695788310
+ frontera_ot_homeland.1: "주권" #deepl:290487462
+ frontera_ot_homeland.1.t: "고향, 달콤한 고향" #deepl:759433816
+ frontera_ot_homeland.1.d: "아메리카 대륙([SCOPE.sState('ascendent_state').GetName])의 정착민 인구가 크게 증가했다. 원주민과의 미해결 갈등에도 불구하고, 이곳은 앞으로 수 세대에 걸쳐 많은 미국인([SCOPE.sCountry('overlord_scope').GetAdjectiveNoFormatting])의 고향([Concept('concept_homeland','$concept_homeland$')])이 될 것으로 보인다." #deepl:1896825475
+ frontera_ot_homeland.1.f: "\"나는 바람이 자유롭게 불고 태양빛을 가릴 것이 아무것도 없던 대초원에서 태어났다.\" — 제로니모" #deepl:2391563847
+ frontera_ot_homeland.1.a: "[SCOPE.sState('ascendent_state').GetName] 곧 주(州)가 될 수도 있다." #deepl:3074916853
+ frontera_ot_homeland.1.b: "여기서 내 일은 끝났다." #deepl:1429745245
+ frontera_ot_homeland_gained_homeland: "발생한 일: \n #indent_newline:3 [SCOPE.sState('ascendent_state').GetName] 다수에게 [Concept('concept_homeland','$concept_homeland$')]로 전락했다 [SCOPE.sCountry('overlord_scope').GetAdjectiveNoFormatting] [Concept('concept_primary_cultures','$concept_primary_culture$')] #!" #deepl:1846806708
+ frontera_fort_ross.1: "손실을 줄이기" #deepl:1680067657
+ frontera_fort_ross.1.t: "손실을 줄이기" #deepl:1680067657
+ frontera_fort_ross.1.d: "포트 로스는 알래스카 식민지 주민들에게 식량을 공급하기 위해 처음 설립되었습니다. 이 미약한 미국 해군([SCOPE.sCountry('seller_scope').GetAdjectiveNoFlag]) 전초 기지는 이후 그 중요성을 상실했습니다. 미국 해군([SCOPE.sCountry('buyer_scope').GetAdjectiveNoFlag]) 관계자들은 최근 이 땅에 대한 우리의 의심스러운 소유권 주장에 주목하기 시작했습니다. 건축물들을 매각하는 것은 우리의 명예를 지키며 떠날 기회를 제공할 뿐만 아니라, 이 지역의 긴장을 완화시킬 수 있을 것입니다." #deepl:233128330
+ frontera_fort_ross.1.f: "\n"보시다시피, 이곳은 제 '#bold '의 'New Helvatia' #!를 설립하기에 이상적인 장소입니다. 네, 훌륭한 땅이군요... 그 대가는 지급될 것입니다! 아#italic  물론 #! 넉넉히 보상해 드리겠습니다," 라고 [SCOPE.sCharacter('john_sutter_scope').GetLastName] 씨는 구매를 서두르며 말합니다. "때가 되면. 오, 그렇습니다, 때가 되면..."" #deepl:2218651227
+ frontera_fort_ross.1.a: "절대 안 돼! [SCOPE.sState('california_scope').GetName]은 당연히 우리의 것입니다." #deepl:1821605251
+ frontera_fort_ross.1.b: "이것은 좋은 계획입니다." #deepl:3518633261
+ frontera_fort_ross.1.c: "[SCOPE.sState('california_scope').GetName] [SCOPE.sCountry('seller_scope').GetAdjectiveNoFlag]..." #deepl:971068779
+ frontera_fort_ross.2: "손실을 줄이기" #deepl:1680067657
+ frontera_fort_ross.2.t: "손실을 줄이기" #deepl:3839667639
+ frontera_fort_ross.2.d: "[SCOPE.sCountry('seller_scope').GetNameNoFlag] 우리의 [concept_subject] 는 [SCOPE.sState('california_scope').GetName] 지분을 포기할 계획입니다." #deepl:221351375
+ frontera_fort_ross.2.f: "현지 국제건설노동조합([SCOPE.sCountry('buyer_scope').GetAdjectiveNoFlag]) 관계자들은 우리가 정착지를 포기하기를 바랄 것이다. 시설을 매각하면 명예를 지키며 떠날 수 있는 기회가 될 뿐만 아니라 지역 내 긴장도 완화될 것이다." #deepl:4219192694
+ frontera_fort_ross.2.a: "아니요, [SCOPE.sState('california_scope').GetName]은 가치 있는 발판입니다." #deepl:1425941161
+ frontera_fort_ross.2.b: "좋아, 이건 위대한 [SCOPE.sCountry('overlord_scope').GetNameNoFlag]에게는 상관없는 일이야." #deepl:2472227683
+ frontera_fort_ross.3: "참으로 대담하군!" #deepl:61601467
+ frontera_fort_ross.3.t: "참으로 대담하군!" #deepl:61601467
+ frontera_fort_ross.3.d: "[SCOPE.sCountry('seller_scope').GetNameNoFlag] [SCOPE.sState('california_scope').GetName]에서 점점 더 적극적으로 나서고 있다." #deepl:984030691
+ frontera_fort_ross.3.f: "불안정한 법적 지위에도 불구하고, 퀸즈랜드([concept_claim])의 일부 정착민 집단은 뉴사우스웨일스([SCOPE.sCountry('buyer_scope').GetNameNoFlag])와 태즈메이니아([SCOPE.sCountry('seller_scope').GetNameNoFlag]) 사이에서 점차 격화되는 영토 분쟁의 불씨를 부채질해왔다." #deepl:725587561
+ frontera_fort_ross.3.a: "[SCOPE.sCountry('buyer_scope').GetAdjectiveNoFlag] 사람들은 이 위협에 맞서 함께 뭉쳐야 한다" #deepl:620721478
+ frontera_fort_ross.4: "[SCOPE.sCharacter('john_sutter_scope').GetLastName] 요새" #deepl:3078921980
+ frontera_fort_ross.4.t: "[SCOPE.sCharacter('john_sutter_scope').GetLastName] 요새" #deepl:3078921980
+ frontera_fort_ross.4.d: "스위스계 미국인 이민자이자 개척자, 다국어 구사자인 윌리엄 톰슨([SCOPE.sCharacter('john_sutter_scope').GetFullName])이 캘리포니아주 샌프란시스코([SCOPE.sState('california_scope').GetName])에 도착했다." #deepl:308682427
+ frontera_fort_ross.4.f: "[SCOPE.sCharacter('john_sutter_scope').GetFullName] 그는 "옛 세계는 죽어가고, 새 세계는 태어나려 애쓰고 있다: 지금이 괴물의 시대다." — 안토니오 그람시 #!" #deepl:508408470
+ frontera_fort_ross.4.a: "이 미친놈을 원래 있던 곳으로 돌려보내라." #deepl:82128806
+ frontera_fort_ross.4.b: "그가 우리를 도와 황야를 길들일 것입니다!" #deepl:3671498773
+ frontera_sunset_route_event.1: "일몰 루트" #deepl:1011417108
+ frontera_sunset_route_event.1.t: "일몰 루트" #deepl:1011417108
+ frontera_sunset_route_event.1.d: "[SCOPE.sState('california_scope').GetName] 대륙 동부 지역까지 철도로 성공적으로 연결되었습니다. 소노란 사막을 가로지르는 이 온난 기후 노선은 연중 무휴로 운행할 수 있습니다." #deepl:3309601727
+ frontera_sunset_route_event.2.d: "[SCOPE.sCountry('builder_scope').GetNameNoFlag] 애리조나주([SCOPE.sState('california_scope').GetName])를 대륙 동부 지역과 철도로 연결하기 위한 노력을 주도해 왔다. 소노란 사막을 가로지르는 이 온난 기후 노선은 연중 무휴로 운행이 가능하다." #deepl:2730146222
+ frontera_sunset_route_event.1.f: ""이것이 너희들을 위한 법이다, 햇빛처럼 맑게," 주지사가 선언했다. 그의 목소리는 등 뒤의 철제 거인처럼 단단했다. 사막을 가로지르는 바람이 휘몰아쳤고, 버질 어프의 손이 권총 위에 머물렀다. 무고한 마을 사람들이 지켜보러 오지 않았다면 총격전이 벌어졌을지도 모른다. 어프의 마지못한 한숨이 증기 소리와 함께 햇볕에 달궈진 공기로 스멀스멀 퍼져나갔다. 기관차는 굴러갔고, 선셋 루트가 개통되었다." #deepl:295026560
+ frontera_sunset_route_event.1.a: "진보를 위한 승리!" #deepl:2958605196
+ frontera_sunset_route_event.2.a: "그들에게 잘됐군..." #deepl:2754019974
+ sunset_route_frontera_reward_int: "선두에서 선셋 루트를 주도했다" #deepl:1304134101
+ frontera_sunset_route_event.3: "메실라 계곡의 분쟁" #deepl:510184323
+ frontera_sunset_route_event.3.t: "메실라 계곡의 분쟁" #deepl:510184323
+ frontera_sunset_route_event.3.d: "메실라 계곡의 소유권에 대한 논란이 미국과 멕시코([SCOPE.sCountry('buyer_scope').GetName]) 간 외교 분쟁으로 격화되었다." #deepl:1502838723
+ frontera_sunset_route_event.3.f: ""[SCOPE.sCountry('buyer_scope').GetAdjectiveNoFlag]의 정찰대가 우리 국경을 마치 이미 자기들 것인 양 넘나든다," [SCOPE.sCountry('angry_country_scope').GetAdjectiveNoFlag] 장관이 분노에 차 말했다. [SCOPE.sCountry('angry_country_scope').GetRuler.GetPrimaryRoleTitle] [SCOPE.sCountry('angry_country_scope').GetRuler.GetFullName]는 침착한 표정으로 시가를 물고 있었고, 희미한 불빛이 잠시 그의 거친 얼굴을 비추었다가 어둠 속으로 사라졌다. \n \n"내가 팔기를 거부하면, 그들은 그냥 가져갈 거야—그리고 운명이라 주장할 테지."\n \n"그럼 네가 동의하면?"\n \n"우린 강제로 잃어야 하는 것에 대해... 대가를 받게 될 거야."" #deepl:87387247
+ frontera_sunset_route_event.3.a: "더 많은 무장 원정대를 보내다" #deepl:3471564856
+ frontera_sunset_route_event.3.b: "더 평화로운 접근을 시도하라" #deepl:990404971
+ frontera_sunset_route_event.4: "메실라 계곡의 침입" #deepl:3780924556
+ frontera_sunset_route_event.4.t: "메실라 계곡의 침입" #deepl:3780924556
+ frontera_sunset_route_event.4.d: "외국 군대의 원정대는 메실라 계곡 근처에 설정된 국경을 반복적으로 침범해 왔다." #deepl:2990890124
+ frontera_sunset_route_event.4.f: ""[SCOPE.sCountry('buyer_scope').GetAdjectiveNoFlag]의 정찰대가 우리 국경을 마치 이미 자기들 것인 양 넘나든다," [SCOPE.sCountry('angry_country_scope').GetAdjectiveNoFlag] 장관이 분노에 차 말했다. [SCOPE.sCountry('angry_country_scope').GetRuler.GetPrimaryRoleTitle] [SCOPE.sCountry('angry_country_scope').GetRuler.GetFullName]는 침착한 표정으로 시가를 물고 있었고, 희미한 불빛이 잠시 그의 거친 얼굴을 비추었다가 어둠 속으로 사라졌다. \n \n"내가 팔기를 거부하면, 그들은 그냥 가져갈 거야—그리고 운명이라 주장할 테지."\n \n"그럼 네가 동의하면?"\n \n"우린 강제로 잃어야 하는 것에 대해... 대가를 받게 될 거야."" #deepl:87387247
+ frontera_sunset_route_event.4.a: "토지 매각 제안" #deepl:3847002548
+ frontera_sunset_route_event.4.b: "그들이 침공한다면 바보일 것이다" #deepl:346374326
+ frontera_sunset_route_event.5: "사막의 측량사들" #deepl:1781160719
+ frontera_sunset_route_event.5.t: "사막의 측량사들" #deepl:1781160719
+ frontera_sunset_route_event.5.d: "[SCOPE.sCountry('buyer_scope').GetAdjectiveNoFlag] 일부 요원들이 현장 임무에 우리 외교관들을 포함시켰습니다. 그들은 양국 간 국제 철도망 구축을 희망하는 것으로 보입니다." #deepl:368096293
+ frontera_sunset_route_event.5.f: "이 계획에 동의하든 그렇지 않든, 이러한 조사는 인프라 개선을 계획하고 보다 진보된 교통 수단에 대한 지식을 교환할 수 있는 훌륭한 기회입니다." #deepl:652771437
+ frontera_sunset_route_event.5.a: "참으로 이웃다운 마음씨" #deepl:1043888935
+ 
