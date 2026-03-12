@@ -127,3 +127,42 @@ on_yearly_pulse_country = {
 		add_yearly_OT_migration_modifier
 	}
 }
+
+# Root = Diplomatic Action
+# Effect for on_action: if OT gains autonomy, they cease to be an OT and become a dominion
+diplomatic_OT_liberation_frontera = {
+	effect = {
+		every_country = {
+			limit = {
+				has_law = law_type:law_frontier_territorial_administration
+				is_subject = yes
+				NOT = { is_subject_type = subject_type_colony }
+			}
+			if = {
+				limit = {
+					overlord = {
+						has_law = law_type:law_monarchy
+					}
+				}
+				activate_law = law_type:law_colonial_administration
+			}
+			else = {
+				activate_law = law_type:law_presidential_republic
+			}
+		}
+	}
+}
+
+# if OT gains autonomy, they cease to be an OT and become a dominion
+on_diplomatic_action_overlord_increase_autonomy = {
+	on_actions = {
+		diplomatic_OT_liberation_frontera
+	}
+}
+
+# Root = Diplomatic Action
+on_diplomatic_action_subject_increase_own_autonomy = {
+	on_actions = {
+		diplomatic_OT_liberation_frontera
+	}
+}

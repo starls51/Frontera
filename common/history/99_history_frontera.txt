@@ -440,6 +440,7 @@ GLOBAL = {
 				xB34192 x4017DC xD49785 x35EAD6 x96E11B x781E75 x5E05A9 xFDA0D8 x4D1908
 			}
 		}
+		remove_claim = c:USA
 		remove_homeland = cu:yankee
 	}
 	s:STATE_MINNESOTA = {

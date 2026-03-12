@@ -20,8 +20,9 @@ law_frontier_territorial_administration = {
 	}
 
 	is_visible = {
-		country_is_colonial_or_company = yes
+		is_subject_type = subject_type_colony
 	}
+
 	can_impose = {
 	}
 

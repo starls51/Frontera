@@ -10,6 +10,7 @@
 
 	possible = {
 		is_subject = no
+		NOT = { is_country_type = unrecognized }
 		has_law = law_type:law_frontier_colonization
 		has_law = law_type:law_homesteading
 		any_scope_state = {
@@ -30,8 +31,6 @@
 	# Establish an Organized Territory
 	scripted_button = je_organize_territory_button
 
-	# Re-Organize A Colonial Administration into an Organized Territory
-	# scripted_button = je_reorganize_colony_button
 	weight = 100
 
 	should_be_pinned_by_default = yes

@@ -4,8 +4,13 @@
 	group = je_group_usa_manifest_destiny
 
 	complete = {
-		owns_entire_state_region = STATE_FLORIDA
-		NOT = { exists = c:SML }
+		s:STATE_FLORIDA = {
+			NOT = {
+				any_scope_state = {
+					owner ?= { is_country_type = decentralized }
+				}
+			}
+		}
 	}
 
 	on_complete = {
@@ -60,27 +65,86 @@
 	}
 
 	fail = {
-		OR = {
-			c:SML ?= {
-				owns_entire_state_region = STATE_FLORIDA
-			}
-			c:MSC ?= {
-				owns_entire_state_region = STATE_FLORIDA
+		s:STATE_FLORIDA = {
+			NOT = {
+				any_scope_state = {
+					OR = {
+						owner ?= c:USA
+						owner ?= { is_subject_of = c:USA }
+					}
+				}
 			}
 		}
 	}
 
 	on_fail = {
-		s:STATE_FLORIDA = {
-			remove_claim = c:FLR
-		}
 		c:SML ?= {
 			set_country_type = recognized
-			trigger_event = { id = independence.2 days = 3 popup = yes }
+			hidden_effect = {
+				s:STATE_FLORIDA = {
+					add_claim = c:SML
+					every_scope_state = {
+						every_scope_pop = {
+							limit = {
+								OR = {
+									culture = cu:afro_american
+									culture = cu:muskogean
+								}
+							}
+							move_partial_pop = { state = s:STATE_FLORIDA.region_state:SML population_ratio = 0.9 }
+						}
+						every_scope_pop = {
+							limit = {
+								OR = {
+									NOT = { culture = cu:afro_american }
+									NOT = { culture = cu:muskogean }
+								}
+							}
+							move_partial_pop = { state = s:STATE_FLORIDA.region_state:SML population_ratio = 0.1 }
+						}
+					}
+				}
+				trigger_event = { id = independence.2 days = -1 popup = yes }
+				add_primary_culture = cu:afro_american
+				activate_law = law_type:law_migration_controls
+			}
 		}
 		c:MSC ?= {
 			set_country_type = recognized
-			trigger_event = { id = independence.2 days = 3 popup = yes }
+			hidden_effect = {
+				s:STATE_FLORIDA = {
+					add_claim = c:MSC
+					every_scope_state = {
+						every_scope_pop = {
+							limit = {
+								OR = {
+									culture = cu:afro_american
+									culture = cu:muskogean
+								}
+							}
+							move_partial_pop = { state = s:STATE_FLORIDA.region_state:MSC population_ratio = 0.9 }
+						}
+						every_scope_pop = {
+							limit = {
+								OR = {
+									NOT = { culture = cu:afro_american }
+									NOT = { culture = cu:muskogean }
+								}
+							}
+							move_partial_pop = { state = s:STATE_FLORIDA.region_state:MSC population_ratio = 0.1 }
+						}
+					}
+				}
+				trigger_event = { id = independence.2 days = -1 popup = yes }
+				add_primary_culture = cu:afro_american
+			}
+		}
+		every_country = {
+			limit = {
+				has_claim = s:STATE_FLORIDA
+			}
+			save_scope_as = country_scope
+			s:STATE_FLORIDA = { remove_claim = scope:country_scope }
 		}
 	}
 

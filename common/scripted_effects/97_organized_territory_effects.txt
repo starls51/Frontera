@@ -112,9 +112,32 @@
 				}
 			}
 		}
+		# Inc for high pop states, to prevent migration overflow
 		if = {
 			limit = {
+				state_population < 200000
 				var:accepted_percent >= 0.6
+			}
+			save_scope_as = state_to_be_homeland_scope
+		}
+		else_if = {
+			limit = {
+				state_population < 500000
+				var:accepted_percent >= 0.45
+			}
+			save_scope_as = state_to_be_homeland_scope
+		}
+		else_if = {
+			limit = {
+				state_population < 1000000
+				var:accepted_percent >= 0.3
+			}
+			save_scope_as = state_to_be_homeland_scope
+		}
+		else_if = {
+			limit = {
+				state_population >= 1000000
+				var:accepted_percent >= 0.2
 			}
 			save_scope_as = state_to_be_homeland_scope
 		}
@@ -134,6 +157,7 @@
 		}
 		state_region = {
 			add_homeland = scope:new_homelander_culture
+			add_claim = root.overlord
 		}
 	}
 }

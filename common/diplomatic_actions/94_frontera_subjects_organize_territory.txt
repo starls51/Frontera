@@ -16,6 +16,7 @@
 
 	possible = {
 		is_revolutionary = no
+		NOT = { is_country_type = unrecognized }
 		has_law = law_type:law_frontier_colonization
 		has_law = law_type:law_homesteading
 		scope:target_country = {
