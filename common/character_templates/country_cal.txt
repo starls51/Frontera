@@ -3,7 +3,7 @@
 # California - CAL
 
 cal_carlos_antonio_carrillo_template = {
-    # Carlos Antonio Carrillo, ranchero, soldier, politician elected to serve as governer in 1837-1838
+    # Carlos Antonio Carrillo, ranchero, soldier, politician elected to serve as governor in 1837-1838
     first_name = Carlos
     last_name =  Carillo
     historical = yes
@@ -20,7 +20,7 @@ cal_carlos_antonio_carrillo_template = {
 }
 
 cal_nicolas_gutierrez_template = {
-    # LtCol Nicolás Gutiérrez - governer of las californias before coup by Juan Batista Alverado later in 1836
+    # LtCol Nicolás Gutiérrez - governor of las californias before coup by Juan Batista Alverado later in 1836
     first_name = Nicolas_2
     last_name =  Gutierrez
     historical = yes
@@ -39,7 +39,7 @@ cal_nicolas_gutierrez_template = {
 }
 
 cal_juan_batista_alverado_template = {
-    # Juan Batista Alverado, future governer or president of Alta California
+    # Juan Batista Alverado, future governor or president of Alta California
     first_name = Juan_Bautista
     last_name =  Alvarado
     is_general = yes
@@ -52,7 +52,7 @@ cal_juan_batista_alverado_template = {
     dna = dna_cal_juan_bautista_alvarado
     traits = {
         ambitious # desires an independent california, willing to revolt
-        tactful # compromises with mexico in the end, negotiates a sweet deal to remain governer
+        tactful # compromises with mexico in the end, negotiates a sweet deal to remain governor
         alcoholic # may have missed his own wedding to get blitzed, had his half-brother stand in as groom
     }
 }
@@ -75,7 +75,7 @@ cal_isaac_graham_template = {
 }
 
 cal_pio_pico_template = {
-    # Pio Pico prominent ranchero, politician, entrepreneur, and last serving governer of Mexican California
+    # Pio Pico prominent ranchero, politician, entrepreneur, and last serving governor of Mexican California
     first_name = Pio
     last_name =  Pico
     historical = yes

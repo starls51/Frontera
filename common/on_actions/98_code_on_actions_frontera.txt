@@ -50,6 +50,7 @@ on_yearly_pulse = {
 		country_fort_ross_event_check
 	}
 }
+
 #OTs
 add_yearly_OT_migration_modifier = {
 	effect = {
@@ -69,6 +70,23 @@ add_yearly_OT_migration_modifier = {
 				}
 			}
 		}
+	}
+}
+# WIP SECTION #
+consolidate_split_states = {
+	effect = {
+		if = {
+			limit = {
+				has_law = law_type:law_frontier_territorial_administration
+			}
+		}
+		country_OT_consolidate_split_states = yes
+	}
+}
+# Define some kind of trigger for this
+on_monthly_pulse_country = {
+	on_actions = {
+		consolidate_split_states
 	}
 }
 

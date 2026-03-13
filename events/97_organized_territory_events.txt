@@ -1,0 +1,49 @@
+﻿namespace = frontera_ot
+frontera_ot.1 = {
+	type = country_event
+	placement = scope:ot_scope
+
+	title = frontera_ot.1.t
+	desc = frontera_ot.1.d
+	flavor = frontera_ot.1.f
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+	duration = 3
+
+	cooldown = { days = -1 }
+
+	trigger = {
+		#triggered by on_action effect when territory is too small to be viable
+	}
+
+	immediate = {
+		save_scope_as = ot_scope
+		overlord ?= { save_scope_as = overlord_scope }
+	}
+
+	# Become the overlord
+	option = {
+		name = frontera_ot.1.a
+		default_option = yes
+		if = {
+			limit = {
+				is_player = yes
+			}
+			play_as = scope:overlord_scope
+			scope:overlord_scope = { annex = scope:ot_scope }
+		}
+		else = {
+			scope:overlord_scope = {
+				post_notification = ot_consolidated_frontera_notification
+				annex = scope:ot_scope
+			}
+		}
+	}
+}

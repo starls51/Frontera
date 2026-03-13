@@ -1,0 +1,6 @@
+﻿l_english:
+ frontera_ot.1:0 "Unorganized Territory"
+ frontera_ot.1.t:0 "Unorganized Territory"
+ frontera_ot.1.d:0 "[SCOPE.sCountry('overlord_scope').GetNameNoFlag] has little interest in preserving [SCOPE.sCountry('ot_scope').GetNameNoFlag] under a distinct governing body."
+ frontera_ot.1.f:0 "This territory will become unorganized, unincorporated [SCOPE.sCountry('overlord_scope').GetAdjectiveNoFlag] land. However, it could one day be incorporated into a new territory."
+ frontera_ot.1.a:0 "Perhaps the Governor will find another job..."

@@ -3,7 +3,7 @@
 # New Mexico - NMX
 
 nmx_albino_perez_template = {
-    # disliked initial governer of new mexico under santa ana
+    # disliked initial governor of new mexico under santa ana
     first_name = Albino
     last_name =  Perez
     historical = yes
@@ -24,7 +24,7 @@ nmx_albino_perez_template = {
 }
 
 nmx_manuel_armijo_template = {
-    # manuel armijo takes over as governer in 1837 after assassin kills albino perez
+    # manuel armijo takes over as governor in 1837 after assassin kills albino perez
     first_name = Manuel
     last_name =  Armijo
     historical = yes
