@@ -36,6 +36,7 @@ law_frontier_territorial_administration = {
 		country_mass_migration_attraction_mult = -1
 		#applies to states in a country it seems
 		state_migration_quota_mult = 0.25
+		country_law_enactment_imposition_success_add = 0.5
 	}
 
 	ai_will_do = {

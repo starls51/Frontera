@@ -1,0 +1,4 @@
+﻿l_english:
+ je_organized_territory_internal_frontera:0 "Populate the Frontier"
+ je_organized_territory_internal_frontera_reason: "#bold The directive of an Organized Territory: #!\n\n$je_organized_territories_frontera_reason$"
+ frontera_arrival_frontier_guides:0 ""

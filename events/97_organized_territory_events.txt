@@ -71,7 +71,6 @@ frontera_ot.2 = {
 	cooldown = { days = -1 }
 
 	trigger = {
-		#triggered at random interval: Country must have an OT subject, country must have at least one political_movement
 	}
 
 	immediate = {
@@ -79,13 +78,37 @@ frontera_ot.2 = {
 		random_subject_or_below = {
 			limit = {
 				has_law = law_type:law_frontier_territorial_administration
-				# does not already have frontier_community variable, or a homeland
+				NOT = { has_variable = frontera_sent_cultural_community }
 			}
 			save_scope_as = ot_scope
-			ordered_scope_state = {
-				order_by = gdp
-				position = 0
-				save_scope_as = ot_state_scope
+			set_variable = {
+				name = frontera_sent_cultural_community
+				value = yes
+				years = 3
+			}
+			if = {
+				limit = {
+					any_scope_state = {
+						NOT = { is_split_state = yes }
+						NOT = { is_homeland_of_country_cultures = scope:overlord_scope }
+					}
+				}
+				ordered_scope_state = {
+					limit = {
+						NOT = { is_split_state = yes }
+						NOT = { is_homeland_of_country_cultures = scope:overlord_scope }
+					}
+					order_by = gdp
+					position = 0
+					save_scope_as = ot_state_scope
+				}
+			}
+			else = {
+				ordered_scope_state = {
+					order_by = gdp
+					position = 0
+					save_scope_as = ot_state_scope
+				}
 			}
 		}
 		ordered_political_movement = {
@@ -244,7 +267,7 @@ frontera_ot.2 = {
 		}
 		default_option = yes
 		ai_chance = {
-			value = 5
+			base = 5
 		}
 	}
 	option = {
@@ -313,7 +336,7 @@ frontera_ot.2 = {
 			}
 		}
 		ai_chance = {
-			value = 4
+			base = 4
 		}
 	}
 	option = {
@@ -382,7 +405,7 @@ frontera_ot.2 = {
 			}
 		}
 		ai_chance = {
-			value = 1
+			base = 1
 		}
 	}
 }

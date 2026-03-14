@@ -1,18 +1,19 @@
 ﻿country_OT_homelands_check_frontera = {
 	every_scope_state = {
 		limit = {
+			NOT = { is_homeland_of_country_cultures = root.overlord }
 			state_population > 85000
 			any_scope_culture = {
 				is_primary_culture_of = root.overlord
 			}
 			# Disables states gaining homeland if state is not fully colonized by Recognized Countries - this should be MIGRATION
-			#state_region = {
-			#	NOT = {
-			#		any_scope_state = {
-			#			owner = { is_country_type = decentralized }
-			#		}
-			#	}
-			#}
+			state_region = {
+				NOT = {
+					any_scope_state = {
+						owner = { is_country_type = decentralized }
+					}
+				}
+			}
 		}
 		set_variable = {
 			name = accepted_percent
@@ -173,10 +174,12 @@ country_OT_transfer_homeland_to_overlord = {
 			is_at_war = no
 			any_scope_state = {
 				is_homeland_of_country_cultures = root.overlord
+				NOT = { has_variable = becoming_state_frontera }
 				save_temporary_scope_as = giveaway_state
 			}
 		}
-		scope:giveaway_state = {
+		scope:giveaway_state ?= {
+			set_variable = becoming_state_frontera
 			trigger_event = frontera_ot_homeland.1
 		}
 	}

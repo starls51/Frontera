@@ -38,6 +38,11 @@
 		add_modifier = {
 			name = age_of_caudillos_modifier
 		}
+		set_variable = {
+			name = frontera_sent_cultural_community
+			value = yes
+			years = 1
+		}
 		
 		initialise_caciquismo_effect = yes
 	}
@@ -71,6 +76,12 @@
 		add_modifier = {
 			name = age_of_caudillos_modifier
 		}
+
+		set_variable = {
+			name = frontera_sent_cultural_community
+			value = yes
+			years = 1
+		}
 		
 		initialise_caciquismo_effect = yes
 	}
@@ -87,6 +98,11 @@
 		ruler = {
 			set_as_interest_group_leader = yes
 		}
+		set_variable = {
+			name = frontera_sent_cultural_community
+			value = yes
+			years = 2
+		}
 	}
 	# MICHIGAN TERRITORY
 	create_country = {
@@ -100,6 +116,11 @@
 		effect_starting_politics_territory_free_frontera = yes
 		ruler = {
 			set_as_interest_group_leader = yes
+		}
+		set_variable = {
+			name = frontera_sent_cultural_community
+			value = yes
+			years = 1
 		}
 	}
 }

@@ -1,0 +1,60 @@
+﻿je_organized_territory_internal_frontera  = {
+	icon = "gfx/interface/icons/invention_icons/democracy.dds"
+
+	group = je_group_internal_affairs
+
+	is_shown_when_inactive = {
+		has_law = law_type:law_frontier_territorial_administration
+	}
+
+	possible = {
+		is_subject = yes
+		has_law = law_type:law_frontier_territorial_administration
+		has_law = law_type:law_homesteading
+		any_primary_culture = { is_primary_culture_of = root.overlord }
+	}
+
+	can_deactivate = yes
+
+
+	on_monthly_pulse = {
+		effect = {
+			if = {
+				limit = {
+					has_variable = frontera_sent_cultural_community
+				}
+				country_OT_homelands_check_frontera = yes
+				country_OT_transfer_homeland_to_overlord = yes
+			}
+		}
+	}
+
+	on_yearly_pulse = {
+		effect = {
+			ordered_scope_state = {
+				limit = {
+					state_region = {
+						NOT = {
+							any_scope_state = {
+								owner = { is_country_type = decentralized }
+							}
+						}
+					}
+				}
+        	    order_by = gdp
+				min = 0
+				max = 2
+				check_range_bounds = no
+				# create a notification for 'arrival of new frontier guides'
+        	    add_modifier = {
+					name = modifier_frontierlands_frontera
+					months = 12
+				}
+			}
+		}
+	}
+
+	weight = 100
+
+	should_be_pinned_by_default = yes
+}

@@ -68,6 +68,7 @@ frontera_ot_homeland.1 = {
 			text = frontera_ot_homeland_gained_homeland
 			scope:ascendent_state = {
 				set_state_type = unincorporated
+				set_variable = becoming_state_frontera
 			}
 		}
 	}
@@ -109,6 +110,7 @@ frontera_ot_homeland.2 = {
 			text = frontera_ot_homeland_gained_homeland
 			scope:ascendent_state = {
 				set_state_type = unincorporated
+				set_variable = becoming_state_frontera
 			}
 		}
 	}

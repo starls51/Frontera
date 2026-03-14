@@ -22,7 +22,6 @@
 		subject_type = subject_type_colony
 
 		second_modifier = {
-			country_law_enactment_imposition_success_add = 0.3
 		}
 
 		actor_can_break = {

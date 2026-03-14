@@ -24,6 +24,19 @@
 
 	can_deactivate = yes
 
+	on_yearly_pulse = {
+		trigger = {
+			any_subject_or_below = {
+				has_law = law_type:law_frontier_territorial_administration
+				NOT = { has_variable = frontera_sent_cultural_community }
+			}
+		}
+		events = {
+			delay = { months = { 3 8 } }
+			frontera_ot.2
+		}
+	}
+
 	immediate = {
 
 	}
