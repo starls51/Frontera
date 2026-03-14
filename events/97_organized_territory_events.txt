@@ -47,3 +47,197 @@ frontera_ot.1 = {
 		}
 	}
 }
+# Wagons West Event
+# SCOPE = Overlord of OT
+# This is an event to gain seed population and found a cultural community. The overlord gets this, and will always favor a player run OT.
+frontera_ot.2 = {
+	type = country_event
+	placement = scope:ot_state_scope
+
+	title = frontera_ot.2.t
+	desc = frontera_ot.2.d
+	flavor = frontera_ot.2.f
+
+	event_image = {
+		video = "asia_poor_people_moving"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+	duration = 3
+
+	cooldown = { days = -1 }
+
+	trigger = {
+		#triggered at random interval: Country must have an OT subject, country must have at least one political_movement
+	}
+
+	immediate = {
+		save_scope_as = overlord_scope
+		random_subject_or_below = {
+			limit = {
+				has_law = law_type:law_frontier_territorial_administration
+				# does not already have frontier_community variable, or a homeland
+			}
+			save_scope_as = ot_scope
+			random_scope_state = {
+				limit = { is_capital = yes }
+				save_scope_as = ot_state_scope
+			}
+		}
+		ordered_political_movement = {
+			order_by = political_movement_popular_support
+			position = 0
+			save_scope_as = movement_a_scope
+		}
+		ordered_political_movement = {
+			limit = {
+				NOT = { scope:movement_a_scope ?= this }
+			}
+			order_by = political_movement_radicalism
+			position = 0
+			save_scope_as = movement_b_scope
+		}
+		if = {
+			limit = {
+				any_political_movement = {
+					NOT = { scope:movement_a_scope ?= this }
+					NOT = { scope:movement_b_scope ?= this }
+				}
+			}
+			random_political_movement = {
+				limit = {
+					NOT = { scope:movement_a_scope ?= this }
+					NOT = { scope:movement_b_scope ?= this }
+				}
+				save_scope_as = movement_c_scope
+			}
+		}
+		else = {
+			random_political_movement = { save_scope_as = movement_c_scope }
+		}
+		# grab relevant pops
+		# if the pops arent big enough to move that many people out, just make up 500 more pops. its best this way...
+		ordered_scope_pop = {
+			limit = {
+				pop_has_primary_culture = yes
+			}
+			order_by = total_size
+  			position = 0
+			save_scope_as = pop_a_scope
+		}
+		ordered_scope_pop = {
+			limit = {
+				pop_has_primary_culture = yes
+			}
+			order_by = pop_radical_fraction
+  			position = 0
+			save_scope_as = pop_b_scope
+		}
+		random_scope_pop = {
+			save_scope_as = pop_c_scope
+		}
+		if = {
+			limit = {
+				any_scope_pop = {
+					is_pop_type = slaves
+				}
+			}
+			ordered_scope_pop = {
+				limit = {
+					is_pop_type = slaves
+				}
+				order_by = total_size
+  				position = 0
+				save_scope_as = pop_slaves_scope
+			}
+		}
+	}
+
+	option = {
+		name = frontera_ot.2.a
+		scope:pop_a_scope = {
+			if = {
+				limit = {
+					total_size >= 600
+				}
+				move_partial_pop = { state = scope:ot_state_scope population = 500 }
+			}
+			else = { move_pop = scope:ot_state_scope }
+			# if pop is pro slavery, try to find 100 slaves to move with them
+		}
+		if = {
+			limit = {
+				scope:movement_a_scope = { is_political_movement_type = movement_pro_slavery }
+				scope:ot_scope = { NOT = { has_law = law_type:law_slavery_banned } }
+			}
+			scope:pop_slaves_scope ?= {
+				if = {
+					limit = {
+						total_size >= 150
+					}
+					move_partial_pop = { state = scope:ot_state_scope population = 100 }
+				}
+				else = { move_pop = scope:ot_state_scope }
+			}
+		}
+	}
+	option = {
+		name = frontera_ot.2.b
+		scope:pop_b_scope = {
+			if = {
+				limit = {
+					total_size >= 600
+				}
+				move_partial_pop = { state = scope:ot_state_scope population = 500 }
+			}
+			else = { move_pop = scope:ot_state_scope }
+			# if pop is pro slavery, try to find 100 slaves to move with them
+		}
+		if = {
+			limit = {
+				scope:movement_b_scope = { is_political_movement_type = movement_pro_slavery }
+				scope:ot_scope = { NOT = { has_law = law_type:law_slavery_banned } }
+			}
+			scope:pop_slaves_scope ?= {
+				if = {
+					limit = {
+						total_size >= 150
+					}
+					move_partial_pop = { state = scope:ot_state_scope population = 100 }
+				}
+				else = { move_pop = scope:ot_state_scope }
+			}
+		}
+	}
+	option = {
+		name = frontera_ot.2.c
+		scope:pop_c_scope = {
+			if = {
+				limit = {
+					total_size >= 600
+				}
+				move_partial_pop = { state = scope:ot_state_scope population = 500 }
+			}
+			else = { move_pop = scope:ot_state_scope }
+			# if pop is pro slavery, try to find 100 slaves to move with them
+		}
+		if = {
+			limit = {
+				scope:movement_c_scope = { is_political_movement_type = movement_pro_slavery }
+				scope:ot_scope = { NOT = { has_law = law_type:law_slavery_banned } }
+			}
+			scope:pop_slaves_scope ?= {
+				if = {
+					limit = {
+						total_size >= 150
+					}
+					move_partial_pop = { state = scope:ot_state_scope population = 100 }
+				}
+				else = { move_pop = scope:ot_state_scope }
+			}
+		}
+	}
+}

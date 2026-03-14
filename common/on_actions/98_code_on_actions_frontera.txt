@@ -72,7 +72,7 @@ add_yearly_OT_migration_modifier = {
 		}
 	}
 }
-# WIP SECTION #
+
 consolidate_split_states = {
 	effect = {
 		if = {
@@ -83,12 +83,12 @@ consolidate_split_states = {
 		country_OT_consolidate_split_states = yes
 	}
 }
-# Define some kind of trigger for this
-on_monthly_pulse_country = {
-	on_actions = {
-		consolidate_split_states
-	}
-}
+# Define trigger for consolidating split states
+#on_monthly_pulse_country = {
+#	on_actions = {
+#		consolidate_split_states
+#	}
+#}
 
 include_OT_in_colonial_freedom = {
 	effect = {
@@ -143,6 +143,7 @@ on_half_yearly_pulse_country = {
 on_yearly_pulse_country = {
 	on_actions = {
 		add_yearly_OT_migration_modifier
+		consolidate_split_states
 	}
 }
 
