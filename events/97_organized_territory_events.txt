@@ -82,8 +82,9 @@ frontera_ot.2 = {
 				# does not already have frontier_community variable, or a homeland
 			}
 			save_scope_as = ot_scope
-			random_scope_state = {
-				limit = { is_capital = yes }
+			ordered_scope_state = {
+				order_by = gdp
+				position = 0
 				save_scope_as = ot_state_scope
 			}
 		}
@@ -128,13 +129,33 @@ frontera_ot.2 = {
   			position = 0
 			save_scope_as = pop_a_scope
 		}
-		ordered_scope_pop = {
+		# if any pop is greater than or equal to 400, get them, else grab another
+		if = {
 			limit = {
-				pop_has_primary_culture = yes
+				any_scope_pop = {
+					total_size >= 400
+					pop_has_primary_culture = yes
+				}
 			}
-			order_by = pop_radical_fraction
-  			position = 0
-			save_scope_as = pop_b_scope
+			ordered_scope_pop = {
+				limit = {
+					total_size >= 400
+					pop_has_primary_culture = yes
+				}
+				order_by = pop_radical_fraction
+  				position = 0
+				save_scope_as = pop_b_scope
+			}
+		}
+		else = {
+			ordered_scope_pop = {
+				limit = {
+					pop_has_primary_culture = yes
+				}
+				order_by = pop_radical_fraction
+  				position = 0
+				save_scope_as = pop_b_scope
+			}
 		}
 		random_scope_pop = {
 			save_scope_as = pop_c_scope
@@ -161,9 +182,9 @@ frontera_ot.2 = {
 		scope:pop_a_scope = {
 			if = {
 				limit = {
-					total_size >= 600
+					total_size >= 400
 				}
-				move_partial_pop = { state = scope:ot_state_scope population = 500 }
+				move_partial_pop = { state = scope:ot_state_scope population = 300 }
 			}
 			else = { move_pop = scope:ot_state_scope }
 			# if pop is pro slavery, try to find 100 slaves to move with them
@@ -183,15 +204,57 @@ frontera_ot.2 = {
 				else = { move_pop = scope:ot_state_scope }
 			}
 		}
+		scope:movement_a_scope = {
+			add_modifier = {
+				name = modifier_frontier_politics_neg_frontera
+				days = normal_modifier_time
+			}
+		}
+		scope:ot_scope = {
+			if = {
+				limit = {
+					any_political_movement = {
+						scope:movement_a_scope.type ?= type
+					}
+				}
+				random_political_movement = {
+					limit = {
+						scope:movement_a_scope.type ?= type
+					}
+					add_modifier = {
+						name = modifier_frontier_politics_pos_frontera
+						days = normal_modifier_time
+					}
+				}
+			}
+			else = { 
+				create_political_movement = {
+					type = scope:movement_a_scope.type
+				}
+				random_political_movement = {
+					limit = {
+						scope:movement_a_scope.type ?= type
+					}
+					add_modifier = {
+						name = modifier_frontier_politics_pos_frontera
+						days = normal_modifier_time
+					}
+				}
+			}
+		}
+		default_option = yes
+		ai_chance = {
+			value = 5
+		}
 	}
 	option = {
 		name = frontera_ot.2.b
 		scope:pop_b_scope = {
 			if = {
 				limit = {
-					total_size >= 600
+					total_size >= 400
 				}
-				move_partial_pop = { state = scope:ot_state_scope population = 500 }
+				move_partial_pop = { state = scope:ot_state_scope population = 300 }
 			}
 			else = { move_pop = scope:ot_state_scope }
 			# if pop is pro slavery, try to find 100 slaves to move with them
@@ -211,15 +274,56 @@ frontera_ot.2 = {
 				else = { move_pop = scope:ot_state_scope }
 			}
 		}
+		scope:movement_b_scope = {
+			add_modifier = {
+				name = modifier_frontier_politics_neg_frontera
+				days = normal_modifier_time
+			}
+		}
+		scope:ot_scope = {
+			if = {
+				limit = {
+					any_political_movement = {
+						scope:movement_b_scope.type ?= type
+					}
+				}
+				random_political_movement = {
+					limit = {
+						scope:movement_b_scope.type ?= type
+					}
+					add_modifier = {
+						name = modifier_frontier_politics_pos_frontera
+						days = normal_modifier_time
+					}
+				}
+			}
+			else = { 
+				create_political_movement = {
+					type = scope:movement_b_scope.type
+				}
+				random_political_movement = {
+					limit = {
+						scope:movement_b_scope.type ?= type
+					}
+					add_modifier = {
+						name = modifier_frontier_politics_pos_frontera
+						days = normal_modifier_time
+					}
+				}
+			}
+		}
+		ai_chance = {
+			value = 4
+		}
 	}
 	option = {
 		name = frontera_ot.2.c
 		scope:pop_c_scope = {
 			if = {
 				limit = {
-					total_size >= 600
+					total_size >= 400
 				}
-				move_partial_pop = { state = scope:ot_state_scope population = 500 }
+				move_partial_pop = { state = scope:ot_state_scope population = 300 }
 			}
 			else = { move_pop = scope:ot_state_scope }
 			# if pop is pro slavery, try to find 100 slaves to move with them
@@ -238,6 +342,47 @@ frontera_ot.2 = {
 				}
 				else = { move_pop = scope:ot_state_scope }
 			}
+		}
+		scope:movement_c_scope = {
+			add_modifier = {
+				name = modifier_frontier_politics_neg_frontera
+				days = normal_modifier_time
+			}
+		}
+		scope:ot_scope = {
+			if = {
+				limit = {
+					any_political_movement = {
+						scope:movement_c_scope.type ?= type
+					}
+				}
+				random_political_movement = {
+					limit = {
+						scope:movement_c_scope.type ?= type
+					}
+					add_modifier = {
+						name = modifier_frontier_politics_pos_frontera
+						days = normal_modifier_time
+					}
+				}
+			}
+			else = { 
+				create_political_movement = {
+					type = scope:movement_c_scope.type
+				}
+				random_political_movement = {
+					limit = {
+						scope:movement_c_scope.type ?= type
+					}
+					add_modifier = {
+						name = modifier_frontier_politics_pos_frontera
+						days = normal_modifier_time
+					}
+				}
+			}
+		}
+		ai_chance = {
+			value = 1
 		}
 	}
 }

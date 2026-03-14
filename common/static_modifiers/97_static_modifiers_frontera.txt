@@ -34,3 +34,15 @@ sunset_route_frontera_reward_int = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
 	country_prestige_mult = 0.05
 }
+
+modifier_frontier_politics_neg_frontera = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_negative.dds
+	political_movement_pop_attraction_mult = -0.1
+	political_movement_radicalism_add = -0.1
+}
+
+modifier_frontier_politics_pos_frontera = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_fist_positive.dds
+	political_movement_pop_attraction_mult = 0.1
+	political_movement_radicalism_add = 0.1
+}
