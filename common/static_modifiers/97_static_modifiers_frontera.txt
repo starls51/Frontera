@@ -4,7 +4,6 @@ modifier_frontierlands_frontera = {
 	state_pop_pol_str_mult = 0.05
 	state_migration_pull_add = 8
 	state_migration_pull_mult = 0.64
-	state_expected_sol_mult = -0.2
 }
 
 modifier_santafe_trail_frontera = {

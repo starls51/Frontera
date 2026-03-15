@@ -28,15 +28,27 @@ law_frontier_territorial_administration = {
 
 	modifier = {
 		# Territories incentivise certain migrants avoiding centralized authority or settlement
-		country_legitimacy_headofstate_add = 20
-		country_legitimacy_ideological_incoherence_mult = 0.1
-		interest_group_ig_rural_folk_pol_str_mult = 0.25
+		country_farmers_pol_str_mult = 0.25
 		country_officers_pol_str_mult = 0.25
-		country_authority_add = 50
 		country_mass_migration_attraction_mult = -1
-		#applies to states in a country it seems
-		state_migration_quota_mult = 0.25
-		country_law_enactment_imposition_success_add = 0.5
+		# applies to states in a country it seems - not sure how this works, disabling for now
+		#state_migration_quota_mult = 0.25
+		country_law_enactment_imposition_success_add = 0.4
+		# Halved the modifiers for unincorporated states
+		state_infrastructure_mult = -0.15
+		state_conscription_rate_mult = -0.25
+		state_expected_sol_mult = -0.2
+		#state_pop_pol_str_mult = -0.50
+		building_group_bg_manufacturing_throughput_add = -0.1
+		building_group_bg_government_throughput_add = -0.1
+		building_group_bg_military_throughput_add = -0.1
+		state_market_access_price_impact = -0.1
+		building_group_bg_infrastructure_construction_efficiency_add = -0.1
+		building_group_bg_extraction_construction_efficiency_add = -0.1
+		building_group_bg_heavy_industry_construction_efficiency_add = -0.25
+		building_group_bg_military_industry_construction_efficiency_add = -0.25
+		building_group_bg_light_industry_construction_efficiency_add = -0.15
+		building_group_bg_government_construction_efficiency_add = -0.15
 	}
 
 	ai_will_do = {

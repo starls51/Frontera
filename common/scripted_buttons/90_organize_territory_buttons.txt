@@ -5,7 +5,7 @@
 	visible = {
 	}
 
-	cooldown = { months = 3 }
+	cooldown = { days = 1 }
 
 	possible = {
 		NOT = {has_law = law_type:law_frontier_territorial_administration}
@@ -26,9 +26,7 @@
 		custom_tooltip = {
 			text = colonial_administration_cooldown
 			NOT = {
-				any_subject_or_below = {
-					has_variable = newly_formed_colonial_nation_var
-				}
+				has_variable = frontera_new_territory_button_pressed
 			}
 		}
 	}
@@ -38,255 +36,17 @@
 	}
 
 	effect = {
+		set_variable = {
+			name = frontera_new_territory_button_pressed
+			value = yes
+			months = 3
+		}
 		custom_tooltip = {
 			text = creating_OT_frontera_tt
-			if = {
-				limit = {
-					any_scope_state = {
-						is_under_colonization = no
-						has_decree = decree_greener_grass_campaign
-						is_incorporated = no
-						NOT = {is_homeland_of_country_cultures = root}
-						any_neighbouring_state = {
-							owner = root
-							is_incorporated = yes
-						}
-					}
-				}
-				ordered_scope_state = {
-					limit = {
-						is_under_colonization = no
-						has_decree = decree_greener_grass_campaign
-						is_incorporated = no
-						NOT = {is_homeland_of_country_cultures = root}
-						any_neighbouring_state = {
-							owner = root
-							is_incorporated = yes
-						}
-					}
-					order_by = gdp
-					position = 0
-					check_range_bounds = no
-					save_scope_as = newly_formed_colonial_nation_anchor_state
-				}
-			}
-			else_if = {
-				limit = {
-					any_scope_state = {
-						is_under_colonization = no
-						is_incorporated = no
-						NOT = {is_homeland_of_country_cultures = root}
-						any_neighbouring_state = {
-							owner = root
-							is_incorporated = yes
-						}
-					}
-				}
-				ordered_scope_state = {
-					limit = {
-						is_under_colonization = no
-						is_incorporated = no
-						NOT = {is_homeland_of_country_cultures = root}
-						any_neighbouring_state = {
-							owner = root
-							is_incorporated = yes
-						}
-					}
-					order_by = gdp
-					position = 0
-					check_range_bounds = no
-					save_scope_as = newly_formed_colonial_nation_anchor_state
-				}
-			}
-			else = {
-				ordered_scope_state = {
-					limit = {
-						is_under_colonization = no
-						is_incorporated = no
-						NOT = {is_homeland_of_country_cultures = root}
-						any_neighbouring_state = {
-							owner = root
-							is_incorporated = yes
-						}
-					}
-					order_by = gdp
-					position = 0
-					check_range_bounds = no
-					save_scope_as = newly_formed_colonial_nation_anchor_state
-				}
-			}
-			# Beginning of geographic region checks for historically viable OTs
-			# the order matters because some regions overlap, and OTs in regions higher up will be generated with higher priority
-			scope:newly_formed_colonial_nation_anchor_state ?= {
-				if = {
-					limit = {
-						state_region = {
-							is_in_geographic_region = geographic_region_kansas_territory
-						}
-					}
-					every_state = {
-						limit = {
-							is_incorporated = no
-							OR = {
-								owner = ROOT
-								owner = {
-									is_subject_of = ROOT
-									has_law = law_type:law_frontier_territorial_administration
-								}
-							}
-							NOT = {is_homeland_of_country_cultures = root}
-							is_in_geographic_region = geographic_region_kansas_territory
-						}
-						set_variable = state_to_cede
-					}
-				}
-				else_if = {
-					limit = {
-						state_region = {
-							is_in_geographic_region = geographic_region_nebraska_territory
-						}
-					}
-					every_state = {
-						limit = {
-							is_incorporated = no
-							OR = {
-								owner = ROOT
-								owner = {
-									is_subject_of = ROOT
-									has_law = law_type:law_frontier_territorial_administration
-								}
-							}
-							NOT = {is_homeland_of_country_cultures = root}
-							is_in_geographic_region = geographic_region_nebraska_territory
-						}
-						set_variable = state_to_cede
-					}
-				}
-				else_if = {
-					limit = {
-						state_region = {
-							is_in_geographic_region = geographic_region_mexican_north
-						}
-					}
-					every_state = {
-						limit = {
-							is_incorporated = no
-							OR = {
-								owner = ROOT
-								owner = {
-									is_subject_of = ROOT
-									has_law = law_type:law_frontier_territorial_administration
-								}
-							}
-							NOT = {is_homeland_of_country_cultures = root}
-							is_in_geographic_region = geographic_region_mexican_north
-						}
-						set_variable = state_to_cede
-					}
-				}
-				else_if = {
-					limit = {
-						state_region = {
-							is_in_geographic_region = geographic_region_greater_columbia
-						}
-					}
-					every_state = {
-						limit = {
-							is_incorporated = no
-							OR = {
-								owner = ROOT
-								owner = {
-									is_subject_of = ROOT
-									has_law = law_type:law_frontier_territorial_administration
-								}
-							}
-							NOT = {is_homeland_of_country_cultures = root}
-							is_in_geographic_region = geographic_region_greater_columbia
-						}
-						set_variable = state_to_cede
-					}
-				}
-				else_if = {
-					limit = {
-						state_region = {
-							is_in_geographic_region = geographic_region_rocky_mountains
-						}
-					}
-					every_state = {
-						limit = {
-							is_incorporated = no
-							OR = {
-								owner = ROOT
-								owner = {
-									is_subject_of = ROOT
-									has_law = law_type:law_frontier_territorial_administration
-								}
-							}
-							NOT = {is_homeland_of_country_cultures = root}
-							is_in_geographic_region = geographic_region_rocky_mountains
-						}
-						set_variable = state_to_cede
-					}
-				}
-				# end of geographic region checks, default back to paradox's strategic regions
-				else = {
-					every_state = {
-						limit = {
-							exists = THIS
-							scope:newly_formed_colonial_nation_anchor_state.region ?= region
-							is_incorporated = no
-							NOT = {is_homeland_of_country_cultures = root}
-							OR = {
-								owner = ROOT
-								owner = {
-									is_subject_of = ROOT
-									has_law = law_type:law_frontier_territorial_administration
-								}
-							}
-						}
-						set_variable = state_to_cede
-					}
-				}
-			}
 		}
 		custom_tooltip = {
 			text = creating_OT_frontera_2_tt
-			create_dynamic_country = {
-				origin = root
-				country_type = colonial
-				tier = principality
-				capital = scope:newly_formed_colonial_nation_anchor_state
-				cede_state_trigger = {
-					has_variable = state_to_cede
-				}
-				on_created = {
-					activate_law = law_type:law_frontier_territorial_administration
-					every_scope_state = {
-						limit = {
-							is_capital = yes
-						}
-					}
-					set_variable = {
-						name = newly_formed_colonial_nation_var
-						months = 1
-					}
-					every_scope_state = {
-						remove_variable = state_to_cede
-					}
-					add_modifier = {
-						name = colonial_administration
-					}
-				}
-			}
-			hidden_effect = {
-				create_diplomatic_pact = {
-					country = scope:newly_formed_colonial_nation_anchor_state.owner
-					type = frontera_organized_territory
-				}
-			}
-			#trigger_event = { id = colonial_administration_events.1 days = 1 popup = yes }
-			#custom_tooltip = je_colonial_administration_button_tt_1
-			#custom_tooltip = je_colonial_administration_button_tt_2
+			trigger_event = { id = frontera_ot.3 }
 		}
 	}
 }

@@ -409,3 +409,377 @@ frontera_ot.2 = {
 		}
 	}
 }
+# I pressed the button to organize a territory: Show where it will be created, less opaque process
+frontera_ot.3 = {
+	type = country_event
+	placement = scope:newly_formed_colonial_nation_anchor_state
+
+	title = frontera_ot.3.t
+	desc = frontera_ot.3.d
+	flavor = frontera_ot.3.f
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+	duration = 3
+
+	cooldown = { days = -1 }
+
+	trigger = {
+		# triggered by create organized territory button
+	}
+
+	immediate = {
+		save_scope_as = overlord_scope
+		every_scope_state = {
+			remove_variable = frontera_state_to_cede_historic
+			remove_variable = frontera_state_to_cede
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					is_under_colonization = no
+					has_decree = decree_greener_grass_campaign
+					is_incorporated = no
+					NOT = {is_homeland_of_country_cultures = root}
+					any_neighbouring_state = {
+						owner = root
+						is_incorporated = yes
+					}
+				}
+			}
+			ordered_scope_state = {
+				limit = {
+					is_under_colonization = no
+					has_decree = decree_greener_grass_campaign
+					is_incorporated = no
+					NOT = {is_homeland_of_country_cultures = root}
+					any_neighbouring_state = {
+						owner = root
+						is_incorporated = yes
+					}
+				}
+				order_by = gdp
+				position = 0
+				check_range_bounds = no
+				save_scope_as = newly_formed_colonial_nation_anchor_state
+			}
+		}
+		else_if = {
+			limit = {
+				any_scope_state = {
+					is_under_colonization = no
+					is_incorporated = no
+					NOT = {is_homeland_of_country_cultures = root}
+					any_neighbouring_state = {
+						owner = root
+						is_incorporated = yes
+					}
+				}
+			}
+			ordered_scope_state = {
+				limit = {
+					is_under_colonization = no
+					is_incorporated = no
+					NOT = {is_homeland_of_country_cultures = root}
+					any_neighbouring_state = {
+						owner = root
+						is_incorporated = yes
+					}
+				}
+				order_by = gdp
+				position = 0
+				check_range_bounds = no
+				save_scope_as = newly_formed_colonial_nation_anchor_state
+			}
+		}
+		else = {
+			ordered_scope_state = {
+				limit = {
+					is_under_colonization = no
+					is_incorporated = no
+					NOT = {is_homeland_of_country_cultures = root}
+					any_neighbouring_state = {
+						owner = root
+						is_incorporated = yes
+					}
+				}
+				order_by = gdp
+				position = 0
+				check_range_bounds = no
+				save_scope_as = newly_formed_colonial_nation_anchor_state
+			}
+		}
+		# Beginning of geographic region checks for historically viable OTs
+		# the order matters because some regions overlap, and OTs in regions higher up will be generated with higher priority
+		scope:newly_formed_colonial_nation_anchor_state ?= {
+			if = {
+				limit = {
+					state_region = {
+						is_in_geographic_region = geographic_region_kansas_territory
+					}
+				}
+				every_state = {
+					limit = {
+						is_incorporated = no
+						OR = {
+							owner = ROOT
+							owner = {
+								is_subject_of = ROOT
+								has_law = law_type:law_frontier_territorial_administration
+							}
+						}
+						NOT = {is_homeland_of_country_cultures = root}
+						is_in_geographic_region = geographic_region_kansas_territory
+					}
+					set_variable = frontera_state_to_cede_historic
+				}
+			}
+			else_if = {
+				limit = {
+					state_region = {
+						is_in_geographic_region = geographic_region_nebraska_territory
+					}
+				}
+				every_state = {
+					limit = {
+						is_incorporated = no
+						OR = {
+							owner = ROOT
+							owner = {
+								is_subject_of = ROOT
+								has_law = law_type:law_frontier_territorial_administration
+							}
+						}
+						NOT = {is_homeland_of_country_cultures = root}
+						is_in_geographic_region = geographic_region_nebraska_territory
+					}
+					set_variable = frontera_state_to_cede_historic
+				}
+			}
+			else_if = {
+				limit = {
+					state_region = {
+						is_in_geographic_region = geographic_region_mexican_north
+					}
+				}
+				every_state = {
+					limit = {
+						is_incorporated = no
+						OR = {
+							owner = ROOT
+							owner = {
+								is_subject_of = ROOT
+								has_law = law_type:law_frontier_territorial_administration
+							}
+						}
+						NOT = {is_homeland_of_country_cultures = root}
+						is_in_geographic_region = geographic_region_mexican_north
+					}
+					set_variable = frontera_state_to_cede_historic
+				}
+			}
+			else_if = {
+				limit = {
+					state_region = {
+						is_in_geographic_region = geographic_region_greater_columbia
+					}
+				}
+				every_state = {
+					limit = {
+						is_incorporated = no
+						OR = {
+							owner = ROOT
+							owner = {
+								is_subject_of = ROOT
+								has_law = law_type:law_frontier_territorial_administration
+							}
+						}
+						NOT = {is_homeland_of_country_cultures = root}
+						is_in_geographic_region = geographic_region_greater_columbia
+					}
+					set_variable = frontera_state_to_cede_historic
+				}
+			}
+			else_if = {
+				limit = {
+					state_region = {
+						is_in_geographic_region = geographic_region_rocky_mountains
+					}
+				}
+				every_state = {
+					limit = {
+						is_incorporated = no
+						OR = {
+							owner = ROOT
+							owner = {
+								is_subject_of = ROOT
+								has_law = law_type:law_frontier_territorial_administration
+							}
+						}
+						NOT = {is_homeland_of_country_cultures = root}
+						is_in_geographic_region = geographic_region_rocky_mountains
+					}
+					set_variable = frontera_state_to_cede_historic
+				}
+			}
+			# end of geographic region checks, default back to paradox's strategic regions
+			
+			every_state = {
+				limit = {
+					exists = THIS
+					scope:newly_formed_colonial_nation_anchor_state.region ?= region
+					is_incorporated = no
+					NOT = {is_homeland_of_country_cultures = root}
+					OR = {
+						owner = ROOT
+						owner = {
+							is_subject_of = ROOT
+							has_law = law_type:law_frontier_territorial_administration
+						}
+					}
+				}
+				set_variable = frontera_state_to_cede
+			}
+			
+			scope:newly_formed_colonial_nation_anchor_state = {
+				region = { save_scope_as = region_scope }
+			}
+		}
+	}
+
+	# A: form with anchor state 1, B: form with anchor state 2, C: reset button, do not found 
+	option = {
+		name = frontera_ot.3.a
+		trigger = {
+			NOT = { is_diplomatic_play_committed_participant = yes }
+			any_scope_state = {
+				has_variable = frontera_state_to_cede_historic
+			}
+			scope:newly_formed_colonial_nation_anchor_state = {
+				owner = root
+			}
+		}
+		default_option = yes
+		custom_tooltip = {
+			text = frontera_establish_ot_in_region_tt
+			create_dynamic_country = {
+				origin = root
+				country_type = colonial
+				tier = principality
+				capital = scope:newly_formed_colonial_nation_anchor_state
+				cede_state_trigger = {
+					has_variable = frontera_state_to_cede_historic
+				}
+				on_created = {
+					activate_law = law_type:law_frontier_territorial_administration
+					every_scope_state = {
+						limit = {
+							is_capital = yes
+						}
+					}
+					every_scope_state = {
+						remove_variable = frontera_state_to_cede_historic
+						remove_variable = frontera_state_to_cede
+					}
+					add_modifier = {
+						name = colonial_administration
+					}
+				}
+			}
+			hidden_effect = {
+				create_diplomatic_pact = {
+					country = scope:newly_formed_colonial_nation_anchor_state.owner
+					type = frontera_organized_territory
+				}
+			}
+		}
+		#this will be state to cede 1
+		every_scope_state = {
+			limit = {
+				has_variable = frontera_state_to_cede_historic
+			}
+			custom_tooltip = { text = frontera_stateslist_tt }
+		}
+		ai_chance = {
+			base = 10000
+		}
+	}
+	# AI should avoid this when the 1st option of geographic regions are no longer avaliable
+	option = {
+		name = frontera_ot.3.b
+		trigger = {
+			NOT = { is_diplomatic_play_committed_participant = yes }
+			any_scope_state = {
+				has_variable = frontera_state_to_cede
+				NOT = { has_variable = frontera_state_to_cede_historic }
+			}
+			scope:newly_formed_colonial_nation_anchor_state = {
+				owner = root
+			}
+		}
+		custom_tooltip = {
+			text = frontera_establish_ot_in_region_tt
+			create_dynamic_country = {
+				origin = root
+				country_type = colonial
+				tier = principality
+				capital = scope:newly_formed_colonial_nation_anchor_state
+				cede_state_trigger = {
+					has_variable = frontera_state_to_cede
+				}
+				on_created = {
+					activate_law = law_type:law_frontier_territorial_administration
+					every_scope_state = {
+						limit = {
+							is_capital = yes
+						}
+					}
+					every_scope_state = {
+						remove_variable = frontera_state_to_cede_historic
+						remove_variable = frontera_state_to_cede
+					}
+					add_modifier = {
+						name = colonial_administration
+					}
+				}
+			}
+			hidden_effect = {
+				create_diplomatic_pact = {
+					country = scope:newly_formed_colonial_nation_anchor_state.owner
+					type = frontera_organized_territory
+				}
+			}
+		}
+		#this will be state to cede 2
+		every_scope_state = {
+			limit = {
+				has_variable = frontera_state_to_cede
+			}
+			custom_tooltip = { text = frontera_stateslist_tt }
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	# Reset the button, the player can move things around how they like
+	option = {
+		name = frontera_ot.3.c
+		custom_tooltip = {
+			text = frontera_ot_creation_reset_tt
+			every_scope_state = {
+				remove_variable = frontera_state_to_cede_historic
+				remove_variable = frontera_state_to_cede
+			}
+			remove_variable = frontera_new_territory_button_pressed
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+}
