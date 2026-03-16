@@ -231,6 +231,7 @@ frontera_ot.2 = {
 			add_modifier = {
 				name = modifier_frontier_politics_neg_frontera
 				days = normal_modifier_time
+				is_decaying = yes
 			}
 		}
 		scope:ot_scope = {
@@ -247,6 +248,7 @@ frontera_ot.2 = {
 					add_modifier = {
 						name = modifier_frontier_politics_pos_frontera
 						days = normal_modifier_time
+						is_decaying = yes
 					}
 				}
 			}
@@ -301,6 +303,7 @@ frontera_ot.2 = {
 			add_modifier = {
 				name = modifier_frontier_politics_neg_frontera
 				days = normal_modifier_time
+				is_decaying = yes
 			}
 		}
 		scope:ot_scope = {
@@ -317,6 +320,7 @@ frontera_ot.2 = {
 					add_modifier = {
 						name = modifier_frontier_politics_pos_frontera
 						days = normal_modifier_time
+						is_decaying = yes
 					}
 				}
 			}
@@ -370,6 +374,7 @@ frontera_ot.2 = {
 			add_modifier = {
 				name = modifier_frontier_politics_neg_frontera
 				days = normal_modifier_time
+				is_decaying = yes
 			}
 		}
 		scope:ot_scope = {
@@ -386,6 +391,7 @@ frontera_ot.2 = {
 					add_modifier = {
 						name = modifier_frontier_politics_pos_frontera
 						days = normal_modifier_time
+						is_decaying = yes
 					}
 				}
 			}
@@ -697,6 +703,7 @@ frontera_ot.3 = {
 					country = scope:newly_formed_colonial_nation_anchor_state.owner
 					type = frontera_organized_territory
 				}
+				post_notification = ot_created_frontera_notification
 			}
 		}
 		#this will be state to cede 1
@@ -754,9 +761,9 @@ frontera_ot.3 = {
 					country = scope:newly_formed_colonial_nation_anchor_state.owner
 					type = frontera_organized_territory
 				}
+				post_notification = ot_created_frontera_notification
 			}
 		}
-		#this will be state to cede 2
 		every_scope_state = {
 			limit = {
 				has_variable = frontera_state_to_cede

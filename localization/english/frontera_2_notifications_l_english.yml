@@ -1,4 +1,7 @@
 ﻿l_english:
  notification_ot_consolidated_frontera_notification_name: "[SCOPE.sCountry('overlord_scope').GetName] annexed [SCOPE.sCountry('ot_scope').GetName]"
- notification_ot_consolidated_frontera_notification_desc: "[SCOPE.sCountry('ot_scope').GetName] is no longer a viable #bold Organized Territory#!: All [SCOPE.sCountry('ot_scope').GetAdjectiveNoFlag] states were in state regions completely controlled by [SCOPE.sCountry('overlord_scope').GetName]."
+ notification_ot_consolidated_frontera_notification_desc: "[SCOPE.sCountry('ot_scope').GetName] is no longer a viable [concept_organized_territory]: All [SCOPE.sCountry('ot_scope').GetAdjectiveNoFlag] states were in state regions completely controlled by [SCOPE.sCountry('overlord_scope').GetName]."
  notification_ot_consolidated_frontera_notification_tooltip: "$notification_ot_consolidated_frontera_notification_name$\n$notification_ot_consolidated_frontera_notification_desc$"
+ notification_ot_created_frontera_notification_name: "[concept_organized_territory] Established"
+ notification_ot_created_frontera_notification_desc: "[SCOPE.sCountry('overlord_scope').GetName] has established an [concept_organized_territory] in [SCOPE.sState('newly_formed_colonial_nation_anchor_state').GetName]."
+ notification_ot_created_frontera_notification_tooltip: "$notification_ot_consolidated_frontera_notification_name$\n$notification_ot_consolidated_frontera_notification_desc$"

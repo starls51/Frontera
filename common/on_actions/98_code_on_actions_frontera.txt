@@ -51,45 +51,6 @@ on_yearly_pulse = {
 	}
 }
 
-#OTs - moved to Organized Territory Internal JE
-#add_yearly_OT_migration_modifier = {
-#	effect = {
-#		if = {
-#			limit = {
-#				has_law = law_type:law_frontier_territorial_administration
-#				has_law = law_type:law_homesteading
-#			}
-#			ordered_scope_state = {
-#        	    order_by = gdp
-#				min = 0
-#				max = 2
-#				check_range_bounds = no
-#        	    add_modifier = {
-#					name = modifier_frontierlands_frontera
-#					months = 11
-#				}
-#			}
-#		}
-#	}
-#}
-
-consolidate_split_states = {
-	effect = {
-		if = {
-			limit = {
-				has_law = law_type:law_frontier_territorial_administration
-			}
-		}
-		country_OT_consolidate_split_states = yes
-	}
-}
-# Define trigger for consolidating split states
-#on_monthly_pulse_country = {
-#	on_actions = {
-#		consolidate_split_states
-#	}
-#}
-
 include_OT_in_colonial_freedom = {
 	effect = {
 		if = {
@@ -105,48 +66,11 @@ include_OT_in_colonial_freedom = {
 	}
 }
 
-# moved to Journal Entry 89- Organized Territory Internal
-
-#check_for_OT_homelands_frontera = {
-#	trigger = {
-#		is_subject = yes
-#		has_law = law_type:law_frontier_territorial_administration
-#	}
-#	effect = {
-#		country_OT_homelands_check_frontera = yes
-#	}
-#}
-#
-#check_for_OT_giveaway_states_frontera = {
-#	trigger = {
-#		is_subject = yes
-#		has_law = law_type:law_frontier_territorial_administration
-#	}
-#	effect = {
-#		country_OT_transfer_homeland_to_overlord = yes
-#	}
-#}
-
-#on_half_yearly_pulse_country = {
-#	on_actions = {
-#    	check_for_OT_homelands_frontera
-#		check_for_OT_giveaway_states_frontera
-#    }
-#}
-
 # Root = Country
 
 on_become_independent = {
 	on_actions = {
 		include_OT_in_colonial_freedom
-	}
-}
-
-
-on_yearly_pulse_country = {
-	on_actions = {
-		# add_yearly_OT_migration_modifier
-		consolidate_split_states
 	}
 }
 

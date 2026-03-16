@@ -39,7 +39,6 @@
  frontera_sunset_route_event.1.f:0 ""There's the law for you boys, clear as day,\" the Governor declared, his voice was sturdy as the iron giant at his back.  Wind whipped across the desert, and Virgil Earp's hand lingered over his revolver. Perhaps there would have been a shootout, if not for all the innocent townsfolk that had come to watch. Earp's reluctant sigh floated into the sun-baked heat as a hiss of steam. The locomotive rolled on, and the Sunset Route was opened."
  frontera_sunset_route_event.1.a:0 "A Victory for Progress!"
  frontera_sunset_route_event.2.a:0 "Good for them..."
- sunset_route_frontera_reward_int:0 "Spearheaded the Sunset Route"
  frontera_sunset_route_event.3:0 "Dispute in the Mesilla Valley"
  frontera_sunset_route_event.3.t:0 "Dispute in the Mesilla Valley"
  frontera_sunset_route_event.3.d:0 "Questions over the ownership of the Mesilla Valley have escalated into a diplomatic dispute between [SCOPE.sCountry('buyer_scope').GetName] and [SCOPE.sCountry('angry_country_scope').GetName]."

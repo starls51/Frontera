@@ -19,6 +19,15 @@
 #       #       #     # #       #     # #
 #       #       ####### #        #####  #
 
+ot_created_frontera_notification = {
+	type = country
+
+	texture = "gfx/interface/icons/notification_icons/colonial.dds"
+
+	notification_type = toast
+	color = neutral
+}
+
 ot_consolidated_frontera_notification = {
 	type = country
 

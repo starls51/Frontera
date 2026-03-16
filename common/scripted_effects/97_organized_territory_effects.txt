@@ -188,12 +188,19 @@ country_OT_transfer_homeland_to_overlord = {
 country_OT_consolidate_split_states = {
 	root = {
 		save_scope_as = ot_scope
-		overlord = { save_scope_as = overlord_scope }
+		root.overlord = { save_scope_as = overlord_scope }
 	}
 	if = {
 		limit = {
 			any_scope_state = {
-				is_split_state = yes
+				NOT = { is_split_state = yes }
+			}
+		}
+		# Do nothing
+	}
+	else_if = {
+		limit = {
+			any_scope_state = {
 				state_region = {
 					any_scope_state = {
 						NOR = {
@@ -204,7 +211,7 @@ country_OT_consolidate_split_states = {
 				}
 			}
 		}
-		# Do nothing
+		# do nothing
 	}
 	else_if = {
 		limit = {

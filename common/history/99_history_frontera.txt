@@ -120,7 +120,7 @@
 		set_variable = {
 			name = frontera_sent_cultural_community
 			value = yes
-			years = 1
+			days = 36
 		}
 	}
 }
@@ -895,6 +895,7 @@ GLOBAL = {
 	}
 	# Mexican centralists vs federalists
 	c:MEX  = {
+		activate_law = law_type:law_frontier_colonization
 		create_political_movement = { type = movement_frontera_mexican_centralist }
 		create_political_movement = { type = movement_frontera_mexican_federalist }
 		every_scope_state = {
