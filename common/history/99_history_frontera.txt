@@ -101,7 +101,7 @@
 		set_variable = {
 			name = frontera_sent_cultural_community
 			value = yes
-			years = 2
+			years = 30
 		}
 	}
 	# MICHIGAN TERRITORY

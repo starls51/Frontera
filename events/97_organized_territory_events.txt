@@ -88,6 +88,31 @@ frontera_ot.2 = {
 			}
 			if = {
 				limit = {
+					NOT = { is_split_state = yes }
+					NOT = { is_homeland_of_country_cultures = scope:overlord_scope }
+					NOT = {
+						any_scope_pop = {
+							pop_has_primary_culture = yes
+						}
+					}
+				}
+				ordered_scope_state = {
+					limit = {
+						NOT = { is_split_state = yes }
+						NOT = { is_homeland_of_country_cultures = scope:overlord_scope }
+						NOT = {
+							any_scope_pop = {
+								pop_has_primary_culture = yes
+							}
+						}
+					}
+					order_by = gdp
+					position = 0
+					save_scope_as = ot_state_scope
+				}
+			}
+			else_if = {
+				limit = {
 					any_scope_state = {
 						NOT = { is_split_state = yes }
 						NOT = { is_homeland_of_country_cultures = scope:overlord_scope }
@@ -703,6 +728,27 @@ frontera_ot.3 = {
 					country = scope:newly_formed_colonial_nation_anchor_state.owner
 					type = frontera_organized_territory
 				}
+				scope:newly_formed_colonial_nation_anchor_state.owner = {
+					if = {
+						limit = {
+							scope:overlord_scope = {
+								has_law = law_type:law_legacy_slavery
+							}
+						}
+						if = {
+							limit = {
+								scope:overlord_scope = { has_variable = frontera_wilmot_proviso_pass }
+							}
+							activate_law = law_type:law_slavery_banned
+						}
+						else_if = {
+							limit = {
+								scope:overlord_scope = { has_variable = frontera_wilmot_proviso_fail }
+							}
+							activate_law = law_type:law_slave_trade
+						}
+					}
+				}
 				post_notification = ot_created_frontera_notification
 			}
 		}
@@ -760,6 +806,27 @@ frontera_ot.3 = {
 				create_diplomatic_pact = {
 					country = scope:newly_formed_colonial_nation_anchor_state.owner
 					type = frontera_organized_territory
+				}
+				scope:newly_formed_colonial_nation_anchor_state.owner = {
+					if = {
+						limit = {
+							scope:overlord_scope = {
+								has_law = law_type:law_legacy_slavery
+							}
+						}
+						if = {
+							limit = {
+								scope:overlord_scope = { has_variable = frontera_wilmot_proviso_pass }
+							}
+							activate_law = law_type:law_slavery_banned
+						}
+						else_if = {
+							limit = {
+								scope:overlord_scope = { has_variable = frontera_wilmot_proviso_fail }
+							}
+							activate_law = law_type:law_slave_trade
+						}
+					}
 				}
 				post_notification = ot_created_frontera_notification
 			}
