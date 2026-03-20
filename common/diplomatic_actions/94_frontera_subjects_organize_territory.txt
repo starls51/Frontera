@@ -5,8 +5,9 @@
 	should_notify_third_parties = yes
 	show_effect_in_tooltip = yes
 
-	texture = "gfx/interface/icons/diplomatic_action_icons/doctrine_of_lapse.dds"
-	#confirmation_sound = "event:/SFX/UI/MapInteraction/SubjectInteractions/diplomatic_action_subjects_04_appoint_governor_benign"
+	#texture = "gfx/interface/icons/diplomatic_action_icons/doctrine_of_lapse.dds"
+	texture = "gfx/interface/icons/diplomatic_action_icons/da_appoint_colonial_governor.dds"
+	confirmation_sound = "event:/SFX/UI/MapInteraction/SubjectInteractions/diplomatic_action_subjects_04_appoint_governor_benign"
 
 	potential = {
 		scope:target_country = {
@@ -18,10 +19,11 @@
 		is_revolutionary = no
 		NOT = { is_country_type = unrecognized }
 		has_law = law_type:law_frontier_colonization
-		has_law = law_type:law_homesteading
+		# has_law = law_type:law_homesteading
 		scope:target_country = {
 			relations:root >= relations_threshold:amicable
 			NOT = {has_law = law_type:law_frontier_territorial_administration}
+			liberty_desire <= 10
 			government_transfer_of_power = dictatorial
 			is_revolutionary = no
 			any_scope_state = {
@@ -47,36 +49,72 @@
 		custom_tooltip = {
 			text = da_organize_territory_from_subject_effect
 			scope:target_country = {
-				# HERE would be to change starting effects based on US slavery policy choices
-				# effect_starting_politics_territory_free_frontera = yes
+				set_country_type = colonial
+				#create_diplomatic_pact = {
+				#	country = root
+				#	type = frontera_organized_territory
+				#}
+				#decrease_autonomy = yes
+				#HERE would be to change starting effects based on US slavery policy choices
+				#effect_starting_politics_territory_free_frontera = yes
 				activate_law = law_type:law_frontier_territorial_administration
 				activate_law = law_type:law_homesteading # required to activate frontier guides modifier
 				activate_law = law_type:law_frontier_colonization # copy the overlords colonization charter
-				every_scope_state = {
-					every_scope_culture = {
+			}
+			hidden_effect = {
+				create_diplomatic_pact = {
+					country = scope:target_country
+					type = frontera_organized_territory
+				}
+				scope:target_country = {
+					random_scope_state = {
 						limit = {
-							has_homeland = prev
+							is_capital = yes
 						}
-						scope:target_country = {
-							add_radicals = {
-								value = medium_radicals
-								culture = prev
+						save_scope_as = newly_formed_colonial_nation_anchor_state
+					}
+					if = {
+						limit = {
+							NOT = {has_modifier = colonial_administration}
+						}
+						add_modifier = {
+							name = colonial_administration
+						}
+					}
+					every_scope_state = {
+						every_scope_culture = {
+							limit = {
+								has_homeland = prev
+							}
+							scope:target_country = {
+								add_radicals = {
+									value = medium_radicals
+									culture = prev
+								}
 							}
 						}
 					}
-				}
-				create_diplomatic_pact = {
-					country = root
-					type = frontera_organized_territory
-				}
-				if = {
-					limit = {
-						NOT = {has_modifier = colonial_administration}
+					if = {
+						limit = {
+							scope:overlord_scope = {
+								has_law = law_type:law_legacy_slavery
+							}
+						}
+						if = {
+							limit = {
+								scope:overlord_scope = { has_variable = frontera_wilmot_proviso_pass }
+							}
+							activate_law = law_type:law_slavery_banned
+						}
+						else_if = {
+							limit = {
+								scope:overlord_scope = { has_variable = frontera_wilmot_proviso_fail }
+							}
+							activate_law = law_type:law_slave_trade
+						}
 					}
-					add_modifier = {
-						name = colonial_administration
-					}
 				}
+				post_notification = ot_created_frontera_notification
 			}
 		}
 	}

@@ -1,9 +1,15 @@
 ﻿
 modifier_frontierlands_frontera = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
-	state_pop_pol_str_mult = 0.05
+	#state_pop_pol_str_mult = 0.05
+	#state_mortality_wealth_mult = -0.01
+	#state_mortality_mult = 0.01
+	#state_mortality_turmoil_mult = 0.01
 	state_migration_pull_add = 8
-	state_migration_pull_mult = 0.64
+	#state_migration_pull_mult = 0.64
+	state_migration_pull_mult = 0.5
+	state_allow_assimilation_in_homeland_bool = yes
+	#country_allow_assimilation_full_acceptance_bool = no
 }
 
 modifier_santafe_trail_frontera = {
@@ -25,7 +31,7 @@ modifier_oregon_trail_frontera = {
 
 sunset_route_frontera = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_gear_positive.dds
-	state_migration_pull_mult = 0.50
+	state_migration_pull_mult = 0.5
 	building_railway_throughput_add = 0.15
 }
 

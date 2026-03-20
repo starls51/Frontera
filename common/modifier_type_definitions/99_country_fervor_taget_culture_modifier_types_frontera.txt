@@ -13,3 +13,11 @@ country_fervor_target_californio_mestizo_add={
 		ai_value=0
 	}
 }
+
+country_fervor_target_tejano_add={
+	decimals=1
+	color=good
+	game_data={
+		ai_value=0
+	}
+}

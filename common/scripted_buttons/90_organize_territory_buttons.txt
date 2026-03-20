@@ -8,7 +8,7 @@
 	cooldown = { days = 1 }
 
 	possible = {
-		NOT = {has_law = law_type:law_frontier_territorial_administration}
+		can_have_subjects = yes
 		any_scope_state = {
 			is_incorporated = no
 			is_split_state = no

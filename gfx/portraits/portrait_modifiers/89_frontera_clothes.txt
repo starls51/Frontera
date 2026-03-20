@@ -1,0 +1,358 @@
+﻿INJECT:clothes = {
+    frontera_north_american_mestizo_clothes_low = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = outfits
+                template = south_american_outfits
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            #accessory = {
+            #    mode = add
+            #    gene = outfits
+            #    template = native_american_outfits
+            #    range = { 0 0.5 } # For the randomness to work correctly
+            #}
+            #accessory = {
+            #    mode = add
+            #    gene = legwear
+            #    template = south_american_legwear
+            #    range = { 0 1 } # For the randomness to work correctly
+            #}
+            accessory = {
+                mode = add
+                gene = legwear
+                template = european_legwear_colors
+                range = { 0 0.72 } # For the randomness to work correctly
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 1000
+                AND = {
+                    frontera_north_american_mestizo_clothes_pop_trigger = yes
+                    poor_clothes_pop_trigger = yes
+                }
+            }
+        }
+    }
+
+    frontera_north_american_mestizo_clothes_mid = {
+        dna_modifiers = {
+            #accessory = {
+            #    mode = add
+            #    gene = outfits
+            #    template = south_american_outfits
+            #    range = { 0 1 } # For the randomness to work correctly
+            #}
+            accessory = {
+                mode = add
+                gene = legwear
+                template = european_legwear_colors
+                range = { 0 0.72 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = outfits
+                template = native_american_outfits
+                range = { 0.45 0.55 }
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 1000
+                    AND = {
+                        frontera_north_american_mestizo_clothes_pop_trigger = yes
+                        OR = {
+                            middle_clothes_pop_trigger = yes
+                            upper_clothes_pop_trigger = yes
+                            soldier_clothes_pop_trigger = yes
+                        }
+                        clergy_clothes_pop_trigger = no
+                    }
+                }
+            }
+        }
+
+     frontera_north_american_mestizo_clothes_high = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = waistcoats
+                template = european_waistcoats
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = legwear
+                template = european_legwear
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = civilian_coats
+                template = european_civilian_coats
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 1000
+                AND = {
+                    frontera_north_american_mestizo_clothes_pop_trigger = yes
+                    clergy_clothes_pop_trigger = yes
+                }
+            }
+        }
+    }
+
+    frontera_north_american_mestizo_clothes = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = outfits
+                template = south_american_outfits
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = legwear
+                template = south_american_legwear
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 500
+                OR = {
+                    AND = {
+                        frontera_north_american_mestizo_clothes_pop_trigger = yes
+                        middle_clothes_pop_trigger = yes
+                        scope:pop = {
+                            NOT = { is_pop_type = shopkeepers }
+                        }
+                    }
+                    AND = {
+                        OR = {
+                            AND = {
+                                politician_clothes_trigger = yes
+                                military_clothes_trigger = no
+                            }
+                            AND = {
+                                executive_clothes_trigger = yes
+                                NOT = {
+                                    has_dlc_feature = mp1_cosmetics
+                                }
+                            }
+                        }
+                        frontera_north_american_mestizo_clothes_character_trigger = yes
+                        scope:character = {
+                            OR = {
+                                is_interest_group_type = ig_petty_bourgeoisie
+                                is_interest_group_type = ig_rural_folk
+                                is_interest_group_type = ig_trade_unions
+                            }
+                        }
+                    }
+                    AND = {
+                        scope:character ?= {
+                            is_in_exile_pool = yes
+                        }
+                        frontera_north_american_mestizo_clothes_character_trigger = yes
+                    }
+                }
+            }
+        }
+    }
+
+
+### AGITATORS ###
+    frontera_north_american_mestizo_agitator_clothes = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = outfits
+                template = south_american_outfits
+                range = { 0 0.5 }
+            }
+            accessory = {
+                mode = add
+                gene = legwear
+                template = south_american_legwear
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = sashes
+                template = south_american_sashes
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                frontera_north_american_mestizo_clothes_character_trigger= yes
+                agitator_character_trigger = yes
+            }
+        }
+    }
+    # Soldier / rebel clothing
+    frontera_north_american_mestizo_agitator_clothes = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = top_layer
+                template = south_american_bandit_lampiao
+                range = { 0 1 }
+            }
+            accessory = {
+                mode = add
+                gene = legwear
+                template = south_american_legwear
+                range = { 0 1 } # For the randomness to work correctly
+            }
+            accessory = {
+                mode = add
+                gene = belts
+                template = gaucho_belts
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                OR = {
+                    AND = {
+                        #scope:character ?= {
+                        #    OR = {
+                        #        AND = {
+                        #            exists = cu:tejano
+                        #            culture = cu:tejano
+                        #        }
+                        #        AND = {
+                        #            exists = cu:californio_mestizo
+                        #            culture = cu:californio_mestizo
+                        #        }
+                        #    }
+                        #}
+                        frontera_north_american_mestizo_clothes_character_trigger= yes
+                        agitator_character_trigger = yes
+                    }
+                    AND = {
+                        scope:pop ?= {
+                            OR = {
+                                AND = {
+                                    exists = cu:tejano
+                                    culture = cu:tejano
+                                }
+                                AND = {
+                                    exists = cu:californio_mestizo
+                                    culture = cu:californio_mestizo
+                                }
+                            }
+                            is_pop_type = soldiers
+                        }
+                    }
+                }
+            }
+        }
+    }
+    # Soldier clothing
+    #frontera_old_west_CSA_military_clothes = {
+    #    dna_modifiers = {
+    #         accessory = {
+    #            mode = add
+    #            gene = coats
+    #            template = american_confederate_uniform_coats
+    #            range = { 0.5 1 } # For the randomness to work correctly
+    #        }
+    #        accessory = {
+    #            mode = add
+    #            gene = epaulettes
+    #            template = all_epaulettes
+    #            range = { 0.8 1 } # For the randomness to work correctly
+    #        }
+    #        accessory = {
+    #            mode = add
+    #            gene = legwear
+    #            template = european_legwear_colors
+    #            range = { 0 0.2 } # black or blue
+    #        }
+    #    }
+    #    weight = {
+    #        base = 0
+    #        modifier = {
+    #            add = 10000
+    #            exists = c:TEX
+    #            OR = {
+    #                AND = {
+    #                    exists = scope:character
+    #                    scope:character = {
+    #                        age >= define:NCharacters|ADULT_AGE
+    #                        exists = home_country
+    #                        home_country = c:TEX
+    #                        OR = {
+    #                            has_role = general
+    #                            monarchy_clothes_trigger = yes
+    #                            AND = {
+    #                                armed_forces_clothes_trigger = yes
+    #                                OR = {
+    #                                    politician_clothes_trigger = yes
+    #                                    junta_clothes_trigger = yes
+    #                                }
+    #                            }
+    #                        }
+    #                    }
+    #                }
+    #                AND = {
+    #                    exists = scope:pop
+    #                    scope:pop = {
+    #                        is_pop_type = officers
+    #                        home_country = c:TEX
+    #                        #home_country = {
+    #                        #    c:TEX ?= this
+    #                        #    has_technology_researched = repeaters
+    #                        #}
+    #                    }
+    #                }
+    #            }
+    #        }
+    #    }
+    #}
+    #
+    #frontera_old_west_CSA_soldier_clothes = {
+    #    dna_modifiers = {
+    #         accessory = {
+    #            mode = add
+    #            gene = coats
+    #            template = american_confederate_uniform_coats
+    #            range = { 0 0.5 } # For the randomness to work correctly
+    #        }
+    #        accessory = {
+    #            mode = add
+    #            gene = legwear
+    #            template = european_legwear_colors
+    #            range =  { 0 0.2 } # black or blue
+    #        }
+    #    }
+    #    weight = {
+    #        base = 0
+    #        modifier = {
+    #            add = 10000
+    #
+    #            exists = c:TEX
+    #            exists = scope:pop
+    #            scope:pop = {
+    #                home_country = c:TEX
+    #                is_pop_type = soldiers
+    #            }
+    #        }
+    #    }
+    #}
+}

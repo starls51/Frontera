@@ -36,6 +36,7 @@ frontera_ot.1 = {
 			limit = {
 				is_player = yes
 			}
+			scope:overlord_scope = { post_notification = ot_consolidated_frontera_notification }
 			play_as = scope:overlord_scope
 			scope:overlord_scope = { annex = scope:ot_scope }
 		}
@@ -71,14 +72,22 @@ frontera_ot.2 = {
 	cooldown = { days = -1 }
 
 	trigger = {
+		any_direct_subject = {
+			has_law = law_type:law_frontier_territorial_administration
+			has_law = law_type:law_homesteading
+			any_neighbouring_state = { owner = prev.overlord }
+			NOT = { has_variable = frontera_sent_cultural_community }
+		}
 	}
 
 	immediate = {
 		save_scope_as = overlord_scope
-		random_subject_or_below = {
+		random_direct_subject = {
 			limit = {
 				has_law = law_type:law_frontier_territorial_administration
+				has_law = law_type:law_homesteading
 				NOT = { has_variable = frontera_sent_cultural_community }
+				any_neighbouring_state = { owner = scope:overlord_scope }
 			}
 			save_scope_as = ot_scope
 			set_variable = {
@@ -88,11 +97,14 @@ frontera_ot.2 = {
 			}
 			if = {
 				limit = {
-					NOT = { is_split_state = yes }
-					NOT = { is_homeland_of_country_cultures = scope:overlord_scope }
-					NOT = {
-						any_scope_pop = {
-							pop_has_primary_culture = yes
+					any_scope_state = {
+						NOT = { is_split_state = yes }
+						NOT = { is_homeland_of_country_cultures = scope:overlord_scope }
+						any_neighbouring_state = { owner = scope:overlord_scope }
+						NOT = {
+							any_scope_pop = {
+								pop_has_primary_culture = yes
+							}
 						}
 					}
 				}
@@ -106,7 +118,7 @@ frontera_ot.2 = {
 							}
 						}
 					}
-					order_by = gdp
+					order_by = free_arable_land
 					position = 0
 					save_scope_as = ot_state_scope
 				}
@@ -116,6 +128,7 @@ frontera_ot.2 = {
 					any_scope_state = {
 						NOT = { is_split_state = yes }
 						NOT = { is_homeland_of_country_cultures = scope:overlord_scope }
+						any_neighbouring_state = { owner = scope:overlord_scope }
 					}
 				}
 				ordered_scope_state = {
@@ -123,14 +136,15 @@ frontera_ot.2 = {
 						NOT = { is_split_state = yes }
 						NOT = { is_homeland_of_country_cultures = scope:overlord_scope }
 					}
-					order_by = gdp
+					order_by = free_arable_land
 					position = 0
 					save_scope_as = ot_state_scope
 				}
 			}
+			# should be fine, if error move back to gdp
 			else = {
 				ordered_scope_state = {
-					order_by = gdp
+					order_by = free_arable_land
 					position = 0
 					save_scope_as = ot_state_scope
 				}
@@ -227,15 +241,129 @@ frontera_ot.2 = {
 
 	option = {
 		name = frontera_ot.2.a
+		scope:ot_state_scope = {
+			if = {
+				limit = {
+					NOT = { any_scope_culture = { is_primary_culture_of = scope:ot_scope } }
+					any_scope_culture = {
+						NOT = { is_primary_culture_of = scope:ot_scope }
+						scope:ot_scope = {
+							cultural_acceptance_base = {
+								target = prev
+								value >= 65
+							}
+						}
+					}
+				}
+				ordered_scope_pop = {
+					limit = {
+						culture = {
+							NOT = { is_primary_culture_of = scope:ot_scope }
+							scope:ot_scope = {
+								cultural_acceptance_base = {
+									target = prev
+									value >= 65
+								}
+							}
+						}
+					}
+					order_by = total_size
+  					position = 0
+					hidden_effect = {
+						if = {
+							limit = {
+								total_size > 1000000
+							}
+							change_pop_culture = {
+								target = scope:pop_a_scope.culture
+								value = 0.0005
+							}
+						}
+						else_if = {
+							limit = {
+								total_size > 100000
+							}
+							change_pop_culture = {
+								target = scope:pop_a_scope.culture
+								value = 0.005
+							}
+						}
+						else_if = {
+							limit = {
+								total_size > 10000
+							}
+							change_pop_culture = {
+								target = scope:pop_a_scope.culture
+								value = 0.05
+							}
+						}
+						else_if = {
+							limit = {
+								total_size >= 2000
+							}
+							change_pop_culture = {
+								target = scope:pop_a_scope.culture
+								value = 0.25
+							}
+						}
+						else_if = {
+							limit = {
+								total_size < 2
+							}
+							change_pop_culture = {
+								target = scope:pop_a_scope.culture
+								value = 1
+							}
+						}
+						else = {
+							change_pop_culture = {
+								target = scope:pop_a_scope.culture
+								value = 0.5
+							}
+						}
+					}
+				}
+				#every_scope_pop = {
+				#	limit = {
+				#		culture = {
+				#			NOT = { is_primary_culture_of = scope:ot_scope }
+				#			scope:ot_scope = {
+				#				cultural_acceptance_base = {
+				#					target = prev
+				#					value >= 65
+				#				}
+				#			}
+				#		}
+				#	}
+				#	change_pop_culture = {
+				#		target = scope:pop_a_scope.culture
+				#		value = 0.5
+				#	}
+				#}
+			}
+			if = {
+				limit = {
+					owner = { has_journal_entry = je_organized_territory_internal_frontera } 
+					NOT = { has_modifier = modifier_frontierlands_frontera }
+				}
+				add_modifier = {
+					name = modifier_frontierlands_frontera
+					months = 6
+				}
+			}
+			create_mass_migration = {
+				origin = scope:overlord_scope
+				culture = scope:pop_a_scope.culture
+			}
+		}
 		scope:pop_a_scope = {
 			if = {
 				limit = {
-					total_size >= 400
+					total_size >= 300
 				}
-				move_partial_pop = { state = scope:ot_state_scope population = 300 }
+				move_partial_pop = { state = scope:ot_state_scope population = 200 }
 			}
 			else = { move_pop = scope:ot_state_scope }
-			# if pop is pro slavery, try to find 100 slaves to move with them
 		}
 		if = {
 			limit = {
@@ -245,9 +373,9 @@ frontera_ot.2 = {
 			scope:pop_slaves_scope ?= {
 				if = {
 					limit = {
-						total_size >= 150
+						total_size >= 1100
 					}
-					move_partial_pop = { state = scope:ot_state_scope population = 100 }
+					move_partial_pop = { state = scope:ot_state_scope population = 1000 }
 				}
 				else = { move_pop = scope:ot_state_scope }
 			}
@@ -299,15 +427,112 @@ frontera_ot.2 = {
 	}
 	option = {
 		name = frontera_ot.2.b
+		scope:ot_state_scope = {
+			if = {
+				limit = {
+					NOT = { any_scope_culture = { is_primary_culture_of = scope:ot_scope } }
+					any_scope_culture = {
+						NOT = { is_primary_culture_of = scope:ot_scope }
+						scope:ot_scope = {
+							cultural_acceptance_base = {
+								target = prev
+								value >= 65
+							}
+						}
+					}
+				}
+				ordered_scope_pop = {
+					limit = {
+						culture = {
+							NOT = { is_primary_culture_of = scope:ot_scope }
+							scope:ot_scope = {
+								cultural_acceptance_base = {
+									target = prev
+									value >= 65
+								}
+							}
+						}
+					}
+					order_by = total_size
+  					position = 0
+					hidden_effect = {
+						if = {
+							limit = {
+								total_size > 1000000
+							}
+							change_pop_culture = {
+								target = scope:pop_b_scope.culture
+								value = 0.0005
+							}
+						}
+						else_if = {
+							limit = {
+								total_size > 100000
+							}
+							change_pop_culture = {
+								target = scope:pop_b_scope.culture
+								value = 0.005
+							}
+						}
+						else_if = {
+							limit = {
+								total_size > 10000
+							}
+							change_pop_culture = {
+								target = scope:pop_b_scope.culture
+								value = 0.05
+							}
+						}
+						else_if = {
+							limit = {
+								total_size >= 2000
+							}
+							change_pop_culture = {
+								target = scope:pop_b_scope.culture
+								value = 0.25
+							}
+						}
+						else_if = {
+							limit = {
+								total_size < 2
+							}
+							change_pop_culture = {
+								target = scope:pop_b_scope.culture
+								value = 1
+							}
+						}
+						else = {
+							change_pop_culture = {
+								target = scope:pop_b_scope.culture
+								value = 0.5
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					owner = { has_journal_entry = je_organized_territory_internal_frontera } 
+					NOT = { has_modifier = modifier_frontierlands_frontera }
+				}
+				add_modifier = {
+					name = modifier_frontierlands_frontera
+					months = 6
+				}
+			}
+			create_mass_migration = {
+				origin = scope:overlord_scope
+				culture = scope:pop_b_scope.culture
+			}
+		}
 		scope:pop_b_scope = {
 			if = {
 				limit = {
-					total_size >= 400
+					total_size >= 300
 				}
-				move_partial_pop = { state = scope:ot_state_scope population = 300 }
+				move_partial_pop = { state = scope:ot_state_scope population = 200 }
 			}
 			else = { move_pop = scope:ot_state_scope }
-			# if pop is pro slavery, try to find 100 slaves to move with them
 		}
 		if = {
 			limit = {
@@ -317,9 +542,9 @@ frontera_ot.2 = {
 			scope:pop_slaves_scope ?= {
 				if = {
 					limit = {
-						total_size >= 150
+						total_size >= 1100
 					}
-					move_partial_pop = { state = scope:ot_state_scope population = 100 }
+					move_partial_pop = { state = scope:ot_state_scope population = 1000 }
 				}
 				else = { move_pop = scope:ot_state_scope }
 			}
@@ -370,15 +595,112 @@ frontera_ot.2 = {
 	}
 	option = {
 		name = frontera_ot.2.c
+		scope:ot_state_scope = {
+			if = {
+				limit = {
+					NOT = { any_scope_culture = { is_primary_culture_of = scope:ot_scope } }
+					any_scope_culture = {
+						NOT = { is_primary_culture_of = scope:ot_scope }
+						scope:ot_scope = {
+							cultural_acceptance_base = {
+								target = prev
+								value >= 65
+							}
+						}
+					}
+				}
+				ordered_scope_pop = {
+					limit = {
+						culture = {
+							NOT = { is_primary_culture_of = scope:ot_scope }
+							scope:ot_scope = {
+								cultural_acceptance_base = {
+									target = prev
+									value >= 65
+								}
+							}
+						}
+					}
+					order_by = total_size
+  					position = 0
+					hidden_effect = {
+						if = {
+							limit = {
+								total_size > 1000000
+							}
+							change_pop_culture = {
+								target = scope:pop_c_scope.culture
+								value = 0.0005
+							}
+						}
+						else_if = {
+							limit = {
+								total_size > 100000
+							}
+							change_pop_culture = {
+								target = scope:pop_c_scope.culture
+								value = 0.005
+							}
+						}
+						else_if = {
+							limit = {
+								total_size > 10000
+							}
+							change_pop_culture = {
+								target = scope:pop_c_scope.culture
+								value = 0.05
+							}
+						}
+						else_if = {
+							limit = {
+								total_size >= 2000
+							}
+							change_pop_culture = {
+								target = scope:pop_c_scope.culture
+								value = 0.25
+							}
+						}
+						else_if = {
+							limit = {
+								total_size < 2
+							}
+							change_pop_culture = {
+								target = scope:pop_c_scope.culture
+								value = 1
+							}
+						}
+						else = {
+							change_pop_culture = {
+								target = scope:pop_c_scope.culture
+								value = 0.5
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					owner = { has_journal_entry = je_organized_territory_internal_frontera } 
+					NOT = { has_modifier = modifier_frontierlands_frontera }
+				}
+				add_modifier = {
+					name = modifier_frontierlands_frontera
+					months = 6
+				}
+			}
+			create_mass_migration = {
+				origin = scope:overlord_scope
+				culture = scope:pop_c_scope.culture
+			}
+		}
 		scope:pop_c_scope = {
 			if = {
 				limit = {
-					total_size >= 400
+					total_size >= 300
 				}
-				move_partial_pop = { state = scope:ot_state_scope population = 300 }
+				move_partial_pop = { state = scope:ot_state_scope population = 200 }
 			}
 			else = { move_pop = scope:ot_state_scope }
-			# if pop is pro slavery, try to find 100 slaves to move with them
 		}
 		if = {
 			limit = {
@@ -388,9 +710,9 @@ frontera_ot.2 = {
 			scope:pop_slaves_scope ?= {
 				if = {
 					limit = {
-						total_size >= 150
+						total_size >= 1100
 					}
-					move_partial_pop = { state = scope:ot_state_scope population = 100 }
+					move_partial_pop = { state = scope:ot_state_scope population = 1000 }
 				}
 				else = { move_pop = scope:ot_state_scope }
 			}
@@ -854,6 +1176,227 @@ frontera_ot.3 = {
 		}
 		ai_chance = {
 			base = 0
+		}
+	}
+}
+frontera_ot.4 = {
+	type = country_event
+	placement = scope:ot_1_state_scope
+
+	title = frontera_ot.4.t
+	desc = frontera_ot.4.d
+	flavor = frontera_ot.4.f
+
+	event_image = {
+		video = "unspecific_signed_contract"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/waving_flag.dds"
+
+	duration = 3
+
+	cooldown = { days = -1 }
+
+	trigger = {
+		# triggered by journal checking for OT state overlaps
+	}
+
+	immediate = {
+		save_scope_as = overlord_scope
+		random_direct_subject = {
+			limit = {
+				has_variable = var_ot_check_for_overlaps
+			}
+			save_scope_as = ot_1_scope
+			remove_variable = var_ot_check_for_overlaps
+			random_scope_state = {
+				limit = {
+					has_variable = var_ot_state_check_for_overlaps
+				}
+				save_scope_as = ot_1_state_scope
+				remove_variable = var_ot_state_check_for_overlaps
+				random_neighbouring_state = {
+					limit = {
+						state_region = scope:ot_1_state_scope.state_region
+						NOT = { owner = root }
+						NOT = { owner = scope:ot_1_scope }
+						owner = {
+							is_direct_subject_of = root
+							has_law = law_type:law_frontier_territorial_administration
+						}
+					}
+					save_scope_as = ot_2_state_scope
+					owner = { save_scope_as = ot_2_scope }
+				}
+			}
+		}
+	}
+
+	cancellation_trigger = {
+		OR = {
+			is_diplomatic_play_committed_participant = yes
+			NOT = { scope:ot_1_state_scope = { owner = scope:ot_1_scope} }
+			NOT = { scope:ot_2_state_scope = { owner = scope:ot_2_scope} }
+		}
+	}
+
+	option = {
+		name = frontera_ot.4.a
+		scope:ot_2_state_scope = {
+			set_state_owner = scope:ot_1_scope
+		}
+		default_option = yes
+		ai_chance = {
+			base = 0
+			modifier = {
+				trigger = {
+					scope:ot_1_state_scope = {
+						is_incorporated = yes
+					}
+					scope:ot_2_state_scope = {
+						NOT = { is_incorporated = yes }
+					}
+				}
+				add = 3
+			}
+			modifier = {
+				trigger = {
+					scope:ot_1_scope = {
+						has_claim = scope:ot_2_state_scope
+					}
+					scope:ot_2_scope = {
+						NOT = { has_claim = scope:ot_1_state_scope }
+					}
+				}
+				add = 1
+			}
+			modifier = {
+				trigger = {
+					scope:ot_1_state_scope.num_provinces >= scope:ot_2_state_scope.num_provinces
+				}
+				add = 1
+			}
+		}
+	}
+	option = {
+		name = frontera_ot.4.b
+		scope:ot_1_state_scope = {
+			set_state_owner = scope:ot_2_scope
+		}
+		ai_chance = {
+			base = 0
+			modifier = {
+				trigger = {
+					scope:ot_2_state_scope = {
+						is_incorporated = yes
+					}
+					scope:ot_1_state_scope = {
+						NOT = { is_incorporated = yes }
+					}
+				}
+				add = 3
+			}
+			modifier = {
+				trigger = {
+					scope:ot_2_scope = {
+						has_claim = scope:ot_1_state_scope
+					}
+					scope:ot_1_scope = {
+						NOT = { has_claim = scope:ot_2_state_scope }
+					}
+				}
+				add = 1
+			}
+			modifier = {
+				trigger = {
+					scope:ot_1_state_scope.num_provinces < scope:ot_2_state_scope.num_provinces
+				}
+				add = 1
+			}
+		}
+	}
+	option = {
+		name = frontera_ot.4.c
+		trigger = {
+			OR = {
+				government_transfer_of_power = dictatorial
+				has_law = law_type:law_autocracy
+			}
+			ruler = {
+				has_trait = cruel
+			}
+			scope:ot_1_scope.relations:root >= scope:ot_2_scope.relations:root
+		}
+		scope:ot_1_scope = {
+			#make_independent = yes
+			create_diplomatic_play = {
+				#escalation = 90
+				target_country = scope:ot_2_scope
+				type = dp_conquer_state
+				target_state = scope:ot_2_state_scope
+				war = yes
+				add_war_goal = {
+					holder = scope:ot_2_scope
+					type = conquer_state
+					target_state = scope:ot_1_state_scope
+					target_country = scope:ot_1_scope
+				}
+				add_war_goal = {
+					holder = scope:ot_1_scope
+					type = conquer_state
+					target_state = scope:ot_2_state_scope
+					target_country = scope:ot_2_scope
+				}
+			}
+		}
+		ruler = {
+			add_trait = psychological_affliction
+		}
+		ai_chance = {
+			base = -1
+		}
+	}
+	option = {
+		name = frontera_ot.4.e
+		trigger = {
+			OR = {
+				government_transfer_of_power = dictatorial
+				has_law = law_type:law_autocracy
+			}
+			ruler = {
+				has_trait = cruel
+			}
+			scope:ot_1_scope.relations:root < scope:ot_2_scope.relations:root
+		}
+		ruler = {
+			add_trait = psychological_affliction
+		}
+		scope:ot_2_scope = {
+			#make_independent = yes
+			create_diplomatic_play = {
+				#escalation = 90
+				target_country = scope:ot_1_scope
+				type = dp_conquer_state
+				target_state = scope:ot_1_state_scope
+				war = yes
+				add_war_goal = {
+					holder = scope:ot_1_scope
+					type = conquer_state
+					target_state = scope:ot_2_state_scope
+					target_country = scope:ot_2_scope
+				}
+				add_war_goal = {
+					holder = scope:ot_2_scope
+					type = conquer_state
+					target_state = scope:ot_1_state_scope
+					target_country = scope:ot_1_scope
+				}
+			}
+		}
+		ai_chance = {
+			base = -1
 		}
 	}
 }

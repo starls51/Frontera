@@ -9,6 +9,7 @@
 
 	possible = {
 		is_subject = yes
+		is_subject_type = subject_type_colony
 		has_law = law_type:law_frontier_territorial_administration
 		has_law = law_type:law_homesteading
 		root.overlord = {
@@ -26,8 +27,9 @@
 				limit = {
 					has_variable = frontera_sent_cultural_community
 				}
+				# Might move this to an event for the territory
 				country_OT_homelands_check_frontera = yes
-				country_OT_transfer_homeland_to_overlord = yes
+				#country_OT_transfer_homeland_to_overlord = yes
 			}
 		}
 	}
@@ -39,7 +41,7 @@
 				limit = {
 					state_region = {
 						NOT = {
-							any_scope_state = {
+							any_neighbouring_state = {
 								owner = { is_country_type = decentralized }
 							}
 						}
@@ -57,6 +59,13 @@
 			}
 		}
 	}
+
+	# progress bar for each state can show progress toward statehood, this JE should never complete, but can deactivate
+
+	#modifiers_while_active = {
+	#	state_colony_growth_speed_mult = 0.25
+	#	country_farmers_pol_str_mult = 0.25
+	#}
 
 	weight = 100
 

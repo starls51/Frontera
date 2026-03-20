@@ -127,6 +127,8 @@ REPLACE:DEFAULT = {
 		trigger = {
 			exists = scope:actor
 			scope:actor = {
+				NOT = { is_revolutionary = yes }
+				NOT = { is_secessionist = yes }
 				has_law = law_type:law_frontier_territorial_administration
 			}
 		}

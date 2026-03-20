@@ -3,9 +3,9 @@
 frontera_acw_events.3 = {
 	type = country_event
 
-	title = acw_events.3.t
-	desc = acw_events.3.d
-	flavor = acw_events.3.f
+	title = frontera_acw_events.3.t
+	desc = frontera_acw_events.3.d
+	flavor = frontera_acw_events.3.f
 
 	event_image = {
 		video = "europenorthamerica_capitalists_meeting"
@@ -18,8 +18,8 @@ frontera_acw_events.3 = {
 	duration = 3
 
 	trigger = {
-		exists = c:USA
-		c:USA = ROOT
+		#exists = c:USA
+		#c:USA = ROOT
 		NOT = { has_law_or_variant = law_type:law_slavery_banned }
 		NOT = { has_variable = american_civil_war }
 		NOT = { has_variable = USA_wilmot_proviso }
@@ -75,7 +75,7 @@ frontera_acw_events.3 = {
 	}
 
 	option = {
-		name = acw_events.3.a # a compromise is when nobody is happy at the end
+		name = frontera_acw_events.3.a # a compromise is when nobody is happy at the end
 		default_option = yes
 
 		every_interest_group = {
@@ -108,7 +108,7 @@ frontera_acw_events.3 = {
 		# frontera variable to dictate slavery in new territories- compromise does nothing
 	}
 	option = { # Abolish slavery in all the new territories
-		name = acw_events.3.b
+		name = frontera_acw_events.3.b
 
 		every_scope_state = {
 			limit = {
@@ -156,7 +156,7 @@ frontera_acw_events.3 = {
 		}
 	}
 	option = { # Enable slavery in all the new territories
-		name = acw_events.3.c
+		name = frontera_acw_events.3.c
 
 		every_interest_group = {
 			limit = {

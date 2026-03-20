@@ -1,18 +1,28 @@
-﻿INJECT:native_american_clothes_trigger = {
+﻿REPLACE:native_american_clothes_trigger = {
 	exists = scope:character
 	scope:character = {
 		culture = {
-			NOT = { this = cu:californio_mestizo }
+			NOT = {
+				OR = {
+					this = cu:californio_mestizo
+					this = cu:tejano
+				}
+			}
 			has_discrimination_trait_group = heritage_group_indigenous_american
 		}
 	}
 }
 
-INJECT:native_north_american_clothes_trigger = {
+REPLACE:native_north_american_clothes_trigger = {
 	exists = scope:character
 	scope:character = {
 		culture = {
-			NOT = { this = cu:californio_mestizo }
+			NOT = {
+				OR = {
+					this = cu:californio_mestizo
+					this = cu:tejano
+				}
+			}
 			OR = {
 				has_discrimination_trait = heritage_californian_indian
 				has_discrimination_trait = heritage_eastern_woodlands_indian
@@ -27,42 +37,117 @@ INJECT:native_north_american_clothes_trigger = {
 		}
 	}
 }
-INJECT:south_american_clothes_character_trigger = {
+
+frontera_north_american_mestizo_clothes_character_trigger = {
 	exists = scope:character
 	scope:character = {
 		culture = {
 			OR = {
-			this = cu:californio_mestizo
-			has_discrimination_trait_group = heritage_group_european
+				has_discrimination_trait = heritage_californian_indian
+				has_discrimination_trait = heritage_southwest_indian
 			}
-			OR = {
-				has_discrimination_trait = language_lusophone
-				has_discrimination_trait = language_hispanophone
-			}
-			NOT = { has_discrimination_trait = heritage_iberian }
+			has_discrimination_trait = language_hispanophone
 		}
 	}
 }
 
-INJECT:integrated_south_american_natives_pop_trigger = { # Represents those South American native groups that had long been integrated into wider South and Central American society.
+frontera_north_american_mestizo_clothes_pop_trigger = {
 	exists = scope:pop
 	scope:pop = {
 		culture = {
 			OR = {
-				this = cu:californio_mestizo
-				has_discrimination_trait = heritage_mesoamerican
-				has_discrimination_trait = heritage_atlantic
-				has_discrimination_trait = heritage_guarani
-				has_discrimination_trait = heritage_andean
-				has_discrimination_trait = heritage_caribbean
+				has_discrimination_trait = heritage_californian_indian
+				has_discrimination_trait = heritage_southwest_indian
 			}
-			NOT = {
-				OR = {
-					this = cu:patagonian
-					this = cu:amazonian
-				}
-			}
+			has_discrimination_trait = language_hispanophone
 		}
 	}
 }
 
+# placeholder until I make sure every role has clothes
+REPLACE:african_diaspora_clothes_trigger = {
+	exists = scope:character
+	scope:character = {
+		OR = {
+			culture = cu:afro_caribbean
+			culture = cu:afro_antillean
+			culture = cu:afro_caribeno
+			culture = cu:afro_american
+			culture = cu:afro_brazilian
+			culture = cu:griqua
+			culture = cu:californio_mestizo
+			culture = cu:tejano
+		}
+	}
+}
+
+REPLACE:african_diaspora_pop_clothes_trigger = {
+	exists = scope:pop
+	scope:pop = {
+		OR = {
+			culture = cu:afro_caribbean
+			culture = cu:afro_antillean
+			culture = cu:afro_caribeno
+			culture = cu:afro_american
+			culture = cu:afro_brazilian
+			culture = cu:californio_mestizo
+			culture = cu:tejano
+		}
+	}
+}
+
+#californian_clothes_trigger = {
+#	exists = scope:character
+#	scope:character = {
+#		exists = home_country
+#		home_country = {
+#			is_subject = no
+#			OR = {
+#				country_has_primary_culture = cu:californio_mestizo
+#				c:CAL ?= this
+#			}
+#		}
+#	}
+#}
+#
+#californian_clothes_pop_trigger = {
+#	exists = scope:pop
+#	scope:pop = {
+#		exists = home_country
+#		home_country = {
+#			is_subject = no
+#			OR = {
+#				country_has_primary_culture = cu:californio_mestizo
+#				c:CAL ?= this
+#			}
+#		}
+#	}
+#}
+#
+#texan_clothes_trigger = {
+#	exists = scope:character
+#	scope:character = {
+#		exists = home_country
+#		home_country = {
+#			is_subject = no
+#			OR = {
+#				country_has_primary_culture = cu:tejano
+#				c:TEX ?= this
+#			}
+#		}
+#	}
+#}
+#
+#texan_clothes_pop_trigger = {
+#	exists = scope:pop
+#	scope:pop = {
+#		exists = home_country
+#		home_country = {
+#			is_subject = no
+#			OR = {
+#				country_has_primary_culture = cu:tejano
+#				c:TEX ?= this
+#			}
+#		}
+#	}
+#}

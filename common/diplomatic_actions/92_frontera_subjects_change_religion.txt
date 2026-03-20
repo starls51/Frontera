@@ -1,0 +1,93 @@
+﻿da_frontera_force_state_religion = {
+	groups= { overlord }
+	show_in_lens = no
+
+	requires_approval = no
+	should_notify_third_parties = yes
+	show_effect_in_tooltip = yes
+
+	texture = "gfx/interface/icons/diplomatic_action_icons/force_state_religion.dds"
+	confirmation_sound = "event:/SFX/UI/MapInteraction/SubjectInteractions/diplomatic_action_subjects_04_appoint_governor_benign"
+
+	potential = {
+		has_law = law_type:law_frontier_colonization
+		scope:target_country = {
+			NOT = { is_diplomatic_play_enemy_of = root }
+		}
+	}
+
+	possible = {
+		#NOT = { has_law = law_type:total_separation }
+		is_revolutionary = no
+		scope:target_country = {
+			NOT = { country_has_state_religion  = root.religion }
+			has_law = law_type:law_frontier_territorial_administration
+			is_revolutionary = no
+		}
+	}
+
+	accept_effect = {
+		scope:target_country = {
+			if = {
+				limit = { root = { has_law = law_type:law_state_atheism } }
+				activate_law = law_type:law_state_atheism
+			}
+			else = {
+				set_state_religion = root.religion
+				capital = {
+					convert_population = {
+						target = root.religion
+						value = 0.05
+					}
+				}
+				every_scope_state = {
+					limit = { is_capital = no }
+					convert_population = {
+						target = root.religion
+						value = 0.02
+					}
+				}
+				state_religion_switch_effect = yes
+			}
+		}
+	}
+
+	ai = {
+		evaluation_chance = {
+			value = 0.25
+		}
+
+		propose_score = {
+			value = 10
+		}
+
+		will_propose = {
+			OR = {
+				AND = {
+					religion = { has_discrimination_trait = heritage_christian }
+					NOT = { scope:target_country = { religion = { has_discrimination_trait = heritage_christian } } }
+				}
+				AND = {
+					religion = { has_discrimination_trait = heritage_islamic }
+					NOT = { scope:target_country = { religion = { has_discrimination_trait = heritage_islamic } } }
+				}
+				AND = {
+					religion = { has_discrimination_trait = heritage_jewish }
+					NOT = { scope:target_country = { religion = { has_discrimination_trait = heritage_jewish } } }
+				}
+				AND = {
+					religion = { has_discrimination_trait = heritage_taoic }
+					NOT = { scope:target_country = { religion = { has_discrimination_trait = heritage_taoic } } }
+				}
+				AND = {
+					religion = { has_discrimination_trait = heritage_dharmic }
+					NOT = { scope:target_country = { religion = { has_discrimination_trait = heritage_dharmic } } }
+				}
+				AND = {
+					religion = { has_discrimination_trait = heritage_indigenous }
+					NOT = { scope:target_country = { religion = { has_discrimination_trait = heritage_indigenous } } }
+				}
+			}
+		}
+	}
+}

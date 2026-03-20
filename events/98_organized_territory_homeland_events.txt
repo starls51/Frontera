@@ -8,7 +8,7 @@ frontera_ot_homeland.1 = {
 	flavor = frontera_ot_homeland.1.f
 
 	event_image = {
-		video = "asia_poor_people_moving"
+		video = "europenorthamerica_gold_prospectors"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -33,8 +33,21 @@ frontera_ot_homeland.1 = {
 		}
 	}
 
+	cancellation_trigger = {
+		scope:subject_scope = {
+			OR = {
+				is_diplomatic_play_committed_participant = yes
+				NOT = { has_law = law_type:law_frontier_territorial_administration }
+				NOT = { is_direct_subject_of = scope:overlord_scope }
+			}
+		}
+	}
+
 	option = {
 		name = frontera_ot_homeland.1.a
+		ai_chance = {
+			base = 1 # subtract 1 
+		}
 		trigger = {
 			scope:subject_scope = {
 				OR = {
@@ -54,21 +67,37 @@ frontera_ot_homeland.1 = {
 		}
 	}
 	option = {
+		name = frontera_ot_homeland.1.c
+		ai_chance = {
+			base = -1 # AI will never do this
+		}
+		custom_tooltip = {
+			text = frontera_ot_homeland_not_ready_for_statehood_tt
+			scope:ascendent_state = {
+				set_variable = {
+					name = not_ready_for_statehood_frontera
+					years = 3
+				}
+			}
+		}
+	}
+	option = {
 		name = frontera_ot_homeland.1.b
+		trigger = {
+			scope:subject_scope = { is_ai = no }
+		}
 		ai_chance = {
 			base = 0 # AI will never do this
 		}
 		scope:subject_scope = {
 			play_as = scope:overlord_scope
 		}
-		scope:ascendent_state = {
-			set_state_owner = scope:overlord_scope
-		}
 		custom_tooltip = {
 			text = frontera_ot_homeland_gained_homeland
 			scope:ascendent_state = {
+				set_state_owner = scope:overlord_scope
 				set_state_type = unincorporated
-				set_variable = becoming_state_frontera
+				remove_variable = becoming_state_frontera
 			}
 		}
 	}
@@ -83,7 +112,7 @@ frontera_ot_homeland.2 = {
 	flavor = frontera_ot_homeland.1.f
 
 	event_image = {
-		video = "asia_poor_people_moving"
+		video = "europenorthamerica_gold_prospectors"
 	}
 
 	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
@@ -103,6 +132,7 @@ frontera_ot_homeland.2 = {
 
 	option = {
 		name = frontera_ot_homeland.1.a
+		default_option = yes
 		scope:ascendent_state = {
 			set_state_owner = scope:overlord_scope
 			}
@@ -110,7 +140,22 @@ frontera_ot_homeland.2 = {
 			text = frontera_ot_homeland_gained_homeland
 			scope:ascendent_state = {
 				set_state_type = unincorporated
-				set_variable = becoming_state_frontera
+				remove_variable = becoming_state_frontera
+			}
+		}
+	}
+	option = {
+		name = frontera_ot_homeland.1.c
+		ai_chance = {
+			base = -1 # AI will never do this
+		}
+		custom_tooltip = {
+			text = frontera_ot_homeland_not_ready_for_statehood_tt
+			scope:ascendent_state = {
+				set_variable = {
+					name = not_ready_for_statehood_frontera
+					years = 3
+				}
 			}
 		}
 	}

@@ -553,6 +553,8 @@ GLOBAL = {
 			country = c:APC
 			provinces = {
 				xB1E3F4 xD0C000 xD5F00A xF2C402 x4E209F x34EDA2 x52EB7C xF642DA x07E17F x31580F
+				# provinces from comanche and new mexico
+				x83741F xEBE9CE xEBE9CE x83741F
 			}
 		}
 		set_owner_of_provinces = {
@@ -567,12 +569,12 @@ GLOBAL = {
 				xAB4C21 xEBAEAA x63F85D x86F203 xDE4C96 x5AE64F
 			}
 		}
-		set_owner_of_provinces = {
-			country = c:COM
-			provinces = {
-				x433C79 x904040 x904040
-			}
-		}
+		#set_owner_of_provinces = {
+		#	country = c:COM
+		#	provinces = {
+		#		x433C79
+		#	}
+		#}
 		set_owner_of_provinces = {
 			country = c:LKT
 			provinces = {
@@ -582,8 +584,8 @@ GLOBAL = {
 		set_owner_of_provinces = {
 			country = c:NMX
 			provinces = {
-				x150652 x9F53C7 x904040 xEBE9CE x687718 x66CBE4 xA891E3 xCEB851 x83741F xBF0C47
-				x719099 x669059 x22BFC4 xC8FA49 x15CB9B x72823F
+				x150652 x9F53C7 x904040 x687718 xA891E3 xCEB851 xBF0C47 x433C79
+				x719099 x669059 x22BFC4 xC8FA49 x15CB9B x72823F x66CBE4
 			}
 		}
 		set_owner_of_provinces = {
@@ -624,27 +626,53 @@ GLOBAL = {
 			}
 		}
 	}
+	s:STATE_TEXAS = {
+		set_owner_of_provinces = {
+			country = c:NMX
+			provinces = {
+				xBD7887 xB114A9 x5C6475 x99A780 xD0FCF0 x2FA254 xDB68A7 x86122A xC6EE8B x0B77C3 xB2484A
+				#territories to prevent mexican colonization. to be correct with Adams Onis Line event
+				
+			}
+		}
+		remove_homeland = cu:mexican
+		add_homeland = cu:tejano
+	}
+	# New mexico settlements
+	#city = "xDF1965"
+    #farm = "x5DA018"
+    #mine = "x851687"
+    #wood = "xB0BB90"
 	s:STATE_NEW_MEXICO = {
 		set_owner_of_provinces = {
 			country = c:APC
 			provinces = {
 				x90EA7D x851687 xA156C7 x3CC82C xA84AFD x0DAC3E x00E2A7 x79844B x23E585 x67B298 
-			}
-		}
-		set_owner_of_provinces = {
-			country = c:COM
-			provinces = {
-				x810C1A x256AEE x74C317 x92D597 x2EE19C xB7D6F2 xE27DFB x418B71 x9660D3 xF9F60A
+				# added comanche land as temp fix to prevent border gore
+				xB7D6F2 xF9F60A
 				xC03297
+				# taken from NMX
+				x3385DD xDBA81D x50DED9 x5E769A xE9C718 x5967A1 x504080 xC32AF4 x0957D1 x7EA360
+				x4BBEE7 x59E5C4 x8A526A x3CD2D7 x0B1E97 x1B611D xD78928 xC50565 xF59F44 x7D2451
 			}
 		}
+		#set_owner_of_provinces = {
+		#	country = c:COM
+		#	provinces = {
+		#		x810C1A x256AEE x74C317 x92D597 x2EE19C xB7D6F2 xE27DFB x418B71 x9660D3 xF9F60A
+		#		xC03297
+		#	}
+		#}
 		set_owner_of_provinces = {
 			country = c:NMX
 			provinces = {
-				x3385DD x1B611D x0B1E97 x940839 x5DA018 x17660E x7C809B x38BB61 xAE2568 xEED52D
-				xB0BB90 x99C48C xB636E0 x40B080 xD3611A x0E8A94 x8C6FA5 x3CD2D7 x59E5C4 x7D2451
-				xA858F4 xCAEC7A xAE76ED x8A526A xFD2B9D xD78928 x4BBEE7 xF59F44 x7EA360 xC50565
-				xDBA81D x5967A1 x5E769A x50DED9 x504080 xC32AF4 xE9C718 x0957D1
+				x940839 x5DA018 x17660E x7C809B x38BB61 xAE2568 xEED52D
+				xB0BB90 x99C48C xB636E0 x40B080 xD3611A x0E8A94 x8C6FA5
+				xA858F4 xCAEC7A xAE76ED xFD2B9D
+				#territories to prevent mexican colonization. to be correct with Adams Onis Line event
+				# taken from apc
+				x9660D3 x418B71 xE27DFB x2EE19C x92D597 x74C317 x256AEE x810C1A
+				
 			}
 		}
 		remove_homeland = cu:mexican
@@ -840,15 +868,54 @@ GLOBAL = {
 			add_modifier = {
 				name = modifier_santafe_trail_frontera
 				years = 74
+			}
+			every_scope_pop = {
+				limit = {
+					culture = cu:mexican
+				}
+				change_pop_culture = {
+					target = cu:tejano
+					value = 0.8
+				}
+			}
+			every_scope_pop = {
+				limit = {
+					culture = cu:oodham
+				}
+				change_pop_culture = {
+					target = cu:tejano
+					value = 0.1
+				}
+			}
+			every_scope_pop = {
+				limit = {
+					culture = cu:caddoan
+				}
+				change_pop_culture = {
+					target = cu:tejano
+					value = 0.3
+				}
+			}
+			every_scope_pop = {
+				limit = {
+					culture = cu:siouan
+				}
+				change_pop_culture = {
+					target = cu:tejano
+					value = 0.3
 				}
 			}
 		}
+	}
 	### CULTURAL FERVOR ###
 	# California was not well controlled by Mexico, had an independent identity
 	cu:californio = {
 		set_fervor = 25
 	}
 	cu:californio_mestizo = {
+		set_fervor = 25
+	}
+	cu:tejano = {
 		set_fervor = 25
 	}
 	### CHARACTERS ###

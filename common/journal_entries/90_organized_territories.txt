@@ -5,21 +5,20 @@
 
 	is_shown_when_inactive = {
 		has_law = law_type:law_frontier_colonization
-		has_law = law_type:law_homesteading
 	}
 
 	possible = {
-		is_subject = no
+		NOT = {has_law = law_type:law_frontier_territorial_administration }
 		NOT = { is_country_type = unrecognized }
 		has_law = law_type:law_frontier_colonization
-		has_law = law_type:law_homesteading
-		any_scope_state = {
-			is_incorporated = no
-			custom_tooltip = {
-				text = je_tooltip_no_homelands_frontera
-				NOT = {is_homeland_of_country_cultures = ROOT}
-			}
-		}
+		#has_law = law_type:law_homesteading
+		#any_scope_state = {
+		#	is_incorporated = no
+		#	custom_tooltip = {
+		#		text = je_tooltip_no_homelands_frontera
+		#		NOT = {is_homeland_of_country_cultures = ROOT}
+		#	}
+		#}
 	}
 
 	can_deactivate = yes
@@ -38,9 +37,8 @@
 
 	on_yearly_pulse = {
 		trigger = {
-			any_subject_or_below = {
+			any_direct_subject = {
 				has_law = law_type:law_frontier_territorial_administration
-				NOT = { has_variable = frontera_sent_cultural_community }
 			}
 		}
 		events = {
@@ -52,6 +50,42 @@
 			#20 = acw_events.2 # The Fugitive Slave
 			20 = frontera_acw_events.5 # Bleeding Kansas
 			#20 = acw_events.6 # The Caning of Charles Sumner
+		}
+		effect = {
+			every_direct_subject = {
+				limit = {
+					has_law = law_type:law_frontier_territorial_administration
+				}
+				country_OT_transfer_homeland_to_overlord = yes
+			}
+			random_direct_subject = {
+				limit = {
+					has_law = law_type:law_frontier_territorial_administration
+				}
+				save_scope_as = ot_scope
+				random_scope_state = {
+					limit = {
+						is_split_state = yes
+						any_neighbouring_state = {
+							state_region = prev.state_region
+							NOT = { owner = root }
+							NOT = { owner = scope:ot_scope }
+							owner = {
+								is_direct_subject_of = root
+								has_law = law_type:law_frontier_territorial_administration
+							}
+						}
+					}
+					set_variable = var_ot_state_check_for_overlaps
+				}
+				set_variable = var_ot_check_for_overlaps
+			}
+			if = {
+				any_scope_state = {
+					has_variable = var_ot_state_check_for_overlaps
+				}
+				trigger_event = { id = frontera_ot.4 }
+			}
 		}
 	}
 

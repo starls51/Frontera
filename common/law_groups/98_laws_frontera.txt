@@ -55,3 +55,11 @@
 #		}
 #	}
 #}
+
+INJECT:lawgroup_colonization = {
+	change_allowed_trigger = {
+		NOT = {
+			has_law = law_type:law_frontier_territorial_administration
+		}
+	}
+}

@@ -1,0 +1,37 @@
+﻿INJECT:headgear = {
+	usage = game
+	selection_behavior = weighted_random
+	fallback = no_headgear
+
+    frontera_north_american_agitator_headgear = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = south_american_headgear_agitators
+                range = { 0 1 } # For the randomness to work correctly
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                OR = {
+                    AND = {
+                        frontera_north_american_mestizo_clothes_pop_trigger = yes
+                        OR = {
+                            middle_clothes_pop_trigger = yes
+                            upper_clothes_pop_trigger = yes
+                            soldier_clothes_pop_trigger = yes
+                        }
+                        clergy_clothes_pop_trigger = no
+                    }
+                    AND = {
+                        frontera_north_american_mestizo_clothes_character_trigger= yes
+                        agitator_character_trigger = yes
+                    }
+                }
+            }
+        }
+    }
+}

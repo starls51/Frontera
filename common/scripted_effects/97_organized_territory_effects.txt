@@ -7,11 +7,17 @@
 				is_primary_culture_of = root.overlord
 			}
 			# Disables states gaining homeland if state is not fully colonized by Recognized Countries - this should be MIGRATION
-			state_region = {
-				NOT = {
-					any_scope_state = {
-						owner = { is_country_type = decentralized }
-					}
+			#state_region = {
+			#	NOT = {
+			#		any_scope_state = {
+			#			owner = { is_country_type = decentralized }
+			#		}
+			#	}
+			#}
+			# is_under_colonization = no
+			NOT = {
+				any_neighbouring_state = {
+					owner = { is_country_type = decentralized }
 				}
 			}
 		}
@@ -174,12 +180,16 @@ country_OT_transfer_homeland_to_overlord = {
 			is_at_war = no
 			any_scope_state = {
 				is_homeland_of_country_cultures = root.overlord
+				NOT = { has_variable = not_ready_for_statehood_frontera }
 				NOT = { has_variable = becoming_state_frontera }
 				save_temporary_scope_as = giveaway_state
 			}
 		}
 		scope:giveaway_state ?= {
-			set_variable = becoming_state_frontera
+			set_variable = { 
+				name = becoming_state_frontera
+				months = 8
+			}
 			trigger_event = frontera_ot_homeland.1
 		}
 	}
@@ -201,17 +211,24 @@ country_OT_consolidate_split_states = {
 	else_if = {
 		limit = {
 			any_scope_state = {
-				state_region = {
-					any_scope_state = {
-						NOR = {
-							owner = scope:overlord_scope
-							owner = { is_subject_of = scope:overlord_scope }
-						}
+				any_neighbouring_state = {
+					state_region = prev.state_region
+					NOR = {
+						owner = scope:overlord_scope
+						owner = { is_direct_subject_of = scope:overlord_scope }
 					}
 				}
+				#state_region = {
+				#	any_scope_state = {
+				#		NOR = {
+				#			owner = scope:overlord_scope
+				#			owner = { is_subject_of = scope:overlord_scope }
+				#		}
+				#	}
+				#}
 			}
 		}
-		# do nothing
+		# Do nothing
 	}
 	else_if = {
 		limit = {

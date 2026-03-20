@@ -4,7 +4,7 @@
  je_organize_territory_button:0 "Establish New Territory"
  je_organize_territory_button_desc:0 "Organize some of our [Concept('concept_unincorporated_state','$concept_unincorporated_states$')] into an [concept_organized_territory]."
  je_sunset_route_frontera:0 "The Sunset Route"
- je_sunset_route_frontera_reason:0 "A warm-weather rail connection to California would allow for an unprecedented flow of commerce and people between the East and West. However, this project requires significant coordination. Apart from settling ongoing #italic frog wars#! between property owners, it is also imperative to standardize guages, signals, and scheduling. This may be more difficult if foreign countries control areas of track along the proposed route, but the task is by no means impossible."
+ je_sunset_route_frontera_reason:0 "A warm-weather rail connection to California would allow for an unprecedented flow of commerce and people between the East and West. However, this project requires significant coordination. Apart from settling ongoing #italic frog wars#! between property owners, it is also imperative to standardize gauges, signals, and scheduling. This may be more difficult if foreign countries control areas of track along the proposed route, but the task is by no means impossible."
  je_sunset_route_frontera_button:0 "Connect the Sunset Route"
  je_sunset_route_frontera_button_desc:0 "Mediate between various stakeholders to create a new rail route to California."
  je_gadsden_purchase_frontera_button:0 "Test the Borders"
