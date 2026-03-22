@@ -11,5 +11,5 @@
  je_gadsden_purchase_frontera_button_desc:0 "Westward rail expansion will be more manageable should we physically control the required land corridor. While politically risky, inciting border disputes with our neighbors may allow for further diplomatic or military options to acquire land for our project."
  je_organized_territory_internal_frontera:0 "Populate the Frontier"
  je_organized_territory_internal_frontera_reason:0 "[ROOT.GetCountry.GetNameNoFlag] is an [concept_organized_territory] belonging to [ROOT.GetCountry.GetTopOverlord.GetNameNoFlag]. This [concept_subject] type allows for increased [concept_migration] and the eventual creation of new [Concept('concept_homeland','$concept_homelands$')] for the [concept_overlord] [concept_country]. Gaining [concept_autonomy] will make [ROOT.GetCountry.GetNameNoFlag] into a [concept_dominion], and will allow changes to its [GetLawGroup('lawgroup_governance_principles').GetName]. \n\n$frontera_settler_lore$"
- frontera_arrival_frontier_guides:0 ""
- je_seminole_wars_removal_frontera:0 ""
+ frontera_treaty_of_limits:0 "Motion to Enforce the Treaty of Limits"
+ frontera_treaty_of_limits_desc:0 "Send a diplomatic mission to formally recognize political borders formerly outlined in the Treaty of Limits."

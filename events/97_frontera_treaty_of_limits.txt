@@ -1,0 +1,726 @@
+﻿namespace = frontera_treaty_of_limits
+# Old Words, New Treaty, USA side, dynamic event
+frontera_treaty_of_limits.1 = {
+	type = country_event
+	placement = scope:seller_scope
+
+	title = frontera_treaty_of_limits.1.t
+	desc = frontera_treaty_of_limits.1.d
+	flavor = frontera_treaty_of_limits.1.f
+
+	event_image = {
+		video = "europenorthamerica_capitalists_meeting"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	duration = 3
+
+	cooldown = { days = -1 }
+
+	trigger = {
+		# triggered by decision: Motion to Enforce the Treaty of Limits
+	}
+
+	immediate = {
+		save_scope_as = seller_scope # USA
+		# for testing - replace with actor who initiates the decision
+		#c:MEX = {
+		#	save_scope_as = buyer_scope
+		#}
+	#	prev = { save_scope_as = buyer_scope } # Mexico
+		#set_global_variable = frontera_treaty_of_limits_attempted
+
+	}
+	# Allow Sale
+	option = {
+		name = frontera_treaty_of_limits.1.a
+		default_option = yes
+		ai_chance = {
+			base = 1
+		}
+		scope:buyer_scope = { trigger_event = { id = frontera_treaty_of_limits.3 } }
+		# display notification / that USA has honored the treaty
+	}
+	# Refuse Sale
+	option = {
+		name = frontera_treaty_of_limits.1.b
+		ai_chance = {
+			base = 0
+		}
+		scope:buyer_scope = { trigger_event = { id = frontera_treaty_of_limits.2 } }
+		# display notification / that USA has refused the treaty
+	}
+}
+# Mexico scope. US refused treaty of limits revival
+frontera_treaty_of_limits.2 = {
+	type = country_event
+	placement = scope:seller_scope
+
+	title = frontera_treaty_of_limits.2.t
+	desc = frontera_treaty_of_limits.2.d
+	flavor = frontera_treaty_of_limits.2.f
+
+	event_image = {
+		video = "europenorthamerica_capitalists_meeting"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	duration = 3
+
+	cooldown = { days = -1 }
+
+	trigger = {
+		# triggered by event choice: frontera_treaty_of_limits.1 Refusal option B
+	}
+
+	immediate = {
+
+	}
+	# Hostile Response
+	option = {
+		name = frontera_treaty_of_limits.2.a
+		default_option = yes
+		ai_chance = {
+			base = 1
+		}
+		every_state_region = {
+			limit = {
+				OR = {
+					region = sr:region_great_plains
+					region = sr:region_pacific_coast
+				}
+				any_scope_state = {
+					OR = {
+						owner = scope:seller_scope
+						owner = { is_subject_of = scope:seller_scope }
+					}
+				}
+			}
+			add_claim = scope:buyer_scope
+		}
+		s:STATE_FLORIDA = {
+			if = {
+				limit = {
+					any_scope_state = {
+						owner = scope:seller_scope
+					}
+				}
+				add_claim = scope:buyer_scope
+			}
+		}
+	}
+	# Restrained Response - only for the player to try again later
+	option = {
+		name = frontera_treaty_of_limits.2.b
+		ai_chance = {
+			base = 0
+		}
+		remove_global_variable = frontera_treaty_of_limits_attempted
+	}
+}
+
+# Mexico scope. US accepted the treaty of limits revival
+frontera_treaty_of_limits.3 = {
+	type = country_event
+	placement = scope:seller_scope
+
+	title = frontera_treaty_of_limits.1.t
+	desc = frontera_treaty_of_limits.3.d
+	flavor = frontera_treaty_of_limits.1.f
+
+	event_image = {
+		video = "europenorthamerica_capitalists_meeting"
+	}
+
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	duration = 3
+
+	cooldown = { days = -1 }
+
+	trigger = {
+		# triggered by event choice: frontera_treaty_of_limits.1 Refusal option A
+	}
+
+	immediate = {
+		scope:buyer_scope = {
+			every_direct_subject = {
+				limit = {
+					has_law = law_type:law_frontier_territorial_administration
+				}
+				if = {
+					limit = {
+						any_scope_state = {
+							state_region = s:STATE_ARIZONA
+						}
+					}
+					save_scope_as = arizona_owner_ot_scope
+				}
+				if = {
+					limit = {
+						any_scope_state = {
+							state_region = s:STATE_CALIFORNIA
+						}
+					}
+					save_scope_as = california_owner_ot_scope
+				}
+				if = {
+					limit = {
+						any_scope_state = {
+							state_region = s:STATE_IDAHO
+						}
+					}
+					save_scope_as = idaho_owner_ot_scope
+				}
+				if = {
+					limit = {
+						any_scope_state = {
+							state_region = s:STATE_NEVADA
+						}
+					}
+					save_scope_as = nevada_owner_ot_scope
+				}
+				if = {
+					limit = {
+						any_scope_state = {
+							state_region = s:STATE_UTAH
+						}
+					}
+					save_scope_as = utah_owner_ot_scope
+				}
+				if = {
+					limit = {
+						any_scope_state = {
+							state_region = s:STATE_WYOMING
+						}
+					}
+					save_scope_as = wyoming_owner_ot_scope
+				}
+				if = {
+					limit = {
+						any_scope_state = {
+							state_region = s:STATE_COLORADO
+						}
+					}
+					save_scope_as = colorado_owner_ot_scope
+				}
+				if = {
+					limit = {
+						any_scope_state = {
+							state_region = s:STATE_KANSAS
+						}
+					}
+					save_scope_as = kansas_owner_ot_scope
+				}
+				if = {
+					limit = {
+						any_scope_state = {
+							state_region = s:STATE_OKLAHOMA
+						}
+					}
+					save_scope_as = oklahoma_owner_ot_scope
+				}
+				if = {
+					limit = {
+						any_scope_state = {
+							state_region = s:STATE_TEXAS
+						}
+					}
+					save_scope_as = texas_owner_ot_scope
+				}
+			}
+		}
+	}
+	# Hostile Response
+	option = {
+		name = frontera_treaty_of_limits.1.a
+		default_option = yes
+		ai_chance = {
+			base = 1
+		}
+		s:STATE_CALIFORNIA = {
+			every_scope_state = {
+				limit = {
+					OR = {
+						owner = scope:seller_scope
+						owner = { is_subject_of = scope:seller_scope }
+					}
+				}
+				if = {
+					limit = { any_neighbouring_state = { scope:california_owner_ot_scope ?= owner } }
+					set_state_owner = scope:california_owner_ot_scope
+					set_state_type = incorporated
+				}
+				else_if = {
+					limit = { any_neighbouring_state = { scope:nevada_owner_ot_scope  ?= owner } }
+					set_state_owner = scope:nevada_owner_ot_scope
+					set_state_type = incorporated
+				}
+				else_if = {
+					limit = { any_neighbouring_state = { scope:arizona_owner_ot_scope  ?= owner } }
+					set_state_owner = scope:arizona_owner_ot_scope
+					set_state_type = incorporated
+				}
+				else = {
+					set_state_owner = scope:buyer_scope
+				}
+				if = {
+					limit = { owner = { has_law = law_type:law_frontier_territorial_administration } }
+					owner = { save_scope_as = california_owner_ot_scope }
+				}
+			}
+		}
+		s:STATE_ARIZONA = {
+			every_scope_state = {
+				limit = {
+					OR = {
+						owner = scope:seller_scope
+						owner = { is_subject_of = scope:seller_scope }
+					}
+				}
+				if = {
+					limit = { any_neighbouring_state = { scope:arizona_owner_ot_scope ?= owner } }
+					set_state_owner = scope:arizona_owner_ot_scope
+					set_state_type = incorporated
+				}
+				else_if = {
+					limit = { any_neighbouring_state = { scope:california_owner_ot_scope ?= owner } }
+					set_state_owner = scope:california_owner_ot_scope
+					set_state_type = incorporated
+				}
+				else_if = {
+					limit = { any_neighbouring_state = { scope:nevada_owner_ot_scope ?= owner } }
+					set_state_owner = scope:nevada_owner_ot_scope
+					set_state_type = incorporated
+				}
+				else_if = {
+					limit = { any_neighbouring_state = { scope:utah_owner_ot_scope ?= owner } }
+					set_state_owner = scope:utah_owner_ot_scope
+					set_state_type = incorporated
+				}
+				else_if = {
+					limit = { any_neighbouring_state = { scope:new_mexico_owner_ot_scope ?= owner } }
+					set_state_owner = scope:new_mexico_owner_ot_scope
+					set_state_type = incorporated
+				}
+				else = {
+					set_state_owner = scope:buyer_scope
+				}
+				if = {
+					limit = { owner ?= { has_law = law_type:law_frontier_territorial_administration } }
+					owner = { save_scope_as = arizona_owner_ot_scope }
+				}
+			}
+		}
+		s:STATE_NEVADA = {
+			every_scope_state = {
+				limit = {
+					OR = {
+						owner = scope:seller_scope
+						owner = { is_subject_of = scope:seller_scope }
+					}
+				}
+				if = {
+					limit = { any_neighbouring_state = { scope:nevada_owner_ot_scope ?= owner } }
+					set_state_owner = scope:nevada_owner_ot_scope
+					set_state_type = incorporated
+				}
+				else_if = {
+					limit = { any_neighbouring_state = { scope:california_owner_ot_scope ?= owner } }
+					set_state_owner = scope:california_owner_ot_scope
+					set_state_type = incorporated
+				}
+				else_if = {
+					limit = { any_neighbouring_state = { scope:arizona_owner_ot_scope ?= owner } }
+					set_state_owner = scope:arizona_owner_ot_scope
+					set_state_type = incorporated
+				}
+				else_if = {
+					limit = { any_neighbouring_state = { scope:utah_owner_ot_scope ?= owner } }
+					set_state_owner = scope:utah_owner_ot_scope
+					set_state_type = incorporated
+				}
+				else_if = {
+					limit = { any_neighbouring_state = { scope:idaho_owner_ot_scope ?= owner } }
+					set_state_owner = scope:idaho_owner_ot_scope
+					set_state_type = incorporated
+				}
+				else_if = {
+					limit = { any_neighbouring_state = { scope:wyoming_owner_ot_scope ?= owner } }
+					set_state_owner = scope:wyoming_owner_ot_scope
+					set_state_type = incorporated
+				}
+				else_if = {
+					limit = { any_neighbouring_state = { scope:colorado_owner_ot_scope ?= owner } }
+					set_state_owner = scope:colorado_owner_ot_scope
+					set_state_type = incorporated
+				}
+				else = {
+					set_state_owner = scope:buyer_scope
+				}
+				if = {
+					limit = { owner ?= { has_law = law_type:law_frontier_territorial_administration } }
+					owner = { save_scope_as = nevada_owner_ot_scope }
+				}
+			}
+		}
+		s:STATE_UTAH = {
+			every_scope_state = {
+				limit = {
+					OR = {
+						owner = scope:seller_scope
+						owner = { is_subject_of = scope:seller_scope }
+					}
+				}
+				if = {
+					limit = { any_neighbouring_state = { scope:utah_owner_ot_scope ?= owner } }
+					set_state_owner = scope:utah_owner_ot_scope
+					set_state_type = incorporated
+				}
+				else_if = {
+					limit = { any_neighbouring_state = { scope:nevada_owner_ot_scope ?= owner } }
+					set_state_owner = scope:nevada_owner_ot_scope
+					set_state_type = incorporated
+				}
+				else_if = {
+					limit = { any_neighbouring_state = { scope:arizona_owner_ot_scope ?= owner } }
+					set_state_owner = scope:arizona_owner_ot_scope
+					set_state_type = incorporated
+				}
+				else_if = {
+					limit = { any_neighbouring_state = { scope:colorado_owner_ot_scope ?= owner } }
+					set_state_owner = scope:colorado_owner_ot_scope
+					set_state_type = incorporated
+				}
+				else_if = {
+					limit = { any_neighbouring_state = { scope:idaho_owner_ot_scope ?= owner } }
+					set_state_owner = scope:idaho_owner_ot_scope
+					set_state_type = incorporated
+				}
+				else_if = {
+					limit = { any_neighbouring_state = { scope:wyoming_owner_ot_scope ?= owner } }
+					set_state_owner = scope:wyoming_owner_ot_scope
+					set_state_type = incorporated
+				}
+				else = {
+					set_state_owner = scope:buyer_scope
+				}
+				if = {
+					limit = { owner ?= { has_law = law_type:law_frontier_territorial_administration } }
+					owner = { save_scope_as = utah_owner_ot_scope }
+				}
+			}
+		}
+		s:STATE_NEW_MEXICO = {
+			every_scope_state = {
+				limit = {
+					OR = {
+						owner = scope:seller_scope
+						owner = { is_subject_of = scope:seller_scope }
+					}
+				}
+				if = {
+					limit = { any_neighbouring_state = { scope:new_mexico_owner_ot_scope ?= owner } }
+					set_state_owner = scope:new_mexico_owner_ot_scope
+					set_state_type = incorporated
+				}
+				else_if = {
+					limit = { any_neighbouring_state = { scope:texas_owner_ot_scope ?= owner } }
+					set_state_owner = scope:texas_owner_ot_scope
+					set_state_type = incorporated
+				}
+				else_if = {
+					limit = { any_neighbouring_state = { scope:arizona_owner_ot_scope ?= owner } }
+					set_state_owner = scope:arizona_owner_ot_scope
+					set_state_type = incorporated
+				}
+				else_if = {
+					limit = { any_neighbouring_state = { scope:colorado_owner_ot_scope ?= owner } }
+					set_state_owner = scope:colorado_owner_ot_scope
+					set_state_type = incorporated
+				}
+				else_if = {
+					limit = { any_neighbouring_state = { scope:oklahoma_owner_ot_scope ?= owner } }
+					set_state_owner = scope:oklahoma_owner_ot_scope
+					set_state_type = incorporated
+				}
+				else_if = {
+					limit = { any_neighbouring_state = { scope:utah_owner_ot_scope ?= owner } }
+					set_state_owner = scope:utah_owner_ot_scope
+					set_state_type = incorporated
+				}
+				else = {
+					set_state_owner = scope:buyer_scope
+				}
+				if = {
+					limit = { owner ?= { has_law = law_type:law_frontier_territorial_administration } }
+					owner = { save_scope_as = new_mexico_owner_ot_scope }
+				}
+			}
+		}
+		s:STATE_TEXAS = {
+			every_scope_state = {
+				limit = {
+					OR = {
+						owner = scope:seller_scope
+						owner = { is_subject_of = scope:seller_scope }
+					}
+				}
+				if = {
+					limit = { any_neighbouring_state = { scope:new_mexico_owner_ot_scope ?= owner } }
+					set_state_owner = scope:new_mexico_owner_ot_scope
+					set_state_type = incorporated
+				}
+				else_if = {
+					limit = { any_neighbouring_state = { scope:oklahoma_owner_ot_scope ?= owner } }
+					set_state_owner = scope:oklahoma_owner_ot_scope
+					set_state_type = incorporated
+				}
+				else = {
+					set_state_owner = scope:buyer_scope
+				}
+				if = {
+					limit = { owner ?= { has_law = law_type:law_frontier_territorial_administration } }
+					owner = { save_scope_as = texas_owner_ot_scope }
+				}
+			}
+		}
+		
+		s:STATE_WYOMING = {
+			every_scope_state = {
+				limit = {
+					OR = {
+						owner = scope:seller_scope
+						owner = { is_subject_of = scope:seller_scope }
+					}
+				}
+				if = {
+					limit = { any_neighbouring_state = { scope:utah_owner_ot_scope ?= owner } }
+					scope:utah_owner_ot_scope = { save_scope_as = wyoming_owner_ot_scope }
+				}
+				else_if = {
+					limit = { any_neighbouring_state = { scope:colorado_owner_ot_scope ?= owner } }
+					scope:colorado_owner_ot_scope = { save_scope_as = wyoming_owner_ot_scope }
+				}
+				else = {
+					scope:buyer_scope = { save_scope_as = wyoming_owner_ot_scope }
+				}
+			}
+			set_owner_of_provinces = {
+				country = scope:wyoming_owner_ot_scope
+				provinces = {
+					x89656E x0EB61F x319B3E x465DC8 x3DC80A x93B583 x2403EF x57FDB7 # californian wyoming
+					x84DF43 x1AC89E x0DE2A6 x867348 # other wyoming
+				}
+			}
+		}
+		s:STATE_OKLAHOMA = {
+			every_scope_state = {
+				limit = {
+					OR = {
+						owner = scope:seller_scope
+						owner = { is_subject_of = scope:seller_scope }
+					}
+				}
+				if = {
+					limit = { any_neighbouring_state = { scope:new_mexico_owner_ot_scope ?= owner } }
+					scope:new_mexico_owner_ot_scope = { save_scope_as = oklahoma_owner_ot_scope }
+				}
+				else_if = {
+					limit = { any_neighbouring_state = { scope:texas_owner_ot_scope ?= owner } }
+					scope:texas_owner_ot_scope = { save_scope_as = oklahoma_owner_ot_scope }
+				}
+				else = {
+					scope:buyer_scope = { save_scope_as = oklahoma_owner_ot_scope }
+				}
+			}
+			set_owner_of_provinces = {
+				country = scope:oklahoma_owner_ot_scope
+				provinces = {
+					xDAABDA xE43B98 xF3AC52 x3A130C # new mexican oklahoma
+				}
+			}
+		}
+		s:STATE_KANSAS = {
+			every_scope_state = {
+				limit = {
+					OR = {
+						owner = scope:seller_scope
+						owner = { is_subject_of = scope:seller_scope }
+					}
+				}
+				if = {
+					limit = { any_neighbouring_state = { scope:oklahoma_owner_ot_scope ?= owner } }
+					scope:oklahoma_owner_ot_scope = { save_scope_as = kansas_owner_ot_scope }
+				}
+				else_if = {
+					limit = { any_neighbouring_state = { scope:colorado_owner_ot_scope ?= owner } }
+					scope:colorado_owner_ot_scope = { save_scope_as = kansas_owner_ot_scope }
+				}
+				else = {
+					scope:buyer_scope = { save_scope_as = kansas_owner_ot_scope }
+				}
+			}
+			set_owner_of_provinces = {
+				country = scope:kansas_owner_ot_scope
+				provinces = {
+					xD3D517 xEB0DEB x405BB7 # new mexican kansas
+				}
+			}
+		}
+		s:STATE_COLORADO = {
+			every_scope_state = {
+				limit = {
+					OR = {
+						owner = scope:seller_scope
+						owner = { is_subject_of = scope:seller_scope }
+					}
+				}
+				if = {
+					limit = { any_neighbouring_state = { scope:wyoming_owner_ot_scope ?= owner } }
+					scope:wyoming_owner_ot_scope ?= { save_scope_as = colorado_owner_ot_scope }
+				}
+				else_if = {
+					limit = { any_neighbouring_state = { scope:utah_owner_ot_scope ?= owner } }
+					scope:utah_owner_ot_scope ?= { save_scope_as = colorado_owner_ot_scope }
+				}
+				else = {
+					scope:buyer_scope = { save_scope_as = colorado_owner_ot_scope }
+				}
+			}
+			set_owner_of_provinces = {
+				country = scope:colorado_owner_ot_scope
+				provinces = {
+					xAB4C21 xEBAEAA x63F85D x86F203 xDE4C96 x5AE64F # californian colorado
+					x5B5900 x6EA57A x724089 x125FB0 x50C000# other colorado 1
+				}
+			}
+			every_scope_state = {
+				limit = {
+					OR = {
+						owner = scope:seller_scope
+						owner = { is_subject_of = scope:seller_scope }
+					}
+				}
+				if = {
+					limit = { any_neighbouring_state = { scope:new_mexico_owner_ot_scope ?= owner } }
+					scope:new_mexico_owner_ot_scope = { save_scope_as = colorado_owner_ot_scope }
+				}
+				else_if = {
+					limit = { any_neighbouring_state = { scope:oklahoma_owner_ot_scope ?= owner } }
+					scope:oklahoma_owner_ot_scope = { save_scope_as = colorado_owner_ot_scope }
+				}
+				else_if = {
+					limit = { any_neighbouring_state = { scope:kansas_owner_ot_scope ?= owner } }
+					scope:kansas_owner_ot_scope = { save_scope_as = colorado_owner_ot_scope }
+				}
+				else_if = {
+					limit = { any_neighbouring_state = { scope:colorado_owner_ot_scope ?= owner } }
+					scope:colorado_owner_ot_scope = { save_scope_as = colorado_owner_ot_scope }
+				}
+				else = {
+					scope:buyer_scope = { save_scope_as = colorado_owner_ot_scope }
+				}
+			}
+			set_owner_of_provinces = {
+				country = scope:colorado_owner_ot_scope
+				provinces = {
+					x150652 x9F53C7 x904040 x687718 xA891E3 xCEB851 xBF0C47 x433C79 # new mexican colorado 1
+					x719099 x669059 x22BFC4 xC8FA49 x15CB9B x72823F x66CBE4 # new mexican colorado 2
+					x31580F x34EDA2 x4E209F x4F6919 xD0C000 xB1E3F4 xF2C402 xD5F00A xEBE9CE x83741F x07E17F x52EB7C xF642DA # other colorado 2
+				}
+			}
+		}
+
+		#s:STATE_COLORADO = {
+		#	set_owner_of_provinces = {
+		#		country = scope:buyer_scope
+		#		provinces = {
+		#			x150652 x9F53C7 x904040 x687718 xA891E3 xCEB851 xBF0C47 x433C79 # new mexican colorado 1
+		#			x719099 x669059 x22BFC4 xC8FA49 x15CB9B x72823F x66CBE4 # new mexican colorado 2
+		#			xAB4C21 xEBAEAA x63F85D x86F203 xDE4C96 x5AE64F # californian colorado
+		#			x5B5900 x6EA57A x724089 x125FB0 x50C000 x07E17F x52EB7C xF642DA x83741F # other colorado 1
+		#			x31580F x34EDA2 x4E209F x4F6919 xD0C000 xB1E3F4 xF2C402 xD5F00A xEBE9CE # other colorado 2
+		#		}
+		#	}
+		#}
+		#s:STATE_KANSAS = {
+		#	set_owner_of_provinces = {
+		#		country = scope:buyer_scope
+		#		provinces = {
+		#			xD3D517 xEB0DEB x405BB7 # new mexican kansas
+		#		}
+		#	}
+		#}
+		#s:STATE_OKLAHOMA = {
+		#	set_owner_of_provinces = {
+		#		country = scope:buyer_scope
+		#		provinces = {
+		#			xDAABDA xE43B98 xF3AC52 x3A130C # new mexican oklahoma
+		#		}
+		#	}
+		#}
+		#s:STATE_WYOMING = {
+		#	set_owner_of_provinces = {
+		#		country = scope:buyer_scope
+		#		provinces = {
+		#			x89656E x0EB61F x319B3E x465DC8 x3DC80A x93B583 x2403EF x57FDB7 # californian wyoming
+		#			x84DF43 x1AC89E x0DE2A6 x867348 # other wyoming
+		#		}
+		#	}
+		#}
+
+		# increase relations
+	}
+	# Crazy Response - only for the player to be a jerk
+	option = {
+		name = frontera_treaty_of_limits.3.b
+		ai_chance = {
+			base = 0
+		}
+		every_state_region = {
+			limit = {
+				OR = {
+					region = sr:region_great_plains
+					region = sr:region_pacific_coast
+				}
+				any_scope_state = {
+					OR = {
+						owner = scope:seller_scope
+						owner = { is_subject_of = scope:seller_scope }
+					}
+				}
+			}
+			add_claim = scope:buyer_scope
+		}
+		s:STATE_FLORIDA = {
+			if = {
+				limit = {
+					any_scope_state = {
+						OR = {
+							owner = scope:seller_scope
+							owner = { is_subject_of = scope:seller_scope }
+						}
+					}
+				}
+				add_claim = scope:buyer_scope
+			}
+		}
+	}
+	# Restrained Response - only for the player to try again later
+	option = {
+		name = frontera_treaty_of_limits.2.b
+		ai_chance = {
+			base = 0
+		}
+		remove_global_variable = frontera_treaty_of_limits_attempted
+	}
+}

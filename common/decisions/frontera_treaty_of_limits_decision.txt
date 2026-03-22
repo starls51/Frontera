@@ -1,0 +1,63 @@
+﻿frontera_treaty_of_limits = {
+	is_shown = {
+		NOT = { has_global_variable = frontera_treaty_of_limits_attempted }
+		country_or_subject_owns_entire_state_region = STATE_TEXAS
+		has_interest_marker_in_region = region_pacific_coast
+		has_interest_marker_in_region = region_great_plains
+	}
+
+	possible = {
+		is_diplomatic_play_committed_participant = no
+		#country_or_subject_owns_entire_state_region = STATE_ARIZONA
+		country_or_subject_owns_entire_state_region = STATE_NEW_MEXICO
+		country_or_subject_owns_entire_state_region = STATE_UTAH
+		s:STATE_KANSAS = {
+			NOT = { any_scope_state = { owner = { is_country_type = decentralized } } }
+		}
+		s:STATE_OKLAHOMA = {
+			NOT = { any_scope_state = { owner = { is_country_type = decentralized } } }
+		}
+		s:STATE_COLORADO = {
+			NOT = { any_scope_state = { owner = { is_country_type = decentralized } } }
+		}
+		s:STATE_WYOMING = {
+			NOT = { any_scope_state = { owner = { is_country_type = decentralized } } }
+		}
+	}
+
+	# has an issue with event overlapping, it happens in multiple cities, but resets the same trigger from different scope countries
+	when_taken = {
+		set_global_variable = frontera_treaty_of_limits_attempted
+		save_scope_as = buyer_scope
+		every_country = {
+			limit = {
+				NOT = root
+				NOT = { is_subject = yes }
+				OR = {
+					OR = {
+						has_state_in_state_region = STATE_KANSAS
+						any_subject_or_below = { has_state_in_state_region = STATE_KANSAS }
+					}
+					OR = {
+						has_state_in_state_region = STATE_COLORADO
+						any_subject_or_below = { has_state_in_state_region = STATE_COLORADO }
+					}
+					OR = {
+						has_state_in_state_region = STATE_OKLAHOMA
+						any_subject_or_below = { has_state_in_state_region = STATE_OKLAHOMA }
+					}
+					OR = {
+						has_state_in_state_region = STATE_WYOMING
+						any_subject_or_below = { has_state_in_state_region = STATE_WYOMING }
+					}
+				}
+			}
+			trigger_event = { id = frontera_treaty_of_limits.1 }
+		}
+		#c:USA = { trigger_event = { id = frontera_treaty_of_limits.1 } }
+	}
+
+	ai_chance = {
+		value = 1
+	}
+}
