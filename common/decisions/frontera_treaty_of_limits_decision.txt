@@ -12,16 +12,40 @@
 		country_or_subject_owns_entire_state_region = STATE_NEW_MEXICO
 		country_or_subject_owns_entire_state_region = STATE_UTAH
 		s:STATE_KANSAS = {
-			NOT = { any_scope_state = { owner = { is_country_type = decentralized } } }
+			NOT = {
+				any_scope_state = {
+					owner = {
+						is_country_type = decentralized
+					}
+				}
+			}
 		}
 		s:STATE_OKLAHOMA = {
-			NOT = { any_scope_state = { owner = { is_country_type = decentralized } } }
+			NOT = {
+				any_scope_state = {
+					owner = {
+						is_country_type = decentralized
+					}
+				}
+			}
 		}
 		s:STATE_COLORADO = {
-			NOT = { any_scope_state = { owner = { is_country_type = decentralized } } }
+			NOT = {
+				any_scope_state = {
+					owner = {
+						is_country_type = decentralized
+					}
+				}
+			}
 		}
 		s:STATE_WYOMING = {
-			NOT = { any_scope_state = { owner = { is_country_type = decentralized } } }
+			NOT = {
+				any_scope_state = {
+					owner = {
+						is_country_type = decentralized
+					}
+				}
+			}
 		}
 	}
 
@@ -31,7 +55,7 @@
 		save_scope_as = buyer_scope
 		every_country = {
 			limit = {
-				NOT = root
+				NOT = { this = root }
 				NOT = { is_subject = yes }
 				OR = {
 					OR = {

@@ -59,7 +59,7 @@ include_OT_in_colonial_freedom = {
 			}
 			trigger_event = { id = independence.2 days = 3 popup = yes }
 			add_modifier = {
-				name = modifier_foreign_administration
+				name = colony_alone_modifier
 				days = long_modifier_time
 			}
 		}

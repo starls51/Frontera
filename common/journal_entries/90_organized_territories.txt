@@ -81,8 +81,10 @@
 				set_variable = var_ot_check_for_overlaps
 			}
 			if = {
-				any_scope_state = {
-					has_variable = var_ot_state_check_for_overlaps
+				limit = {
+					any_scope_state = {
+						has_variable = var_ot_state_check_for_overlaps
+					}
 				}
 				trigger_event = { id = frontera_ot.4 }
 			}
