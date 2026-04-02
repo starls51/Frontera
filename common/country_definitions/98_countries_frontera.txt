@@ -89,3 +89,274 @@ NMX = {
 	cultures = { mexican }
 	capital = STATE_NEW_MEXICO
 }
+# indigenous 
+# F00 = { #Atsugewi
+#	color = { 130 86 75 }
+#
+#	country_type = decentralized
+#
+#	tier = principality
+#
+#	cultures = { hokan }
+#	capital = STATE_CALIFORNIA
+#}
+F01 = { # Yana
+	color = { 177 125 77 }
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { hokan }
+	capital = STATE_CALIFORNIA
+}
+F02 = { # Maidu
+	color = { 133 104 64 }
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { hokan paiute } # Penutian Controversy
+	capital = STATE_CALIFORNIA
+}
+# F03 = { # Konkaw - Merged with Maidu
+#	color = { 156 130 73 }
+#
+#	country_type = decentralized
+#
+#	tier = principality
+#
+#	cultures = { hokan }
+#	capital = STATE_CALIFORNIA
+#}
+F04 = { # Wintu
+	color = { 140 131 122 }
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { hokan paiute }
+	capital = STATE_CALIFORNIA
+}
+# F05 = { # Nomlaki
+#	color = { 175 177 176 }
+#
+#	country_type = decentralized
+#
+#	tier = principality
+#
+#	cultures = { hokan }
+#	capital = STATE_CALIFORNIA
+#}
+F06 = { # Kawaiisu
+	color = { 229 178 131 }
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { paiute }
+	capital = STATE_CALIFORNIA
+}
+F07 = { # Yurok - Ne Puekw'oohl with Wiyot
+	color = { 171 199 184 }
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { algonquian } # siouan placeholder, algic language group, merging with Wiyot as water people Ne Puekw'oohl
+	capital = STATE_CALIFORNIA
+}
+# F08 = { # Wiyot merged with Yurok to create the Water People
+#	color = { 195 195 185 }
+#
+#	country_type = decentralized
+#
+#	tier = principality
+#
+#	cultures = { siouan }
+#	capital = STATE_CALIFORNIA
+#}
+F09 = { # Mattole / Ni'ekeni'
+	color = { 164 209 238 }
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { athabaskan hokan }
+	capital = STATE_CALIFORNIA
+}
+F10 = { # Shasta - locally known as Kahosadi
+	color = { 74 108 83 }
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { hokan }
+	capital = STATE_CALIFORNIA
+}
+F11 = { # Karuk
+	color = { 105 146 135 }
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { hokan }
+	capital = STATE_CALIFORNIA
+}
+# F12 = { # Patwin
+#	color = { 207 189 79 }
+#
+#	country_type = decentralized
+#
+#	tier = principality
+#
+#	cultures = { hokan }
+#	capital = STATE_CALIFORNIA
+#}
+F13 = { # Modoc should be merged with oregon tribes
+	color = { 132 114 68 }
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { paiute }
+	capital = STATE_CALIFORNIA
+}
+F14 = { # Miwok
+	color = { 185 179 83 }
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { hokan paiute } # Yok-Utian Languages
+	capital = STATE_CALIFORNIA
+}
+# F15 = { # Nisenan
+#	color = { 139 154 85 }
+#
+#	country_type = decentralized
+#
+#	tier = principality
+#
+#	cultures = { hokan paiute }
+#	capital = STATE_CALIFORNIA
+#}
+F16 = { # Achumawi
+	color = { 155 96 64 }
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { hokan }
+	capital = STATE_CALIFORNIA
+}
+# F17 = { # Tolowa
+#	color = { 152 168 167 }
+#
+#	country_type = decentralized
+#
+#	tier = principality
+#
+#	cultures = { athabaskan hokan }
+#	capital = STATE_CALIFORNIA
+#}
+F18 = { # Pomo
+	color = { 136 175 156 }
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { hokan }
+	capital = STATE_CALIFORNIA
+}
+F19 = { # Yokut
+	color = { 224 205 110 }
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { hokan paiute }  # Yok-Utian Languages
+	capital = STATE_CALIFORNIA
+}
+F20 = { # Southern Paiute, Nuwuvi
+	color = { 248 214 88 }
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { paiute } # Uto-Aztec Language
+	capital = STATE_CALIFORNIA
+}
+F21 = { # Maarenga'yam - Taaqtam more universal word
+	color = { 220 197 156 }
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { paiute }
+	capital = STATE_CALIFORNIA
+}
+F22 = { # Iviatim - Cahuilla Indians
+	color = { 190 183 173 }
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { paiute }
+	capital = STATE_CALIFORNIA
+}
+F23 = { # Dakota Sioux, Isanti, Santee
+	color = { 5 79 110 }
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { dakota }
+	capital = STATE_MINNESOTA
+}
+F24 = { # Northern Paiute, Numu
+	color = { 179 60 44 }
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { paiute }
+	capital = STATE_NEVADA
+}
+F25 = { # Oklahoma Native Outlets - unofficial Choctaw name for the land leading up to 1866
+	color = { 200 31 6 } # Choctaw Nation Flag-Code Red
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { caddoan cherokee muskogean siouan }
+	capital = STATE_OKLAHOMA
+}
+REPLACE:BLF = { # Blackfoot Confederacy - Niitsítapi
+	color = { 121 171 222 }
+
+	country_type = decentralized
+
+	tier = principality
+
+	cultures = { algonquian siouan } # verify
+	capital = STATE_MINNESOTA
+}

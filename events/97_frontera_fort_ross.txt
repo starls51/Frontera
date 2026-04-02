@@ -28,6 +28,9 @@ frontera_fort_ross.1 = {
 			save_scope_as = seller_scope
 			overlord ?= { save_scope_as = overlord_scope }
 		}
+		scope:seller_scope = {
+			random_primary_culture = { save_scope_as = seller_culture_scope }
+		}
 		s:STATE_CALIFORNIA = {
 			random_scope_state = {
 				limit = {
@@ -36,7 +39,10 @@ frontera_fort_ross.1 = {
 				save_scope_as = california_scope
 			}
 			ordered_scope_state = {
-                order_by = arable_land 
+				limit = {
+					owner = { NOT = { is_country_type = decentralized } }
+				}
+                order_by = arable_land
 				position = 0
 				check_range_bounds = no
                 owner = {
@@ -93,6 +99,7 @@ frontera_fort_ross.1 = {
 	# AGREE SALE AS OVERLORD
 	option = {
 		trigger = {
+			NOT = { scope:buyer_scope.overlord ?= scope:seller_scope }
 			scope:seller_scope = { is_subject = no }
 		}
 		name = frontera_fort_ross.1.b
@@ -104,10 +111,10 @@ frontera_fort_ross.1 = {
 		}
 		default_option = yes
 	}
-	# Wait I am actually mexico
+	# Wait I am actually mexico (or the overlord)
 	option = {
 		trigger = {
-			THIS = c:MEX
+			scope:buyer_scope.overlord ?= scope:seller_scope
 		}
 		name = frontera_fort_ross.1.c
 		scope:buyer_scope = {
@@ -115,7 +122,7 @@ frontera_fort_ross.1 = {
 		}
 		s:STATE_CALIFORNIA = {
 			add_claim = scope:seller_scope
-			add_homeland = cu:mexican
+			add_homeland = scope:seller_culture_scope
 			random_scope_state = {
 				limit = {
 					owner = scope:seller_scope
@@ -268,6 +275,19 @@ frontera_fort_ross.4 = {
 				save_scope_as = california_scope
 			}
 		}
+		# for if the USA doesn't exist... for some reason
+		random_country = {
+			limit = {
+				NOT = { is_local_player = yes }
+				country_rank >= rank_value:great_power
+				NOT = { this = scope:buyer_scope }
+				NOT = { scope:buyer_scope.overlord ?= this }
+			}
+			save_scope_as = migrant_country_scope
+			random_primary_culture = {
+				save_scope_as = migrant_culture_scope
+			}
+		}
 	}
 	option = {
 		trigger = {
@@ -292,22 +312,29 @@ frontera_fort_ross.4 = {
 			}
 		}
 		name = frontera_fort_ross.4.a
-		scope:buyer_scope = {
-			add_primary_culture = cu:californio_mestizo
+		hidden_effect = {
+			scope:buyer_scope = {
+				add_primary_culture = cu:californio_mestizo
+			}
 		}
 		if = {
 			limit = {
-				c:USA ?= { exists = THIS }
+				c:USA ?= { has_interest_marker_in_region = region_pacific_coast }
 			}
 			scope:john_sutter_scope = {
-				set_home_country = c:USA
-				change_character_culture = cu:yankee
+				hidden_effect = {
+					set_home_country = c:USA
+					#change_character_culture = cu:yankee
+				}
 				transfer_character = c:USA
 			}
 		}
 		else = {
 			scope:john_sutter_scope = {
-				change_character_culture = cu:hawaiian
+				hidden_effect = {
+					set_home_country = scope:migrant_country_scope
+					#change_character_culture = cu:yankee
+				}
 				exile_character = yes
 			}
 		}
@@ -320,25 +347,54 @@ frontera_fort_ross.4 = {
 		default_option = yes
 		if = {
 			limit = {
-				c:USA ?= { exists = THIS }
+				c:USA ?= { has_interest_marker_in_region = region_pacific_coast }
 			}
 			scope:john_sutter_scope = {
-				set_home_country = c:USA
-				change_character_culture = cu:yankee
+				hidden_effect = {
+					set_home_country = c:USA
+					change_character_culture = cu:yankee
+				}
 				transfer_character = scope:buyer_scope
 			}
 			s:STATE_CALIFORNIA = {
-				add_homeland = cu:yankee
+				hidden_effect = { add_homeland = cu:yankee }
+				random_scope_state = {
+					limit = { owner = scope:buyer_scope }
+					create_mass_migration = {
+						origin = c:USA
+						culture = cu:yankee
+					}
+					# estimated 4000 to 20000 in subsequent genocide. lower number for gameplay could use mortality modifier later on
+					hidden_effect = {
+						kill_population_in_state = {
+							value = 3800
+							culture = cu:hokan
+						}
+					}
+				}
 			}
 		}
 		else = {
 			scope:john_sutter_scope = {
-				change_character_culture = cu:mexican
-				set_home_country_definition = cd:MEX
+				set_home_country = scope:migrant_country_scope
 				transfer_character = scope:buyer_scope
 			}
 			s:STATE_CALIFORNIA = {
-				add_homeland = cu:mexican
+				hidden_effect = { add_homeland = scope:migrant_culture_scope }
+				random_scope_state = {
+					limit = { owner = scope:buyer_scope }
+					create_mass_migration = {
+						origin = scope:migrant_country_scope
+						culture = scope:migrant_culture_scope
+					}
+					# estimated 4000 to 20000 in subsequent genocide. lower number for gameplay could use mortality modifier later on
+					hidden_effect = {
+						kill_population_in_state = {
+							value = 3800
+							culture = cu:hokan
+						}
+					}
+				}
 			}
 		}
 		ai_chance = {

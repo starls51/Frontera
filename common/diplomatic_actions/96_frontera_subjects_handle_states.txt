@@ -1,0 +1,170 @@
+﻿REPLACE:take_state = {
+	groups= {
+		overlord
+	}
+
+	texture = "gfx/interface/icons/diplomatic_action_icons/take_state.dds"
+
+	requires_approval = no
+	should_notify_third_parties = yes
+	show_effect_in_tooltip = yes
+	state_selection = second_required
+	second_state_list = second_country
+	can_use_obligations = no
+
+	possible = {
+		scope:target_country = {
+			OR = {
+				is_subject_type = subject_type_colony
+				is_subject_type = subject_type_puppet
+				is_subject_type = subject_type_vassal
+			}
+			is_diplomatic_play_committed_participant = no
+			is_revolutionary = no
+			liberty_desire < 50
+		}
+	}
+
+	second_state_trigger = {
+		owner = scope:target_country
+		is_capital = no
+		is_under_colonization = no
+
+		# Not allowed to take incorporated states from dominions
+		trigger_if = {
+			limit = { scope:target_country = { is_subject_type = subject_type_dominion } }
+			is_incorporated = no
+		}
+	}
+
+	accept_effect = {
+		if = {
+			limit = { exists = scope:second_state }
+			scope:target_country = {
+				add_liberty_desire = {
+					value = "scope:second_state.ai_state_value(scope:target_country)"
+					divide = 5
+					max = 100
+					min = 20
+				}
+			}
+			change_infamy = {
+				value = {
+					add = 5
+
+					multiply = {
+						value = scope:second_state.state_population
+						divide = define:NDiplomacy|WAR_GOAL_INFAMY_POPULATION_SCALING_FACTOR
+						multiply = define:NDiplomacy|WAR_GOAL_INFAMY_POPULATION_SCALING_MULTIPLIER
+						add = 1
+						max = define:NDiplomacy|WAR_GOAL_INFAMY_POPULATION_SCALING_MULTIPLIER_MAX_PER_STATE
+					}
+
+					multiply = {
+						value = 1
+						if = {
+							limit = {
+								scope:second_state = {
+									is_homeland_of_country_cultures = root
+								}
+							}
+							add = define:NDiplomacy|WAR_GOAL_INFAMY_HOMELAND_FACTOR
+						}
+					}
+
+					multiply = {
+						value = 1
+						if = {
+							limit = {
+								scope:second_state = {
+									is_incorporated = no
+								}
+							}
+							add = define:NDiplomacy|WAR_GOAL_INFAMY_UNINCORPORATED_FACTOR
+						}
+					}
+
+					multiply = {
+						value = 1
+						if = {
+							limit = {
+								scope:target_country = {
+									is_country_type = unrecognized
+								}
+							}
+							add = modifier:country_infamy_generation_against_unrecognized_mult
+						}
+					}
+
+					multiply = {
+						value = 1
+						if = {
+							limit = {
+								scope:target_country = {
+									is_subject_of = root
+									liberty_desire < define:NDiplomacy|WAR_GOAL_INFAMY_LOW_LIBERTY_DESIRE_THRESHOLD
+								}
+							}
+							multiply = define:NDiplomacy|WAR_GOAL_INFAMY_LOW_LIBERTY_DESIRE_SUBJECT_MULT
+						}
+					}
+
+					min = 5
+				}
+			}
+			scope:second_state = { set_state_owner = root }
+		}
+	}
+
+	ai = {
+		evaluation_chance = {
+			value = 0.0
+
+			if = {
+				limit = {
+					any_subject_or_below = {
+						OR = {
+							is_subject_type = subject_type_colony
+							is_subject_type = subject_type_puppet
+							is_subject_type = subject_type_vassal
+						}
+					}
+				}
+				add = 0.1
+			}
+		}
+
+		will_select_as_second_state = {
+			is_incorporated = no
+			owner = { NOT = { has_law = law_type:law_frontier_territorial_administration } }
+		}
+
+		will_propose_with_states = {
+			exists = scope:second_state
+			# The AI only uses take state on disconnected colonial bits of subjects which are adjacent to their own lands
+			NOT = {
+				any_neighbouring_state = {
+					owner = root.owner
+					is_incorporated = yes
+				}
+			}
+
+			scope:second_state = {
+				any_neighbouring_state = {
+					owner = root
+				}
+			}
+
+			# This may seem odd, but is intentional
+			# If the overlord is domineering they should be focusing on reducing autonomy and annexing the subject instead of just taking disconnected colonial bits
+			has_attitude = {
+				who = scope:target_country
+				attitude = protective
+			}
+		}
+
+		propose_score = {
+			value = 10
+		}
+	}
+}

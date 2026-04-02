@@ -6,12 +6,13 @@
 	should_notify_third_parties = yes
 	show_effect_in_tooltip = yes
 
-	texture = "gfx/interface/icons/diplomatic_action_icons/force_state_religion.dds"
-	confirmation_sound = "event:/SFX/UI/MapInteraction/SubjectInteractions/diplomatic_action_subjects_04_appoint_governor_benign"
+	texture = "gfx/interface/icons/diplomatic_action_icons/evangelize.dds"
+	confirmation_sound = "event:/SFX/UI/MapInteraction/SubjectInteractions/diplomatic_action_subjects_11_evangelize_benign"
 
 	potential = {
 		has_law = law_type:law_frontier_colonization
 		scope:target_country = {
+			has_law = law_type:law_frontier_territorial_administration
 			NOT = { is_diplomatic_play_enemy_of = root }
 		}
 	}
@@ -20,8 +21,10 @@
 		#NOT = { has_law = law_type:total_separation }
 		is_revolutionary = no
 		scope:target_country = {
+			liberty_desire = 0
+			NOT = { is_country_type = unrecognized }
 			NOT = { country_has_state_religion  = root.religion }
-			has_law = law_type:law_frontier_territorial_administration
+			#has_law = law_type:law_frontier_territorial_administration
 			is_revolutionary = no
 		}
 	}
@@ -49,6 +52,7 @@
 				}
 				state_religion_switch_effect = yes
 			}
+			add_liberty_desire = 25
 		}
 	}
 

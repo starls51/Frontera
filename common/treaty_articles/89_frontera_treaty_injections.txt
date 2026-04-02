@@ -1,0 +1,160 @@
+﻿#INJECT:military_access = {
+#	can_withdraw = {
+#		trigger_if = {
+#			limit = {
+#				scope:withdrawing_country = { exists = yes }
+#				#scope:withdrawing_country = scope:source_country
+#			}
+#			treaty ?= {
+#				exists = no
+#			}
+#			#treaty = {
+#			#	any_scope_article = {
+#			#		has_type = guarantee_independence
+#			#	}
+#			#}
+#			#scope:withdrawing_country = { has_journal_entry = je_liberate_the_slaves }
+#		}
+#	}
+#}
+#INJECT:transit_rights = {}
+#INJECT:trade_privilege = {}
+#INJECT:state_transfer = {}
+
+frontera_state_transfer_no_infamy = {
+	kind = directed
+	cost = 0
+
+	icon = "gfx/interface/icons/diplomatic_treaties_articles_icons/transfer_state.dds"
+
+	flags = {
+		causes_state_transfer
+		giftable
+	}
+
+	visible = { always = no }
+
+	usage_limit = once_per_side_with_same_inputs
+
+	maintenance_paid_by = source_country
+
+    required_inputs = {
+		state
+    }
+
+	can_ratify = {
+		scope:source_country = {
+			num_states >= 2
+		}
+
+		custom_tooltip = {
+            text = DUPLICATE_ARTICLE_SAME_INPUTS
+            scope:treaty ?= {
+                NOT = {
+                    any_scope_article_option = {
+                        count > 1
+                        has_type = state_transfer
+                        source_country = scope:source_country
+                        input_state = root.input_state
+                    }
+                }
+            }
+        }
+	}
+
+	state_valid_trigger = {
+		scope:input = {
+			owner = root
+			is_capital = no
+			is_under_colonization = no
+			OR = {
+				scope:other_country = { is_adjacent_to_state = prev }
+				AND = {
+					is_coastal = yes
+					scope:other_country = { has_port = yes }
+				}
+			}
+		}
+	}
+
+	on_entry_into_force = {
+		scope:article_options = {
+			target_country = {
+				save_scope_as = state_taker
+			}
+			source_country = {
+				save_scope_as = state_giver
+			}
+
+			if = {
+				limit = { exists = input_state }
+				input_state = { set_state_owner = scope:state_taker }
+			}
+
+			scope:state_taker ?= {
+				if = {
+					limit = {
+						has_variable = recently_traded_states_counter
+					}
+					change_variable = {
+						name = recently_traded_states_counter
+						add = 1
+					}
+				}
+				else_if = {
+					limit = {
+						NOT = { has_variable = recently_traded_states_counter }
+					}
+					set_variable = {
+						name = recently_traded_states_counter
+						value = 1
+					}
+				}
+			}
+
+
+			scope:state_giver ?= {
+				if = {
+					limit = {
+						has_variable = recently_traded_states_counter
+					}
+					if = {
+						limit = {
+							var:recently_traded_states_counter > 1
+						}
+						change_variable = {
+							name = recently_traded_states_counter
+							subtract = 1
+						}
+					}
+					else = {
+						remove_variable = recently_traded_states_counter
+					}
+				}
+			}
+		}
+	}
+
+	on_withdrawal = {}
+	on_break = {
+	}
+
+	ai = {
+
+		treaty_categories = {
+			expansion
+		}
+
+		evaluation_chance = {
+			value = 0
+		}
+
+		article_ai_usage = {
+            request
+        }
+
+		inherent_accept_score = {
+			value = 0
+		}
+	}
+}

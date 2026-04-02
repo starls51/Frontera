@@ -46,18 +46,6 @@
 				text = oregon_tt
 				has_global_variable = oregon_trail_mapped
 			}
-			OR = {
-				owns_entire_state_region = STATE_MONTANA
-				any_subject_or_below = {
-					owns_entire_state_region = STATE_MONTANA
-				}
-			}
-			OR = {
-				owns_entire_state_region = STATE_WYOMING
-				any_subject_or_below = {
-					owns_entire_state_region = STATE_WYOMING
-				}
-			}
 		}
 	}
 
@@ -69,16 +57,31 @@
 					text = oregon_tt
 					has_global_variable = oregon_trail_mapped
 				}
-				OR = {
-					owns_entire_state_region = STATE_MONTANA
-					any_subject_or_below = {
-						owns_entire_state_region = STATE_MONTANA
+				s:STATE_IDAHO = {
+					NOT = {
+						any_scope_state = {
+							owner = {
+								is_country_type = decentralized
+							}
+						}
 					}
 				}
-				OR = {
-					owns_entire_state_region = STATE_WYOMING
-					any_subject_or_below = {
-						owns_entire_state_region = STATE_WYOMING
+				s:STATE_OREGON = {
+					NOT = {
+						any_scope_state = {
+							owner = {
+								is_country_type = decentralized
+							}
+						}
+					}
+				}
+				s:STATE_WASHINGTON = {
+					NOT = {
+						any_scope_state = {
+							owner = {
+								is_country_type = decentralized
+							}
+						}
 					}
 				}
 				c:GBR ?= {
@@ -86,26 +89,19 @@
 				}
 			}
 			AND = {
-				OR = {
-					owns_entire_state_region = STATE_WASHINGTON
-					any_subject_or_below = {
-						owns_entire_state_region = STATE_WASHINGTON
-					}
-				}
-				OR = {
-					owns_entire_state_region = STATE_IDAHO
-					any_subject_or_below = {
-						owns_entire_state_region = STATE_IDAHO
-					}
-				}
-				OR = {
-					owns_entire_state_region = STATE_OREGON
-					any_subject_or_below = {
-						owns_entire_state_region = STATE_OREGON
-					}
-				}
+				country_or_subject_owns_entire_state_region = STATE_WASHINGTON
+				country_or_subject_owns_entire_state_region = STATE_IDAHO
+				country_or_subject_owns_entire_state_region = STATE_OREGON
 			}
 		}
+	}
+
+	fail = {
+		OR = {
+			NOT = { has_interest_marker_in_region = region_pacific_coast }
+			country_rank < rank_value:major_power
+		}
+		# No states in Idaho, Washington, or Oregon are decentralized
 	}
 
 	on_complete = {
@@ -142,7 +138,7 @@
 					}
 				}
 			}
-			c:GBR ?= { trigger_event = { id = oregon.2 } }
+			c:GBR ?= { trigger_event = { id = frontera_oregon.2 } }
 		}
 		else = {
 			#s:STATE_IDAHO = {
@@ -171,26 +167,9 @@ REPLACE:je_conquer_oregon = {
 
 	complete = {
 		c:USA ?= {
-			AND = {
-				OR = {
-					owns_entire_state_region = STATE_WASHINGTON
-					any_subject_or_below = {
-						owns_entire_state_region = STATE_WASHINGTON
-					}
-				}
-				OR = {
-					owns_entire_state_region = STATE_IDAHO
-					any_subject_or_below = {
-						owns_entire_state_region = STATE_IDAHO
-					}
-				}
-				OR = {
-					owns_entire_state_region = STATE_OREGON
-					any_subject_or_below = {
-						owns_entire_state_region = STATE_OREGON
-					}
-				}
-			}
+			country_or_subject_owns_entire_state_region = STATE_WASHINGTON
+			country_or_subject_owns_entire_state_region = STATE_IDAHO
+			country_or_subject_owns_entire_state_region = STATE_OREGON
 		}
 	}
 

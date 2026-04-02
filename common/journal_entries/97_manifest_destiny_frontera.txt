@@ -5,12 +5,12 @@
 
 	# note that if you change this, also update the decision
 	complete = {
-		owns_entire_state_region = STATE_CALIFORNIA
-		owns_entire_state_region = STATE_NEVADA
-		owns_entire_state_region = STATE_UTAH
-		owns_entire_state_region = STATE_ARIZONA
-		owns_entire_state_region = STATE_NEW_MEXICO
-		owns_entire_state_region = STATE_TEXAS
+		country_or_subject_owns_entire_state_region = STATE_CALIFORNIA
+		country_or_subject_owns_entire_state_region = STATE_NEVADA
+		country_or_subject_owns_entire_state_region = STATE_UTAH
+		country_or_subject_owns_entire_state_region = STATE_ARIZONA
+		country_or_subject_owns_entire_state_region = STATE_NEW_MEXICO
+		country_or_subject_owns_entire_state_region = STATE_TEXAS
 	}
 
 	on_complete = {
@@ -28,13 +28,13 @@ REPLACE:je_manifest_destiny_frontier_wars = {
 
 	# note that if you change this, also update the decision
 	complete = {
-		owns_entire_state_region = STATE_MONTANA
-		owns_entire_state_region = STATE_WYOMING
-		owns_entire_state_region = STATE_COLORADO
-		owns_entire_state_region = STATE_NORTH_DAKOTA
-		owns_entire_state_region = STATE_SOUTH_DAKOTA
-		owns_entire_state_region = STATE_NEBRASKA
-		owns_entire_state_region = STATE_KANSAS
+		country_or_subject_owns_entire_state_region = STATE_MONTANA
+		country_or_subject_owns_entire_state_region = STATE_WYOMING
+		country_or_subject_owns_entire_state_region = STATE_COLORADO
+		country_or_subject_owns_entire_state_region = STATE_NORTH_DAKOTA
+		country_or_subject_owns_entire_state_region = STATE_SOUTH_DAKOTA
+		country_or_subject_owns_entire_state_region = STATE_NEBRASKA
+		country_or_subject_owns_entire_state_region = STATE_KANSAS
 	}
 
 	on_complete = {

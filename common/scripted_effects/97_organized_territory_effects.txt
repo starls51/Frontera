@@ -17,6 +17,7 @@
 			# is_under_colonization = no
 			NOT = {
 				any_neighbouring_state = {
+					state_region = prev.state_region
 					owner = { is_country_type = decentralized }
 				}
 			}

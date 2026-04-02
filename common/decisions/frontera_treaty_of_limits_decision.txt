@@ -1,48 +1,57 @@
 ﻿frontera_treaty_of_limits = {
 	is_shown = {
 		NOT = { has_global_variable = frontera_treaty_of_limits_attempted }
+		NOT = { has_variable = manifested_destiny }
 		country_or_subject_owns_entire_state_region = STATE_TEXAS
 		has_interest_marker_in_region = region_pacific_coast
 		has_interest_marker_in_region = region_great_plains
+		any_state_in_louisiana_purchase = {
+			OR = {
+				owner = ROOT
+				owner = { is_subject_of = ROOT }
+			}
+			count <= 3
+		}
 	}
 
 	possible = {
 		is_diplomatic_play_committed_participant = no
 		#country_or_subject_owns_entire_state_region = STATE_ARIZONA
-		country_or_subject_owns_entire_state_region = STATE_NEW_MEXICO
-		country_or_subject_owns_entire_state_region = STATE_UTAH
-		s:STATE_KANSAS = {
-			NOT = {
-				any_scope_state = {
-					owner = {
-						is_country_type = decentralized
-					}
-				}
+		#country_or_subject_owns_entire_state_region = STATE_NEW_MEXICO
+		#country_or_subject_owns_entire_state_region = STATE_UTAH
+		any_state_in_louisiana_purchase = {
+			OR = {
+				owner = ROOT
+				owner = { is_subject_of = ROOT }
 			}
+			count <= 3
 		}
-		s:STATE_OKLAHOMA = {
-			NOT = {
-				any_scope_state = {
-					owner = {
-						is_country_type = decentralized
-					}
-				}
+		any_state_in_mexican_north = {
+			OR = {
+				owner = ROOT
+				owner = { is_subject_of = ROOT }
 			}
+			count >= 6
 		}
-		s:STATE_COLORADO = {
-			NOT = {
-				any_scope_state = {
-					owner = {
-						is_country_type = decentralized
-					}
-				}
-			}
-		}
-		s:STATE_WYOMING = {
-			NOT = {
-				any_scope_state = {
-					owner = {
-						is_country_type = decentralized
+		NOT = {
+			any_state_in_frontera_adams_onis_treatyline = {
+				#count = 0
+				owner = {
+					OR = {
+					is_diplomatic_play_committed_participant = yes
+					is_country_type = decentralized
+					NOR = {
+						this = root
+						this = { is_subject_of = root }
+						AND = {
+							is_subject = no
+							relations:ROOT >= relations_threshold:cordial
+						}
+						AND = {
+							is_subject = yes
+							top_overlord ?= { relations:ROOT >= relations_threshold:cordial }
+						}
+						}
 					}
 				}
 			}
@@ -82,6 +91,6 @@
 	}
 
 	ai_chance = {
-		value = 1
+		value = 100
 	}
 }

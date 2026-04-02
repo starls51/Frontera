@@ -214,6 +214,10 @@ frontera_sunset_route_event.4 = {
 
 	option = {
 		name = frontera_sunset_route_event.4.a
+		set_relations = {
+			country = scope:buyer_scope
+			value = 0
+		}
 		custom_tooltip = {
 			text = mesilla_treaty_creation_tt
 			if = {
@@ -376,6 +380,7 @@ frontera_sunset_route_event.4 = {
 				}
 			}
 		}
+		
 		# TO DO - AI can refuse if they are more powerful than the buyer, or if they have an overlord stronger than the buyer
 		ai_chance = {
 			base = 1
@@ -384,20 +389,28 @@ frontera_sunset_route_event.4 = {
 	}
 	option = {
 		name = frontera_sunset_route_event.4.b
-		if = {
-			limit = {
-				has_state_in_state_region = STATE_ARIZONA
+		hidden_effect = {
+			scope:buyer_scope = {
+				set_secret_goal = {
+					country = scope:seller_scope
+					secret_goal = conquer
+				}
 			}
-			s:STATE_ARIZONA = {
-				add_claim = scope:buyer_scope
+			if = {
+				limit = {
+					has_state_in_state_region = STATE_ARIZONA
+				}
+				s:STATE_ARIZONA = {
+					add_claim = scope:buyer_scope
+				}
 			}
-		}
-		if = {
-			limit = {
-				has_state_in_state_region = STATE_NEW_MEXICO
-			}
-			s:STATE_NEW_MEXICO = {
-				add_claim = scope:buyer_scope
+			if = {
+				limit = {
+					has_state_in_state_region = STATE_NEW_MEXICO
+				}
+				s:STATE_NEW_MEXICO = {
+					add_claim = scope:buyer_scope
+				}
 			}
 		}
 		# TO DO - AI might hold out if they are more powerful than the buyer, or if they have an overlord stronger than the buyer
@@ -432,6 +445,7 @@ frontera_sunset_route_event.5 = {
 	}
 
 	immediate = {
+		save_scope_as = seller_scope
 	}
 
 	option = {

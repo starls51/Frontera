@@ -10,7 +10,9 @@
 	confirmation_sound = "event:/SFX/UI/MapInteraction/SubjectInteractions/diplomatic_action_subjects_04_appoint_governor_benign"
 
 	potential = {
+		has_law = law_type:law_frontier_colonization
 		scope:target_country = {
+			NOT = {has_law = law_type:law_frontier_territorial_administration}
 			NOT = { is_diplomatic_play_enemy_of = root }
 		}
 	}
@@ -18,13 +20,11 @@
 	possible = {
 		is_revolutionary = no
 		NOT = { is_country_type = unrecognized }
-		has_law = law_type:law_frontier_colonization
 		# has_law = law_type:law_homesteading
 		scope:target_country = {
-			relations:root >= relations_threshold:amicable
-			NOT = {has_law = law_type:law_frontier_territorial_administration}
-			liberty_desire <= 10
-			government_transfer_of_power = dictatorial
+			#relations:root >= relations_threshold:amicable
+			#NOT = {has_law = law_type:law_frontier_territorial_administration}
+			liberty_desire = 0
 			is_revolutionary = no
 			any_scope_state = {
 				is_incorporated = yes
@@ -60,6 +60,7 @@
 				activate_law = law_type:law_frontier_territorial_administration
 				activate_law = law_type:law_homesteading # required to activate frontier guides modifier
 				activate_law = law_type:law_frontier_colonization # copy the overlords colonization charter
+				add_liberty_desire = 75
 			}
 			hidden_effect = {
 				create_diplomatic_pact = {
@@ -96,19 +97,19 @@
 					}
 					if = {
 						limit = {
-							scope:overlord_scope = {
+							root = {
 								has_law = law_type:law_legacy_slavery
 							}
 						}
 						if = {
 							limit = {
-								scope:overlord_scope = { has_variable = frontera_wilmot_proviso_pass }
+								root = { has_variable = frontera_wilmot_proviso_pass }
 							}
 							activate_law = law_type:law_slavery_banned
 						}
 						else_if = {
 							limit = {
-								scope:overlord_scope = { has_variable = frontera_wilmot_proviso_fail }
+								root = { has_variable = frontera_wilmot_proviso_fail }
 							}
 							activate_law = law_type:law_slave_trade
 						}

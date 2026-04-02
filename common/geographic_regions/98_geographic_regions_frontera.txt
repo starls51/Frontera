@@ -18,6 +18,17 @@
 	}
 }
 
+geographic_region_frontera_adams_onis_treatyline = {
+	short_key = "frontera_adams_onis_treatyline"
+
+	state_regions = {
+		STATE_KANSAS
+		STATE_OKLAHOMA
+		STATE_COLORADO
+		STATE_WYOMING
+	}
+}
+
 geographic_region_nebraska_territory = {
 	short_key = "nebraska_territory"
 

@@ -11,7 +11,8 @@
 		can_have_subjects = yes
 		any_scope_state = {
 			is_incorporated = no
-			is_split_state = no
+			###
+			#is_split_state = no
 			custom_tooltip = {
 				text = je_tooltip_no_homelands_frontera
 				NOT = {is_homeland_of_country_cultures = root}
@@ -20,13 +21,24 @@
 				owner = root
 				is_incorporated = yes
 			}
+			state_region = {
+				NOT = {
+					any_scope_country = {
+						NOT = { owner = ROOT }
+						NOT = { owner = { is_subject_of = ROOT } }
+					}
+				}
+			}
 		}
 		is_diplomatic_play_committed_participant = no
 		is_at_war = no
 		custom_tooltip = {
 			text = colonial_administration_cooldown
 			NOT = {
-				has_variable = frontera_new_territory_button_pressed
+				OR = {
+					global_var:frontera_new_territory_button_global_freeze = yes
+					has_variable = frontera_new_territory_button_pressed
+				}
 			}
 		}
 	}
@@ -43,6 +55,14 @@
 		}
 		custom_tooltip = {
 			text = creating_OT_frontera_tt
+			set_global_variable = {
+				name = frontera_new_territory_button_global_freeze
+				value = yes
+			}
+			every_state = {
+				remove_variable = frontera_state_to_cede_historic
+				remove_variable = frontera_state_to_cede
+			}
 		}
 		custom_tooltip = {
 			text = creating_OT_frontera_2_tt

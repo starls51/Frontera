@@ -11,11 +11,12 @@
 		is_subject = yes
 		is_subject_type = subject_type_colony
 		has_law = law_type:law_frontier_territorial_administration
-		has_law = law_type:law_homesteading
-		root.overlord = {
-			has_journal_entry = je_organized_territories_frontera 
-		}
-		any_primary_culture = { is_primary_culture_of = root.overlord }
+		#has_law = law_type:law_homesteading
+		#root.overlord = {
+		#	has_journal_entry = je_organized_territories_frontera
+		#	any_primary_culture = { is_primary_culture_of = root }
+		#}
+		#any_primary_culture = { is_primary_culture_of = root.overlord }
 	}
 
 	can_deactivate = yes
@@ -25,36 +26,55 @@
 		effect = {
 			if = {
 				limit = {
+					root.overlord = {
+						NOT = { has_journal_entry = je_organized_territories_frontera }
+					}
+				}
+				activate_law = law_type:law_colonial_administration
+			}
+			if = {
+				limit = {
 					has_variable = frontera_sent_cultural_community
 				}
-				# Might move this to an event for the territory
+				# Move to event in OT scope
 				country_OT_homelands_check_frontera = yes
 				#country_OT_transfer_homeland_to_overlord = yes
 			}
+			# if colonial affairs is under level 3 or 4 investment, start the crazy seperatist event chains
 		}
 	}
 
 	on_yearly_pulse = {
 		effect = {
 			country_OT_consolidate_split_states = yes
-			ordered_scope_state = {
+			if = {
 				limit = {
-					state_region = {
-						NOT = {
-							any_neighbouring_state = {
-								owner = { is_country_type = decentralized }
-							}
+					root.overlord = {
+						institution_investment_level = {
+							institution = institution_colonial_affairs
+							value >= 2
 						}
 					}
 				}
-        	    order_by = gdp
-				min = 0
-				max = 2
-				check_range_bounds = no
-				# create a notification for 'arrival of new frontier guides'
-        	    add_modifier = {
-					name = modifier_frontierlands_frontera
-					months = 12
+				ordered_scope_state = {
+					limit = {
+						state_region = {
+							NOT = {
+								any_neighbouring_state = {
+									owner = { is_country_type = decentralized }
+								}
+							}
+						}
+					}
+        		    order_by = gdp
+					min = 0
+					max = 2
+					check_range_bounds = no
+					# create a notification for 'arrival of new frontier guides'
+        		    add_modifier = {
+						name = modifier_frontierlands_frontera
+						months = 12
+					}
 				}
 			}
 		}

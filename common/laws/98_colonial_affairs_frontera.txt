@@ -66,6 +66,8 @@ REPLACE:law_frontier_colonization = {
 	}
 
 	modifier = {
+		state_colony_growth_speed_mult = -0.33
+		state_migration_pull_unincorporated_mult = -0.25
 		state_incorporation_speed_mult = 0.1
 	}
 

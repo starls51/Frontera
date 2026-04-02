@@ -77,7 +77,32 @@ frontera_acw_events.3 = {
 	option = {
 		name = frontera_acw_events.3.a # a compromise is when nobody is happy at the end
 		default_option = yes
-
+		ai_chance = {
+			base = 1
+			modifier = {
+				trigger = {
+					any_interest_group = {
+						is_revolutionary = no
+						is_insurrectionary = no
+						ig_counts_as_marginal = no
+						OR = {
+							has_ideology = ideology:ideology_anti_slavery
+							leader = { has_ideology = ideology:ideology_abolitionist }
+						}
+					}
+					any_interest_group = {
+						is_revolutionary = no
+						is_insurrectionary = no
+						ig_counts_as_marginal = no
+						OR = {
+							has_ideology = ideology:ideology_pro_slavery
+							leader = { has_ideology = ideology:ideology_slaver }
+						}
+					}
+				}
+				add = 8
+			}
+		}
 		every_interest_group = {
 			limit = {
 				OR = {
@@ -109,7 +134,23 @@ frontera_acw_events.3 = {
 	}
 	option = { # Abolish slavery in all the new territories
 		name = frontera_acw_events.3.b
-
+		ai_chance = {
+			base = 0
+			modifier = {
+				trigger = {
+					any_interest_group = {
+						is_revolutionary = no
+						is_insurrectionary = no
+						ig_counts_as_marginal = no
+						OR = {
+							has_ideology = ideology:ideology_anti_slavery
+							leader = { has_ideology = ideology:ideology_abolitionist }
+						}
+					}
+				}
+				add = 1
+			}
+		}
 		every_scope_state = {
 			limit = {
 				has_claim_by = c:MEX
@@ -157,7 +198,23 @@ frontera_acw_events.3 = {
 	}
 	option = { # Enable slavery in all the new territories
 		name = frontera_acw_events.3.c
-
+		ai_chance = {
+			base = 0
+			modifier = {
+				trigger = {
+					any_interest_group = {
+						is_revolutionary = no
+						is_insurrectionary = no
+						ig_counts_as_marginal = no
+						OR = {
+							has_ideology = ideology:ideology_pro_slavery
+							leader = { has_ideology = ideology:ideology_slaver }
+						}
+					}
+				}
+				add = 1
+			}
+		}
 		every_interest_group = {
 			limit = {
 				OR = {
@@ -257,10 +314,16 @@ frontera_acw_events.4 = {
 			}
 			save_scope_as = scope_to_remove
 			c:CSA = { annex = scope:scope_to_remove }
-			#create_diplomatic_pact = {
-			#	country = c:CSA
-			#	type = frontera_organized_territory
-			#}
+		}
+		c:CSA = {
+			every_scope_state = {
+				limit = {
+					is_split_state = yes
+				}
+				state_region = {
+					add_claim = c:CSA
+				}
+			}
 		}
 	}
 

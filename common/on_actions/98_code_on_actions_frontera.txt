@@ -13,12 +13,20 @@ country_fort_ross_event_check = {
 		# 1839 03 01 for trigger in april
 		if = {
 			limit = {
-				game_date < 1865.4.9
-				game_date > 1840.04.11
+				game_date < 1880.6.18
+				game_date > 1840.4.11
 				s:STATE_CALIFORNIA = {
 					NOT = { has_variable = frontera_fort_ross_sale_initiated }
 					any_scope_state = {
 						is_split_state = yes
+					}
+					any_scope_state = {
+						owner = { NOT = { is_country_type = decentralized } }
+						#count >= 2
+						any_neighbouring_state = {
+							state_region = prev.state_region
+							owner = { NOT = { is_country_type = decentralized } }
+						}
 					}
 					NOT = {
 						any_scope_state = {
@@ -34,6 +42,9 @@ country_fort_ross_event_check = {
 					name = frontera_fort_ross_sale_initiated
 				}
 				ordered_scope_state = {
+					limit = {
+						owner = { NOT = { is_country_type = decentralized } }
+					}
         	        order_by = arable_land 
 					position = 1
 					check_range_bounds = no

@@ -1,4 +1,178 @@
 ﻿COUNTRIES = {
+	# INDIGENOUS
+		# Achomawi
+	#create_country = {
+	#	tag = F00
+	#	origin = c:LKT
+	#	province = p:x370658
+	#}
+		# Konkaw merged with Maidu
+	#create_country = {
+	#	tag = F03
+	#	origin = c:F00
+	#	province = p:xA65FC5
+	#}
+		# Nomlaki
+	#create_country = {
+	#	tag = F05
+	#	origin = c:F00
+	#	province = p:xB8F452
+	#	# c78cd3
+	#}
+	 # F08 "Wiyot" merged with Yurok as water people
+ 	#create_country = {
+	#	tag = F08
+	#	origin = c:F00
+	#	province = p:x1C6782
+	#}
+	 # F12 "Patwin"
+	#create_country = {
+	#	tag = F12
+	#	origin = c:F00
+	#	province = p:x2A91D8
+	#	# ab1aa2
+	#}
+	 # F15 "Nisenan" - Southern Maidu, Merged with Maidu
+	#create_country = {
+	#	tag = F15
+	#	origin = c:F00
+	#	province = p:xFE6E88
+	#	# 1169b8 d401d0
+	#}
+	# F17 "Tolowa"
+	# Largely destroyed by germs and genocide at this point, merging with water people
+ 	#create_country = {
+	#	tag = F17
+	#	origin = c:F00
+	#	province = p:xDAABF7
+	#}
+	create_country = {
+		tag = F01
+		origin = c:LKT
+		province = p:xC9F623
+	}
+	# maidu
+	create_country = {
+		tag = F02
+		origin = c:F01
+		province = p:xFE6E88
+	}
+	# Wintu
+	create_country = {
+		tag = F04
+		origin = c:F01
+		province = p:x607BA8
+		# e6440d
+	}
+ # F06 "Kawaiisu"
+	create_country = {
+		tag = F06
+		origin = c:F01
+		province = p:x5EAA35
+		# 2b1204  6e6d40 b881ee
+	}
+ # F07 "Yurok"
+ 	create_country = {
+		tag = F07
+		origin = c:F01
+		province = p:x42B7D9
+	}
+ # F09 "Mattole"
+ 	create_country = {
+		tag = F09
+		origin = c:F01
+		province = p:xC1F518
+	}
+ # F10 "Shasta"
+	create_country = {
+		tag = F10
+		origin = c:F01
+		province = p:x5A4650
+		# 33ee3b 0425b3
+	}
+ # F11 "Karuk"
+	create_country = {
+		tag = F11
+		origin = c:F01
+		province = p:xC4A8E9
+	}
+ # F13 "Modoc" # Should be merged with Oregon tribes if possible
+ 	create_country = {
+		tag = F13
+		origin = c:F01
+		province = p:xAF199E
+		# 307d50
+	}
+ # F14 "Miwok"
+	create_country = {
+		tag = F14
+		origin = c:F01
+		province = p:xC54807
+		# 25a37f
+	}
+ # F16 "Achumawi" changed to Ahmá-wí to include related river tribes
+ 	create_country = {
+		tag = F16
+		origin = c:F01
+		province = p:xBFE3A4
+		# 9c28a4
+	}
+ # F18 "Pomo"
+	create_country = {
+		tag = F18
+		origin = c:F01
+		province = p:x108000
+		# e97768 d6a835 3f27c8
+	}
+ # F19 "Yokut"
+	create_country = {
+		tag = F19
+		origin = c:F01
+		province = p:xCBA1C9
+		# 783d1d bd0f03 93a4c5 209fc3 7e8e1a 298876 61a555 fdc502
+		# 7a5da6 2ce673 0af8fd 161979 6b8e78 8d4e6d 2c84c4
+	}
+ # F20 "Southern Paiute"
+	create_country = {
+		tag = F20
+		origin = c:F01
+		province = p:xC6C267
+		# 8f17e5 52ad57 2fd5dd 911882 d29c90 dcbae1 1b31b7 3b1b46
+		# f38c8a 5b065e 428b93 032be2 cc07d4 914e48 cc1818 f31acc
+	}
+ # F21 "Maarenga'yam"
+ 	create_country = {
+		tag = F21
+		origin = c:F01
+		province = p:x6CCFDB
+		# ca5813 c5390e d507fa
+	}
+ # F22 "Iviatim"
+	create_country = {
+		tag = F22
+		origin = c:F01
+		province = p:x8A35D2
+		# 4ab8ee cd0b47 ebf5a0 864b45
+	}
+# F23 Dakota Sioux, Isanti, Santee
+	create_country = {
+		tag = F23
+		origin = c:F01
+		province = p:xD000C0
+	}
+# F24 Northern Paiute, Numu
+	create_country = {
+		tag = F24
+		origin = c:F01
+		province = p:x0D95C2
+	}
+# F25 Oklahoma, Okla Humma
+	create_country = {
+		tag = F25
+		origin = c:F01
+		province = p:xC62026
+	}
+
 	# ALTA CALIFORNIA
 	create_country = {
 		tag = CAL
@@ -6,8 +180,6 @@
 		province = p:x2F8F36
 	}
 	c:CAL = {
-		add_primary_culture = cu:mexican
-		remove_primary_culture = cu:californio
 		add_primary_culture = cu:californio
 		effect_starting_technology_tier_3_tech = yes
 		effect_starting_politics_liberal = yes
@@ -38,11 +210,11 @@
 		add_modifier = {
 			name = age_of_caudillos_modifier
 		}
-		set_variable = {
-			name = frontera_sent_cultural_community
-			value = yes
-			years = 1
-		}
+		#set_variable = {
+		#	name = frontera_sent_cultural_community
+		#	value = yes
+		#	years = 1
+		#}
 		
 		initialise_caciquismo_effect = yes
 	}
@@ -202,21 +374,27 @@ GLOBAL = {
 		#homelands
 		add_homeland = cu:californio
 		add_homeland = cu:californio_mestizo
+		add_homeland = cu:athabaskan
+		add_homeland = cu:paiute
 		add_claim = c:CAL
 		set_owner_of_provinces = {
 			country = c:CAL
 			provinces = {
-				xAB1AA2 x108080 xE4FC42 x5EF8F5 x1116AA xD6A835 x3F27C8 xDBCBC6 x4160C1 x2D1B0B
-				x2A91D8 xC4A8E9 x108000 xC1F518 x42B7D9 xC78CD3 xE97768 xE6440D x33EE3B x4AB8EE
-				x0425B3 x1C6782 xDAABF7 x370658 xFE6E88 x908000 xAF199E xC9F623 xB8F452 xA45ACA
-				x56F5CB x5A4650 xD401D0 x307D50 xC54807 xB72458 x577D08 x9C28A4 xA65FC5 x8A35D2
-				x25A37F xA24DA3 x607BA8 xBFE3A4 x1169B8 xF7DB50 x908080 x6B8E78 x7B005B xEBF5A0
-				x2F3B45 x76A57D x8CFB9B x8F1372 xA06435 x2099C1 x0898A3 x6CCFDB xCC07D4 xFD4509
-				x7A5DA6 xF49BCD x7E8E1A x61A555 x8D4E6D xFDC502 x500CAD xC5390E x032BE2 x508000
-				x2B1204 x914E48 x2CE673 x995E0F x5EAA35 xCBA1C9 x209FC3 x298876 x783D1D x2A2B04
-				xDE208B xF6B075 xF16E88 x93A4C5 x1FE069 x161979 xCA5813 x864B45 xB881EE xCD0B47
-				x0AE895 x441749 x519529 x6E6D40 xBD0F03 x2C84C4 x6F44CB x0AF8FD x7BCC6D xC2E1AA
-				x4C2D30 xD00000 xD507FA x5625EF x8CC57E x25842F x3117AA xB21AB9 x0E8D26
+				x3F27C8 xE4FC42 x5EF8F5 x1116AA x908000 x6f44cb x56F5CB x108080
+				x8CFB9B x2099C1 x8F1372 x0898a3 x908080 xD00000 x8CC57E xC2E1AA x4C2D30 x25842F
+				x3117AA xA45ACA x508000 x2A2B04 x2D1B0B xFD4509 x7BCC6D x995E0F xF16E88 xF49BCD
+				xF6B075 xDBCBC6 xA06435 x2F3B45 x7B005B x76A57D x0E8D26 xB21AB9 x5625EF x4160C1
+				x500CAD 
+
+			}
+		}
+		# move all pops to Mexican california
+		region_state:MEX = {
+			every_scope_pop = {
+				limit = {
+					culture = { has_discrimination_trait_group = heritage_group_european }
+				}
+				move_pop = s:STATE_CALIFORNIA.region_state:CAL
 			}
 		}
 		region_state:CAL = {
@@ -257,11 +435,200 @@ GLOBAL = {
 				size = 150
 			}
 		}
+		set_owner_of_provinces = {
+			country = c:F02
+			provinces = {
+				x1169B8
+				xA65FC5 # Konkaw
+				xD401D0 xA24DA3 # Nisenan
+			}
+		}
+		set_owner_of_provinces = {
+			country = c:F04
+			provinces = {
+				xE6440D
+				xB8F452 xC78CD3 # Nomlaki
+				x2A91D8 xAB1AA2 # Patwin
+			}
+		}
+		#set_owner_of_provinces = {
+		#	country = c:F05
+		#	provinces = {
+		#		xC78CD3
+		#	}
+		#}
+		set_owner_of_provinces = {
+			country = c:F06
+			provinces = {
+				x2B1204 x6E6D40 xB881EE
+			}
+		}
+		set_owner_of_provinces = {
+			country = c:F07
+			provinces = {
+				x1C6782 xDAABF7
+			}
+		}
+		set_owner_of_provinces = {
+			country = c:F10
+			provinces = {
+				x33EE3B x0425B3
+			}
+		}
+		#set_owner_of_provinces = {
+		#	country = c:F12
+		#	provinces = {
+		#		xAB1AA2
+		#	}
+		#}
+		set_owner_of_provinces = {
+			country = c:F13
+			provinces = {
+				x307D50
+			}
+		}
+		set_owner_of_provinces = {
+			country = c:F14
+			provinces = {
+				x25A37F
+			}
+		}
+		#set_owner_of_provinces = {
+		#	country = c:F15
+		#	provinces = {
+		#		x1169B8 xD401D0 # xA24DA3
+		#	}
+		#}
+		set_owner_of_provinces = {
+			country = c:F16
+			provinces = {
+				x9C28A4 x370658
+			}
+		}
+		set_owner_of_provinces = {
+			country = c:F18
+			provinces = {
+				xE97768 xD6A835 x3F27C8
+			}
+		}
+		set_owner_of_provinces = {
+			country = c:F19
+			provinces = {
+				x783D1D xBD0F03 x93A4C5 x209FC3 x7E8E1A x298876 x61A555 xFDC502
+				x7A5DA6 x2CE673 x0AF8FD x161979 x6B8E78 x8D4E6D x2C84C4
+			}
+		}
+		set_owner_of_provinces = {
+			country = c:F20
+			provinces = {
+				x032BE2 xCC07D4 x914E48
+			}
+		}
+		set_owner_of_provinces = {
+			country = c:F21
+			provinces = {
+				xCA5813 xC5390E xD507FA
+			}
+		}
+		set_owner_of_provinces = {
+			country = c:F22
+			provinces = {
+				x4AB8EE xCD0B47 xEBF5A0 x864B45
+			}
+		}
+		set_owner_of_provinces = {
+			country = c:F24
+			provinces = {
+				xB72458 x577D08
+				xF7DB50
+			}
+		}
+		set_owner_of_provinces = {
+			country = c:UTE
+			provinces = {
+				x519529 xDE208B x441749 x1FE069
+				x0AE895
+
+			}
+		}
 		# Fort Ross area in Sonoma county where Russians set up farms and trapping
 		set_owner_of_provinces = {
 			country = c:ALK
 			provinces = {
 				x3F27C8
+			}
+		}
+		every_scope_state = {
+			limit = {
+				owner = {
+					country_has_primary_culture = cu:athabaskan
+				}
+			}
+			create_pop = {
+				culture = athabaskan
+				pop_type = farmers
+				size = 800
+			}
+		}
+		# placeholder for algic language group
+		every_scope_state = {
+			limit = {
+				owner = {
+					country_has_primary_culture = cu:algonquian
+				}
+			}
+			create_pop = {
+				culture = algonquian
+				pop_type = farmers
+				size = 1800
+			}
+		}
+		every_scope_state = {
+			limit = {
+				owner = {
+					country_has_primary_culture = cu:paiute
+				}
+			}
+			create_pop = {
+				culture = paiute
+				pop_type = farmers
+				size = 800
+			}
+		}
+		every_scope_state = {
+			limit = {
+				owner = {
+					country_has_primary_culture = cu:hokan
+				}
+			}
+			create_pop = {
+				culture = hokan
+				pop_type = farmers
+				size = 800
+			}
+			s:STATE_CALIFORNIA = {
+				region_state:CAL = {
+					kill_population_in_state = {
+						value = 800
+						culture = cu:hokan
+					}
+				}
+			}
+		}
+		every_scope_state = {
+			limit = {
+				owner = {
+					NOT = { country_has_primary_culture = cu:californio }
+				}
+			}
+			set_state_type = incorporated
+		}
+		region_state:UTE = {
+			every_scope_pop = {
+				limit = {
+					culture = cu:hokan
+				}
+				move_partial_pop = { state = s:STATE_CALIFORNIA.region_state:CAL population_ratio = 0.7 }
 			}
 		}
 		region_state:ALK = {
@@ -326,7 +693,7 @@ GLOBAL = {
 			}
 		}
 		add_claim = c:FLR
-		remove_claim = c:USA
+		#remove_claim = c:USA
 		remove_homeland = cu:dixie
 	}
 	s:STATE_IOWA = {
@@ -345,53 +712,73 @@ GLOBAL = {
 	}
 	s:STATE_NEVADA = {
 		set_owner_of_provinces = {
-			country = c:BNN
+			country = c:F24
 			provinces = {
-				xF3223E
+				xB312C1 xDBA111 x5CC000 x6CF688 x8B11E1 x5BE036 x47F30A x00D336
+				x4934EE xEAB9B1 x48E8C5 xF13FC2 x7C7251 x91EF0D xCA0467 xA72957
+				x9FF17F xBB8631 xCF2942 x84491D x992C09 xF1B928 
 			}
 		}
 		set_owner_of_provinces = {
 			country = c:CAL
 			provinces = {
-				xB312C1 xDBA111 x5CC000 x7C1958 x6CF688 x455838 x6D645C x8B11E1 x5BE036 x227FEB
-				x4934EE xEAB9B1 x80BCA8 x48E8C5 xEF5007 xF13FC2 xA7D253 x7C7251 x91EF0D xCA0467
-				xA72957 x7D25E6 x187093 xF0C923 xE076DB x3F791B xEDCBF4 x60609D xA8DB62 x8A5945
-				x012DC1 xE15291 xB2D968 xEC5DC5 xCCDB4C x7F60DB xB2CC01 x163861 x4C4586 x1BAC1A
-				xB6ED0A xAEE311 xE3A018 x2D6DBC x1B4789 x10C000 x7DE699 x832FF7 x5AD9C0 xC351DC
-				x25439E x2A9CAC x780763 x9FF17F x0DF43E xAEE5AB x4736B3 x47F30A x00D336 x8F30EA
-				x68B95E x1741A2 x005C93 xD66C7A xBB2109 xCC1818 x374A87 xB8C75E xA4D6D1 x80FCE4
-				xAF4B58 x8B17C5 xD3B4EB
+				xA4D6D1 x005C93 x80BCA8 xF0C923 x455838 xE3A018 x8F30EA x780763 xAEE311
+				xEC5DC5 x4736B3 xAEE5AB xA8DB62 xF3223E x2736cd xA7D253 x7C1958 x80FCE4
+			}
+		}
+		set_owner_of_provinces = {
+			country = c:F20
+			provinces = {
+				xCC1818
 			}
 		}
 		set_owner_of_provinces = {
 			country = c:UTE
 			provinces = {
-				xBB2109 xD66C7A xD3B4EB x227FEB x1741A2 x8B17C5
+				xBB2109 xD66C7A xD3B4EB x227FEB x1741A2 x8B17C5 x10C000 x832FF7 x0DF43E
+				x2A9CAC xE15291 x7D25E6 x6D645C xEF5007 x1BAC1A x8A5945 xB2D968 x5AD9C0
+				xC351DC x1B4789 x2D6DBC xB8C75E x374A87	xAF4B58 x7DE699 xCCDB4C xE076DB
+				x7F60DB x163861 x68B95E x60609D x187093 x3F791B xB6ED0A xEDCBF4 xB2CC01
+				x012DC1 x4C4586 x25439E
 			}
 		}
 		add_claim = c:CAL
+		region_state:CAL = {
+			every_scope_pop = {
+				limit = {
+					culture = cu:paiute
+				}
+				move_partial_pop = { state = s:STATE_CALIFORNIA.region_state:CAL population_ratio = 0.25 }
+			}
+		}
 	}
 	s:STATE_ARIZONA = {
 		set_owner_of_provinces = {
+			country = c:F20
+			provinces = {
+				xD29C90 x52AD57 x2FD5DD x8F17E5 x3B1B46 xF38C8A x428B93 x1B31B7 xDCBAE1
+				x911882 x5B065E xF31ACC x2E93C4 x6685A7 x900E30 
+			}
+		}
+		set_owner_of_provinces = {
 			country = c:APC
 			provinces = {
-				xAB6EDB x900E30 x8F17E5 x911882 xC6C267 x6685A7 xF38C8A x428B93 x3B1B46 x1B31B7
-				x8C162F
+				xAB6EDB x8C162F xC98675 x078B25 xE857ED x093F42 x1A5AE7 x104080
 			}
 		}
 		set_owner_of_provinces = {
 			country = c:CAL
 			provinces = {
-				x2FD5DD xDCBAE1 xD29C90 x4DA90F xA615B6 xC98675 x078B25 x2E93C4 xE857ED
-				x093F42 x1A5AE7 x5B065E x1546DA xF31ACC
+				xB03D4F x4DA90F x1546DA xA615B6
 			}
 		}
 		set_owner_of_provinces = {
 			country = c:MEX
 			provinces = {
-				x104080 x77EF15 xA8531A
+				x77EF15 xA8531A x022AE2 x48A4E7 xC28CA0 x44CC50 xBF471B x2392B7 xD331E1 x8755F3 x1A06C1 x67A8BE
 			}
 		}
+		region_state:MEX = { set_state_type = incorporated }
 		set_owner_of_provinces = {
 			country = c:NVJ
 			provinces = {
@@ -402,14 +789,14 @@ GLOBAL = {
 		remove_claim = c:MEX
 		every_scope_state = {
 			limit = {
-				NOT = { owner = c:MEX }
-				has_cultural_community = cu:oodham
+				NOT = { owner = c:F20 }
+				has_cultural_community = cu:paiute
 			}
 			every_scope_pop = {
 				limit = {
-					culture = cu:oodham
+					culture = cu:paiute
 				}
-				move_pop = s:STATE_ARIZONA.region_state:MEX
+				move_partial_pop = { state = s:STATE_ARIZONA.region_state:F20 population_ratio = 0.3 }
 			}
 		}
 		every_scope_state = {
@@ -427,28 +814,52 @@ GLOBAL = {
 		}
 	}
 	s:STATE_UTAH = {
-		set_owner_of_provinces = {
-			country = c:BNN
-			provinces = {
-				x7E6D79
-			}
-		}
+		#set_owner_of_provinces = {
+		#	country = c:BNN
+		#	provinces = {
+		#		x7E6D79
+		#	}
+		#}
 		set_owner_of_provinces = {
 			country = c:CAL
 			provinces = {
-				x7F33D3 xD4D9A8 x83E7A7 xF480A1 x3F5E68 x5708EE xD9ABAF xA3BC1C xC3F179 xCBA4C1
-				x37D3FD xA54D29
+				x7F33D3 xD4D9A8 x83E7A7 xF480A1 x3F5E68 x5708EE xD9ABAF xC3F179
+				x7E6D79 xB3AE0B x567651 xAF38BD xD13E4A x54A0C5 xFC38F6 x8E2C1A
+				x13DF28 xC2D850 xD08080 x1D0AA3
+				xA9B917 
 			}
 		}
 		set_owner_of_provinces = {
 			country = c:UTE
 			provinces = {
-				x8F9823 xA9B917 x3FB458 xF3B4BA x9ADC65 x52FA0B x326026 x23017D x567651 xB3AE0B
-				xEC4FF4 x5708EE xD9ABAF xC3F179 x37D3FD xA54D29 xCBA4C1
+				x8F9823 x3FB458 xF3B4BA x9ADC65 x52FA0B x326026 x23017D xB33EEF
+				x5708EE xD9ABAF xC3F179 x37D3FD xA54D29 xCBA4C1 xA3BC1C xC71490
+				x9271BC x9E50CC x904000 x174B8E x2C62ED x044448 x24D112 x5CEFAC
+				x276EB1
+			}
+		}
+		set_owner_of_provinces = {
+			country = c:NVJ
+			provinces = {
+				xEC4FF4 xA73DE5 xF10601
 			}
 		}
 		add_claim = c:CAL
 		remove_claim = c:MEX
+		every_scope_state = {
+			limit = {
+				owner = {
+					NOT = { country_has_primary_culture = cu:navajo }
+				}
+			}
+			every_scope_pop = {
+				limit = {
+					culture = cu:navajo
+				}
+				move_pop = s:STATE_UTAH.region_state:NVJ
+			}
+
+		}
 	}
 	s:STATE_MICHIGAN = {
 		set_owner_of_provinces = {
@@ -461,20 +872,30 @@ GLOBAL = {
 				xB34192 x4017DC xD49785 x35EAD6 x96E11B x781E75 x5E05A9 xFDA0D8 x4D1908
 			}
 		}
-		remove_claim = c:USA
+		#remove_claim = c:USA
 		remove_homeland = cu:yankee
 	}
 	s:STATE_MINNESOTA = {
 		set_owner_of_provinces = {
 			country = c:UOM
 			provinces = {
-				x5A4A79 x450FD3 x7B3020 xC2D863 x1B5ADB x108E46 x21D67D x2F06FA x54C77A x096804
+				x5A4A79 x450FD3 x7B3020 xC2D863 x1B5ADB x108E46 x21D67D x2F06FA
 				xDF2B35 xE649BF x70957E xD0C080 x4FFFFC x84B824 x5CFCFE x658093 x5D35AB x929D22
 				x7388CD xBE054B x282692 x59C9CA x45FBF5 x865EB8 x289431 x28022C xE7EF56 x9D934A
 				xA8B1F6 x1B6243 x0FAD27 x36ECCB xDE887C x1B5B1A xCDECF0 x373F2F xF09A2C x6AD1DD
 			}
 		}
-		remove_claim = c:USA
+		set_owner_of_provinces = {
+			country = c:F23
+			provinces = {
+				x54C77A x096804
+				xD06D27 x8334D0 xCC4DE2 x1DF928 x1000C0 x2E8F99 x5E307F xC5E30A x03F3AE
+				xDEFE70 xFBB91E x85D457 x4DCFD1 xCCC204 x27DB3F x00A0C0 x71C380 x46F177
+				xEE7CFB xECA010 x29243C x1E5DFD xDFFB08 xF3CD0C xE3F82F x57556B x108319
+				xFF83EB xBDF621 xAB7F2A x9A9297 x8D5116
+			}
+		}
+		#remove_claim = c:USA
 		add_claim = c:UOM
 		remove_homeland = cu:yankee
 		# under 1000 Americans living in minnesota
@@ -488,21 +909,83 @@ GLOBAL = {
 	}
 	s:STATE_NORTH_DAKOTA = {
 		set_owner_of_provinces = {
-			country = c:UOM
+			country = c:USA
 			provinces = {
-				x8F0750 xF3EC53 x76F55B x17983F x8C905E xC1C5C5 xCDE122 x20A1FA xAB458E xA4C2F6
-				xFAD908 x2D7D62 xAA3B6E x298347 xE24F6E x30BADD x5BED05 xAF6E5B xA5A929
+				x002DE6 x6B9ADF x17EF0F x5080C0 x3EB1F2 x198845 x746873
+				x8F0750
 			}
 		}
+		set_owner_of_provinces = {
+			country = c:LKT
+			provinces = {
+				x3816BA xF3479B xF03169 xA5970F x18D7A9 xAB7707 xF3C4FA x43E5A3 xBD89ED x224996
+				x9FB4C1
+			}
+		}
+		set_owner_of_provinces = {
+			country = c:F23
+			provinces = {
+				x0020C0 x0EADCE x3160D9 x329C17 x080BEC
+				x647FB6 x7A9921 x913BCB x9255F2 x96B71E x9D100E
+				xB5FEC3 xBEFC85 xCE5B60 xDD5888
+				xEF51A8 x8C905E xAA3B6E
+				x76F55B x17983F x298347 xFAD908 xAB458E xC1C5C5 x30BADD xCDE122
+			}
+		}
+		set_owner_of_provinces = {
+			country = c:BLF
+			provinces = {
+				xEE82BD x184A57 x9EA3FF x96D61E
+			}
+		}
+		set_owner_of_provinces = {
+			country = c:UOM
+			provinces = {
+				xB7F25B xBB73D1 x98A328 xE5FDC3
+				xF3EC53 xA4C2F6 xE24F6E
+				x2D7D62 x5BED05 x17235E x20A1FA
+			}
+		}
+		region_state:UOM = { set_state_type = incorporated }
 		add_claim = c:UOM
 	}
 	s:STATE_SOUTH_DAKOTA = {
 		set_owner_of_provinces = {
-			country = c:UOM
+			country = c:LKT
 			provinces = {
-				x844BD6 x0D6439 x49577A
+				# x5E7877
+				x026750 x08613A x17DA7A x1C9F35 
+				x245CEE x47FA09 x532C36
+				x58317B x6466A1 x6A7412 x0A6682 
+				x75D810 x8B54D5
+				x8F4ECF x8FB7A5 x993FC6 xAD862C xFA9899
+				xBF6E5B xC51FF7 xC5E80F xD080C0 xD56C26
+				xEA8626 xEEDDC3 xF131A8 xABD1D2
 			}
 		}
+		set_owner_of_provinces = {
+			country = c:F23
+			provinces = {
+				x14E86D x91A08A x4D2CA3 xAD6F67 x859766 xF1B990 x49577A x0D6439 x74D214
+				xB182F3 x40F27A x56C14E x7A9D37 xB7A857 x680B83
+			}
+		}
+		set_owner_of_provinces = {
+			country = c:USA
+			provinces = {
+				x3F22C3 xE37FAD x6D06D4
+				x8CE0D2 x7AD306 xAF6E5B xA5A929
+				x5E7877 x176E1A
+			}
+		}
+		set_owner_of_provinces = {
+			country = c:UOM
+			provinces = {
+				x844BD6 x6FE856 xF276CA x120F17  
+				xF47AED x551291 xE3E1E1 x78F2DF x6E68EF
+			}
+		}
+		region_state:UOM = { set_state_type = incorporated }
 		add_claim = c:UOM
 	}
 	s:STATE_WISCONSIN = {
@@ -523,58 +1006,143 @@ GLOBAL = {
 	}
 	s:STATE_WYOMING = {
 		set_owner_of_provinces = {
-			country = c:BNN
+			country = c:LKT
 			provinces = {
-				x2CC9D7
+				x244042 x90C080 x8BF1A0 x5B63B5 x109BC0 xF3326F x5B70BB x1F5624 x2CC9D7
+				x5FBCFF x818335 x28CC5C x65DCDB xE35101 xFABE6A
 			}
 		}
-		set_owner_of_provinces = {
-			country = c:CAL
-			provinces = {
-				x89656E x0EB61F x319B3E x465DC8 x3DC80A x93B583 x2403EF x57FDB7
-			}
-		}
+		#set_owner_of_provinces = {
+		#	country = c:CAL
+		#	provinces = {
+		#		x84DF43 x319B3E
+		#	}
+		#}
 		set_owner_of_provinces = {
 			country = c:USA
 			provinces = {
-				xF2DFDC x1DF2FD x27F79C x952F3F x58C850 x36DEC9
+				x1DF2FD x27F79C x952F3F x58C850 x36DEC9 x11BB04 xF2158B
+				x10C080 x82F798 x050F0F x27F79C xCF073F x7105F8 xD7B8D9
+				x465DC8 x3DC80A x93B583 x2403EF x57FDB7
+				x65D786 x81DB36
+				x84DF43 x319B3E # Californian area
 			}
 		}
 		set_owner_of_provinces = {
 			country = c:UTE
 			provinces = {
-				x0DE2A6 x1AC89E x84DF43 x867348
-			}
-		}
-		remove_claim = c:USA
-	}
-	s:STATE_COLORADO = {
-		set_owner_of_provinces = {
-			country = c:APC
-			provinces = {
-				xB1E3F4 xD0C000 xD5F00A xF2C402 x4E209F x34EDA2 x52EB7C xF642DA x07E17F x31580F
-				# provinces from comanche and new mexico
-				x83741F xEBE9CE xEBE9CE x83741F
+				x0DE2A6 x1AC89E x867348
 			}
 		}
 		set_owner_of_provinces = {
 			country = c:ARP
 			provinces = {
-				x61CB37 xC97B5E x88B597
+				x4B60B0 x63D8F8 xF2DFDC x0EB61F x89656E
 			}
 		}
 		set_owner_of_provinces = {
-			country = c:CAL
+			country = c:ABS
 			provinces = {
-				xAB4C21 xEBAEAA x63F85D x86F203 xDE4C96 x5AE64F
+				x2CC9D7 x21EE68 xEC9D85 x5F141F xE387E7 x42A388 #x65D786
+				x9F03E3 x8B96F2 x600D92 x533D44 xAC6092 x22B520 
 			}
 		}
-		#set_owner_of_provinces = {
-		#	country = c:COM
-		#	provinces = {
-		#		x433C79
-		#	}
-		#}
+		#remove_claim = c:USA
+	}
+	s:STATE_MONTANA = {
+		set_owner_of_provinces = {
+			country = c:SLS
+			provinces = {
+				xC964E5 xE3FA4D xCAC122 x575CCC xB963F3 x1A505E xC0696D x6BDFF3 x7E7783 x4F5A4D
+				x9EA705 x6C53BA xFB2578 x41AC27 xA4DCB6 xC02080
+				x99CB13 xEDD51C x7F5540 xF29AB7 x9025C8
+				xB3A111 xAED236 x358AB3
+				x5EC3DB x508080
+			}
+		}
+		set_owner_of_provinces = {
+			country = c:ABS
+			provinces = {
+				x9A8A93 xFA2355 x9A73C7 x3ABADD x743F41 x5DA006 x89BC19 xA56B00
+				xB9F872 x8B47B7 x796B16 x1508A0 xFE4B26 xD56340 x19D061 x5392DD xA6F6FD x664C79
+				x0D3B73 xB2DF51 x3AAFA5 x63252A x91670D x5551A1
+				x39D379 xAF7CB4 xC89BA4 xC6BBD4 xC7106E x0A4987 x6FE354
+			}
+		}
+		set_owner_of_provinces = {
+			country = c:BLF
+			provinces = {
+				xEEE91D x68E0D2 x14A4F8 x3DCC7B x7F2867 x0AABD3 xE29E7C xE340DC xECA315 x946CC7
+				x554220 x50B493 xBE9808 x55C41A xACF621 xCA8E9D xEA36A6 xEB65F5 xE9D326
+				xAD3A6B x1C7988 xCA5BE4 x299FC0 xEA0263 x771CB3 x3DF911 xBAAB60
+				x64283A x7C58BC xDE27DA x4CD299 x9C13D9 x860DD4 x092B19
+			}
+		}
+		set_owner_of_provinces = {
+			country = c:LKT
+			provinces = {
+				x0F89B6 x11EFF8 x265A51 x2BAD69 x3AC323 x3E174B x571800 x60CAD8
+				x6BD915 x7F3DF1 x904080 xB2AFD1 xDAF79D xEC1DF2 xF17880 x51B9BC
+			}
+		}
+		set_owner_of_provinces = {
+			country = c:USA
+			provinces = {
+				x40E4CF x944E30 xF3DCE7 x1C5277 x05E469 x5CCA79 x15CA79 xB9C113 x0A9E2B xB891F3 x2619FF
+				xD5A752 xE2ABA8 xBD9D59 xF78700 xD80B74 xE979D9 x68D8FB xF88E77 xD51888 x90FB3B 
+			}
+		}
+	}
+	s:STATE_NEBRASKA = {
+		set_owner_of_provinces = {
+			country = c:LKT
+			provinces = {
+				x921E4D x35C80B x199C35 xFFE6CD x836A23 x72799C xE3FE43 x4A5CBE x5551C2 xDFB7E3 x63FFC3 xB9B03E x0F6ED8
+				x3CA80A x75B4EE xFB92A2 xF823F6 xCC97E9 x26D7F5
+			}
+		}
+		set_owner_of_provinces = {
+			country = c:PWN
+			provinces = {
+				x9215D8 x574C53 x46C0C9 xF500FF x369A5E x10C040 x996A90 xA8C3AF
+				x5BD057 x6298F3 x9B4CC5 xD7F409 xD5A04C x782001
+				x671F4C xD08040 xABDA2C
+				x394431 x085848
+			}
+		}
+		set_owner_of_provinces = {
+			country = c:USA
+			provinces = {
+				xD4B162 xF972E7 x4C746E xC547CE
+				x814008 x5FA3C8 x63FAC0 xD1616D xE2B0F1 xB83435 x675507 x09025B
+				x5A6816
+				x76F2C5 x3E62DB xC0F9BB xA912ED xF7CF1A x8E9E5A x5AE35B
+				x574B34 x1204FB x924593 x90C040
+				x904040
+			}
+		}
+	}
+	s:STATE_COLORADO = {
+		set_owner_of_provinces = {
+			country = c:UTE
+			provinces = {
+				xF2C402 xB1E3F4 xD0C000 xD5F00A
+				x07E17F x72823F xDE4C96 x5AE64F
+				xC8FA49 x15CB9B x4E209F x34EDA2 x52EB7C xF642DA x31580F x150652 x719099
+				x669059 x86F203 x63F85D
+			}
+		}
+		set_owner_of_provinces = {
+			country = c:ARP
+			provinces = {
+				x61CB37 xC97B5E x88B597 x511F34 xAB4C21 
+				xC5CFEF xD07052 x820130 x52080F xA69111 xEB212F x307992
+				x8C7A20 x8C51FE xBBFA06 x25C53C x1DAD86 xD04000 xFD4329
+				x9F53C7 x129391 x26A01D x348ACD x32230C x7854CE x6EA57A
+				xEBAEAA x22BFC4 x017E79 xA90729 x812CF7 xA891E3 x687718 xCEB851
+
+			}
+		}
 		set_owner_of_provinces = {
 			country = c:LKT
 			provinces = {
@@ -584,20 +1152,20 @@ GLOBAL = {
 		set_owner_of_provinces = {
 			country = c:NMX
 			provinces = {
-				x150652 x9F53C7 x904040 x687718 xA891E3 xCEB851 xBF0C47 x433C79
-				x719099 x669059 x22BFC4 xC8FA49 x15CB9B x72823F x66CBE4
+				xBF0C47 x433C79 x83741F
+				x66CBE4 xEBE9CE x4F6919
 			}
 		}
-		set_owner_of_provinces = {
-			country = c:NVJ
-			provinces = {
-				x4F6919
-			}
-		}
+		#set_owner_of_provinces = {
+		#	country = c:NVJ
+		#	provinces = {
+		#		x4F6919
+		#	}
+		#}
 		set_owner_of_provinces = {
 			country = c:USA
 			provinces = {
-				x129391 x26A01D x348ACD x32230C x812CF7 xA90729 x017E79 xA69111 x307992 xEB212F
+				x0B9901 x1BE078 x704257 xE85180 x742D27 x05E33E
 			}
 		}
 		every_scope_state = {
@@ -630,11 +1198,37 @@ GLOBAL = {
 		set_owner_of_provinces = {
 			country = c:NMX
 			provinces = {
-				xBD7887 xB114A9 x5C6475 x99A780 xD0FCF0 x2FA254 xDB68A7 x86122A xC6EE8B x0B77C3 xB2484A
+				#x86122A xDB68A7
 				#territories to prevent mexican colonization. to be correct with Adams Onis Line event
-				
+				# border with texas
+				x90CE2B xC9D330 x6125F7 xAfBf37 x46137E x1E553B x58AF61 x3F2F5D x00A88F
 			}
 		}
+		set_owner_of_provinces = {
+			country = c:TEX
+			provinces = {
+				#border with new mexico
+				x212F2F xE6C09D x22F5CE xB0D689 xFE0821 x3B9D9E x0D192D x871357 xBB8A78
+				x601A4F xC369DB x27D689 x1E9A0F x10D832 x3CA5A6
+				# comanche
+				x860F5A x00B0C0 x2E8063
+			}
+		}
+		set_owner_of_provinces = {
+			country = c:MEX
+			provinces = {
+				#border with texas
+				xDB3E39 xED08F5 x08F331 xC7ED1C x1DCED1 xA3A810 xE3F481 x0E125F xB9118E
+			}
+			#set_state_type = incorporated
+		}
+		#set_owner_of_provinces = {
+		#	country = c:COM
+		#	provinces = {
+		#		xB2484A 
+		#	}
+		#}
+		add_claim = c:NMX
 		remove_homeland = cu:mexican
 		add_homeland = cu:tejano
 	}
@@ -647,31 +1241,46 @@ GLOBAL = {
 		set_owner_of_provinces = {
 			country = c:APC
 			provinces = {
-				x90EA7D x851687 xA156C7 x3CC82C xA84AFD x0DAC3E x00E2A7 x79844B x23E585 x67B298 
-				# added comanche land as temp fix to prevent border gore
-				xB7D6F2 xF9F60A
-				xC03297
+				x90EA7D x650434
 				# taken from NMX
-				x3385DD xDBA81D x50DED9 x5E769A xE9C718 x5967A1 x504080 xC32AF4 x0957D1 x7EA360
-				x4BBEE7 x59E5C4 x8A526A x3CD2D7 x0B1E97 x1B611D xD78928 xC50565 xF59F44 x7D2451
+				x17660E x940839 x9C15D3 x53F9F0 xFB0FA8 x4025EE x9C0FED
 			}
 		}
-		#set_owner_of_provinces = {
-		#	country = c:COM
-		#	provinces = {
-		#		x810C1A x256AEE x74C317 x92D597 x2EE19C xB7D6F2 xE27DFB x418B71 x9660D3 xF9F60A
-		#		xC03297
-		#	}
-		#}
+		set_owner_of_provinces = {
+			country = c:COM
+			provinces = {
+				x5E769A x74C317 x5967A1 xC32AF4 x8A526A xCAEC7A xB0BB90
+				x40B080 x9660D3 x418B71 xE27DFB
+				x2EE19C x92D597 x504080 xE9C718 x7EA360 xC50565 x3CD2D7 xD3611A x7C809B
+				xF59F44 x4BBEE7 x7D2451 x59E5C4 xF9F60A xB7D6F2
+				xC03297 x0957D1
+				x256AEE
+			}
+		}
+		set_owner_of_provinces = {
+			country = c:UTE
+			provinces = {
+				xA84AFD x3CC82C x67B298 x00E2A7 x0DAC3E x79844B
+			}
+		}
+		set_owner_of_provinces = {
+			country = c:NVJ
+			provinces = {
+				x17E6C3 x2DF849 xBD8033
+			}
+		}
 		set_owner_of_provinces = {
 			country = c:NMX
 			provinces = {
-				x940839 x5DA018 x17660E x7C809B x38BB61 xAE2568 xEED52D
-				xB0BB90 x99C48C xB636E0 x40B080 xD3611A x0E8A94 x8C6FA5
-				xA858F4 xCAEC7A xAE76ED xFD2B9D
+				x5DA018 xAE76ED xB636E0 xAE2568
+				x0E8A94 x8C6FA5 x99C48C x38BB61 
+				xA858F4 xFD2B9D xEED52D 
 				#territories to prevent mexican colonization. to be correct with Adams Onis Line event
 				# taken from apc
-				x9660D3 x418B71 xE27DFB x2EE19C x92D597 x74C317 x256AEE x810C1A
+				x810C1A xDBA81D
+				x808AB5 x168663 xEF029F xAA2075 xA156C7 x851687 x50DED9 x3385DD x23E585
+				x1B611D x0B1E97 xD78928 
+
 				
 			}
 		}
@@ -691,49 +1300,188 @@ GLOBAL = {
 				move_pop = s:STATE_NEW_MEXICO.region_state:NMX
 			}
 		}
+		region_state:UTE = {
+			every_scope_pop = {
+				limit = {
+					culture = cu:pueblo
+				}
+				move_pop = s:STATE_NEW_MEXICO.region_state:APC
+			}
+		}
+		region_state:COM = {
+			every_scope_pop = {
+				limit = {
+					culture = cu:pueblo
+				}
+				move_pop = s:STATE_NEW_MEXICO.region_state:APC
+			}
+		}
+		region_state:MEX = { set_state_type = incorporated }
 	}
 	s:STATE_KANSAS = {
 		set_owner_of_provinces = {
-			country = c:COM
+			country = c:F25
 			provinces = {
-				x432B51 x6377BB x5A143B xA00FE0 x10C0C0 xE80F7D xA00FE0 x0364B8
+				x432B51 x6377BB x5A143B xA00FE0 x10C0C0 xE80F7D
+				x876BD0 x94CB2D
+			}
+		}
+		create_state = {
+			country = c:PWN
+			owned_provinces = {
+				xF5DE3F x24CC25 
+				x6C6CF4 xBE4BF0 
 			}
 		}
 		set_owner_of_provinces = {
-			country = c:NMX
+			country = c:ARP
 			provinces = {
-				xD3D517 xEB0DEB x405BB7
+				x2CA41F
+				xEB3089 x17C2F0 xAF6622 x231FA5 xDF119B x0CD9E6 x69F3E2
+				x770EB3
 			}
 		}
 		set_owner_of_provinces = {
 			country = c:USA
 			provinces = {
-				x94CB2D x49EB3C x17C2F0 xAF6622 x231FA5 
+				x49EB3C x2D821B
+				x0B51E5 x428D5B x8E9862 x8B2E2A x5196C1
+				x9324D1 xE5842F x1B1E8B
+				xCF5B71 x25C814 x76A411 x08A728
+				xAB5E06 x1711F0 xDA6117 x7F42E1 x1040C0
+				xF5dE3F xC020D9 x05C8DA xD26D2D x5D421A
+				xA68A21 xEEC0B1 x54AC76 x4A5328 x0364B8
+				x029975 xB8266A
+				#NMX lands
+				xD3D517 xEB0DEB x405BB7
+				x9040C0
 			}
 		}
-		remove_claim = c:USA
+		region_state:USA = {
+			every_scope_pop = {
+				limit = {
+					culture = cu:caddoan
+				}
+				move_partial_pop = { state = s:STATE_KANSAS.region_state:PWN population_ratio = 0.7 }
+			}
+			every_scope_pop = {
+				limit = {
+					culture = cu:siouan
+				}
+				move_partial_pop = { state = s:STATE_KANSAS.region_state:PWN population_ratio = 0.1 }
+			}
+		}
+		#remove_claim = c:USA
 	}
 	s:STATE_OKLAHOMA = {
 		set_owner_of_provinces = {
+			country = c:F25
+			provinces = {
+				x3449B1 x51621D xA1D6F3 x70D146 xF98E99 xD72549 x384259 xEB66DA xE0ACB6
+				x7A74B8 x90C0C0 x3DC254 x5F2DBA xCE7722 xE64C00 x7507ED xD545C6
+			}
+		}
+		set_owner_of_provinces = {
 			country = c:COM
 			provinces = {
-				x3449B1 x51621D xA1D6F3 x13C47E x70D146 xF98E99 xD72549 x384259 xEB66DA xE0ACB6
-				x7A74B8 x90C0C0 x3DC254 x5F2DBA xCE7722 xE64C00 xC62026 x7507ED xD545C6
-			}
-		}
-		set_owner_of_provinces = {
-			country = c:NMX
-			provinces = {
-				xDAABDA xE43B98 xF3AC52 x3A130C
-			}
-		}
-		set_owner_of_provinces = {
-			country = c:USA
-			provinces = {
-				x5C449B
+				xE43B98 xF3AC52 x3A130C # NMX
+				x5C449B xCF0284 x4034FA x155091 xDAABDA # Okla
+				x37CCC2 x13C47E
 			}
 		}
 		add_claim = c:SEQ
+		#add_claim = c:USA
+	}
+	s:STATE_IDAHO = {
+		set_owner_of_provinces = {
+			country = c:USA
+			provinces = {
+				x9888F6 xD00080 x0B6D01 x06E885
+				x40339D x4690C2 x1E57E5
+			}
+		}
+		set_owner_of_provinces = {
+			country = c:ORG
+			provinces = {
+				x73354E x7355BF x1F04CC x744A86 x4A7CD8 xC998B0 
+				x156C47 x2C976D x87941A
+			}
+		}
+		set_owner_of_provinces = {
+			country = c:NZP
+			provinces = {
+				xFD9C12
+			}
+		}
+		set_owner_of_provinces = {
+			country = c:F24
+			provinces = {
+				xD484FE x3BC3DC
+			}
+		}
+		region_state:ORG = { set_state_type = incorporated }
+	}
+	s:STATE_OREGON = {
+		set_owner_of_provinces = {
+			country = c:F24
+			provinces = {
+				xE0E0E0 xFAEFD3 x103F17 xE1EAB1
+				x7A125A x9057FD x1F5423
+			}
+		}
+		set_owner_of_provinces = {
+			country = c:F13
+			provinces = {
+				xA30109 xFE0977 x500A3C 
+			}
+		}
+		set_owner_of_provinces = {
+			country = c:F11
+			provinces = {
+				x45A1A9 xBB67BF
+			}
+		}
+		set_owner_of_provinces = {
+			country = c:F07
+			provinces = {
+				x80A000 x9D6DC4
+			}
+		}
+	}
+	s:STATE_BRITISH_COLUMBIA = {
+		set_owner_of_provinces = {
+			country = c:SLS
+			provinces = {
+				xB3A699 x8B9B2E xFBE9A2 xDCF8ED x9C275B
+			}
+		}
+	}
+	s:STATE_ALBERTA = {
+		set_owner_of_provinces = {
+			country = c:BLF
+			provinces = {
+				xA68F40 x0AD7A5
+			}
+		}
+	}
+	s:STATE_SASKATCHEWAN = {
+		set_owner_of_provinces = {
+			country = c:BLF
+			provinces = {
+				x7A8706 x1E1BE6 xBA20F5 x2CBF22 x9D5A1E xF45D51 x58FBF4 xE48FD5 x2ED2E9 x80E080
+				xE1C4D9 x2A2319 x1BA7C7 xAAC78F xE33A60 xBFA383 xBB4DAD x912B29 xF33D4E x167CB1
+				x6C59AC 
+			}
+		}
+	}
+	s:STATE_MANITOBA = {
+		set_owner_of_provinces = {
+			country = c:F23
+			provinces = {
+				xFCF1D9 x00A040 xE63FEA x788EF7 x89C7F6
+				x1CA16D xF3596D x174627 
+			}
+		}
 	}
 	### STATE MODIFIERS STARTING ###
 	s:STATE_CALIFORNIA = {
@@ -989,9 +1737,9 @@ GLOBAL = {
 		}
 	}
 	c:CAL = {
-		every_scope_state = {
-			set_state_type = incorporated
-		}
+		#every_scope_state = {
+		#	set_state_type = incorporated
+		#}
 		create_political_movement = { type = movement_frontera_mexican_centralist }
 		create_political_movement = { type = movement_frontera_mexican_federalist }
 		every_scope_state = {
@@ -1003,11 +1751,21 @@ GLOBAL = {
 		set_strategy = ai_strategy_agricultural_expansion
 		set_strategy = ai_strategy_subject_maintain_autonomy
 		set_strategy = ai_strategy_territorial_expansion
+		create_unidirectional_truce = { country = c:NVJ months = 2 }
+		create_unidirectional_truce = { country = c:UTE months = 2 }
+		create_unidirectional_truce = { country = c:F24 months = 2 }
+		create_unidirectional_truce = { country = c:F20 months = 2 }
+		create_unidirectional_truce = { country = c:APC months = 2 }
+		create_unidirectional_truce = { country = c:ARP months = 2 }
+		set_secret_goal = {
+			country = c:MEX
+			secret_goal = antagonize
+		}
 	}
 	c:NMX = {
-		every_scope_state = {
-			set_state_type = incorporated
-		}
+		#every_scope_state = {
+		#	set_state_type = incorporated
+		#}
 		create_political_movement = { type = movement_frontera_mexican_centralist }
 		create_political_movement = { type = movement_frontera_mexican_federalist }
 		every_scope_state = {
@@ -1019,17 +1777,40 @@ GLOBAL = {
 		set_strategy = ai_strategy_agricultural_expansion
 		set_strategy = ai_strategy_conservative_agenda
 		set_strategy = ai_strategy_subject_overlord_compliance
+		create_unidirectional_truce = { country = c:ARP months = 12 }
+		create_unidirectional_truce = { country = c:UTE months = 2 }
 	}
 	### WARS ###
 	c:USA ?= {
-		set_secret_goal = {
-			country = c:CAL
-			secret_goal = dominate
+		activate_law = law_type:law_frontier_colonization
+		set_institution_investment_level = {
+			institution = institution_colonial_affairs
+			level = 2
+		}
+		# These dominate goals were moved to the USA's manifest destiny decision.
+		#set_secret_goal = {
+		#	country = c:CAL
+		#	secret_goal = dominate
+		#}
+		#set_secret_goal = {
+		#	country = c:NMX
+		#	secret_goal = dominate
+		#}
+		set_mutual_secret_goal = {
+			country = c:MEX
+			secret_goal = none
 		}
 		set_secret_goal = {
-			country = c:NMX
-			secret_goal = dominate
+			country = c:SEQ
+			#secret_goal = antagonize
+			secret_goal = protect
 		}
+		set_relations = {
+			country = c:MEX
+			value = -12
+		}
+		create_unidirectional_truce = { country = c:SEQ months = 274 }
+		create_unidirectional_truce = { country = c:SML months = 36 }
 	}
 	c:MEX ?= {
 		set_secret_goal = {
@@ -1040,7 +1821,138 @@ GLOBAL = {
 			country = c:NMX
 			secret_goal = protect
 		}
+		# prevents mexico from colonizing right out of the gate
+		create_unidirectional_truce = { country = c:COM months = 1 }
+		create_unidirectional_truce = { country = c:APC months = 1 }
+		create_unidirectional_truce = { country = c:LKT months = 1 }
+		create_unidirectional_truce = { country = c:F20 months = 1 }
+		create_unidirectional_truce = { country = c:F22 months = 1 }
 	}
+	c:TEX ?= {
+		set_secret_goal = {
+			country = c:USA
+			secret_goal = befriend
+		}
+	}
+	create_treaty = {
+		name = treaty_name_frontera_nonintercourse_act_1834 #make this a treaty to recognize indian territory, non-colonization of dixie
+		first_country = c:USA
+		second_country = c:SEQ
+		is_draft = no
+		entered_into_force_on = 1834.6.30
+		binding_period = { years = 4 }
+		articles_to_create = {
+			{
+				article = frontera_state_transfer_no_infamy
+				source_country = c:USA
+				target_country = c:SEQ
+				inputs = {
+					{ state = s:STATE_KANSAS.region_state:USA }
+				}
+			}
+			{
+				article = frontera_state_transfer_no_infamy
+				source_country = c:USA
+				target_country = c:SEQ
+				inputs = {
+					{ state = s:STATE_NEBRASKA.region_state:USA }
+				}
+			}
+			{
+				article = frontera_state_transfer_no_infamy
+				source_country = c:USA
+				target_country = c:SEQ
+				inputs = {
+					{ state = s:STATE_COLORADO.region_state:USA }
+				}
+			}
+			{
+				article = frontera_state_transfer_no_infamy
+				source_country = c:USA
+				target_country = c:SEQ
+				inputs = {
+					{ state = s:STATE_WYOMING.region_state:USA }
+				}
+			}
+			{
+				article = frontera_state_transfer_no_infamy
+				source_country = c:USA
+				target_country = c:SEQ
+				inputs = {
+					{ state = s:STATE_SOUTH_DAKOTA.region_state:USA }
+				}
+			}
+			{
+				article = frontera_state_transfer_no_infamy
+				source_country = c:USA
+				target_country = c:SEQ
+				inputs = {
+					{ state = s:STATE_NORTH_DAKOTA.region_state:USA }
+				}
+			}
+			{
+				article = frontera_state_transfer_no_infamy
+				source_country = c:USA
+				target_country = c:SEQ
+				inputs = {
+					{ state = s:STATE_MONTANA.region_state:USA }
+				}
+			}
+			{
+				article = frontera_state_transfer_no_infamy
+				source_country = c:USA
+				target_country = c:SEQ
+				inputs = {
+					{ state = s:STATE_IDAHO.region_state:USA }
+				}
+			}
+			{ # Organic Regulation
+				article = law_commitment
+				source_country = c:SEQ
+				target_country = c:USA
+				inputs = {
+					{ law_type = law_type:law_closed_borders }
+				}
+			}
+			{
+				article = transit_rights
+				source_country = c:SEQ
+				target_country = c:USA
+			}
+			{
+				article = military_access
+				source_country = c:SEQ
+				target_country = c:USA
+			}
+			{
+				article = non_colonization_agreement
+				source_country = c:USA
+				target_country = c:SEQ
+				inputs = {
+					{ strategic_region = sr:region_great_plains }
+				}
+			}
+		}
+	}
+	every_state = {
+		limit = {
+			owner = { is_country_type = decentralized }
+			NOT = { is_capital = yes }
+		}
+		set_state_type = incorporated
+	}
+	#c:USA = {
+	#	create_diplomatic_pact = {
+	#		country = c:SEQ
+	#		type = frontera_organized_territory
+	#	}
+	#}
+	set_global_variable = {
+		name = frontera_new_territory_button_global_freeze
+		value = no
+	}
+	# s:STATE_KANSAS.region_state:SEQ = { set_state_type = incorporated }
+	# s:STATE_NEBRASKA.region_state:SEQ = { set_state_type = incorporated }
 	# changing war goals in Texan Independence war, less aggressive texas
 	#random_diplomatic_play = {
 	#	limit = {
