@@ -26,6 +26,9 @@
 	on_monthly_pulse = {
 		trigger = {
 			NOT = { has_law = law_type:law_slavery_banned }
+			any_direct_subject = {
+				has_law = law_type:law_frontier_territorial_administration
+			}
 		}
 		random_events = {
 			# American Civil War buildup - abstracted to organized territory journal

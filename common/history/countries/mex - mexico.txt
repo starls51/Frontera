@@ -1,11 +1,12 @@
 ﻿COUNTRIES = {
 	c:MEX ?= {
+		set_next_election_date = 1840.6.7
 		effect_starting_technology_tier_3_tech = yes
 		effect_starting_politics_conservative = yes
 		add_technology_researched = empiricism
 		
 		activate_law = law_type:law_presidential_republic
-		activate_law = law_type:law_oligarchy
+		activate_law = law_type:law_wealth_voting
 		activate_law = law_type:law_cultural_exclusion
 		activate_law = law_type:law_mercantilism
 		activate_law = law_type:law_agrarianism
@@ -36,12 +37,24 @@
 			add_ruling_interest_group = yes
 		}
 
-		ig:ig_landowners ?= {
-			add_ruling_interest_group = yes
-		}
-
 		add_modifier = {
 			name = age_of_caudillos_modifier
+		}
+
+		active_law:lawgroup_governance_principles ?= {
+			add_amendment = {
+				type = amendment_generic_sponsor_polstr_increase_negotiation_3
+				sponsor = PREV.ig:ig_armed_forces
+				cooldown = 48
+			}
+		}
+
+		active_law:lawgroup_distribution_of_power ?= {
+			add_amendment = {
+				type = amendment_generic_sponsor_polstr_increase_negotiation_3
+				sponsor = PREV.ig:ig_armed_forces
+				cooldown = 48
+			}
 		}
 		
 		initialise_caciquismo_effect = yes

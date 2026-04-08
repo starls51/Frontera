@@ -19,16 +19,15 @@
 	possible = {
 		is_revolutionary = no
 		scope:target_country = {
-			liberty_desire = 0
+			liberty_desire <= 25
 			is_revolutionary = no
 			NOT = { is_country_type = unrecognized }
 			any_primary_culture = {
 				NOT = { is_primary_culture_of = root }
 			}
+			this.capital = { NOT = { is_under_colonization = yes } }
 		}
-		capital = {
-			NOT = { is_under_colonization = yes }
-		}
+		NOT = { has_journal_entry = je_caudillo }
 	}
 
 	accept_effect = {

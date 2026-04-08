@@ -33,15 +33,21 @@
 				limit = {
 					OR = {
 						is_primary_culture_of = root.overlord
-						AND = {
-							NOT = { is_primary_culture_of = root }
-							ROOT = {
-								country_average_cultural_acceptance = {
-									target = scope:culture_to_check
-									value >= 65
-								}
+						ROOT = {
+							country_average_cultural_acceptance = {
+								target = scope:culture_to_check
+								value >= 60
 							}
 						}
+						#AND = {
+						#	NOT = { is_primary_culture_of = root }
+						#	ROOT = {
+						#		country_average_cultural_acceptance = {
+						#			target = scope:culture_to_check
+						#			value >= 60
+						#		}
+						#	}
+						#}
 					}
 				}
 				scope:state_to_check_scope = {

@@ -69,7 +69,7 @@ frontera_ot_homeland.1 = {
 	option = {
 		name = frontera_ot_homeland.1.c
 		ai_chance = {
-			base = -1 # AI will never do this
+			base = 0 # AI will never do this
 		}
 		custom_tooltip = {
 			text = frontera_ot_homeland_not_ready_for_statehood_tt
@@ -132,6 +132,9 @@ frontera_ot_homeland.2 = {
 
 	option = {
 		name = frontera_ot_homeland.1.a
+		ai_chance = {
+			base = 1
+		}
 		default_option = yes
 		scope:ascendent_state = {
 			set_state_owner = scope:overlord_scope
@@ -147,7 +150,7 @@ frontera_ot_homeland.2 = {
 	option = {
 		name = frontera_ot_homeland.1.c
 		ai_chance = {
-			base = -1 # AI will never do this
+			base = 0 # AI will never do this
 		}
 		custom_tooltip = {
 			text = frontera_ot_homeland_not_ready_for_statehood_tt

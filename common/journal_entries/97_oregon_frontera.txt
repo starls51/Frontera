@@ -85,7 +85,7 @@
 					}
 				}
 				c:GBR ?= {
-					relations:ROOT >= relations_threshold:cordial
+					relations:ROOT > relations_threshold:poor
 				}
 			}
 			AND = {

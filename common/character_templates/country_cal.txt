@@ -42,6 +42,7 @@ cal_juan_batista_alverado_template = {
     # Juan Batista Alverado, future governor or president of Alta California
     first_name = Juan_Bautista
     last_name =  Alvarado
+    #ig_leader = yes
     is_general = yes
     hq = region_pacific_coast
     historical = yes

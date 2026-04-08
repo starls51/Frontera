@@ -21,7 +21,7 @@
 		#NOT = { has_law = law_type:total_separation }
 		is_revolutionary = no
 		scope:target_country = {
-			liberty_desire = 0
+			liberty_desire <= 25
 			NOT = { is_country_type = unrecognized }
 			NOT = { country_has_state_religion  = root.religion }
 			#has_law = law_type:law_frontier_territorial_administration

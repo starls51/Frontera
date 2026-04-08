@@ -1,13 +1,4 @@
-﻿####This one is broken, so I will isntead make it so OTs cannot integrate states
-#   due to super high modifier penalty- avoids edge case of OTs integrating states
-#   and not getting their respective modifiers.
-#on_state_incorporation = {
-#	on_actions = {
-#		check_for_OT_state_modifier_frontera
-#	}
-#}
-
-#Ft Ross
+﻿#Ft Ross
 country_fort_ross_event_check = {
 	effect = {
 		# 1839 03 01 for trigger in april
@@ -68,7 +59,7 @@ include_OT_in_colonial_freedom = {
 			limit = {
 				has_law = law_type:law_frontier_territorial_administration
 			}
-			trigger_event = { id = independence.2 days = 3 popup = yes }
+			trigger_event = { id = independence.2 days = 1 popup = yes }
 			add_modifier = {
 				name = colony_alone_modifier
 				days = long_modifier_time

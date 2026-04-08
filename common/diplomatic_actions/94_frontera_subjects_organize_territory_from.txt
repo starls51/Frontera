@@ -1,13 +1,17 @@
 ﻿da_organize_territory_from_subject = {
 	groups= { overlord }
-
+	#show_in_lens = no
 	requires_approval = no
 	should_notify_third_parties = yes
 	show_effect_in_tooltip = yes
 
-	#texture = "gfx/interface/icons/diplomatic_action_icons/doctrine_of_lapse.dds"
-	texture = "gfx/interface/icons/diplomatic_action_icons/da_appoint_colonial_governor.dds"
+	texture = "gfx/interface/icons/diplomatic_action_icons/doctrine_of_lapse.dds"
+	#texture = "gfx/interface/icons/diplomatic_action_icons/da_appoint_colonial_governor.dds"
 	confirmation_sound = "event:/SFX/UI/MapInteraction/SubjectInteractions/diplomatic_action_subjects_04_appoint_governor_benign"
+
+	selectable = {
+		has_law = law_type:law_frontier_colonization
+	}
 
 	potential = {
 		has_law = law_type:law_frontier_colonization
@@ -20,11 +24,9 @@
 	possible = {
 		is_revolutionary = no
 		NOT = { is_country_type = unrecognized }
-		# has_law = law_type:law_homesteading
+		NOT = {has_law = law_type:law_frontier_territorial_administration}
 		scope:target_country = {
-			#relations:root >= relations_threshold:amicable
-			#NOT = {has_law = law_type:law_frontier_territorial_administration}
-			liberty_desire = 0
+			liberty_desire <= 25
 			is_revolutionary = no
 			any_scope_state = {
 				is_incorporated = yes
@@ -60,7 +62,7 @@
 				activate_law = law_type:law_frontier_territorial_administration
 				activate_law = law_type:law_homesteading # required to activate frontier guides modifier
 				activate_law = law_type:law_frontier_colonization # copy the overlords colonization charter
-				add_liberty_desire = 75
+				add_liberty_desire = 50
 			}
 			hidden_effect = {
 				create_diplomatic_pact = {

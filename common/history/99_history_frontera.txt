@@ -180,15 +180,18 @@
 		province = p:x2F8F36
 	}
 	c:CAL = {
+		set_next_election_date = 1837.7.1
 		add_primary_culture = cu:californio
 		effect_starting_technology_tier_3_tech = yes
 		effect_starting_politics_liberal = yes
 		add_technology_researched = empiricism
 		
 		activate_law = law_type:law_frontier_territorial_administration
-		activate_law = law_type:law_wealth_voting
+		activate_law = law_type:law_census_voting
+		#activate_law = law_type:law_oligarchy
 		activate_law = law_type:law_cultural_exclusion
 		activate_law = law_type:law_mercantilism
+		activate_law = law_type:law_freedom_of_conscience
 		activate_law = law_type:law_tenant_farmers
 		activate_law = law_type:law_agrarianism
 		activate_law = law_type:law_peasant_levies
@@ -198,25 +201,21 @@
 		activate_law = law_type:law_no_schools
 		activate_law = law_type:law_no_police
 		
-		py:conservative_party ?= {
-			disband_party = yes
-		}
-		py:military_party ?= {
-			add_ig_to_party = ig:ig_armed_forces
-			add_momentum = 0.3
-			set_ruling_party = yes
-		}
-		set_ruling_interest_groups = { ig_armed_forces }
 		add_modifier = {
 			name = age_of_caudillos_modifier
 		}
-		#set_variable = {
-		#	name = frontera_sent_cultural_community
-		#	value = yes
-		#	years = 1
-		#}
-		
+		set_ruling_interest_groups = { ig_armed_forces ig_landowners }
+		ig:ig_armed_forces ?= {
+			add_ideology = ideology_caudillismo
+		}
 		initialise_caciquismo_effect = yes
+		active_law:lawgroup_distribution_of_power ?= {
+			add_amendment = {
+				type = amendment_generic_sponsor_polstr_increase_negotiation_1
+				sponsor = PREV.ig:ig_landowners
+				cooldown = 48
+			}
+		}
 	}
 	# NEW MEXICO
 	create_country = {
@@ -248,13 +247,14 @@
 		add_modifier = {
 			name = age_of_caudillos_modifier
 		}
-
 		set_variable = {
 			name = frontera_sent_cultural_community
 			value = yes
 			years = 1
 		}
-		
+		#ig:ig_armed_forces ?= {
+		#	add_ideology = ideology_caudillismo
+		#}
 		initialise_caciquismo_effect = yes
 	}
 	# FLORIDA TERRITORY
@@ -299,49 +299,62 @@
 
 # 8 Setup California Ranches - doing them here so they begin the game with full employment
 BUILDINGS = {
-	s:STATE_CALIFORNIA={
-		region_state:MEX={
-			create_building={
-				building="building_livestock_ranch"
-				add_ownership={
-					building={
-						type="building_manor_house"
-						country="c:MEX"
-						levels=1
-						region="STATE_CALIFORNIA"
-					}
-				}
-				reserves=1
-				activate_production_methods={ "pm_open_air_stockyards" "pm_simple_ranch" "pm_standard_fences" "pm_unrefrigerated"  }
-			}
+	s:STATE_PENNSYLVANIA = {
+		region_state:USA = {
 			create_building={
 				building="building_port"
 				add_ownership={
 					country={
-						country="c:MEX"
+						country="c:USA"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_basic_port"}
+			}
+			create_building={
+				building="building_shipyard"
+				add_ownership={
+					company={
+						type=company_william_cramp
+						country="c:USA"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_basic_shipbuilding"  }
+			}
+			create_building={
+				building="building_military_shipyard"
+				add_ownership={
+					company={
+						type=company_william_cramp
+						country="c:USA"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_military_shipbuilding_wooden"  }
+			}
+		}
+	}
+	s:STATE_FLORIDA = {
+		region_state:FLR = {
+			create_building={
+				building="building_port"
+				add_ownership={
+					country={
+						country="c:USA"
 						levels=1
 					}
 				}
 				reserves=1
 				activate_production_methods={ "pm_anchorage" }
 			}
-			create_building={
-				building="building_trade_center"
-				add_ownership={
-					building={
-						type="building_financial_district"
-						country="c:MEX"
-						levels=1
-						region="STATE_MEXICO"
-					}
-				}
-				reserves=1
-				activate_production_methods={ "pm_trade_center_trade_quantity_limited" }
-			}
 		}
 	}
 }
-# Initialize mod history - Here is to safely overwrite anything in vanilla history
+# Initialize mod history - to overwrite anything in vanilla history
 GLOBAL = {
 	# Mexican Federalist/Decentralized States
 	c:MEX = {
@@ -433,6 +446,43 @@ GLOBAL = {
 				religion = catholic
 				pop_type = farmers
 				size = 150
+			}
+			create_building={
+				building="building_livestock_ranch"
+				add_ownership={
+					building={
+						type="building_manor_house"
+						country="c:CAL"
+						levels=1
+						region="STATE_CALIFORNIA"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_open_air_stockyards" "pm_simple_ranch" "pm_standard_fences" "pm_unrefrigerated"  }
+			}
+			create_building={
+				building="building_port"
+				add_ownership={
+					country={
+						country="c:CAL"
+						levels=1
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_anchorage" }
+			}
+			create_building={
+				building="building_trade_center"
+				add_ownership={
+					building={
+						type="building_financial_district"
+						country="c:MEX"
+						levels=1
+						region="STATE_MEXICO"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_trade_center_trade_quantity_limited" }
 			}
 		}
 		set_owner_of_provinces = {
@@ -1447,6 +1497,7 @@ GLOBAL = {
 				x80A000 x9D6DC4
 			}
 		}
+		add_claim = c:ORG
 	}
 	s:STATE_BRITISH_COLUMBIA = {
 		set_owner_of_provinces = {
@@ -1670,6 +1721,7 @@ GLOBAL = {
 	c:CAL ?= {
 		create_character = {
 			template = cal_juan_batista_alverado_template
+			save_scope_as = cal_juan_batista_alverado_scope
 		}
 
 		create_character = {
@@ -1695,9 +1747,11 @@ GLOBAL = {
 	c:NMX ?= {
 		create_character = {
 			template = nmx_albino_perez_template
+			save_scope_as = nmx_albino_perez_scope
 		}
 		create_character = {
 			template = nmx_manuel_armijo_template
+			save_scope_as = nmx_manuel_armijo_scope
 		}
 	}
 	### POLITICS ###
@@ -1761,6 +1815,27 @@ GLOBAL = {
 			country = c:MEX
 			secret_goal = antagonize
 		}
+		random_scope_general = {
+			limit = { has_template = cal_juan_batista_alverado_template }
+			prev = {
+				create_coup_from_character = {
+					CHARACTER = prev
+				}
+			}
+			add_modifier = {
+				name = coup_supported
+				days = normal_modifier_time
+				multiplier = 1
+				is_decaying = yes
+			}
+			add_modifier = {
+				name = hero_of_the_people
+				days = normal_modifier_time
+				multiplier = 4
+				is_decaying = yes
+			}
+		}
+		trigger_event = { id = coup_pulse_events.5 days = 20 popup = yes }
 	}
 	c:NMX = {
 		#every_scope_state = {
@@ -1781,6 +1856,12 @@ GLOBAL = {
 		create_unidirectional_truce = { country = c:UTE months = 2 }
 	}
 	### WARS ###
+	c:ORG ?= {
+		set_institution_investment_level = {
+			institution = institution_colonial_affairs
+			level = 2
+		}
+	}
 	c:USA ?= {
 		activate_law = law_type:law_frontier_colonization
 		set_institution_investment_level = {
@@ -1813,6 +1894,18 @@ GLOBAL = {
 		create_unidirectional_truce = { country = c:SML months = 36 }
 	}
 	c:MEX ?= {
+		set_tax_level = high
+		start_enactment = law_type:law_elected_bureaucrats
+		add_enactment_phase = 2
+		add_enactment_modifier = {
+			name = successful_law_focus
+		}
+		add_modifier = {
+			name = low_electoral_confidence
+			days = short_modifier_time
+			multiplier = 1
+			is_decaying = yes
+		}
 		set_secret_goal = {
 			country = c:CAL
 			secret_goal = protect
@@ -1820,6 +1913,43 @@ GLOBAL = {
 		set_secret_goal = {
 			country = c:NMX
 			secret_goal = protect
+		}
+		random_scope_general = {
+			limit = { has_variable = is_santa_anna }
+			prev = {
+				create_coup_from_character = {
+					CHARACTER = prev
+				}
+			}
+			add_modifier = {
+				name = coup_supported
+				days = normal_modifier_time
+				multiplier = 3
+				is_decaying = yes
+			}
+			add_modifier = {
+				name = hero_of_the_people
+				days = normal_modifier_time
+				multiplier = 7
+				is_decaying = yes
+			}
+		}
+		every_interest_group = {
+			limit = {
+				NOT = { is_interest_group_type = ig_armed_forces }
+				NOT = { is_interest_group_type = ig_intelligentsia }
+			}
+			add_modifier = {
+				name = util_colonial_admin_fail
+				days = normal_modifier_time
+				multiplier = 8
+				is_decaying = yes
+			}
+		}
+		set_ruling_interest_groups = { ig_armed_forces ig_landowners }
+		py:military_party ?= {
+			set_ruling_party = yes
+			add_momentum = 1.5 # Adjusted for historical election results
 		}
 		# prevents mexico from colonizing right out of the gate
 		create_unidirectional_truce = { country = c:COM months = 1 }
@@ -1829,6 +1959,12 @@ GLOBAL = {
 		create_unidirectional_truce = { country = c:F22 months = 1 }
 	}
 	c:TEX ?= {
+		set_secret_goal = {
+			country = c:USA
+			secret_goal = befriend
+		}
+	}
+	c:GBR ?= {
 		set_secret_goal = {
 			country = c:USA
 			secret_goal = befriend
@@ -1977,4 +2113,42 @@ GLOBAL = {
 	#		}
 	#	}
 	#}
+}
+MILITARY_FORMATIONS = {
+	c:CAL ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_pacific_coast
+			name = MiliciasDiciplinadas
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_CALIFORNIA
+				count = 1
+			}
+			save_scope_as = frontera_cal_militia
+		}
+
+		scope:cal_juan_batista_alverado_scope = {
+			transfer_to_formation = scope:frontera_cal_militia
+		}
+	}
+	c:NMX ?= {
+		create_military_formation = {
+			type = army
+			hq_region = sr:region_great_plains
+			name = MiliciasDiciplinadas
+			combat_unit = {
+				type = unit_type:combat_unit_type_irregular_infantry
+				state_region = s:STATE_NEW_MEXICO
+				count = 1
+			}
+			save_scope_as = frontera_nmx_militia
+		}
+		scope:nmx_albino_perez_scope = {
+			transfer_to_formation = scope:frontera_nmx_militia
+		}
+		scope:nmx_manuel_armijo_scope = {
+			transfer_to_formation = scope:frontera_nmx_militia
+		}
+	}
 }

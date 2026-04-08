@@ -8,8 +8,8 @@
 	}
 
 	possible = {
-		is_subject = yes
-		is_subject_type = subject_type_colony
+		#is_subject = yes
+		#is_subject_type = subject_type_colony
 		has_law = law_type:law_frontier_territorial_administration
 		#has_law = law_type:law_homesteading
 		#root.overlord = {
@@ -26,14 +26,22 @@
 		effect = {
 			if = {
 				limit = {
+					NOT = { is_subject = yes }
+				}
+				trigger_event = { id = independence.2 days = 1 popup = yes }
+			}
+			else_if = {
+				limit = {
 					root.overlord = {
 						NOT = { has_journal_entry = je_organized_territories_frontera }
 					}
 				}
 				activate_law = law_type:law_colonial_administration
+				cancel_enactment = yes
 			}
 			if = {
 				limit = {
+					any_primary_culture = { is_primary_culture_of = root.overlord }
 					has_variable = frontera_sent_cultural_community
 				}
 				# Move to event in OT scope
@@ -79,13 +87,6 @@
 			}
 		}
 	}
-
-	# progress bar for each state can show progress toward statehood, this JE should never complete, but can deactivate
-
-	#modifiers_while_active = {
-	#	state_colony_growth_speed_mult = 0.25
-	#	country_farmers_pol_str_mult = 0.25
-	#}
 
 	weight = 100
 

@@ -349,6 +349,7 @@ frontera_fort_ross.4 = {
 			limit = {
 				c:USA ?= { has_interest_marker_in_region = region_pacific_coast }
 			}
+			hidden_effect = { c:CAL ?= { add_primary_culture = cu:yankee } }
 			scope:john_sutter_scope = {
 				hidden_effect = {
 					set_home_country = c:USA
@@ -365,11 +366,29 @@ frontera_fort_ross.4 = {
 						culture = cu:yankee
 					}
 					# estimated 4000 to 20000 in subsequent genocide. lower number for gameplay could use mortality modifier later on
+					every_scope_culture = {
+						limit = {
+							has_discrimination_trait_group = heritage_group_indigenous_american
+						}
+						prev = {
+							add_culture_standard_of_living_modifier = {
+								culture = prev
+								days = very_long_modifier_time
+								multiplier = -5
+							}
+						}
+					}
+					#add_culture_standard_of_living_modifier = {
+					#	culture = cu:hokan
+					#	days = long_modifier_time
+					#	multiplier = -5
+					#}
 					hidden_effect = {
 						kill_population_in_state = {
 							value = 3800
 							culture = cu:hokan
 						}
+
 					}
 				}
 			}

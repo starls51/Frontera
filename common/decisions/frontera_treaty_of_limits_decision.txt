@@ -2,7 +2,8 @@
 	is_shown = {
 		NOT = { has_global_variable = frontera_treaty_of_limits_attempted }
 		NOT = { has_variable = manifested_destiny }
-		country_or_subject_owns_entire_state_region = STATE_TEXAS
+		#country_or_subject_owns_entire_state_region = STATE_TEXAS
+		has_state_in_state_region = STATE_TEXAS
 		has_interest_marker_in_region = region_pacific_coast
 		has_interest_marker_in_region = region_great_plains
 		any_state_in_louisiana_purchase = {
@@ -45,11 +46,11 @@
 						this = { is_subject_of = root }
 						AND = {
 							is_subject = no
-							relations:ROOT >= relations_threshold:cordial
+							relations:ROOT > relations_threshold:poor
 						}
 						AND = {
 							is_subject = yes
-							top_overlord ?= { relations:ROOT >= relations_threshold:cordial }
+							top_overlord ?= { relations:ROOT >= relations_threshold:poor }
 						}
 						}
 					}
