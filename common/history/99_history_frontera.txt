@@ -1470,6 +1470,12 @@ GLOBAL = {
 			}
 		}
 		region_state:ORG = { set_state_type = incorporated }
+		add_claim = c:ORG
+		add_claim = c:USA
+	}
+	s:STATE_WASHINGTON = {
+		add_claim = c:ORG
+		add_claim = c:USA
 	}
 	s:STATE_OREGON = {
 		set_owner_of_provinces = {
@@ -1498,6 +1504,7 @@ GLOBAL = {
 			}
 		}
 		add_claim = c:ORG
+		add_claim = c:USA
 	}
 	s:STATE_BRITISH_COLUMBIA = {
 		set_owner_of_provinces = {
@@ -2127,7 +2134,6 @@ MILITARY_FORMATIONS = {
 			}
 			save_scope_as = frontera_cal_militia
 		}
-
 		scope:cal_juan_batista_alverado_scope = {
 			transfer_to_formation = scope:frontera_cal_militia
 		}
@@ -2149,6 +2155,19 @@ MILITARY_FORMATIONS = {
 		}
 		scope:nmx_manuel_armijo_scope = {
 			transfer_to_formation = scope:frontera_nmx_militia
+		}
+	}
+}
+GOVERNMENT_SETUP = {
+	c:USA = {
+		random_interest_group = {
+			limit = {
+				leader = { has_template = USA_winfield_scott }
+			}
+			save_scope_as = ig_to_kick_scope
+		}
+		py:conservative_party = {
+			remove_ig_from_party = scope:ig_to_kick_scope
 		}
 	}
 }

@@ -282,6 +282,19 @@ frontera_oregon.3 = {
 				}
 				set_state_owner = c:USA
 			}
+			if = {
+				limit = {
+					c:ORG ?= {
+						has_claim = s:STATE_WASHINGTON
+					}
+				}
+				s:STATE_WASHINGTON = {
+					remove_claim = c:ORG
+				}
+				s:STATE_WASHINGTON = {
+					add_claim = c:USA
+				}
+			}
 		}
 		s:STATE_OREGON = {
 			#add_homeland = cu:yankee
@@ -296,6 +309,19 @@ frontera_oregon.3 = {
 					}
 				}
 				set_state_owner = c:USA
+			}
+			if = {
+				limit = {
+					c:ORG ?= {
+						has_claim = s:STATE_OREGON
+					}
+				}
+				s:STATE_OREGON = {
+					remove_claim = c:ORG
+				}
+				s:STATE_OREGON = {
+					add_claim = c:USA
+				}
 			}
 		}
 		s:STATE_MONTANA = {

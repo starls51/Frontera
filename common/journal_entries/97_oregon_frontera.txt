@@ -53,41 +53,28 @@
 		OR = {
 			AND = {
 				has_interest_marker_in_region = region_pacific_coast
-				custom_tooltip = {
-					text = oregon_tt
-					has_global_variable = oregon_trail_mapped
-				}
-				s:STATE_IDAHO = {
-					NOT = {
-						any_scope_state = {
-							owner = {
-								is_country_type = decentralized
-							}
-						}
-					}
-				}
-				s:STATE_OREGON = {
-					NOT = {
-						any_scope_state = {
-							owner = {
-								is_country_type = decentralized
-							}
-						}
-					}
-				}
-				s:STATE_WASHINGTON = {
-					NOT = {
-						any_scope_state = {
-							owner = {
-								is_country_type = decentralized
-							}
-						}
-					}
-				}
 				c:GBR ?= {
-					relations:ROOT > relations_threshold:poor
+					relations:ROOT > -20
+				}
+				OR = {
+					sr:region_pacific_coast = {
+						any_scope_state = {
+							owner = ROOT
+							is_incorporated = yes
+						}
+					}
+					custom_tooltip = {
+						text = oregon_tt
+						has_global_variable = oregon_trail_mapped
+					}
+					#s:STATE_IDAHO = {
+					#	any_scope_state = {
+					#		owner = c:USA
+					#	}
+					#}
 				}
 			}
+
 			AND = {
 				country_or_subject_owns_entire_state_region = STATE_WASHINGTON
 				country_or_subject_owns_entire_state_region = STATE_IDAHO

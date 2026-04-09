@@ -1,0 +1,18 @@
+﻿REPLACE:USA_winfield_scott = {
+	first_name = Winfield
+	last_name = Scott
+	historical = yes
+	culture = cu:dixie
+	birth_date = 1786.6.13
+	dna = dna_winfield_scott
+	is_general = yes
+	ig_leader = yes
+	interest_group = ig_armed_forces
+	ideology = ideology_moderate
+	hq = region_new_england
+	traits = {
+		innovative
+		basic_diplomat
+		cautious
+	}
+}
