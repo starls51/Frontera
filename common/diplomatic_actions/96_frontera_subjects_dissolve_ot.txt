@@ -1,0 +1,52 @@
+﻿da_frontera_dissolve_ot = {
+	groups= {
+		overlord
+	}
+	#texture = "gfx/interface/icons/diplomatic_action_icons/take_state.dds"
+	texture = "gfx/interface/icons/war_goals/annex_country.dds"
+	show_in_lens = no
+	requires_approval = no
+	should_notify_third_parties = yes
+	show_effect_in_tooltip = yes
+
+	potential = {
+		scope:target_country = { has_law = law_type:law_frontier_colonization }
+	}
+
+	possible = {
+		scope:target_country = {
+			is_subject_type = subject_type_ot_frontera
+			is_diplomatic_play_committed_participant = no
+			is_revolutionary = no
+			liberty_desire < 25
+		}
+	}
+
+	accept_effect = {
+		hidden_effect = {
+			scope:target_country = {
+				every_scope_state = {
+					set_state_owner = ROOT
+					set_state_type = unincorporated
+				}
+			}
+		}
+		# looks cleaner as tt
+		scope:target_country ?= { ROOT = { annex = prev } }
+	}
+
+	# This is a player affordance, no AI logic, for now
+	ai = {
+		evaluation_chance = {
+			value = 0.0
+		}
+
+		propose_score = {
+			value = 0
+		}
+
+		will_propose = {
+			always = no
+		}
+	}
+}

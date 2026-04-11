@@ -19,7 +19,7 @@
 		relations_progress_per_day = 1
 		relations_improvement_max = 50
 
-		subject_type = subject_type_colony
+		subject_type = subject_type_ot_frontera
 
 		second_modifier = {
 		}

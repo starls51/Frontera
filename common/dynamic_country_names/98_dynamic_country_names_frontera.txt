@@ -105,6 +105,36 @@ REPLACE:CAL = {
 	}
 
 	dynamic_country_name = {
+		name = dyn_c_british_california
+		adjective = dyn_c_british_california_adj
+
+		is_main_tag_only = no
+		priority = 1010
+
+		trigger = {
+			#scope:actor ?= {
+			#	country_has_primary_culture = cu:british
+			#}
+			coa_def_british_ensign_trigger = yes
+		}
+	}
+
+	dynamic_country_name = {
+		name = dyn_c_russian_california
+		adjective = dyn_c_russian_california_adj
+
+		is_main_tag_only = no
+		priority = 1009
+
+		trigger = {
+			scope:actor ?= {
+				country_has_primary_culture = cu:russian
+			}
+			#coa_def_british_ensign_trigger = yes
+		}
+	}
+
+	dynamic_country_name = {
 		name = dyn_c_two_californias
 		adjective = dyn_c_two_californias_adj
 

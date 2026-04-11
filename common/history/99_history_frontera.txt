@@ -200,7 +200,6 @@
 		activate_law = law_type:law_land_based_taxation
 		activate_law = law_type:law_no_schools
 		activate_law = law_type:law_no_police
-		
 		add_modifier = {
 			name = age_of_caudillos_modifier
 		}
@@ -216,6 +215,7 @@
 				cooldown = 48
 			}
 		}
+		add_journal_entry = { type = je_fort_ross_frontera }
 	}
 	# NEW MEXICO
 	create_country = {
@@ -836,6 +836,7 @@ GLOBAL = {
 			}
 		}
 		add_claim = c:CAL
+		add_claim = c:NMX
 		remove_claim = c:MEX
 		every_scope_state = {
 			limit = {
@@ -1864,6 +1865,13 @@ GLOBAL = {
 	}
 	### WARS ###
 	c:ORG ?= {
+		set_institution_investment_level = {
+			institution = institution_colonial_affairs
+			level = 2
+		}
+	}
+	# helps california to settle their land faster
+	c:CAL ?= {
 		set_institution_investment_level = {
 			institution = institution_colonial_affairs
 			level = 2

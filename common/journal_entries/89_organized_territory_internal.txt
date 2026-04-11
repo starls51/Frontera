@@ -32,12 +32,13 @@
 			}
 			else_if = {
 				limit = {
-					root.overlord = {
-						NOT = { has_journal_entry = je_organized_territories_frontera }
+					OR = {
+						root.overlord = { NOT = { has_journal_entry = je_organized_territories_frontera } }
+						NOT = { is_subject_type = subject_type_ot_frontera }
 					}
 				}
 				activate_law = law_type:law_colonial_administration
-				cancel_enactment = yes
+				#cancel_enactment = yes
 			}
 			if = {
 				limit = {

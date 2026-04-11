@@ -1,0 +1,149 @@
+﻿je_fort_ross_frontera = {
+	#icon = "gfx/interface/icons/invention_icons/navigation.dds"
+	icon = "gfx/interface/icons/invention_icons/centralization.dds"
+
+	group = je_group_foreign_affairs
+
+	complete = {
+		owns_entire_state_region = STATE_CALIFORNIA
+	}
+
+	on_complete = {
+		if = {
+			limit = {
+				NOT = { country_tier = empire }
+				NOT = { country_tier = hegemony }
+			}
+			add_modifier = {
+				name = country_modifier_golden_gate_frontera
+				multiplier = 5
+			}
+		}
+		else = {
+			add_modifier = { name = country_modifier_golden_gate_frontera }
+		}
+		s:STATE_CALIFORNIA = { add_state_trait = state_trait_golden_gate_frontera }
+	}
+
+	immediate = {
+		save_scope_as = buyer_scope
+		random_scope_state = {
+			limit = { state_region = s:STATE_CALIFORNIA }
+			save_scope_as = big_california_scope
+		}
+	}
+
+	fail = {
+		OR = {
+			hidden_trigger = { NOT = { has_state_in_state_region = STATE_CALIFORNIA } }
+			s:STATE_CALIFORNIA = {
+				custom_tooltip = {
+					text = frontera_je_fort_ross_fail_trigger_tt
+					any_scope_state = {
+						owner = {
+							NOT = { owner = ROOT }
+							NOT = { is_country_type = decentralized }
+						}
+						scope:big_california_scope.num_provinces < num_provinces
+					}
+				}
+			}
+		}
+		# I don't have any states in California
+		# Another country's state in california has more provinces than I do
+	}
+
+	on_fail = {
+		s:STATE_CALIFORNIA = {
+				custom_tooltip = {
+				text = frontera_je_fort_ross_fail_effect_tt
+				ordered_scope_state = {
+					limit = { owner = { NOT = { is_country_type = decentralized } } }
+        	        order_by = num_provinces
+					position = 0
+					check_range_bounds = no
+        	        owner = {
+						add_journal_entry = { type = je_fort_ross_frontera }
+					}
+				}
+			}
+		}
+		# If california is split between non-decentralized countries, give the JE to the country with the most states in california.
+		# Otherwise, trigger the sutters fort event in the owner of california 
+	}
+
+	on_monthly_pulse = {
+		effect = {
+			# check for sale of ft ross to alta california
+			if = {
+				limit = { p:x3F27C8.state.owner = { is_country_type = decentralized } }
+				s:STATE_CALIFORNIA = { set_variable = frontera_fort_ross_sale_initiated }
+				p:x3F27C8.state.owner = {
+					set_country_type = unrecognized
+					trigger_event = { id = independence.2 days = 1 popup = no }
+				}
+			}
+			if = {
+				limit = {
+					s:STATE_CALIFORNIA = {
+						NOT = { has_variable = frontera_fort_ross_sale_initiated }
+						NOT = { any_scope_country = { is_diplomatic_play_committed_participant = yes } }
+						NOT = {
+							any_scope_country = {
+								is_country_type = decentralized
+								count > 7
+							}
+						}
+					}
+				}
+				# p:x3F27C8.state.owner Sacramento - New Helvetia
+				# Sonoma County - FT Ross
+				p:x5EF8F5.state.owner = { save_scope_as = buyer_scope }
+				p:x3F27C8.state = {
+					owner = {
+						if = {
+							limit = {
+								game_date > 1863.2.23
+							}
+							# if sutter would be older than 60, someone will go crazy and pretend to be him
+							random_character_in_exile_pool = {
+								add_trait = psychological_affliction
+								save_scope_as = john_sutter_scope
+							}
+						}
+						else = {
+							create_character = {
+								template = cal_john_sutter_template
+								on_created = {
+									set_home_country_definition = cd:SWI
+									add_character_role = agitator
+								}
+								save_scope_as = john_sutter_scope
+							}
+						}
+						random_primary_culture = { save_scope_as = seller_culture_scope }
+						save_scope_as = seller_scope
+						overlord ?= { save_scope_as = overlord_scope }
+					}
+					save_scope_as = california_scope
+				}
+				if = {
+					limit = { scope:seller_scope = { this = scope:buyer_scope } }
+					clear_saved_scope = seller_scope
+					s:STATE_CALIFORNIA = { set_variable = frontera_fort_ross_sale_initiated }
+					scope:buyer_scope = { trigger_event = { id = frontera_fort_ross.4 days = -1 popup = no } }
+				}
+				else = {
+					s:STATE_CALIFORNIA = { set_variable = frontera_fort_ross_sale_initiated }
+					scope:seller_scope = { trigger_event = { id = frontera_fort_ross.1 days = -1 popup = no } }
+				}
+			}
+		}
+	}
+	on_yearly_pulse = {
+	}
+
+	weight = 100
+
+	should_be_pinned_by_default = yes
+}

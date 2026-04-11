@@ -14,17 +14,18 @@
 	}
 
 	potential = {
-		has_law = law_type:law_frontier_colonization
+		#has_law = law_type:law_frontier_colonization
+		has_journal_entry = je_organized_territories_frontera
 		scope:target_country = {
-			NOT = {has_law = law_type:law_frontier_territorial_administration}
 			NOT = { is_diplomatic_play_enemy_of = root }
+			NOT = { is_subject_type = subject_type_ot_frontera }
 		}
 	}
 
 	possible = {
 		is_revolutionary = no
-		NOT = { is_country_type = unrecognized }
-		NOT = {has_law = law_type:law_frontier_territorial_administration}
+		#NOT = { is_country_type = unrecognized }
+		NOT = { is_subject_type = subject_type_ot_frontera }
 		scope:target_country = {
 			liberty_desire <= 25
 			is_revolutionary = no

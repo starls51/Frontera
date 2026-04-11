@@ -15,6 +15,7 @@
 	possible = {
 		scope:target_country = {
 			OR = {
+				is_subject_type = subject_type_ot_frontera
 				is_subject_type = subject_type_colony
 				is_subject_type = subject_type_puppet
 				is_subject_type = subject_type_vassal
@@ -124,6 +125,7 @@
 				limit = {
 					any_subject_or_below = {
 						OR = {
+							is_subject_type = subject_type_ot_frontera
 							is_subject_type = subject_type_colony
 							is_subject_type = subject_type_puppet
 							is_subject_type = subject_type_vassal

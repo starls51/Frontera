@@ -16,6 +16,8 @@
  je_tooltip_no_homelands_frontera:0 "Is #bold not#! [ROOT.GetCountry.GetAdjectiveNoFormatting] [Concept('concept_homeland', '$concept_homeland$')]."
  je_tooltip_homeland_required_frontera:0 "Is [ROOT.GetCountry.GetAdjectiveNoFormatting] [Concept('concept_homeland', '$concept_homeland$')]."
  je_tooltip_incorporated_adjacency_frontera:0 "Is #bold adjacent#! to [ROOT.GetCountry.GetAdjectiveNoFormatting] [Concept('concept_incorporated_state','$concept_incorporated_state$')]."
+ frontera_je_fort_ross_fail_effect_tt:0 "Largest [concept_state] owner in [THIS.GetStateRegion.GetName] activates this [concept_journal_entry]"
+ frontera_je_fort_ross_fail_trigger_tt:0 "[ROOT.GetCountry.GetNameNoFlag] does #bold not#! have the largest [concept_state] in [THIS.GetStateRegion.GetName]"
  sunset_route_built_yes_tt:0 "The #bold Sunset Route#! exists"
  sunset_route_built_no_tt:0 "The #bold Sunset Route#! does not exist"
  colonial_affairs_owner_is_discriminated_country_tt:0 "Any [concept_state] adjacent to [GetPlayer.GetAdjective] [concept_homeland] belongs to a [concept_country] whose [concept_primary_cultures] are all below [Concept('concept_discrimination','@acceptance_status_4! $second_rate_citizen$')] in [GetPlayer.GetName]."

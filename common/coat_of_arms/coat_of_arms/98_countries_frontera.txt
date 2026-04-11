@@ -46,6 +46,32 @@ REPLACE:CAL = { # California Bear Flag
 	}
 }
 
+CAL_notext = { # California Bear Flag without text placeholder for national flags
+	pattern = "pattern_solid.tga"
+	color1 = "white"
+	color2 = "black"
+
+	colored_emblem = {
+		texture = "ce_star_05.dds"
+		color1 = "red"
+		color2 = "red"
+		instance = { scale = { 0.25 0.25 } position = { 0.14 0.2 } }
+	}
+	colored_emblem = {
+		texture = "ce_bear_california.dds"
+		color1 = "tan"
+		color2 = "brown"
+		color3 = "white"
+		instance = { scale = { 0.65 0.65 } position = { 0.5 0.46 } }
+	}
+	colored_emblem = {
+		texture = "ce_solid.dds"
+		color1 = "green"
+		color2 = "green"
+		instance = { scale = { 1.0 0.25 } position = { 0.5 0.875 } }
+	}
+}
+
 CAL_star = { # California Red Star on White
 	pattern = "pattern_solid.tga"
 	color1 = "white"

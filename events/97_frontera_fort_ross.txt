@@ -24,49 +24,14 @@ frontera_fort_ross.1 = {
 	}
 
 	immediate = {
-		owner = {
-			save_scope_as = seller_scope
-			overlord ?= { save_scope_as = overlord_scope }
-		}
-		scope:seller_scope = {
-			random_primary_culture = { save_scope_as = seller_culture_scope }
-		}
-		s:STATE_CALIFORNIA = {
-			random_scope_state = {
-				limit = {
-					owner = scope:seller_scope
-				}
-				save_scope_as = california_scope
-			}
-			ordered_scope_state = {
-				limit = {
-					owner = { NOT = { is_country_type = decentralized } }
-				}
-                order_by = arable_land
-				position = 0
-				check_range_bounds = no
-                owner = {
-					save_scope_as = buyer_scope
-					create_character = {
-						template = cal_john_sutter_template
-						on_created = {
-							set_home_country_definition = cd:SWI
-							add_character_role = agitator
-							# Yes he is Swiss but he abandoned his wife and children due to legal and debt issues- if exiled he will return to USA
-						}
-						save_scope_as = john_sutter_scope
-					}
-				}
-			}
-		}
 	}
 	# REFUSE SALE
 	option = {
 		name = frontera_fort_ross.1.a
-		# trigger = {} Add a trigger here to require a certain number of pops in Sonoma before player is allowed to stake claims
+		# trigger = {} May need a trigger for min req pops, SOL, GDP to stake claim
 		# seller will gain claim on California
 		scope:buyer_scope = {
-			trigger_event = { id = frontera_fort_ross.3 days = -1 popup = yes }
+			trigger_event = { id = frontera_fort_ross.3 days = -1 popup = no }
 		}
 		s:STATE_CALIFORNIA = {
 			add_claim = scope:seller_scope
@@ -118,7 +83,7 @@ frontera_fort_ross.1 = {
 		}
 		name = frontera_fort_ross.1.c
 		scope:buyer_scope = {
-			trigger_event = { id = frontera_fort_ross.3 days = -1 popup = yes }
+			trigger_event = { id = frontera_fort_ross.3 days = -1 popup = no }
 		}
 		s:STATE_CALIFORNIA = {
 			add_claim = scope:seller_scope
@@ -179,7 +144,7 @@ frontera_fort_ross.2 = {
 			save_scope_as = seller_scope
 		}
 		scope:buyer_scope = {
-			trigger_event = { id = frontera_fort_ross.3 days = -1 popup = yes }
+			trigger_event = { id = frontera_fort_ross.3 days = -1 popup = no }
 		}
 		ai_chance = {
 			#change this so an aggressive Russia with high country rank WILL hold Ft Ross against Mexico
@@ -190,7 +155,7 @@ frontera_fort_ross.2 = {
 	option = {
 		name = frontera_fort_ross.2.b
 		scope:buyer_scope = {
-			trigger_event = { id = frontera_fort_ross.4 days = -1 popup = yes }
+			trigger_event = { id = frontera_fort_ross.4 days = -1 popup = no }
 		}
 		default_option = yes
 		ai_chance = {
@@ -266,11 +231,18 @@ frontera_fort_ross.4 = {
 	}
 
 	immediate = {
-		s:STATE_CALIFORNIA = {
+		#s:STATE_CALIFORNIA = {
+		#	random_scope_state = {
+		#		limit = {
+		#			owner = scope:seller_scope
+		#		}
+		#		set_state_owner = scope:buyer_scope
+		#		save_scope_as = california_scope
+		#	}
+		#}
+		scope:seller_scope ?= {
 			random_scope_state = {
-				limit = {
-					owner = scope:seller_scope
-				}
+				limit = { state_region = s:STATE_CALIFORNIA }
 				set_state_owner = scope:buyer_scope
 				save_scope_as = california_scope
 			}
@@ -353,7 +325,12 @@ frontera_fort_ross.4 = {
 			scope:john_sutter_scope = {
 				hidden_effect = {
 					set_home_country = c:USA
-					change_character_culture = cu:yankee
+					if = {
+						limit = {
+							has_template = cal_john_sutter_template
+						}
+						change_character_culture = cu:yankee
+					}
 				}
 				transfer_character = scope:buyer_scope
 			}

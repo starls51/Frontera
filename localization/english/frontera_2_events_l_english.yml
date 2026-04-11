@@ -29,6 +29,6 @@
  frontera_ot.4.d:0 "[SCOPE.sCountry('ot_1_scope').GetRuler.GetPrimaryRoleTitle] [SCOPE.sCountry('ot_1_scope').GetRuler.GetLastName] has approached the government with concerns over an unclear boundary with [SCOPE.sCountry('ot_2_scope').GetNameNoFormatting]. Tax collectors claiming to represent [SCOPE.sCountry('ot_2_scope').GetRuler.GetPrimaryRoleTitle] [SCOPE.sCountry('ot_2_scope').GetRuler.GetLastName] have attempted to collect from settlements in [SCOPE.sState('ot_1_state_scope').GetName]."
  frontera_ot.4.f:0 "Who could tell little borders from wrinkles on this grubby old map?"
  frontera_ot.4.a:0 "Order a resurvey in [SCOPE.sCountry('ot_1_scope').GetNameNoFlag]."
- frontera_ot.4.b:0 "The [SCOPE.sCountry('ot_2_scope').GetRuler.GetPrimaryRoleTitle] of [SCOPE.sCountry('ot_2_scope').GetNameNoFlag] is within his rights."
+ frontera_ot.4.b:0 "The [SCOPE.sCountry('ot_2_scope').GetRuler.GetPrimaryRoleTitle] of [SCOPE.sCountry('ot_2_scope').GetNameNoFlag] is within [SCOPE.sCountry('ot_2_scope').GetRuler.GetHerHis] rights."
  frontera_ot.4.c:0 "Yes! Carnage! Blood for the [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle]!"
  frontera_ot.4.e:0 "Yes! Carnage! Blood for the [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle]!"
