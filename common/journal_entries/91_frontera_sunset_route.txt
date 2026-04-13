@@ -14,18 +14,24 @@
 			text = sunset_route_built_no_tt
 			NOT = { has_global_variable = sunset_route_built }
 		}
-		any_scope_state = {
-			state_region = s:STATE_CALIFORNIA
-			has_building = building_railway
-			any_neighbouring_state = {
-				state_region = s:STATE_ARIZONA
+		s:STATE_CALIFORNIA = {
+			any_scope_state = {
+				owner = ROOT
+				is_coastal = yes
+				#has_building = building_railway # doesnt need railway to start JE
+				any_neighbouring_state = {
+					state_region = s:STATE_ARIZONA
+					owner ?= { NOT = { is_country_type = decentralized } }
+				}
 			}
 		}
 		s:STATE_TEXAS = {
 			any_scope_state = {
+				is_coastal = yes
 				has_building = building_railway
 				any_neighbouring_state = {
 					state_region = s:STATE_NEW_MEXICO
+					owner ?= { NOT = { is_country_type = decentralized } }
 				}
 			}
 		}
@@ -43,48 +49,8 @@
 	}
 
 	on_complete = {
-		random_scope_state = {
-			limit = {
-				state_region = s:STATE_CALIFORNIA
-			}
-			add_modifier = {
-				name = sunset_route_frontera
-				days = long_modifier_time
-			}
-		}
-		every_state = {
-			limit = {
-				state_region = s:STATE_TEXAS
-			}
-			add_modifier = {
-				name = sunset_route_frontera
-				days = normal_modifier_time
-			}
-		}
-		every_state = {
-			limit = {
-				OR = {
-					AND = {
-						state_region = s:STATE_CALIFORNIA
-						NOT = { owner = root }
-					}
-					state_region = s:STATE_NEVADA
-					state_region = s:STATE_ARIZONA
-					state_region = s:STATE_NEW_MEXICO
-				}
-			}
-			add_modifier = {
-				name = sunset_route_frontera
-				days = short_modifier_time
-			}
-		}
-		hidden_effect = {
-			every_state = {
-				limit = {
-					has_modifier = modifier_santafe_trail_frontera
-				}
-				remove_modifier = modifier_santafe_trail_frontera
-			}
+		custom_tooltip = {
+		text = sunset_route_complete_effect_tt
 		}
 	}
 

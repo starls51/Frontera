@@ -10,61 +10,25 @@
 	possible = {
 		save_temporary_scope_as = root_scope
 		has_technology_researched = steel_railway_cars
-		s:STATE_ARIZONA = {
-			NOT = {
-				any_scope_state = {
-					OR = {
-						NOT = { has_building = building_railway }
+		any_state_region_in_frontera_sunset_route = {
+			any_scope_country = { NOT = { is_country_type = decentralized } }
+			count = 4
+		}
+		NOT = {
+			any_state_in_frontera_sunset_route = {
+				owner ?= { NOT = { is_country_type = decentralized } }
+				OR = {
+					NOT = { has_building = building_railway }
+					owner ?= {
 						NOR = {
-							owner ?= scope:root_scope
-							owner ?= {
-								is_subject_of = scope:root_scope
-							}
-							owner ?= {
-								"relations(scope:root_scope)" >= 25
-							}
+							this = scope:root_scope
+							is_subject_of = scope:root_scope
+							"relations(scope:root_scope)" >= 25
 						}
 					}
 				}
 			}
 		}
-		s:STATE_NEW_MEXICO = {
-			NOT = {
-				any_scope_state = {
-					OR = {
-						NOT = { has_building = building_railway }
-						NOR = {
-							owner ?= scope:root_scope
-							owner ?= {
-								is_subject_of = scope:root_scope
-							}
-							owner ?= {
-								"relations(scope:root_scope)" >= 25
-							}
-						}
-					}
-				}
-			}
-		}
-		s:STATE_TEXAS = {
-			NOT = {
-				any_scope_state = {
-					OR = {
-						NOT = { has_building = building_railway }
-						NOR = {
-							owner ?= scope:root_scope
-							owner ?= {
-								is_subject_of = scope:root_scope
-							}
-							owner ?= {
-								"relations(scope:root_scope)" >= 25
-							}
-						}
-					}
-				}
-			}
-		}
-
 	}
 
 	ai_chance = {

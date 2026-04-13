@@ -188,7 +188,7 @@ sub_usa_eagle_canton = {
 	}
 }
 
-REPLACE:sub_legend_california = {
+sub_legend_california_br = {
 	# pattern = "pattern_solid.tga"
 	color1 = "brown"
 	color2 = "brown"
@@ -266,7 +266,7 @@ REPLACE:sub_legend_california = {
 	}
 }
 
-REPLACE:sub_legend_republic = {
+sub_legend_republic_br = {
 	# pattern = "pattern_solid.tga"
 	color1 = "brown"
 	color2 = "brown"

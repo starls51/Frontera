@@ -1,0 +1,823 @@
+﻿# Del Monte
+company_cal_packing_frontera = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/cal_packing_frontera.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_CALIFORNIA }
+
+	building_types = {
+		building_food_industry
+		building_fishing_wharf
+	}
+
+	extension_building_types = {
+		building_port
+		building_banana_plantation
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_pacific_coast
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_CALIFORNIA
+			}
+		}
+	}
+
+	possible = {
+		AND = {
+			any_scope_state = {
+				state_region = s:STATE_CALIFORNIA
+				any_scope_building = {
+					is_building_type = building_food_industry
+					level >= 1
+				}
+			}
+			any_scope_state = {
+				any_scope_building = {
+					is_building_type = building_fishing_wharf
+					level >= 5
+				}
+			}
+		}	
+	}
+
+	prosperity_modifier = {
+		building_port_throughput_add = 0.2
+	}
+
+	ai_will_do = {
+		AND = {
+			any_scope_state = {
+				state_region = s:STATE_CALIFORNIA
+				any_scope_building = {
+					is_building_type = building_food_industry
+					level >= 1
+				}
+			}
+			any_scope_state = {
+				any_scope_building = {
+					is_building_type = building_fishing_wharf
+					level >= 5
+				}
+			}
+		}	
+	}
+
+	ai_construction_targets = {
+		building_food_industry = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_CALIFORNIA
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+company_ducommun_frontera = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/ducommun_frontera.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+
+	flavored_company = yes
+
+	category = shopkeeper_owned
+
+	preferred_headquarters = { STATE_CALIFORNIA }
+
+	building_types = {
+		building_tooling_workshop
+		building_steel_mill
+	}
+
+	extension_building_types = {
+		building_iron_mine
+	}
+
+	possible_prestige_goods = {
+		prestige_good_generic_tools
+	}
+
+	prestige_goods_trigger = {
+		custom_tooltip = {
+			text = je_prestige_goods_tools_complete_tt
+			has_variable = prestige_good_generic_tools_var
+		}
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_pacific_coast
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_CALIFORNIA
+			}
+		}
+	}
+
+	possible = {
+		#has_technology_researched = bessemer_process
+		any_scope_state = {
+			state_region = s:STATE_CALIFORNIA
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_tooling_workshop
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		building_arms_industry_throughput_add = 0.1
+		building_shipyard_throughput_add = 0.1
+		building_military_shipyard_throughput_add = 0.1
+	}
+
+	ai_will_do = {
+		#has_technology_researched = bessemer_process
+		any_scope_state = {
+			state_region = s:STATE_CALIFORNIA
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_tooling_workshop = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_CALIFORNIA
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+###### meme company, factories always exploded, AI will never do
+company_giant_powder_frontera = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/giant_powder_frontera.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_heavy.dds"
+
+	flavored_company = yes
+
+	category = academic_owned
+
+	preferred_headquarters = { STATE_CALIFORNIA }
+
+	building_types = {
+		building_explosives_factory
+	}
+
+	extension_building_types = {
+		#building_chemical_plant
+		building_munition_plant
+		building_sulfur_mine
+	}
+
+	possible_prestige_goods = {
+		prestige_good_generic_explosives
+	}
+
+	prestige_goods_trigger = {
+		custom_tooltip = {
+			text = je_prestige_goods_explosives_complete_tt
+			has_variable = prestige_good_generic_explosives_var
+		}
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_pacific_coast
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_CALIFORNIA
+			}
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_CALIFORNIA
+			any_scope_building = {
+				is_building_type = building_explosives_factory
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		state_mortality_mult = 0.01
+		#country_military_tech_spread_mult = 0.1
+		country_weekly_innovation_mult = 0.05
+		country_qualification_growth_open_prejudice_mult = 0.25
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_CALIFORNIA
+			any_scope_building = {
+				is_building_type = building_explosives_factory
+				level >= 5
+			}
+		}
+	}
+
+	ai_construction_targets = {
+		building_explosives_factory = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_CALIFORNIA
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+company_ornn_frontera = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/ornn_frontera.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_OREGON }
+
+	building_types = {
+		building_port
+		building_logging_camp
+	}
+
+	extension_building_types = {
+		building_railway
+	}
+
+	possible_prestige_goods = {
+		prestige_good_generic_merchant_marine
+	}
+
+	prestige_goods_trigger = {
+		custom_tooltip = {
+			text = je_prestige_goods_merchant_marine_complete_tt
+			has_variable = prestige_good_generic_merchant_marine_var
+		}
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_pacific_coast
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_OREGON
+			}
+		}
+	}
+
+	possible = {
+		has_technology_researched = paddle_steamer
+		has_technology_researched = railways
+		NOT = {
+			has_company = company_type:company_union_pacific_frontera
+		}
+		AND = {
+			any_scope_state = {
+				state_region = s:STATE_OREGON
+				any_scope_building = {
+					is_building_type = building_port
+					level >= 1
+				}
+			}
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_WASHINGTON
+					state_region = s:STATE_OREGON
+					state_region = s:STATE_IDAHO
+				}
+				any_scope_building = {
+					is_building_type = building_logging_camp
+					level >= 5
+				}
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		building_group_bg_fishing_throughput_add = 0.15
+		building_group_bg_logging_throughput_add = 0.15
+	}
+
+	ai_will_do = {
+		AND = {
+			any_scope_state = {
+				state_region = s:STATE_OREGON
+				any_scope_building = {
+					is_building_type = building_port
+					level >= 1
+				}
+			}
+			any_scope_state = {
+				OR = {
+					state_region = s:STATE_WASHINGTON
+					state_region = s:STATE_OREGON
+					state_region = s:STATE_IDAHO
+				}
+				any_scope_building = {
+					is_building_type = building_logging_camp
+					level >= 5
+				}
+			}
+		}
+	}
+
+	ai_construction_targets = {
+		building_port = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_OREGON
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+company_levi_frontera = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/levi_frontera.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_manufacturing_light.dds"
+
+	flavored_company = yes
+
+	category = shopkeeper_owned
+
+	preferred_headquarters = { STATE_CALIFORNIA }
+
+	building_types = {
+		building_trade_center
+		building_textile_mill
+	}
+
+	extension_building_types = {
+		building_synthetics_plant
+	}
+
+	# Blue Jeans and Rock Music
+	possible_prestige_goods = {
+		prestige_good_denim_frontera
+	}
+
+	prestige_goods_trigger = {
+		custom_tooltip = {
+			text = je_prestige_goods_clothes_complete_tt
+			has_variable = prestige_good_generic_clothes_var
+		}
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_pacific_coast
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_CALIFORNIA
+			}
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_CALIFORNIA
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_textile_mill
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		country_farmers_pol_str_mult = 0.1
+		country_laborers_pol_str_mult = 0.1
+		building_gold_mine_throughput_add = 0.15
+		building_livestock_ranch_throughput_add = 0.15
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_CALIFORNIA
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_textile_mill = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_CALIFORNIA
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+#company_pacific_bone_frontera = {
+#	icon = "gfx/interface/icons/company_icons/historical_company_icons/bolivia_csfa.dds"
+#	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
+#
+#	flavored_company = yes
+#
+#	preferred_headquarters = { STATE_CALIFORNIA }
+#
+#	building_types = {
+#		building_chemical_plant
+#		building_sulfur_mine
+#	}
+#
+#	extension_building_types = {
+#		building_sugar_plantation
+#	}
+#
+#	possible_prestige_goods = {
+#		prestige_good_generic_fertilizer
+#	}
+#
+#	prestige_goods_trigger = {
+#		custom_tooltip = {
+#			text = je_prestige_goods_fertilizer_complete_tt
+#			has_variable = prestige_good_generic_fertilizer_var
+#		}
+#	}
+#
+#	potential = {
+#		has_interest_marker_in_region = region_pacific_coast
+#	}
+#
+#	attainable = {
+#		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+#			any_scope_state = {
+#				state_region = s:STATE_CALIFORNIA
+#			}
+#		}
+#	}
+#
+#	possible = {
+#		any_scope_state = {
+#			state_region = s:STATE_CALIFORNIA
+#			any_scope_building = {
+#				is_building_type = building_chemical_plant
+#				level >= 5
+#			}
+#		}
+#	}
+#
+#	prosperity_modifier = {
+#		building_group_bg_agriculture_throughput_add = 0.2
+#		interest_group_ig_rural_folk_approval_add = 3
+#	}
+#
+#	ai_will_do = {
+#		any_scope_state = {
+#			state_region = s:STATE_CALIFORNIA
+#			any_scope_building = {
+#				is_building_type = building_chemical_plant
+#				level >= 5
+#			}
+#		}
+#	}
+#
+#	ai_construction_targets = {
+#		building_chemical_plant = {
+#			level = 5
+#			state_trigger = {
+#				state_region = s:STATE_CALIFORNIA
+#			}
+#		}
+#	}
+#
+#	ai_weight = {
+#		value = 3 # Higher base value for flavored companies
+#	}
+#}
+company_sperry_frontera = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/sperry_frontera.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_wheat.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_CALIFORNIA }
+
+	building_types = {
+		building_wheat_farm
+		building_maize_farm
+	}
+
+	extension_building_types = {
+		building_motor_industry
+		building_food_industry
+	}
+
+	# drifting snow flower - locally sourced in cal
+	possible_prestige_goods = {
+		prestige_good_drifted_snow_flour_frontera
+	}
+
+	prestige_goods_trigger = {
+		custom_tooltip = {
+			text = je_prestige_goods_grain_complete_tt
+			has_variable = prestige_good_generic_grain_var
+		}
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_pacific_coast
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_CALIFORNIA
+			}
+		}
+	}
+
+	possible = {
+		any_scope_state = {
+			state_region = s:STATE_CALIFORNIA
+			any_scope_building = {
+				is_building_type = building_wheat_farm
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		building_motor_industry_throughput_add = 0.1
+		state_radicalism_increases_violent_hostility_mult = -0.05
+		state_radicalism_increases_cultural_erasure_mult = -0.05
+		state_radicalism_increases_open_prejudice_mult = -0.05
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			state_region = s:STATE_CALIFORNIA
+			any_scope_building = {
+				is_building_type = building_wheat_farm
+				level >= 5
+			}
+		}
+	}
+
+	ai_construction_targets = {
+		building_wheat_farm = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_CALIFORNIA
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+company_union_iron_works_frontera = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/union_iron_frontera.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_harbor_shipbuilding.dds"
+
+	flavored_company = yes
+
+	category = shopkeeper_owned
+
+	preferred_headquarters = { STATE_CALIFORNIA }
+
+	building_types = {
+		building_shipyard
+		building_motor_industry
+	}
+
+	extension_building_types = {
+		building_tooling_workshop
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_pacific_coast
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_CALIFORNIA
+			}
+		}
+	}
+
+	possible = {
+		has_technology_researched = screw_frigate
+		any_scope_state = {
+			state_region = s:STATE_CALIFORNIA
+			any_scope_building = {
+				is_building_type = building_shipyard
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		country_convoys_capacity_mult = 0.15
+		building_group_bg_fishing_throughput_add = 0.2
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_shipyard
+				level >= 5
+			}
+		}
+	}
+}
+company_union_pacific_frontera = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/union_pacific_frontera.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_NEBRASKA }
+
+	building_types = {
+		building_railway
+		building_motor_industry
+	}
+
+	extension_building_types = {
+		building_steel_mill
+		
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_pacific_coast
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_CALIFORNIA
+			}
+		}
+	}
+
+	possible = {
+		has_technology_researched = steel_railway_cars
+		NOT = {
+			has_company = company_type:company_ornn_frontera
+		}
+		any_state_in_american_west_frontera = {
+			owner = ROOT
+			any_scope_building = {
+				is_building_type = building_railway
+				level >= 1
+			}
+			count >= 5
+		}
+		any_scope_state = {
+			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_railway
+				level >= 5
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		state_assimilation_mult = 0.15
+		country_standard_of_living_full_acceptance_add = 0.5
+		country_standard_of_living_second_rate_citizen_add = 0.5
+		country_standard_of_living_cultural_erasure_add = -0.5
+		country_standard_of_living_violent_hostility_add = -0.5
+	}
+
+	ai_will_do = {
+		has_technology_researched = steel_railway_cars
+		any_scope_state = {
+			state_region = s:STATE_CALIFORNIA
+			is_incorporated = yes
+		}
+	}
+
+	ai_construction_targets = {
+		building_railway = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_CALIFORNIA
+			}
+		}
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}
+company_wells_fargo_frontera = {
+	icon = "gfx/interface/icons/company_icons/historical_company_icons/wells_fargo_frontera.dds"
+	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_railways.dds"
+
+	flavored_company = yes
+
+	preferred_headquarters = { STATE_CALIFORNIA }
+
+	building_types = {
+		building_trade_center
+		building_gold_mine
+	}
+
+	extension_building_types = {
+		building_railway
+	}
+
+	potential = {
+		has_interest_marker_in_region = region_pacific_coast
+	}
+
+	attainable = {
+		hidden_trigger = { # Hide attainable if it's always fulfilled by possible
+			any_scope_state = {
+				state_region = s:STATE_CALIFORNIA
+			}
+		}
+	}
+
+	possible = {
+		#has_technology_researched = steel_railway_cars
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_CALIFORNIA
+				state_region = s:STATE_NEVADA
+			}
+			any_scope_building = {
+				is_building_type = building_gold_mine
+				level >= 5
+			}
+		}
+	}
+
+	ai_will_do = {
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_CALIFORNIA
+				state_region = s:STATE_NEVADA
+			}
+			any_scope_building = {
+				is_building_type = building_gold_mine
+				level >= 5
+			}
+		}
+	}
+
+	ai_construction_targets = {
+		building_trade_center = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_CALIFORNIA
+			}
+		}
+		building_trade_center = {
+			level = 1
+			state_trigger = {
+				is_in_geographic_region = geographic_region_american_west_frontera
+			}
+		}
+		building_gold_mine = {
+			level = 5
+			state_trigger = {
+				state_region = s:STATE_NEVADA
+			}
+		}
+	}
+
+	prosperity_modifier = {
+		building_railway_throughput_add = 0.1
+		country_max_companies_add = 1
+	}
+
+	ai_weight = {
+		value = 3 # Higher base value for flavored companies
+	}
+}

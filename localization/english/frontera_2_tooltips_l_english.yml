@@ -20,6 +20,7 @@
  frontera_je_fort_ross_fail_trigger_tt:0 "[ROOT.GetCountry.GetNameNoFlag] does #bold not#! have the largest [concept_state] in [THIS.GetStateRegion.GetName]"
  sunset_route_built_yes_tt:0 "The #bold Sunset Route#! exists"
  sunset_route_built_no_tt:0 "The #bold Sunset Route#! does not exist"
+ sunset_route_complete_effect_tt:0 "Every [concept_state] in [GetGeographicRegion('geographic_region_sunset_route_frontera').GetName]:\n[GetStaticModifier('sunset_route_frontera').GetDesc]\n#italic Temporary state modifier#!"
  colonial_affairs_owner_is_discriminated_country_tt:0 "Any [concept_state] adjacent to [GetPlayer.GetAdjective] [concept_homeland] belongs to a [concept_country] whose [concept_primary_cultures] are all below [Concept('concept_discrimination','@acceptance_status_4! $second_rate_citizen$')] in [GetPlayer.GetName]."
  mesilla_treaty_creation_tt:0 "Add a [concept_treaty] offer to sell any owned land in Arizona or New Mexico to the [SCOPE.sCountry('buyer_scope').GetName] for a weekly sum of #bold £3500#! per [concept_state]"
  treaty_of_limits_province_transfer_tt:0 "[SCOPE.sCountry('buyer_scope').GetName] becomes the partial owner of [GetGeographicRegion('geographic_region_frontera_adams_onis_treatyline').GetName]"

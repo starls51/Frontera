@@ -1,0 +1,11 @@
+﻿prestige_good_denim_frontera = {
+	base_good = clothes
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/frontera_denim_prestige.dds"
+}
+
+prestige_good_drifted_snow_flour_frontera = {
+	base_good = grain
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/frontera_drifted_snow_flour_prestige.dds"
+}

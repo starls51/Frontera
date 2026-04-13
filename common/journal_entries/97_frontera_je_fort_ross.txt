@@ -16,7 +16,7 @@
 			}
 			add_modifier = {
 				name = country_modifier_golden_gate_frontera
-				multiplier = 5
+				multiplier = 3
 			}
 		}
 		else = {

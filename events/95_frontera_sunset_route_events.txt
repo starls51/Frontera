@@ -37,10 +37,35 @@ frontera_sunset_route_event.1 = {
 	option = {
 		name = frontera_sunset_route_event.1.a
 		default_option = yes
-		add_modifier = {
+		custom_tooltip = {
+		text = sunset_route_complete_effect_tt
+			add_modifier = {
 				name = sunset_route_frontera_reward_int
 				days = long_modifier_time
 			}
+			every_state_in_frontera_sunset_route = {
+				limit = { NOT = { owner ?= { is_country_type = decentralized } } }
+				if = {
+					limit = { state_region = s:STATE_CALIFORNIA }
+						add_modifier = {
+						name = sunset_route_frontera
+						days = long_modifier_time
+					}
+				}
+				else = {
+					add_modifier = {
+						name = sunset_route_frontera
+						days = normal_modifier_time
+					}
+				}
+			}
+			every_state = {
+				limit = {
+					has_modifier = modifier_santafe_trail_frontera
+				}
+				remove_modifier = modifier_santafe_trail_frontera
+			}
+		}
 		hidden_effect = {
 			every_country = {
 				limit = {

@@ -6,7 +6,7 @@
  je_sunset_route_frontera:0 "The Sunset Route"
  je_sunset_route_frontera_reason:0 "A warm-weather rail connection to California would allow for an unprecedented flow of commerce and people between the East and West. However, this project requires significant coordination. Apart from settling ongoing #italic frog wars#! between property owners, it is also imperative to standardize gauges, signals, and scheduling. This may be more difficult if foreign countries control areas of track along the proposed route, but the task is by no means impossible."
  je_sunset_route_frontera_button:0 "Connect the Sunset Route"
- je_sunset_route_frontera_button_desc:0 "Mediate between various stakeholders to create a new rail route to California."
+ je_sunset_route_frontera_button_desc:0 "Mediate between various stakeholders, building a new rail route to California"
  je_gadsden_purchase_frontera_button:0 "Test the Borders"
  je_gadsden_purchase_frontera_button_desc:0 "Westward rail expansion will be more manageable with physical control over the required land corridor. While politically risky, inciting border disputes with neighbors may allow for further diplomatic or military options to acquire land for the project."
  je_organized_territory_internal_frontera:0 "Populate the Frontier"

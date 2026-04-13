@@ -29,12 +29,14 @@
 			NOT = { is_country_type = decentralized }
 			is_direct_subject_of = root
 			OR = {
+				### stopgap fix until I mod AI ###
 				hidden_trigger = {
 					AND = {
 						has_diplomatic_pact = { who = root type = frontera_organized_territory }
 						ROOT = { is_player = yes }
 					}
 				}
+				###   ###
 				has_diplomatic_pact = { who = root type = colony }
 				has_diplomatic_pact = { who = root type = puppet }
 				has_diplomatic_pact = { who = root type = vassal }
@@ -87,4 +89,35 @@
 			}
 		}
 	}
+}
+REPLACE:dp_return_state = {
+	requires_interest_marker = no
+
+	war_goal = return_state
+
+	texture = "gfx/interface/icons/war_goals/return_state.dds"
+
+	possible = {
+		NOT = { is_country_type = decentralized }
+		aggressive_diplomatic_plays_permitted = yes
+		NOT = { is_subject_of = scope:target_country }
+		### stopgap fix until I get around to modding the AI
+		OR = {
+			is_player = yes
+			NOT = { has_diplomatic_pact = { who = scope:target_country type = frontera_organized_territory } }
+		}
+		###   ###
+		scope:target_country = {
+			NOT = { is_country_type = decentralized }
+		}
+		diplomatic_play_has_no_relations_blockers = yes
+	}
+
+	ai_acceptance_max = 90
+
+	on_weekly_pulse = {}
+
+	on_war_begins = {}
+
+	on_war_end = {}
 }

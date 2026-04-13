@@ -12,7 +12,7 @@
 @uru_canton_height = 0.556
 @NZL_coa_offset = @[3/16]
 @sm_fra = 0.16
-REPLACE:CAL = { # California Bear Flag
+CAL_frontera = { # California Bear Flag
 	pattern = "pattern_solid.tga"
 	color1 = "white"
 	color2 = "black"
@@ -31,11 +31,11 @@ REPLACE:CAL = { # California Bear Flag
 		instance = { scale = { 0.65 0.65 } position = { 0.5 0.4 } }
 	}
     sub = {
-        parent = "sub_legend_california"
+        parent = "sub_legend_california_br"
         instance = { scale = { 0.55 0.55 } offset = { 0.15 0.28 } }
     }
     sub = {
-        parent = "sub_legend_republic"
+        parent = "sub_legend_republic_br"
         instance = { scale = { 0.55 0.55 } offset = { 0.31 0.28 } }
     }
 	colored_emblem = {

@@ -18,6 +18,35 @@
 	}
 }
 
+geographic_region_american_west_frontera = {
+	short_key = "american_west_frontera"
+
+	state_regions = {
+		STATE_CALIFORNIA
+		STATE_OREGON
+		STATE_WASHINGTON
+		STATE_IDAHO
+		STATE_NEVADA
+		STATE_UTAH
+		STATE_ARIZONA
+		STATE_NEW_MEXICO
+		STATE_COLORADO
+		STATE_WYOMING
+		STATE_MONTANA
+	}
+}
+
+geographic_region_sunset_route_frontera = {
+	short_key = "frontera_sunset_route"
+
+	state_regions = {
+		STATE_CALIFORNIA
+		STATE_ARIZONA
+		STATE_NEW_MEXICO
+		STATE_TEXAS
+	}
+}
+
 geographic_region_frontera_adams_onis_treatyline = {
 	short_key = "frontera_adams_onis_treatyline"
 
