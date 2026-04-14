@@ -1,0 +1,19 @@
+﻿l_japanese:
+ je_organized_territories_frontera: "領土を整理する" #deepl:2984011793
+ je_organized_territories_frontera_reason: "国の拡大を図るため、既存の「[Concept('concept_unincorporated_state','$concept_unincorporated_states$')]」の一部を改編し、「[concept_organized_territory]」を設立する可能性があります。これらは「[concept_organized_territory]」が所有する「[Concept('concept_incorporated_state','$concept_incorporated_states$')]」となります。\n \n $frontera_settler_lore$" #deepl:334027685
+ je_organize_territory_button: "新たな領域を開拓する" #deepl:3442212506
+ je_organize_territory_button_desc: "[Concept('concept_unincorporated_state','$concept_unincorporated_states$')]を[concept_organized_territory]に整理する。" #deepl:2770156865
+ je_sunset_route_frontera: "サンセット・ルート" #deepl:1011417108
+ je_sunset_route_frontera_reason: "カリフォルニア州への温暖な気候の地域を結ぶ鉄道網が整備されれば、東西間の物資や人の往来がかつてないほど活発になるだろう。しかし、このプロジェクトには多大な調整が必要となる。土地所有者間で続いている「蛙をめぐる争い」（#italic ）#!を解決するだけでなく、軌間、信号、運行ダイヤの標準化も不可欠である。提案されたルート沿いの線路の一部が外国の管轄下にある場合、この作業はより困難になるかもしれないが、決して不可能なことではない。" #deepl:2977714634
+ je_sunset_route_frontera_button: "サンセット・ルートを繋ぐ" #deepl:317884082
+ je_sunset_route_frontera_button_desc: "さまざまな利害関係者の間を取り持ち、カリフォルニア州への新たな鉄道路線を整備する" #deepl:1348194334
+ je_gadsden_purchase_frontera_button: "国境をテストする" #deepl:2467056109
+ je_gadsden_purchase_frontera_button_desc: "必要な用地を確保できれば、西への鉄道拡張はより円滑に進められるだろう。政治的にはリスクを伴うものの、近隣諸国との国境紛争を引き起こすことで、プロジェクトのための用地を確保するためのさらなる外交的あるいは軍事的な選択肢が生まれる可能性がある。" #deepl:110269188
+ je_organized_territory_internal_frontera: "フロンティアを開拓する" #deepl:2132308742
+ je_organized_territory_internal_frontera_reason: "[ROOT.GetCountry.GetNameNoFlag] これは、[ROOT.GetCountry.GetTopOverlord.GetNameNoFlag] に属する[concept_organized_territory]です。この[concept_subject_type]により、[concept_migration]が強化され、最終的に[concept_overlord]の[concept_country]向けに新しい[Concept('concept_homeland','$concept_homelands$')]が作成されるようになります。[concept_autonomy]を獲得すると、[ROOT.GetCountry.GetNameNoFlag]は[concept_dominion]となり、その[GetLawGroup('lawgroup_governance_principles').GetName]を変更できるようになります。\n \n $frontera_settler_lore$" #deepl:4286496753
+ je_fort_ross_frontera: "太平洋への玄関口" #deepl:2279191856
+ je_fort_ross_frontera_reason: "[GetStateRegion('STATE_CALIFORNIA').GetName] この地は依然として人口の希薄な辺境であり、脆弱なスペインの紙上の領有権の下で危うく持ちこたえ、野心的な隣国に囲まれている。しかし、その港湾、土地、資源は神の恵みに満ち溢れている。\n \n この地域（[concept_state_region]）の支配権は、カリブ海（[GetStrategicRegion('region_pacific_coast').GetName]）における勢力均衡を決定づける上で重要な役割を果たす可能性がある。" #deepl:51288871
+ frontera_treaty_of_limits: "「境界条約」の改正案を作成する" #deepl:2091412374
+ frontera_treaty_of_limits_desc: "アメリカの国境における法的境界線が、隣国によって守られていない。外交使節団を派遣し、この問題を完全に解決すべきだ。" #deepl:1253377358
+ frontera_manifest_destiny: "ヌエセス・ストリップの強化" #deepl:2389825869
+ frontera_manifest_destiny_desc: "メキシコは、テキサスに対する我々の主権を未だに認めていない。ヌエセス川を越えて軍事拠点を確立し、西部におけるアメリカの野心に疑いの余地を残してはならない。" #deepl:784934809

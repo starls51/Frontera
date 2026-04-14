@@ -1,0 +1,11 @@
+﻿l_simp_chinese:
+ modifier_frontierlands_frontera: "《边疆向导》" #deepl:1536403044
+ modifier_oregon_trail_frontera: "《俄勒冈小道》" #deepl:1130619855
+ modifier_santafe_trail_frontera: "圣塔菲小径" #deepl:3532834792
+ modifier_frontier_politics_neg_frontera: "奔向边陲" #deepl:37614712
+ modifier_frontier_politics_pos_frontera: "来自内陆地区的旅客" #deepl:328592282
+ sunset_route_frontera_reward_int: "带队走完了日落路线" #deepl:1304134101
+ sunset_route_frontera: "日落路线" #deepl:1965144848
+ sunset_route_reward_frontera: "日落路线" #deepl:1965144848
+ country_modifier_golden_gate_frontera: "西境守卫" #deepl:855556125
+ state_trait_golden_gate_frontera: "克里索皮莱" #deepl:2560816944

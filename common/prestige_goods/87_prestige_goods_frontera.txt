@@ -9,3 +9,9 @@ prestige_good_drifted_snow_flour_frontera = {
 	prestige_bonus = 0.1
 	texture = "gfx/interface/icons/goods_icons/prestige_goods/frontera_drifted_snow_flour_prestige.dds"
 }
+
+prestige_good_frontera_canned_goods = {
+	base_good = groceries
+	prestige_bonus = 0.1
+	texture = "gfx/interface/icons/goods_icons/prestige_goods/frontera_canned_goods_prestige.dds"
+}

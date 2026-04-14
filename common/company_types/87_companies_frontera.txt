@@ -17,6 +17,17 @@ company_cal_packing_frontera = {
 		building_banana_plantation
 	}
 
+	possible_prestige_goods = {
+		prestige_good_frontera_canned_goods
+	}
+
+	prestige_goods_trigger = {
+		custom_tooltip = {
+			text = je_prestige_goods_groceries_complete_tt
+			has_variable = prestige_good_generic_groceries_var
+		}
+	}
+
 	potential = {
 		has_interest_marker_in_region = region_pacific_coast
 	}
@@ -30,6 +41,7 @@ company_cal_packing_frontera = {
 	}
 
 	possible = {
+		has_technology_researched = canneries
 		AND = {
 			any_scope_state = {
 				state_region = s:STATE_CALIFORNIA
@@ -99,17 +111,6 @@ company_ducommun_frontera = {
 
 	extension_building_types = {
 		building_iron_mine
-	}
-
-	possible_prestige_goods = {
-		prestige_good_generic_tools
-	}
-
-	prestige_goods_trigger = {
-		custom_tooltip = {
-			text = je_prestige_goods_tools_complete_tt
-			has_variable = prestige_good_generic_tools_var
-		}
 	}
 
 	potential = {
@@ -184,17 +185,6 @@ company_giant_powder_frontera = {
 		building_sulfur_mine
 	}
 
-	possible_prestige_goods = {
-		prestige_good_generic_explosives
-	}
-
-	prestige_goods_trigger = {
-		custom_tooltip = {
-			text = je_prestige_goods_explosives_complete_tt
-			has_variable = prestige_good_generic_explosives_var
-		}
-	}
-
 	potential = {
 		has_interest_marker_in_region = region_pacific_coast
 	}
@@ -208,6 +198,7 @@ company_giant_powder_frontera = {
 	}
 
 	possible = {
+		has_technology_researched = dynamite
 		any_scope_state = {
 			state_region = s:STATE_CALIFORNIA
 			any_scope_building = {
@@ -220,7 +211,7 @@ company_giant_powder_frontera = {
 	prosperity_modifier = {
 		state_mortality_mult = 0.01
 		#country_military_tech_spread_mult = 0.1
-		country_weekly_innovation_mult = 0.05
+		country_weekly_innovation_mult = 0.1
 		country_qualification_growth_open_prejudice_mult = 0.25
 	}
 
@@ -400,6 +391,7 @@ company_levi_frontera = {
 	}
 
 	possible = {
+		has_technology_researched = mechanized_workshops
 		any_scope_state = {
 			state_region = s:STATE_CALIFORNIA
 			is_incorporated = yes
@@ -418,9 +410,14 @@ company_levi_frontera = {
 	}
 
 	ai_will_do = {
+		has_technology_researched = mechanized_workshops
 		any_scope_state = {
 			state_region = s:STATE_CALIFORNIA
 			is_incorporated = yes
+			any_scope_building = {
+				is_building_type = building_textile_mill
+				level >= 5
+			}
 		}
 	}
 
@@ -520,6 +517,8 @@ company_sperry_frontera = {
 	background = "gfx/interface/icons/company_icons/company_backgrounds/comp_illu_farm_wheat.dds"
 
 	flavored_company = yes
+
+	category = shopkeeper_owned
 
 	preferred_headquarters = { STATE_CALIFORNIA }
 
@@ -662,12 +661,14 @@ company_union_pacific_frontera = {
 
 	preferred_headquarters = { STATE_NEBRASKA }
 
+	category = bureaucrat_owned
+
 	building_types = {
 		building_railway
-		building_motor_industry
 	}
 
 	extension_building_types = {
+		building_motor_industry
 		building_steel_mill
 		
 	}
@@ -708,10 +709,10 @@ company_union_pacific_frontera = {
 
 	prosperity_modifier = {
 		state_assimilation_mult = 0.15
-		country_standard_of_living_full_acceptance_add = 0.5
-		country_standard_of_living_second_rate_citizen_add = 0.5
-		country_standard_of_living_cultural_erasure_add = -0.5
-		country_standard_of_living_violent_hostility_add = -0.5
+		country_standard_of_living_full_acceptance_add = 1
+		country_standard_of_living_second_rate_citizen_add = 1
+		country_standard_of_living_cultural_erasure_add = -1
+		country_standard_of_living_violent_hostility_add = -1
 	}
 
 	ai_will_do = {
@@ -766,6 +767,7 @@ company_wells_fargo_frontera = {
 
 	possible = {
 		#has_technology_researched = steel_railway_cars
+		has_technology_researched = banking
 		any_scope_state = {
 			OR = {
 				state_region = s:STATE_CALIFORNIA
@@ -779,6 +781,7 @@ company_wells_fargo_frontera = {
 	}
 
 	ai_will_do = {
+		has_technology_researched = banking
 		any_scope_state = {
 			OR = {
 				state_region = s:STATE_CALIFORNIA

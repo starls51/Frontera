@@ -1,0 +1,22 @@
+﻿l_german:
+ da_frontera_force_culture: "Eine nationalistische Regierung einsetzen" #deepl:2453814574
+ da_frontera_force_culture_desc: "Ändert die „[concept_primary_cultures]“ eines „[concept_organized_territory]“, sodass sie mit denen seines „[concept_overlord]“ übereinstimmen." #deepl:3006522470
+ da_frontera_force_culture_action_name: "Eine nationalistische Regierung einsetzen" #deepl:2453814574
+ da_frontera_force_culture_action_notification_name: "[TARGET_COUNTRY.GetName] Übernimmt die Verwaltung von „[INITIATOR_COUNTRY.GetAdjective]“" #deepl:495659015
+ da_frontera_force_culture_action_notification_desc: "[INITIATOR_COUNTRY.GetName] hat die URL [concept_primary_cultures] von [TARGET_COUNTRY.GetName] so geändert, dass sie mit ihrer eigenen übereinstimmt." #deepl:1709253863
+ da_frontera_force_culture_action_notification_third_party_name: "[TARGET_COUNTRY.GetName] Übernimmt die Verwaltung von „[INITIATOR_COUNTRY.GetAdjective]“" #deepl:495659015
+ da_frontera_force_culture_action_notification_third_party_desc: "[INITIATOR_COUNTRY.GetName] hat die URL [concept_primary_cultures] von [TARGET_COUNTRY.GetName] so geändert, dass sie mit ihrer eigenen übereinstimmt." #deepl:1709253863
+ da_frontera_force_state_religion: "Spread-$concept_religion$" #deepl:3780971767
+ da_frontera_force_state_religion_action_name: "Spread-[concept_religion]" #deepl:1833652158
+ da_frontera_force_state_religion_desc: "Diese Veranstaltung „[concept_organized_territory]“ wird unser herausragendes Projekt „[concept_religion]“ in den Vordergrund rücken und es Vertretern und Pädagogen ermöglichen, sich unter die Besucher zu mischen." #deepl:2479916493
+ da_frontera_force_state_religion_action_notification_name: "[INITIATOR_COUNTRY.GetName] entsendet Vertreter ihrer [concept_religion]" #deepl:3886297734
+ da_frontera_force_state_religion_action_notification_desc: "[INITIATOR_COUNTRY.GetName] hat Vertreter ihrer „[concept_religion]“ in unser Land eingeladen" #deepl:486204899
+ da_frontera_force_state_religion_action_notification_third_party_name: "[INITIATOR_COUNTRY.GetName] entsendet Vertreter ihrer [concept_religion]" #deepl:3886297734
+ da_frontera_force_state_religion_action_notification_third_party_desc: "[INITIATOR_COUNTRY.GetName] hat Vertreter ihrer „[concept_religion]“ zu „[TARGET_COUNTRY.GetName]“ eingeladen" #deepl:243943760
+ da_frontera_dissolve_ot: "Gebiet auflösen" #deepl:1444142792
+ da_frontera_dissolve_ot_action_name: "[concept_organized_territory] auflösen" #deepl:3449086710
+ da_frontera_dissolve_ot_desc: "Diese „[concept_organized_territory]“ wird als „[Concept('concept_unincorporated_state','$concept_unincorporated_states$')]“ beigefügt." #deepl:2143557788
+ da_frontera_dissolve_ot_action_notification_name: "[INITIATOR_COUNTRY.GetName] Anhänge [TARGET_COUNTRY.GetName]" #deepl:3664093964
+ da_frontera_dissolve_ot_action_notification_desc: "[INITIATOR_COUNTRY.GetName] hat uns annektiert" #deepl:1307216587
+ da_frontera_dissolve_ot_action_notification_third_party_name: "[INITIATOR_COUNTRY.GetName] Anhänge und [concept_organized_territory]" #deepl:795772768
+ da_frontera_dissolve_ot_action_notification_third_party_desc: "[INITIATOR_COUNTRY.GetName] hat [TARGET_COUNTRY.GetName] angegliedert" #deepl:2142045709

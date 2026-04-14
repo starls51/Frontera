@@ -1,23 +1,23 @@
 ﻿l_russian:
- movement_frontera_mexican_federalist: "Федералистское движение" #deepl:2788786836
+ movement_frontera_mexican_federalist: "Движение «Федералиста»" #deepl:2788786836
  movement_frontera_mexican_federalist_short: "Федералист" #deepl:620747088
- movement_frontera_mexican_federalist_name: "Федералистское движение" #deepl:2788786836
+ movement_frontera_mexican_federalist_name: "Движение «Федералиста»" #deepl:2788786836
  ideology_frontera_mexican_federalist: "Мексиканский федералист" #deepl:2228111078
- ideology_frontera_mexican_federalist_desc: "Федералисты выступают за децентрализацию власти, предоставляя значительную автономию отдельным штатам. Вдохновленные моделью Соединенных Штатов, федералисты стремятся защитить местные свободы и предотвратить приход к власти единоличного диктатора в столице." #deepl:3704296238
- movement_frontera_mexican_centralist: "Централистское движение" #deepl:2210180886
+ ideology_frontera_mexican_federalist_desc: "Федералисты выступают за децентрализацию власти, предоставляя отдельным штатам значительную автономию. Вдохновленные моделью Соединенных Штатов, федералисты стремятся защитить местные свободы и не допустить прихода к власти единоличного диктатора в столице." #deepl:3704296238
+ movement_frontera_mexican_centralist: "Движение «Централиста»" #deepl:2210180886
  movement_frontera_mexican_centralist_short: "Централист" #deepl:1675741728
- movement_frontera_mexican_centralist_name: "Централистское движение" #deepl:2210180886
+ movement_frontera_mexican_centralist_name: "Движение «Централиста»" #deepl:2210180886
  ideology_frontera_mexican_centralist: "Мексиканский централист" #deepl:1986234739
- ideology_frontera_mexican_centralist_desc: "Централисты стремятся к созданию сильного, унитарного национального правительства, как правило, за счет региональной автономии. Они стремятся навести порядок в хаотичной молодой республике, копируя централизованную структуру колониальной эпохи." #deepl:2906061988
- state_pop_support_movement_frontera_mexican_federalist_add: "$movement_frontera_mexican_federalist$ $concept_pop$ Притяжение" #deepl:2340973415
- state_pop_support_movement_frontera_mexican_federalist_add_desc: "$политическое_движение_популярность_мультипликатор_убывающий_порядок$" #deepl:424746024
+ ideology_frontera_mexican_centralist_desc: "Централисты стремятся к созданию сильного, унитарного национального правительства, как правило, в ущерб региональной автономии. Они стремятся навести порядок в хаотичной молодой республике, копируя централизованную структуру колониальной эпохи." #deepl:2906061988
+ state_pop_support_movement_frontera_mexican_federalist_add: "$movement_frontera_mexican_federalist$ $concept_pop$ Достопримечательность" #deepl:2340973415
+ state_pop_support_movement_frontera_mexican_federalist_add_desc: "$political_movement_pop_attraction_mult_desc$" #deepl:424746024
  state_pop_support_movement_frontera_mexican_federalist_mult: "$state_pop_support_movement_frontera_mexican_federalist_add$" #deepl:3056203231
- state_pop_support_movement_frontera_mexican_federalist_mult_desc: "$политическое_движение_популярность_мультипликатор_убывающий_порядок$" #deepl:424746024
- state_pop_support_movement_frontera_mexican_centralist_add: "$movement_frontera_mexican_centralist$ $concept_pop$ Притяжение" #deepl:2808064350
- state_pop_support_movement_frontera_mexican_centralist_add_desc: "$политическое_движение_популярность_мультипликатор_убывающий_порядок$" #deepl:424746024
+ state_pop_support_movement_frontera_mexican_federalist_mult_desc: "$political_movement_pop_attraction_mult_desc$" #deepl:424746024
+ state_pop_support_movement_frontera_mexican_centralist_add: "$movement_frontera_mexican_centralist$ $concept_pop$ Достопримечательность" #deepl:2808064350
+ state_pop_support_movement_frontera_mexican_centralist_add_desc: "$political_movement_pop_attraction_mult_desc$" #deepl:424746024
  state_pop_support_movement_frontera_mexican_centralist_mult: "$state_pop_support_movement_frontera_mexican_centralist_add$" #deepl:999402151
- state_pop_support_movement_frontera_mexican_centralist_mult_desc: "$политическое_движение_популярность_мультипликатор_убывающий_порядок$" #deepl:424746024
- generic_revolt_federalist_frontera: "Федералист $NAME$" #deepl:2886720149
+ state_pop_support_movement_frontera_mexican_centralist_mult_desc: "$political_movement_pop_attraction_mult_desc$" #deepl:424746024
+ generic_revolt_federalist_frontera: "Federalista $NAME$" #deepl:2886720149
  generic_revolt_federalist_frontera_adj: "$ADJECTIVE$ федералист" #deepl:1698099802
- generic_revolt_centralist_frontera: "Централист $NAME$" #deepl:394110082
- generic_revolt_centralist_frontera_adj: "$ADJECTIVE$ Централист" #deepl:2543533519
+ generic_revolt_centralist_frontera: "Централиста $NAME$" #deepl:394110082
+ generic_revolt_centralist_frontera_adj: "$ADJECTIVE$ централист" #deepl:2543533519

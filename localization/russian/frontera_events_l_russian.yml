@@ -1,60 +1,74 @@
 ﻿l_russian:
- debug_req_pop_ct: "В штате проживает НОМЕР НАСЕЛЕНИЯ" #deepl:2150280673
- debug_req_primary_perc: "ГОСУДАРСТВО ИМЕЕТ ПРОЦЕНТ ПЕРВИЧНОЙ КУЛЬТУРЫ ПОВЕРХНОСТНОГО ПРАВИТЕЛЯ" #deepl:695788310
+ debug_req_pop_ct: "В штате проживает количество населения" #deepl:2150280673
+ debug_req_primary_perc: "В штате преобладает основная культура Overlord" #deepl:695788310
  frontera_ot_homeland.1: "Государственность" #deepl:290487462
  frontera_ot_homeland.1.t: "Дом, милый дом" #deepl:759433816
- frontera_ot_homeland.1.d: "Население поселенцев в «[SCOPE.sState('ascendent_state').GetName]» значительно выросло. Несмотря на нерешенные конфликты с коренными жителями, похоже, что это место станет «[Concept('concept_homeland','$concept_homeland$')]» для многих поколений «[SCOPE.sCountry('overlord_scope').GetAdjectiveNoFormatting]» в будущем." #deepl:1896825475
- frontera_ot_homeland.1.f: "«Я родился на прериях, где ветер дул свободно и ничто не преграждало путь солнечному свету». — Джеронимо" #deepl:2391563847
- frontera_ot_homeland.1.a: "[SCOPE.sState('ascendent_state').GetName] может вскоре стать штатом." #deepl:3074916853
+ frontera_ot_homeland.1.d: "Численность поселенцев в «[SCOPE.sState('ascendent_state').GetNameNoFormatting]» значительно выросла. Несмотря на нерешенные конфликты с коренным населением, похоже, что это место станет «[Concept('concept_homeland','$concept_homeland$')]» для многих будущих поколений «[SCOPE.sCountry('overlord_scope').GetAdjectiveNoFormatting]»." #deepl:4242322575
+ frontera_ot_homeland.1.f: "«Я родился в прериях, где ветер дул свободно и ничто не заслоняло солнечный свет». — Джеронимо" #deepl:2391563847
+ frontera_ot_homeland.1.a: "[SCOPE.sState('ascendent_state').GetNameNoFormatting] вскоре может стать штатом." #deepl:3155158794
  frontera_ot_homeland.1.b: "Моя работа здесь закончена." #deepl:1429745245
- frontera_ot_homeland_gained_homeland: "Произошло: \n #indent_newline:3 [SCOPE.sState('ascendent_state').GetName] стал [Concept('concept_homeland','$concept_homeland$')] для большинства [SCOPE.sCountry('overlord_scope').GetAdjectiveNoFormatting] [Concept('concept_primary_cultures','$concept_primary_culture$')] #!" #deepl:1846806708
- frontera_fort_ross.1: "Сокращение убытков" #deepl:1680067657
- frontera_fort_ross.1.t: "Сокращение убытков" #deepl:1680067657
- frontera_fort_ross.1.d: "Форт Росс был основан с целью обеспечения продовольствием колонистов на Аляске. Этот молодой форт, принадлежащий Американскому историческому обществу ([SCOPE.sCountry('seller_scope').GetAdjectiveNoFlag]), со временем утратил свое значение. Недавно представители Американского исторического общества обратили внимание на наши сомнительные права на эту землю. Продажа зданий даст нам возможность уйти с честью и снимет напряженность в регионе." #deepl:233128330
- frontera_fort_ross.1.f: "\n«Как видите, это идеальное место для основания моей #bold  New Helvatia #!. Да, это прекрасная земля... за которую вам заплатят! Ах #italic  Конечно #! вам заплатят щедро», — говорит мистер [SCOPE.sCharacter('john_sutter_scope').GetLastName], жаждущий совершить покупку. «В свое время. О да, в свое время...»" #deepl:2218651227
- frontera_fort_ross.1.a: "Ни за что! «[SCOPE.sState('california_scope').GetName]» по праву принадлежит нам." #deepl:1821605251
+ frontera_ot_homeland.1.c: "[SCOPE.sState('ascendent_state').GetNameNoFormatting] пока что останется территориальным владением." #deepl:1129899227
+ frontera_fort_ross.1: "Минимизация убытков" #deepl:1680067657
+ frontera_fort_ross.1.t: "Минимизация убытков" #deepl:1680067657
+ frontera_fort_ross.1.d: "Форт Росс был первоначально основан для обеспечения колонистов на Аляске продовольствием. С тех пор этот молодой форт [SCOPE.sCountry('seller_scope').GetAdjectiveNoFormatting] утратил своё значение. Руководство [SCOPE.sCountry('buyer_scope').GetAdjectiveNoFormatting] недавно обратило внимание на эту спорную претензию на землю. Продажа зданий дала бы возможность уйти с сохранением чести и сгладить любые напряжённые отношения в регионе." #deepl:3386575780
+ frontera_fort_ross.1.f: "\n«Как видите, это идеальное место для основания моей #bold  Новой Гельвеции #!. Да, это прекрасная земля… за которую вам заплатят! Ах #italic  Конечно #! вам заплатят щедро», — говорит [SCOPE.sCharacter('john_sutter_scope').GetLastNameNoFormatting], горя желанием совершить покупку. «В своё время. О да, в своё время…»" #deepl:1029766778
+ frontera_fort_ross.1.a: "Ни за что! «[SCOPE.sState('california_scope').GetNameNoFormatting]» по праву принадлежит нам." #deepl:207577355
  frontera_fort_ross.1.b: "Это хороший план." #deepl:3518633261
- frontera_fort_ross.1.c: "[SCOPE.sState('california_scope').GetName] всегда был [SCOPE.sCountry('seller_scope').GetAdjectiveNoFlag]..." #deepl:971068779
- frontera_fort_ross.2: "Сокращение убытков" #deepl:1680067657
- frontera_fort_ross.2.t: "Сокращение убытков" #deepl:3839667639
- frontera_fort_ross.2.d: "[SCOPE.sCountry('seller_scope').GetNameNoFlag] Наша компания «[concept_subject]» намерена продать свои активы в «[SCOPE.sState('california_scope').GetName]»." #deepl:221351375
- frontera_fort_ross.2.f: "Местные власти «[SCOPE.sCountry('buyer_scope').GetAdjectiveNoFlag]» были бы рады, если бы мы покинули поселение. Продажа зданий дала бы нам возможность уйти с неповрежденной честью и ослабила бы напряженность в регионе." #deepl:4219192694
- frontera_fort_ross.2.a: "Нет, «[SCOPE.sState('california_scope').GetName]» — это ценная опора." #deepl:1425941161
- frontera_fort_ross.2.b: "Хорошо, это не касается могущественного «[SCOPE.sCountry('overlord_scope').GetNameNoFlag]»." #deepl:2472227683
- frontera_fort_ross.3: "Какая дерзость!" #deepl:61601467
- frontera_fort_ross.3.t: "Какая дерзость!" #deepl:61601467
- frontera_fort_ross.3.d: "[SCOPE.sCountry('seller_scope').GetNameNoFlag] становится все более напористым в «[SCOPE.sState('california_scope').GetName]»." #deepl:984030691
- frontera_fort_ross.3.f: "Несмотря на неопределенную законность своего [concept_claim] , группы [SCOPE.sCountry('seller_scope').GetAdjectiveNoFlag] колонистов разжигают растущий территориальный конфликт между [SCOPE.sCountry('buyer_scope').GetNameNoFlag] и [SCOPE.sCountry('seller_scope').GetNameNoFlag]." #deepl:725587561
- frontera_fort_ross.3.a: "[SCOPE.sCountry('buyer_scope').GetAdjectiveNoFlag] люди должны объединиться против этой угрозы" #deepl:620721478
- frontera_fort_ross.4: "Крепость «[SCOPE.sCharacter('john_sutter_scope').GetLastName]»" #deepl:3078921980
- frontera_fort_ross.4.t: "Крепость «[SCOPE.sCharacter('john_sutter_scope').GetLastName]»" #deepl:3078921980
- frontera_fort_ross.4.d: "Швейцарско-американский иммигрант, пионер и полиглот Эдвард С. Бейкер ([SCOPE.sCharacter('john_sutter_scope').GetFullName]) прибыл в город Энн-Айрен ([SCOPE.sState('california_scope').GetName])." #deepl:308682427
- frontera_fort_ross.4.f: "[SCOPE.sCharacter('john_sutter_scope').GetFullName] приобрел все активы, принадлежащие [SCOPE.sCountry('seller_scope').GetNameNoFlag], в [SCOPE.sState('california_scope').GetName] для своего грандиозного проекта #bold  New Helvetia #!. С нашего благословения колония может служить буфером против неуправляемых туземцев. [SCOPE.sCharacter('john_sutter_scope').GetLastName] утверждает, что #bold  New Helvetia #! станет маяком цивилизации для пограничных территорий. Однако есть тревожные сообщения о его жестоком обращении с туземцами, работающими на него и в окрестных деревнях. \n \n #italic "Старый мир умирает, а новый мир с трудом рождается: сейчас время монстров». — Антонио Грамши #!" #deepl:508408470
- frontera_fort_ross.4.a: "Верните этого сумасшедшего туда, откуда он пришел." #deepl:82128806
- frontera_fort_ross.4.b: "Он поможет нам приручить дикую природу!" #deepl:3671498773
+ frontera_fort_ross.1.c: "[SCOPE.sState('california_scope').GetNameNoFormatting] всегда был [SCOPE.sCountry('seller_scope').GetAdjectiveNoFormatting]..." #deepl:1496946436
+ frontera_fort_ross.2: "Минимизация убытков" #deepl:1680067657
+ frontera_fort_ross.2.t: "Минимизация убытков" #deepl:3839667639
+ frontera_fort_ross.2.d: "[SCOPE.sCountry('seller_scope').GetNameNoFormatting] намеревается продать свою долю в компании «[SCOPE.sState('california_scope').GetNameNoFormatting]»." #deepl:1434516165
+ frontera_fort_ross.2.f: "Местные власти «[SCOPE.sCountry('buyer_scope').GetAdjectiveNoFormatting]» были бы рады, если бы «[SCOPE.sCountry('seller_scope').GetNameNoFormatting]» покинула поселение. Продажа зданий дала бы возможность уйти с честью и сгладить напряженность в регионе." #deepl:2936373317
+ frontera_fort_ross.2.a: "Нет, сайт [SCOPE.sState('california_scope').GetNameNoFormatting] — это ценная отправная точка." #deepl:4183963343
+ frontera_fort_ross.2.b: "Ладно, это не имеет никакого отношения к могущественному сайту [SCOPE.sCountry('overlord_scope').GetNameNoFormatting]." #deepl:1288417892
+ frontera_fort_ross.3: "Какая наглость!" #deepl:61601467
+ frontera_fort_ross.3.t: "Какая наглость!" #deepl:61601467
+ frontera_fort_ross.3.d: "[SCOPE.sCountry('seller_scope').GetNameNoFormatting] становится всё более напористым в сериале «[SCOPE.sState('california_scope').GetNameNoFormatting]»." #deepl:2360485480
+ frontera_fort_ross.3.f: "Несмотря на неопределённость правового статуса их претензий, группы колонистов из [SCOPE.sCountry('seller_scope').GetAdjectiveNoFormatting] разжигают растущий территориальный спор между [SCOPE.sCountry('buyer_scope').GetNameNoFormatting] и [SCOPE.sCountry('seller_scope').GetNameNoFormatting]." #deepl:2021577011
+ frontera_fort_ross.3.a: "[SCOPE.sCountry('buyer_scope').GetAdjectiveNoFormatting] люди должны объединиться, чтобы противостоять этой угрозе" #deepl:177952069
+ frontera_fort_ross.4: "Форт «[SCOPE.sCharacter('john_sutter_scope').GetLastNameNoFormatting]»" #deepl:4241808508
+ frontera_fort_ross.4.t: "Форт «[SCOPE.sCharacter('john_sutter_scope').GetLastNameNoFormatting]»" #deepl:4241808508
+ frontera_fort_ross.4.d: "[SCOPE.sCharacter('john_sutter_scope').GetHomeCountry.GetAdjectiveNoFormatting] -Американский иммигрант, первопроходец и полиглот Энтони С. Стюарт ([SCOPE.sCharacter('john_sutter_scope').GetFullNameNoFormatting]) прибыл в «[SCOPE.sState('california_scope').GetNameNoFormatting]»." #deepl:1729197350
+ frontera_fort_ross.4.f: "[SCOPE.sCharacter('john_sutter_scope').GetFullNameNoFormatting] приобрела руины старого форта в [SCOPE.sState('california_scope').GetNameNoFormatting]. Материалы из снесенных зданий будут использованы для строительства [SCOPE.sCharacter('john_sutter_scope').GetHerHis] нового поселения #bold  New Helvetia #!. С нашего благословения, колония может служить буфером против неуправляемых туземцев. [SCOPE.sCharacter('john_sutter_scope').GetLastNameNoFormatting] утверждает, что #bold  New Helvetia #! станет маяком цивилизации на границе. Однако поступают тревожные сообщения о жестоком обращении с туземцами, находящимися на службе у [SCOPE.sCharacter('john_sutter_scope').GetHerHis], а также в окрестных деревнях. \n \n #italic «Старый мир умирает, а новый мир с трудом рождается: сейчас время монстров». — Антонио Грамши #!" #deepl:4023662245
+ frontera_fort_ross.4.a: "Отправьте этого сумасшедшего туда, откуда он пришел — на сайт [SCOPE.sCharacter('john_sutter_scope').GetSheHe]." #deepl:508690232
+ frontera_fort_ross.4.b: "Хорошо, сайт [SCOPE.sCharacter('john_sutter_scope').GetSheHe] поможет нам приручить дикую природу!" #deepl:3603057105
  frontera_sunset_route_event.1: "Маршрут «Закат»" #deepl:1011417108
  frontera_sunset_route_event.1.t: "Маршрут «Закат»" #deepl:1011417108
- frontera_sunset_route_event.1.d: "[SCOPE.sState('california_scope').GetName] был успешно соединен с восточной частью континента железной дорогой. Пересекая пустыню Сонора, этот маршрут с теплым климатом может работать без перерывов в течение всего года." #deepl:3309601727
- frontera_sunset_route_event.2.d: "[SCOPE.sCountry('builder_scope').GetNameNoFlag] возглавил усилия по соединению Аризоны ([SCOPE.sState('california_scope').GetName]) с восточными районами континента железной дорогой. Пересекая пустыню Сонора, этот маршрут с теплым климатом может функционировать без перерывов в течение всего года." #deepl:2730146222
- frontera_sunset_route_event.1.f: "«Вот вам закон, ребята, ясный как день», — провозгласил губернатор, и его голос был тверд, как железный гигант за его спиной.  Ветер дул по пустыне, и рука Вирджила Эрпа задержалась на его револьвере. Возможно, произошла бы перестрелка, если бы не все невинные горожане, которые пришли посмотреть. Неохотный вздох Эрпа разнесся в солнечном зноге, как шипение пара. Локомотив тронулся, и маршрут «Закат» был открыт." #deepl:295026560
+ frontera_sunset_route_event.1.d: "[SCOPE.sState('california_scope').GetNameNoFormatting] был успешно соединен с восточными районами континента железнодорожной линией. Пролегая через пустыню Сонора, этот маршрут, характерный для теплого климата, может функционировать без перерывов в течение всего года." #deepl:1375503153
+ frontera_sunset_route_event.2.d: "[SCOPE.sCountry('builder_scope').GetNameNoFormatting] выступил инициатором проекта по соединению города «[SCOPE.sState('california_scope').GetNameNoFormatting]» с восточными районами континента с помощью железной дороги. Пролегая через пустыню Сонора, эта трасса, на которой царит теплый климат, может функционировать без перерывов в течение всего года." #deepl:3852099163
+ frontera_sunset_route_event.1.f: "«Вот вам и закон, ребята, ясно как день», — заявил губернатор; его голос звучал так же твердо, как стоявший за его спиной железный гигант. Ветер хлестал по пустыне, а рука Вирджила Эрпа замерла над револьвером. Возможно, дело дошло бы до перестрелки, если бы не все те невинные горожане, которые собрались посмотреть на происходящее. Нехотя выдохнутый Эрпом вздох разнесся в выжженном солнцем воздухе, словно шипение пара. Локомотив покатился дальше, и «Сансет-рут» был открыт." #deepl:295026560
  frontera_sunset_route_event.1.a: "Победа прогресса!" #deepl:2958605196
- frontera_sunset_route_event.2.a: "Хорошо для них..." #deepl:2754019974
- sunset_route_frontera_reward_int: "Возглавил маршрут «Закатный путь»" #deepl:1304134101
- frontera_sunset_route_event.3: "Спор в долине Месилья" #deepl:510184323
- frontera_sunset_route_event.3.t: "Спор в долине Месилья" #deepl:510184323
- frontera_sunset_route_event.3.d: "Вопросы о праве собственности на долину Месилла переросли в дипломатический спор между Католической епархией Сан-Мануэль ([SCOPE.sCountry('buyer_scope').GetName]) и Католической епархией Сан-Мануэль ([SCOPE.sCountry('angry_country_scope').GetName])." #deepl:1502838723
- frontera_sunset_route_event.3.f: "«Разведчики из «[SCOPE.sCountry('buyer_scope').GetAdjectiveNoFlag]» пересекают нашу границу, как будто она уже принадлежит им», — возмущался министр [SCOPE.sCountry('angry_country_scope').GetAdjectiveNoFlag]. [SCOPE.sCountry('angry_country_scope').GetRuler.GetPrimaryRoleTitle] [SCOPE.sCountry('angry_country_scope').GetRuler.GetFullName] затянулся сигарой в задумчивом спокойствии, слабый свет на мгновение очертил его изможденные черты лица, прежде чем исчезнуть в темноте. \n \n«Если я откажусь продавать, они просто заберут это — и объявят, что это их судьба».\n \n«А если вы согласитесь?»\n \n«Нам платят... за то, что мы вынуждены потерять»." #deepl:87387247
- frontera_sunset_route_event.3.a: "Отправить больше вооруженных экспедиций" #deepl:3471564856
- frontera_sunset_route_event.3.b: "Попытайтесь применить более мирный подход" #deepl:990404971
+ frontera_sunset_route_event.2.a: "Молодцы..." #deepl:2754019974
+ frontera_sunset_route_event.3: "Спор в долине Месилла" #deepl:510184323
+ frontera_sunset_route_event.3.t: "Спор в долине Месилла" #deepl:510184323
+ frontera_sunset_route_event.3.d: "Спор о праве собственности на долину Месилла перерос в дипломатический конфликт между США ([SCOPE.sCountry('buyer_scope').GetNameNoFormatting]) и Мексикой ([SCOPE.sCountry('angry_country_scope').GetNameNoFormatting])." #deepl:1879231144
+ frontera_sunset_route_event.3.f: "«Разведчики из «[SCOPE.sCountry('buyer_scope').GetAdjectiveNoFormatting]» пересекают нашу границу, словно она уже принадлежит им», — возмущённо заявил министр [SCOPE.sCountry('angry_country_scope').GetAdjectiveNoFormatting]. [SCOPE.sCountry('angry_country_scope').GetRuler.GetPrimaryRoleTitle] [SCOPE.sCountry('angry_country_scope').GetRuler.GetFullNameNoFormatting] с мрачным спокойствием затянулся сигарой [SCOPE.sCountry('angry_country_scope').GetRuler.GetHerHis]; слабое сияние на мгновение очертило [SCOPE.sCountry('angry_country_scope').GetRuler.GetHerHis] измученные черты лица, прежде чем исчезнуть в темноте. \n \n«Если я откажусь продавать, они заберут это силой».\n \n«А если вы согласитесь?»\n \n«Нам платят… за то, что нас заставляют потерять»." #deepl:3985735214
+ frontera_sunset_route_event.3.a: "Отправить больше вооружённых отрядов" #deepl:3471564856
+ frontera_sunset_route_event.3.b: "Попробуйте применить более мирный подход" #deepl:990404971
  frontera_sunset_route_event.4: "Вторжения в долину Месилла" #deepl:3780924556
- frontera_sunset_route_event.4.t: "Вторжения в долину Месилья" #deepl:3780924556
- frontera_sunset_route_event.4.d: "Иностранные военные экспедиции неоднократно пересекали границу, установленную вблизи долины Месилья." #deepl:2990890124
- frontera_sunset_route_event.4.f: "«Разведчики из «[SCOPE.sCountry('buyer_scope').GetAdjectiveNoFlag]» пересекают нашу границу, как будто она уже принадлежит им», — возмущался министр [SCOPE.sCountry('angry_country_scope').GetAdjectiveNoFlag]. [SCOPE.sCountry('angry_country_scope').GetRuler.GetPrimaryRoleTitle] [SCOPE.sCountry('angry_country_scope').GetRuler.GetFullName] затянулся сигарой в задумчивом спокойствии, слабый свет на мгновение очертил его изможденные черты лица, прежде чем исчезнуть в темноте. \n \n«Если я откажусь продавать, они просто заберут это — и объявят, что это их судьба».\n \n«А если вы согласитесь?»\n \n«Нам платят... за то, что мы вынуждены потерять»." #deepl:87387247
- frontera_sunset_route_event.4.a: "Предложение о продаже земли" #deepl:3847002548
+ frontera_sunset_route_event.4.t: "Вторжения в долину Месилла" #deepl:3780924556
+ frontera_sunset_route_event.4.d: "Иностранные военные экспедиции неоднократно нарушали границу, установленную вблизи долины Месилла." #deepl:2990890124
+ frontera_sunset_route_event.4.f: "$frontera_sunset_route_event.3.f$" #deepl:3255788596
+ frontera_sunset_route_event.4.a: "Предложение о продаже земельного участка" #deepl:3847002548
  frontera_sunset_route_event.4.b: "Они были бы глупцами, если бы вторглись" #deepl:346374326
  frontera_sunset_route_event.5: "Геодезисты в пустыне" #deepl:1781160719
  frontera_sunset_route_event.5.t: "Геодезисты в пустыне" #deepl:1781160719
- frontera_sunset_route_event.5.d: "[SCOPE.sCountry('buyer_scope').GetAdjectiveNoFlag] агенты включили некоторых наших дипломатов в полевую миссию. Похоже, они надеются создать международные железнодорожные сети между нашими странами." #deepl:368096293
- frontera_sunset_route_event.5.f: "Независимо от того, согласны мы с этим планом или нет, такие опросы являются отличной возможностью для планирования улучшений инфраструктуры и обмена знаниями о более передовых методах транспортировки." #deepl:652771437
- frontera_sunset_route_event.5.a: "Действительно дружеский жест" #deepl:1043888935
- 
+ frontera_sunset_route_event.5.d: "[SCOPE.sCountry('buyer_scope').GetAdjectiveNoFormatting] Агенты включили дипломатов из «[SCOPE.sCountry('seller_scope').GetAdjectiveNoFormatting]» в состав разведывательной миссии, которая посетила долину Месилла. По всей видимости, они надеются наладить международное железнодорожное сообщение между двумя странами." #deepl:3671600249
+ frontera_sunset_route_event.5.f: "Независимо от того, согласны мы с этим планом или нет, эти обследования представляют собой отличную возможность для планирования работ по модернизации инфраструктуры и обмена опытом в области передовых методов организации транспортного движения." #deepl:3061632216
+ frontera_sunset_route_event.5.a: "Жест добрососедства." #deepl:3189443051
+ frontera_treaty_of_limits.1:0 "Old Words, New Treaty
+ frontera_treaty_of_limits.1.t:0 "Old Words, New Treaty
+ frontera_treaty_of_limits.1.d: "Заявляя о себе как о законных наследниках недействующего договора «Адамс-Онис» (#bold ) #!, представители организации [SCOPE.sCountry('buyer_scope').GetAdjectiveNoFormatting] оказывают давление на [SCOPE.sCountry('seller_scope').GetCapital.GetCityHubName] с целью признания и соблюдения старых границ, установленных этим договором." #deepl:2830373953
+ frontera_treaty_of_limits.1.f: "Договор о границах 1821 года #! был подписан между Соединёнными Штатами и Мексикой в 1821 году. Он подтвердил положения договора Адамса-Ониса #!, ранее подписанного Испанией двумя годами ранее. Помимо передачи контроля над Флоридой Соединённым Штатам, договор Адамса-Ониса #! также закрепил юридическую границу с Испанией на западе." #deepl:4100799599
+ frontera_treaty_of_limits.1.a: "Ратифицировать договор." #deepl:468172514
+ frontera_treaty_of_limits.1.b: "Какая нелепая идея..." #deepl:1417336212
+ frontera_treaty_of_limits.2: "Старые слова, никакого договора: [SCOPE.sCountry('seller_scope').GetCapital.GetCityHubName]" #deepl:1106196979
+ frontera_treaty_of_limits.2.t: "Старые слова, никакого договора: [SCOPE.sCountry('seller_scope').GetCapital.GetCityHubName]" #deepl:1106196979
+ frontera_treaty_of_limits.2.d: "Представители организации «[SCOPE.sCountry('buyer_scope').GetAdjectiveNoFormatting]» вернулись из дипломатической миссии в [SCOPE.sCountry('seller_scope').GetCapital.GetCityHubName]. К сожалению, их коллеги из организации «[SCOPE.sCountry('seller_scope').GetAdjectiveNoFormatting]» отвергли «нелепую» идею возобновления действия Договора о границах #italic  #!." #deepl:4221233034
+ frontera_treaty_of_limits.2.f: "Это было одно из лучших мест, где можно было произвести впечатление на высокопоставленного гостя, и один из лучших ресторанов в [SCOPE.sCountry('seller_scope').GetCapital.GetCityHubName]. «Они могли бы с таким же успехом попросить нас водрузить флаг [SCOPE.sCountry('buyer_scope').GetAdjectiveNoFormatting] на Луне!» — взорвались хохотом светские львицы из [SCOPE.sCountry('seller_scope').GetAdjectiveNoFormatting]. \n \n За соседним столиком двое дипломатов из [SCOPE.sCountry('buyer_scope').GetAdjectiveNoFormatting] обменялись обеспокоенными взглядами." #deepl:1334437244
+ frontera_treaty_of_limits.2.a: "Выступить с официальным осуждением." #deepl:3722538865
+ frontera_treaty_of_limits.2.b: "Забудь об этой идее." #deepl:3521850535
+ frontera_treaty_of_limits.3: "Старые слова, новый договор: [SCOPE.sCountry('seller_scope').GetCapital.GetCityHubName]" #deepl:3693793379
+ frontera_treaty_of_limits.3.t: "Старые слова, новый договор: [SCOPE.sCountry('seller_scope').GetCapital.GetCityHubName]" #deepl:3693793379
+ frontera_treaty_of_limits.3.d: "Представители компании «[SCOPE.sCountry('buyer_scope').GetAdjectiveNoFormatting]» вернулись из дипломатической поездки в [SCOPE.sCountry('seller_scope').GetCapital.GetCityHubName], оставаясь в восторге от приятного общения со своими коллегами из [SCOPE.sCountry('seller_scope').GetAdjectiveNoFormatting]. Переговоры идут в пользу [SCOPE.sCountry('buyer_scope').GetNameNoFormatting]." #deepl:1366457633
+ frontera_treaty_of_limits.3.b: "Это признак слабости." #deepl:2947401295

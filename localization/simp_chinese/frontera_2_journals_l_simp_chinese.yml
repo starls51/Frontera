@@ -1,0 +1,19 @@
+﻿l_simp_chinese:
+ je_organized_territories_frontera: "划分辖区" #deepl:2984011793
+ je_organized_territories_frontera_reason: "为了拓展国家版图，我们计划将部分[Concept('concept_unincorporated_state','$concept_unincorporated_states$')]合并为[concept_organized_territory]。这些机构将作为[Concept('concept_incorporated_state','$concept_incorporated_states$')]，由[concept_organized_territory]所有。\n \n $frontera_settler_lore$" #deepl:334027685
+ je_organize_territory_button: "开拓新领域" #deepl:3442212506
+ je_organize_territory_button_desc: "将一些[Concept('concept_unincorporated_state','$concept_unincorporated_states$')]文件整理成一个[concept_organized_territory]文件。" #deepl:2770156865
+ je_sunset_route_frontera: "日落之路" #deepl:1011417108
+ je_sunset_route_frontera_reason: "一条通往加利福尼亚州的温暖气候铁路线路，将使东西部之间的商业往来和人员流动达到前所未有的规模。然而，该项目需要进行大量协调工作。除了要解决土地所有者之间持续不断的“蛙战”（#italic ）#! 之外，还必须统一轨距、信号系统和运行时刻表。如果拟建路线沿线的某些路段由外国控制，这项工作可能会更加困难，但这绝非不可能完成的任务。" #deepl:2977714634
+ je_sunset_route_frontera_button: "连接日落路线" #deepl:317884082
+ je_sunset_route_frontera_button_desc: "协调各方利益相关者，建设通往加利福尼亚州的新铁路线路" #deepl:1348194334
+ je_gadsden_purchase_frontera_button: "试探边界" #deepl:2467056109
+ je_gadsden_purchase_frontera_button_desc: "如果能够实际控制所需的土地走廊，向西扩建铁路将更容易实施。尽管存在政治风险，但挑起与邻国的边界争端或许能为该项目获取土地提供更多外交或军事手段。" #deepl:110269188
+ je_organized_territory_internal_frontera: "开拓边疆" #deepl:2132308742
+ je_organized_territory_internal_frontera_reason: "[ROOT.GetCountry.GetNameNoFlag] 是一个属于[ROOT.GetCountry.GetTopOverlord.GetNameNoFlag]的[concept_organized_territory]。该[concept_subject_type]能够提升[concept_migration]，并最终为[concept_overlord]的[concept_country]创建新的[Concept('concept_homeland','$concept_homelands$')]。获得[concept_autonomy]将使[ROOT.GetCountry.GetNameNoFlag]转变为[concept_dominion]，并允许对其[GetLawGroup('lawgroup_governance_principles').GetName]进行修改。\n \n $frontera_settler_lore$" #deepl:4286496753
+ je_fort_ross_frontera: "通往太平洋的大门" #deepl:2279191856
+ je_fort_ross_frontera_reason: "[GetStateRegion('STATE_CALIFORNIA').GetName] 这里依然是一片人烟稀少的边疆，仅凭西班牙一份脆弱的纸面主张勉强维系，四周环绕着野心勃勃的邻国。然而，这里的港口、土地和资源却蕴藏着丰厚的天赐之物。\n \n 对这片 [concept_state_region] 的控制，可能在决定 [GetStrategicRegion('region_pacific_coast').GetName] 上的力量平衡方面发挥重要作用。" #deepl:51288871
+ frontera_treaty_of_limits: "起草修订后的《边界条约》" #deepl:2091412374
+ frontera_treaty_of_limits_desc: "我们的邻国无视美国边境的法律界限。派遣一个外交使团，一劳永逸地解决这个问题。" #deepl:1253377358
+ frontera_manifest_destiny: "强化努埃塞斯地带" #deepl:2389825869
+ frontera_manifest_destiny_desc: "墨西哥至今尚未承认我们对得克萨斯州的主权。应在努埃塞斯河以西建立军事据点，让世人毫无疑问地看到美国在西部的野心。" #deepl:784934809

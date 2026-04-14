@@ -1,0 +1,7 @@
+﻿l_japanese:
+ notification_ot_consolidated_frontera_notification_name: "[SCOPE.sCountry('overlord_scope').GetName] 添付ファイル：[SCOPE.sCountry('ot_scope').GetName]" #deepl:1586765335
+ notification_ot_consolidated_frontera_notification_desc: "[SCOPE.sCountry('ot_scope').GetName] [concept_organized_territory]はもはや有効な選択肢ではない：[SCOPE.sCountry('ot_scope').GetAdjectiveNoFlag]のすべての州は、[SCOPE.sCountry('overlord_scope').GetName]が完全に支配する州地域内にあった。" #deepl:761137428
+ notification_ot_consolidated_frontera_notification_tooltip: "$notification_ot_consolidated_frontera_notification_name$\n$notification_ot_consolidated_frontera_notification_desc$" #deepl:4081520516
+ notification_ot_created_frontera_notification_name: "[concept_organized_territory] 設立" #deepl:3716142294
+ notification_ot_created_frontera_notification_desc: "[SCOPE.sCountry('overlord_scope').GetName] は、[SCOPE.sState('newly_formed_colonial_nation_anchor_state').GetName]に[concept_organized_territory]を設立しました。" #deepl:978047473
+ notification_ot_created_frontera_notification_tooltip: "$notification_ot_consolidated_frontera_notification_name$\n$notification_ot_consolidated_frontera_notification_desc$" #deepl:4081520516

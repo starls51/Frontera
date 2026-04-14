@@ -4,12 +4,16 @@
  Armijo: "Армихо" #deepl:2904734236
  Hartnell: "Хартнелл" #deepl:3013980238
  Sutter: "Саттер" #deepl:3431356359
- californio: "калифорниец" #deepl:3509864768
- californio_adj: "калифорниец" #deepl:3509864768
- californio_mestizo: "Калифорнийский метис" #deepl:263075456
- californio_mestizo_adj: "Калифорнийский метис" #deepl:263075456
+ Charles_Louis: "Шарль Луи" #deepl:3361948321
+ Charles_Albert: "Чарльз Альберт" #deepl:3416553405
+ Ducommun: "Дюкоммун" #deepl:2623748770
+ Fargo: "Фарго" #deepl:785969634
+ dyn_c_british_california: "Новый Альбион" #deepl:333256567
+ dyn_c_british_california_adj: "Новый альбионец" #deepl:3132386340
+ dyn_c_russian_california: "Калифорния" #deepl:4081344775
+ dyn_c_russian_california_adj: "Калифорнийский" #deepl:2302024145
  dyn_c_alta_california: "Верхняя Калифорния" #deepl:2718655753
- dyn_c_alta_california_adj: "калифорниец" #deepl:230681887
+ dyn_c_alta_california_adj: "калифорнийский" #deepl:230681887
  dyn_michigan_territory: "Территория Мичиган" #deepl:3433257000
  dyn_wisconsin_territory: "Территория Висконсин" #deepl:2122556499
  dyn_wisconsin_territory_adj: "житель Висконсина" #deepl:1988775082
@@ -17,55 +21,32 @@
  dyn_minnesota_territory_adj: "житель Миннесоты" #deepl:2642244691
  dyn_iowa_territory: "Территория Айова" #deepl:2578029042
  dyn_iowa_territory_adj: "житель штата Айова" #deepl:2527579376
- dyn_northwest_territory: "Северо-Западная территория" #deepl:905356594
- dyn_northwest_territory_adj: "Северо-Западная территория" #deepl:905356594
+ dyn_northwest_territory: "Территория Дакота" #deepl:1746554679
+ dyn_northwest_territory_adj: "Территория Дакота" #deepl:1746554679
  dyn_c_utah_territory: "Территория Юта" #deepl:1157070552
  dyn_c_utah_territory_adj: "Территория Юта" #deepl:1157070552
  dyn_florida_territory: "Территория Флорида" #deepl:246124055
- NMX: "Нью-Мексико" #deepl:27763770
- NMX_ADJ: "новомексиканец" #deepl:2909205373
- modifier_frontierlands_frontera: "Пограничные гиды" #deepl:1536403044
- modifier_oregon_trail_frontera: "Орегонский путь" #deepl:1130619855
- modifier_santafe_trail_frontera: "Тропа Санта-Фе" #deepl:3532834792
+ geographic_region_american_west_frontera: "Американский Запад" #deepl:489080198
+ geographic_region_frontera_adams_onis_treatyline: "Приграничный регион Адамс-Онис" #deepl:1397985490
  geographic_region_louisiana_purchase: "Покупка Луизианы" #deepl:1628975508
+ geographic_region_sunset_route_frontera: "Маршрут «Закат»" #deepl:1965144848
  geographic_region_nebraska_territory: "Территория Небраска" #deepl:245903829
  geographic_region_kansas_territory: "Территория Канзас" #deepl:2490102990
  geographic_region_mexican_north: "Север Мексики" #deepl:1926221193
  geographic_region_rocky_mountains: "Скалистые горы" #deepl:3487678637
- geographic_region_greater_columbia: "Большая Колумбия" #deepl:3068876322
+ geographic_region_greater_columbia: "Большой Колумбия" #deepl:3068876322
  generic_organized_territory: "$NAME$" #deepl:1008351533
  generic_organized_territory_adj: "$ПРИЛАГАТЕЛЬНОЕ$" #deepl:1624419671
+ frontera_state_transfer_no_infamy: "$state_transfer$" #deepl:4033366297
+ frontera_state_transfer_no_infamy_desc: "$state_transfer_desc$" #deepl:3510072888
+ frontera_state_transfer_no_infamy_effects_desc: "$state_transfer_effects_desc$" #deepl:2538127184
+ frontera_state_transfer_no_infamy_article_short_desc: "$state_transfer_article_short_desc$" #deepl:185831997
+ TREATY_DRAFT_ARTICLE_FLAG_CAUSES_FRONTERA_STATE_TRANSFER_NO_INFAMY_EFFECT: "$TREATY_DRAFT_ARTICLE_FLAG_CAUSES_STATE_TRANSFER_EFFECT$" #deepl:72011276
+ TREATY_ARTICLE_FLAG_CAUSES_FRONTERA_STATE_TRANSFER_NO_INFAMY_EFFECT: "$TREATY_ARTICLE_FLAG_CAUSES_STATE_TRANSFER_EFFECT$" #deepl:2446753876
  eng_organized_territory: "$ADJECTIVE$ Территория" #deepl:2924367184
  eng_organized_territory_adj: "$ADJECTIVE$ Территория" #deepl:2924367184
- de_organized_territory: "Комиссариат Рейха по делам евреев ($NAME$)" #deepl:2134933361
- de_organized_territory_adj: "$ADJECTIVE$ Комиссариат" #deepl:1154235138
- creating_OT_frontera_tt: "#indent_newline:2 Организованная территория #bold  #! будет присвоена [concept_capital_state] в соответствии со следующими правилами: \n $EFFECT_LIST_BULLET$ Является ли [Concept('concept_unincorporated_state','$concept_unincorporated_state$')] \n $EFFECT_LIST_BULLET$ Является ли #bold  не #! [ROOT.GetCountry.GetAdjectiveNoFormatting] [Concept('concept_homeland','$concept_homeland$')] \n $EFFECT_LIST_BULLET$ Является ли #bold  смежным #! с [ROOT.GetCountry.GetAdjectiveNoFormatting] [Concept('concept_incorporated_state','$concept_incorporated_state$')]. \n $EFFECT_LIST_BULLET$ Имеет ли [GetDecreeType('decree_greener_grass_campaign').GetName] , или [concept_state] с наивысшим [Concept('concept_gdp','$concept_gdp_short$')]" #deepl:2335454090
- creating_OT_frontera_2_tt: "#italic  Любые штаты, следующие первым двум правилам и имеющие общий граничный бассейн ([concept_strategic_region]) с новым штатом ([concept_capital_state]), будут переданы в состав организованной территории (Organized Territory) штата Виргиния (#bold ) #! #!." #deepl:1399382270
- je_tooltip_no_homelands_frontera: "#bold  не #! [ROOT.GetCountry.GetAdjectiveNoFormatting] [Concept('concept_homeland', '$concept_homeland$')]." #deepl:2389861123
- je_tooltip_homeland_required_frontera: "[ROOT.GetCountry.GetAdjectiveNoFormatting] [Concept('concept_homeland', '$concept_homeland$')]." #deepl:3505402040
- je_tooltip_incorporated_adjacency_frontera: "#bold  находится рядом с #! и [ROOT.GetCountry.GetAdjectiveNoFormatting] [Concept('concept_incorporated_state','$concept_incorporated_state$')]." #deepl:215185147
- je_organized_territories_frontera: "Установить организованную территорию" #deepl:1625332565
- je_organized_territories_frontera_reason: "В целях расширения нашей страны, на территории некоторых из наших [Concept('concept_unincorporated_state','$concept_unincorporated_states$')] может быть создана организованная территория #bold  #!. Они станут [Concept('concept_incorporated_state','$concept_incorporated_states$')], принадлежащими организованной территории #bold  #!. \n \n В то время как на территории #bold  #! принят закон [GetLawType('law_homesteading').GetName], два [Concept('concept_incorporated_state','$concept_states$')] с самым высоким [Concept('concept_gdp','$concept_gdp_short$')] будут получать ежегодный бонус к [Concept('concept_migration','$concept_migration$')]. Любой [Concept('concept_incorporated_state','$concept_incorporated_state$')], принадлежащий организованной территории #bold  #!, может в конечном итоге стать [Concept('concept_homeland','$concept_homeland$')] для [Concept('concept_overlord','$concept_overlord_possessive$')] [Concept('concept_primary_cultures','$concept_primary_culture$')]. \n #indent_newline:2 \n [concept_state] станет [Concept('concept_homeland','$concept_homeland$')], если: \n $EFFECT_LIST_BULLET$ Имеет [Concept('concept_cultural_community','$concept_cultural_community$')] [Concept('concept_overlord','$concept_overlord_possessive$')] [Concept('concept_primary_cultures','$concept_primary_culture$')] \n $EFFECT_LIST_BULLET$ 60% [Concept('concept_pop', '$concept_population$')] имеет [concept_acceptance] 65 или более \n $EFFECT_LIST_BULLET$ [concept_state] [Concept('concept_pop', '$concept_population$')] превышает 85 000 \n \n #lore  Поселенцы, торговцы, миссионеры и солдаты продвигаются вперед в поисках земли и возможностей, часто выходя за пределы досягаемости центрального правительства. Чтобы эти отдаленные территории могли интегрироваться, за расширением должна следовать администрация. Там, где растут поселения, новые штаты могут однажды быть приняты в нашу юрисдикцию. #!" #deepl:544344828
- je_organize_territory_button: "Установить территорию" #deepl:4044636356
- je_organize_territory_button_desc: "Организуйте некоторые из наших «[Concept('concept_unincorporated_state','$concept_unincorporated_states$')]» в «#bold » «Organized Territory» «#!»." #deepl:1558054720
- da_organize_territory_from_subject: "Учредить пограничное правительство" #deepl:1624084733
- da_organize_territory_from_subject_desc: "[Concept('concept_law', '$concept_laws$')] и [Concept('concept_institution', '$concept_institutions$')] этого [concept_subject] будут изменены, чтобы стать #bold  Organized Territory #!. Поселенцы будут более склонны [Concept('concept_migration','$concept_migrate$')] здесь, но местные [Concept('concept_pop', '$Population$')] станут более [Concept('concept_radical','$concept_radicalized$')]." #deepl:2949097403
- da_organize_territory_from_subject_effect: "Ассоциация «[concept_subject]» станет территорией, организованной в рамках «#bold » (#!)." #deepl:1446860370
- da_organize_territory_from_subject_action_notification_third_party_name: "[INITIATOR_COUNTRY.GetAdjectiveNoFormatting] - [TARGET_COUNTRY.GetAdjectiveNoFormatting] Образована #bold  Организованная территория #!" #deepl:3641017969
- da_organize_territory_from_subject_action_notification_third_party_desc: "[INITIATOR_COUNTRY.GetName] учредил организацию «[TARGET_COUNTRY.GetName]» в качестве территории, организованной в соответствии с законом штата Вирджиния (#bold ) #!" #deepl:3647728949
- da_organize_territory_from_subject_action_notification_name: "[INITIATOR_COUNTRY.GetName] реорганизовал нас в территорию, организованную по принципу «#bold » #!" #deepl:1212072590
- da_organize_territory_from_subject_action_notification_desc: "[INITIATOR_COUNTRY.GetName] учредил организацию «[TARGET_COUNTRY.GetName]» в качестве территории, организованной в соответствии с законом штата Вирджиния (#bold ) #!" #deepl:3647728949
- je_sunset_route_frontera: "Маршрут «Закат»" #deepl:1011417108
- je_sunset_route_frontera_reason: "Железнодорожное сообщение с Калифорнией в теплое время года позволило бы обеспечить беспрецедентный поток товаров и людей между Востоком и Западом. Однако этот проект требует значительной координации. Помимо урегулирования продолжающихся споров между владельцами недвижимости по поводу пересечения железнодорожных путей (#italic ) #!, необходимо также стандартизировать ширину колеи, сигналы и расписание. Это может быть более сложной задачей, если иностранные государства контролируют участки путей вдоль предлагаемого маршрута, но эта задача ни в коем случае не является невозможной." #deepl:1621464726
- je_sunset_route_frontera_button: "Подключите маршрут «Закат»" #deepl:317884082
- je_sunset_route_frontera_button_desc: "Выступать посредником между различными заинтересованными сторонами с целью создания нового железнодорожного маршрута в Калифорнию." #deepl:952386937
- je_gadsden_purchase_frontera_button: "Проверьте границы" #deepl:2467056109
- je_gadsden_purchase_frontera_button_desc: "Расширение железнодорожной сети на запад будет более управляемым, если мы будем физически контролировать необходимый земельный коридор. Хотя это и сопряжено с политическим риском, провоцирование пограничных споров с нашими соседями может открыть дополнительные дипломатические или военные возможности для приобретения земель для нашего проекта." #deepl:1391362877
- sunset_route_built_yes_tt: "Маршрут «Закат в парке Форест-Крик» (#bold ) #! существует" #deepl:4231881481
- sunset_route_built_no_tt: "Маршрут «Закат в парке Форест-Крик» (#bold ) Маршрут «Закат в парке Форест-Крик» (#!) не существует." #deepl:1689524445
- sunset_route_frontera: "Маршрут «Закат»" #deepl:1965144848
- sunset_route_reward_frontera: "Маршрут «Закат»" #deepl:1965144848
- treaty_name_treaty_of_mesilla: "Договор Месилья" #deepl:3628424082
- mesilla_treaty_creation_tt: "Добавьте предложение «[concept_treaty]» о продаже любой принадлежащей вам земли в Аризоне или Нью-Мексико в «[SCOPE.sCountry('buyer_scope').GetName]» за еженедельную сумму #bold £3500 #! per [concept_state]" #deepl:2192895926
- je_seminole_wars_removal_frontera: ""
- colonial_affairs_owner_is_discriminated_country_tt: "Любой элемент [concept_state], смежный с [GetPlayer.GetAdjective] [concept_homeland], принадлежит элементу [concept_country], все элементы [concept_primary_cultures] которого находятся ниже элемента [Concept('concept_discrimination','@acceptance_status_4! $second_rate_citizen$')] в элементе [GetPlayer.GetName]." #deepl:525054957
+ de_organized_territory: "Рейхскомиссариат по делам евреев в Германии ($NAME$)" #deepl:2134933361
+ de_organized_territory_adj: "$ADJECTIVE$ Продовольственное управление" #deepl:1154235138
+ treaty_name_treaty_of_mesilla: "Месильский договор" #deepl:3628424082
+ treaty_name_frontera_treaty_of_limits: "Договор о границах" #deepl:1311019191
+ treaty_name_frontera_nonintercourse_act_1834: "Закон о запрете половых сношений 1834 года" #deepl:3761781907

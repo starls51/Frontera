@@ -1,0 +1,34 @@
+﻿l_russian:
+ frontera_ot.1: "Неорганизованная территория" #deepl:770041530
+ frontera_ot.1.t: "Неорганизованная территория" #deepl:770041530
+ frontera_ot.1.d: "[SCOPE.sCountry('overlord_scope').GetNameNoFlag] не проявляет особого интереса к сохранению организации «[SCOPE.sCountry('ot_scope').GetNameNoFlag]» в качестве самостоятельного органа управления." #deepl:791967195
+ frontera_ot.1.f: "Эта территория станет неорганизованной, неинкорпорированной территорией штата Аляска ([SCOPE.sCountry('overlord_scope').GetAdjectiveNoFlag]). Однако в будущем она может быть включена в состав новой территории." #deepl:2413213071
+ frontera_ot.1.a: "Возможно, губернатор найдет себе другую работу..." #deepl:671175547
+ frontera_ot.2: "Вперед, вагоны!" #deepl:3523476864
+ frontera_ot.2.t: "Вперед, вагоны!" #deepl:3523476864
+ frontera_ot.2.d: "[SCOPE.sCountry('overlord_scope').GetAdjectiveNoFlag] поселенцы переезжают в [SCOPE.sState('ot_state_scope').GetName]" #deepl:2987101877
+ frontera_ot.2.f: "Переселенцы, отправляющиеся на новые земли, принесут с собой уникальное сочетание историй и верований. Их путешествие в новые края не только станет испытанием для их личности, но и определит, кем они станут в будущем. \n \n #bold  Эти новые поселенцы... #!" #deepl:4166109341
+ frontera_ot.2.a: "[SCOPE.sPop('pop_a_scope').GetCulture.GetName] [SCOPE.sPop('pop_a_scope').GetPopType.GetNameNoIcon], которого часто слышали, как он обсуждал сайт [SCOPE.sPoliticalMovement('movement_a_scope').GetNameNoIcon]." #deepl:43556161
+ frontera_ot.2.b: "[SCOPE.sPop('pop_b_scope').GetCulture.GetName] [SCOPE.sPop('pop_b_scope').GetPopType.GetNameNoIcon], внутренние разногласия по поводу [SCOPE.sPoliticalMovement('movement_b_scope').GetNameNoIcon]." #deepl:1096300513
+ frontera_ot.2.c: "[SCOPE.sPop('pop_c_scope').GetCulture.GetName] [SCOPE.sPop('pop_c_scope').GetPopType.GetNameNoIcon], с твердой уверенностью в [SCOPE.sPoliticalMovement('movement_c_scope').GetNameNoIcon]." #deepl:456112610
+ frontera_ot.3: "Территориальный устав" #deepl:2442298291
+ frontera_ot.3.t: "Постановление «[SCOPE.sState('newly_formed_colonial_nation_anchor_state').GetNameNoFormatting]»" #deepl:64569039
+ frontera_ot.3.d: "После долгих обсуждений общая концепция нового сайта [concept_organized_territory] почти определилась. Осталось уточнить лишь некоторые мелкие детали." #deepl:3662192004
+ frontera_ot.3.f: "Территория «[Concept('concept_unincorporated_state','$concept_unincorporated_state$')]» ([SCOPE.sState('newly_formed_colonial_nation_anchor_state').GetName]) была признана подходящей для создания в рамках программы «[Concept('concept_capital_state','$concept_capital_state_short$')]». После окончательного утверждения границ для управления этой территорией может быть назначен местный орган власти. \n \n #bold  Где будет создана эта территория? #!" #deepl:3332362391
+ frontera_ot.3.a: "Определить территорию вокруг [SCOPE.sState('newly_formed_colonial_nation_anchor_state').GetName]." #deepl:1584845668
+ frontera_ot.3.b: "Определить границы территории в районе реки Элк ([SCOPE.sStrategicRegion('region_scope').GetName])." #deepl:236851503
+ frontera_ot.3.c: "Если хорошенько подумать, это может подождать." #deepl:3045238605
+ frontera_acw_events.3.t: "Оговорка о «[SCOPE.sCharacter('wilmot_proviso_ig_leader').GetLastName]»" #deepl:1352998344
+ frontera_acw_events.3.d: "[SCOPE.sCharacter('wilmot_proviso_ig_leader').GetFullName]., лидер «[SCOPE.gsInterestGroup('wilmot_proviso_ig').GetName]», предложил полностью запретить рабство на всех наших новых территориях. Некоторые противники призывают к умеренности, но другие требуют легализации рабства на всех новых территориях." #deepl:3885920250
+ frontera_acw_events.3.f: "«Это невыносимое учреждение не должно больше расширять своё влияние! Свободная нация нуждается в свободной земле, чтобы процветать!»" #deepl:3646320274
+ frontera_acw_events.3.a: "Отклонить это условие; данный вопрос остается в компетенции отдельных штатов." #deepl:3123663819
+ frontera_acw_events.3.b: "Примите это условие и отмените рабство на территориях." #deepl:2346190169
+ frontera_acw_events.3.c: "Отклонить это условие и распространить рабство на территории." #deepl:2300651371
+ frontera_ot.4: "Пограничный спор" #deepl:988586463
+ frontera_ot.4.t: "Пограничный спор" #deepl:988586463
+ frontera_ot.4.d: "[SCOPE.sCountry('ot_1_scope').GetRuler.GetPrimaryRoleTitle] [SCOPE.sCountry('ot_1_scope').GetRuler.GetLastName] обратилась к правительству с опасениями по поводу неясной границы с компанией «[SCOPE.sCountry('ot_2_scope').GetNameNoFormatting]». Налоговые инспекторы, заявляющие, что представляют компанию «[SCOPE.sCountry('ot_2_scope').GetRuler.GetPrimaryRoleTitle]» ([SCOPE.sCountry('ot_2_scope').GetRuler.GetLastName]), пытались взыскать налоги с населенных пунктов, расположенных на территории «[SCOPE.sState('ot_1_state_scope').GetName]»." #deepl:1034593519
+ frontera_ot.4.f: "Кто смог бы отличить мелкие границы от морщин на этой запыленной старой карте?" #deepl:2316071882
+ frontera_ot.4.a: "Закажите повторное обследование на сайте [SCOPE.sCountry('ot_1_scope').GetNameNoFlag]." #deepl:2273386938
+ frontera_ot.4.b: "Сайт [SCOPE.sCountry('ot_2_scope').GetRuler.GetPrimaryRoleTitle], расположенный по адресу [SCOPE.sCountry('ot_2_scope').GetNameNoFlag], находится в ведении [SCOPE.sCountry('ot_2_scope').GetRuler.GetHerHis]." #deepl:4240412277
+ frontera_ot.4.c: "Да! Кровавая бойня! Кровь для «[ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle]»!" #deepl:2183657101
+ frontera_ot.4.e: "Да! Кровавая бойня! Кровь для «[ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle]»!" #deepl:2183657101

@@ -1,51 +1,61 @@
 ﻿l_russian:
- gov_frontier_territory_frontera: "#bold  Организованная территория#!" #deepl:906580571
- gov_occupied_territory_frontera: "#bold  Профессия Правительство #!" #deepl:1016260001
- gov_frontier_territory_frontera_desc: "Это де-факто государство [concept_government_type], управляемое избранным законодательным органом от имени своего территориального повелителя. \n \n $TRANSFER_OF_POWER_NAME_DESC$" #deepl:2530168596
+ subject_type_ot_frontera: "@colony! $subject_type_ot_frontera_no_icon$" #deepl:3253250556
+ subject_type_ot_frontera_no_icon: "$concept_organized_territory$" #deepl:313969428
+ concept_ot_frontera_desc: "$concept_organized_territory_desc$" #deepl:3873127522
+ gov_frontier_territory_frontera: "Организованная территория" #deepl:2352668119
+ gov_occupied_territory_frontera: "Сфера деятельности: Государственное управление" #deepl:3187887074
+ gov_frontier_territory_frontera_desc: "Это де-факто государство [concept_government_type], управляемое избранным законодательным органом от имени своего территориального суверена. \n \n $TRANSFER_OF_POWER_NAME_DESC$" #deepl:2530168596
  gov_occupied_territory_frontera_desc: "Это де-факто государство [concept_government_type], управляемое назначенной администрацией от имени своего территориального повелителя. \n \n $TRANSFER_OF_POWER_NAME_DESC$" #deepl:4281170394
  law_frontier_territorial_administration: "Территориальный совет" #deepl:2715586447
- law_frontier_territorial_administration_desc: "Государство юридически является подразделением иностранной державы, не обладающим собственным суверенитетом. Ему предоставлены ограниченные полномочия по управлению мозаичным территориальным владением. По замыслу, территориальное правительство призвано способствовать миграции, росту населения или географическому контролю; его функции могут привести к постепенной интеграции с их верховным правителем." #deepl:2928952332
+ law_frontier_territorial_administration_desc: "С юридической точки зрения штат является административной единицей иностранного государства и не обладает собственным суверенитетом. Ему предоставлены ограниченные полномочия по управлению разрозненными территориальными владениями. По замыслу, территориальное правительство призвано способствовать миграции, росту населения или установлению географического контроля; его деятельность может привести к постепенной интеграции с вышестоящей властью." #deepl:2928952332
+ da_organize_territory_from_subject: "Создать правительство приграничных территорий" #deepl:1624084733
+ da_organize_territory_from_subject_desc: "Адрес [Concept('concept_law', '$concept_laws$')] и [Concept('concept_institution', '$concept_institutions$')] данного сайта [concept_subject] будет изменен на [concept_organized_territory]. Посетители, скорее всего, будут переходить по ссылке [Concept('concept_migration','$concept_migrate$')], но местный сайт [Concept('concept_pop', '$Population$')] станет более доступным по адресу [Concept('concept_radical','$concept_radicalized$')]." #deepl:3012390034
+ da_organize_territory_from_subject_effect: "Сайт [concept_subject] будет перенаправлен на сайт [concept_organized_territory]." #deepl:2940174597
+ da_organize_territory_from_subject_action_notification_third_party_name: "[INITIATOR_COUNTRY.GetAdjectiveNoFormatting] - [TARGET_COUNTRY.GetAdjectiveNoFormatting] Основан в [concept_organized_territory]" #deepl:3127302275
+ da_organize_territory_from_subject_action_notification_third_party_desc: "[INITIATOR_COUNTRY.GetName] создала сайт [TARGET_COUNTRY.GetName] в качестве [concept_organized_territory]" #deepl:2133792713
+ da_organize_territory_from_subject_action_notification_name: "[INITIATOR_COUNTRY.GetName] преобразовала нас в организацию «[concept_organized_territory]»" #deepl:128971638
+ da_organize_territory_from_subject_action_notification_desc: "[INITIATOR_COUNTRY.GetName] создала сайт [TARGET_COUNTRY.GetName] в качестве [concept_organized_territory]" #deepl:2133792713
  frontera_organized_territory: "Организованная территория" #deepl:2352668119
- frontera_organized_territory_action_name: "[концепция_колония_предмет]" #deepl:3251702515
- frontera_organized_territory_action_propose_name: "Сделайте из этого «[concept_colony_subject]»" #deepl:3174115590
- frontera_organized_territory_action_break_name: "Предоставить независимость" #deepl:559759927
- frontera_organized_territory_action_ask_to_break_name: "Независимость от спроса" #deepl:2601711019
- frontera_organized_territory_desc: "Устанавливает связь «[concept_colony_subject]» (связь «») [concept_subject_type] между двумя «[Concept('concept_country', '$concept_countries$')]» (связью «»)." #deepl:705416797
- frontera_organized_territory_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName] является частью проекта «[concept_colony_subject]» (Проект «Сделай сам») сайта [SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName]." #deepl:1373808063
- frontera_organized_territory_action_notification_name: "Спрос на [concept_colony_subject]" #deepl:1515811026
- frontera_organized_territory_action_notification_desc: "[INITIATOR_COUNTRY.GetName] требует, чтобы мы подчинились им и стали их «[concept_colony_subject]» (покорными рабами)." #deepl:2712539620
+ frontera_organized_territory_action_name: "[концепция_организованной_территории]" #deepl:2032668942
+ frontera_organized_territory_action_propose_name: "Сделайте так: [concept_organized_territory]" #deepl:4097128999
+ frontera_organized_territory_action_break_name: "Обеспечить независимость" #deepl:559759927
+ frontera_organized_territory_action_ask_to_break_name: "Требуйте независимости" #deepl:2601711019
+ frontera_organized_territory_desc: "Устанавливает связь [concept_organized_territory] [concept_subject_type] между двумя [Concept('concept_country', '$concept_countries$')]." #deepl:71996272
+ frontera_organized_territory_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName] является филиалом компании «[concept_organized_territory]» ([SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName])." #deepl:2631043201
+ frontera_organized_territory_action_notification_name: "Спрос на [concept_organized_territory]" #deepl:1535292097
+ frontera_organized_territory_action_notification_desc: "[INITIATOR_COUNTRY.GetName] требует, чтобы мы подчинились им и стали их «[concept_organized_territory]»." #deepl:2726039266
  frontera_organized_territory_action_notification_break_name: "Предоставление независимости" #deepl:2574177537
- frontera_organized_territory_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] завершили наше участие в программе «[concept_colony_subject]». Мы снова стали независимыми." #deepl:3957619773
+ frontera_organized_territory_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] прекратили наше участие в программе «[concept_organized_territory]». Мы вновь стали независимыми." #deepl:321213479
  frontera_organized_territory_proposal_notification_break_name: "Требование независимости" #deepl:4186398139
- frontera_organized_territory_proposal_notification_break_desc: "[INITIATOR_COUNTRY.GetName] требуют, чтобы мы прекратили их статус «[concept_colony_subject]» (особое положение)." #deepl:1708328788
- frontera_organized_territory_proposal_notification_break_effects_desc: "Если мы согласимся, они станут полностью независимыми." #deepl:2906517331
+ frontera_organized_territory_proposal_notification_break_desc: "[INITIATOR_COUNTRY.GetName] требуют, чтобы мы лишили их статуса «[concept_organized_territory]»." #deepl:1723243462
+ frontera_organized_territory_proposal_notification_break_effects_desc: "Если мы согласимся, они обретут полную независимость." #deepl:2906517331
  frontera_organized_territory_proposal_break_accepted_name: "Предоставление независимости" #deepl:2574177537
- frontera_organized_territory_proposal_break_accepted_desc: "[TARGET_COUNTRY.GetName] приняли требование прекратить наш статус «[concept_colony_subject]». Мы снова стали независимыми." #deepl:1952871052
- frontera_organized_territory_proposal_break_declined_name: "Независимость отклонена" #deepl:653698475
- frontera_organized_territory_proposal_break_declined_desc: "[TARGET_COUNTRY.GetName] отказались удовлетворить требование о прекращении нашего статуса «[concept_colony_subject]»." #deepl:3746860557
+ frontera_organized_territory_proposal_break_accepted_desc: "[TARGET_COUNTRY.GetName] удовлетворили требование о прекращении нашего статуса «[concept_organized_territory]». Мы вновь стали независимыми." #deepl:3078165425
+ frontera_organized_territory_proposal_break_declined_name: "Отказ в независимости" #deepl:653698475
+ frontera_organized_territory_proposal_break_declined_desc: "[TARGET_COUNTRY.GetName] отклонили требование лишить нас статуса «[concept_organized_territory]»." #deepl:3407165481
  frontera_organized_territory_action_third_party_notification_break_name: "Предоставление независимости" #deepl:2574177537
- frontera_organized_territory_action_third_party_notification_break_desc: "[INITIATOR_COUNTRY.GetName] прекратил статус «[concept_colony_subject]» (зависимая территория) [TARGET_COUNTRY.GetName] , предоставив им полную независимость." #deepl:3771074568
+ frontera_organized_territory_action_third_party_notification_break_desc: "[INITIATOR_COUNTRY.GetName] прекратил статус «государства под опекой» ([concept_organized_territory]) в отношении [TARGET_COUNTRY.GetName], предоставив ему полную независимость." #deepl:305684714
  frontera_organized_territory_proposal_third_party_break_accepted_name: "Предоставление независимости" #deepl:2574177537
- frontera_organized_territory_proposal_third_party_break_accepted_desc: "[TARGET_COUNTRY.GetName] прекратил статус «[concept_colony_subject]» (зависимая территория) [INITIATOR_COUNTRY.GetName] , предоставив им полную независимость." #deepl:100521671
- frontera_organized_territory_proposal_third_party_break_declined_name: "Независимость отклонена" #deepl:653698475
- frontera_organized_territory_proposal_third_party_break_declined_desc: "[TARGET_COUNTRY.GetName] отказался прекратить статус «[concept_colony_subject]» (запрещенный для доступа) сайта [INITIATOR_COUNTRY.GetName]." #deepl:3590310999
- frontera_organized_territory_proposal_notification_name: "Требование порабощения" #deepl:266272033
- frontera_organized_territory_proposal_notification_desc: "[INITIATOR_COUNTRY.GetName] требует, чтобы мы подчинились им и стали их «[concept_colony_subject]» (покорными рабами)." #deepl:2712539620
- frontera_organized_territory_proposal_notification_effects_desc: "Если мы согласимся, то станем их подданными." #deepl:852371670
+ frontera_organized_territory_proposal_third_party_break_accepted_desc: "[TARGET_COUNTRY.GetName] прекратил статус «государства под опекой» ([concept_organized_territory]) в отношении [INITIATOR_COUNTRY.GetName], предоставив ему полную независимость." #deepl:1941904680
+ frontera_organized_territory_proposal_third_party_break_declined_name: "Отказ в независимости" #deepl:653698475
+ frontera_organized_territory_proposal_third_party_break_declined_desc: "[TARGET_COUNTRY.GetName] отказался отменить статус «[concept_organized_territory]» у сайта [INITIATOR_COUNTRY.GetName]." #deepl:2589167366
+ frontera_organized_territory_proposal_notification_name: "Требование о подчинении" #deepl:266272033
+ frontera_organized_territory_proposal_notification_desc: "[INITIATOR_COUNTRY.GetName] требует, чтобы мы подчинились им и стали их «[concept_organized_territory]»." #deepl:2726039266
+ frontera_organized_territory_proposal_notification_effects_desc: "Если мы согласимся, мы станем их подданными." #deepl:852371670
  frontera_organized_territory_proposal_accepted_name: "Подчинение принято" #deepl:2584296030
- frontera_organized_territory_proposal_accepted_desc: "[TARGET_COUNTRY.GetName] приняли требование стать нашими «[concept_colony_subject]» (партнерами по продвижению)." #deepl:1124690513
- frontera_organized_territory_proposal_declined_name: "Подчинение отклонено" #deepl:3425793555
- frontera_organized_territory_proposal_declined_desc: "[TARGET_COUNTRY.GetName] отклонили требование стать нашими «[concept_colony_subject]»." #deepl:3198712008
- frontera_organized_territory_proposal_third_party_accepted_name: "Подчиненная страна" #deepl:3333335653
- frontera_organized_territory_proposal_third_party_accepted_desc: "[TARGET_COUNTRY.GetName] согласился стать «[concept_colony_subject]» (ведущим блогером) сайта [INITIATOR_COUNTRY.GetName]." #deepl:3618292710
- frontera_organized_territory_proposal_third_party_declined_name: "Подчинение отклонено" #deepl:3425793555
- frontera_organized_territory_proposal_third_party_declined_desc: "[TARGET_COUNTRY.GetName] отказался стать «[concept_colony_subject]» из «[INITIATOR_COUNTRY.GetName]»." #deepl:1144786411
- frontera_organized_territory_effect_desc_global: "Становится «[concept_colony_subject]»" #deepl:2186263610
- frontera_organized_territory_effect_desc_first: "[TARGET_COUNTRY.GetName] становится [COUNTRY.GetAdjectiveNoFlag] [concept_colony_subject]" #deepl:812973629
- frontera_organized_territory_effect_desc_third: "[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)] [AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] становится [concept_colony_subject] из [COUNTRY.GetName]" #deepl:1164416506
- frontera_organized_territory_trigger_desc_global: "[concept_colony_subject]" #deepl:281153964
- frontera_organized_territory_trigger_false_desc_global: "#b  не #! a [concept_colony_subject]" #deepl:4120123678
- frontera_organized_territory_trigger_desc_first: "[TARGET_COUNTRY.GetName] [COUNTRY.GetAdjectiveNoFlag] [concept_colony_subject]" #deepl:3100485644
- frontera_organized_territory_trigger_false_desc_first: "[TARGET_COUNTRY.GetName] #b , а не #! [COUNTRY.GetAdjectiveNoFlag] [concept_colony_subject]" #deepl:3644228541
- frontera_organized_territory_trigger_desc_third: "[COUNTRY.GetName] [concept_colony_subject] [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)] [AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]" #deepl:1872412249
- frontera_organized_territory_trigger_false_desc_third: "[COUNTRY.GetNameNoFlag] #b , а не #!, [concept_colony_subject], [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetName)], [AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]" #deepl:2909402420
+ frontera_organized_territory_proposal_accepted_desc: "[TARGET_COUNTRY.GetName] согласились с требованием, чтобы они стали нашими «[concept_organized_territory]»." #deepl:4169460010
+ frontera_organized_territory_proposal_declined_name: "Отказ от покорности" #deepl:3425793555
+ frontera_organized_territory_proposal_declined_desc: "[TARGET_COUNTRY.GetName] отклонили просьбу о том, чтобы они стали нашими «[concept_organized_territory]»." #deepl:3866933163
+ frontera_organized_territory_proposal_third_party_accepted_name: "Покоренная страна" #deepl:3333335653
+ frontera_organized_territory_proposal_third_party_accepted_desc: "[TARGET_COUNTRY.GetName] согласился стать официальным партнером по размещению рекламы ([concept_organized_territory]) сайта [INITIATOR_COUNTRY.GetName]." #deepl:1880742352
+ frontera_organized_territory_proposal_third_party_declined_name: "Отказ от покорности" #deepl:3425793555
+ frontera_organized_territory_proposal_third_party_declined_desc: "[TARGET_COUNTRY.GetName] отказался стать «[concept_organized_territory]» на сайте [INITIATOR_COUNTRY.GetName]." #deepl:4249654475
+ frontera_organized_territory_effect_desc_global: "Становится участником программы «[concept_organized_territory]»" #deepl:687329912
+ frontera_organized_territory_effect_desc_first: "[TARGET_COUNTRY.GetName] становится участником программы «[COUNTRY.GetAdjectiveNoFlag]» [concept_organized_territory]" #deepl:4022060011
+ frontera_organized_territory_effect_desc_third: "[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)] [AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] становится филиалом компании «[concept_organized_territory]» ([COUNTRY.GetName])" #deepl:550130030
+ frontera_organized_territory_trigger_desc_global: "[concept_organized_territory]" #deepl:3062203235
+ frontera_organized_territory_trigger_false_desc_global: "#b  — это не #!, а [concept_organized_territory]" #deepl:111525193
+ frontera_organized_territory_trigger_desc_first: "[TARGET_COUNTRY.GetName] — это сайт [COUNTRY.GetAdjectiveNoFlag] [concept_organized_territory]" #deepl:1431207336
+ frontera_organized_territory_trigger_false_desc_first: "[TARGET_COUNTRY.GetName] #b , а не #!, [COUNTRY.GetAdjectiveNoFlag] или [concept_organized_territory]" #deepl:4246920251
+ frontera_organized_territory_trigger_desc_third: "[COUNTRY.GetName] [concept_organized_territory]: [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)] [AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]" #deepl:1737137617
+ frontera_organized_territory_trigger_false_desc_third: "[COUNTRY.GetNameNoFlag] #b , а не #! — это [concept_organized_territory], принадлежащий [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetName)] [AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]" #deepl:1425883803

@@ -1,0 +1,22 @@
+﻿l_simp_chinese:
+ da_frontera_force_culture: "建立国民党政府" #deepl:2453814574
+ da_frontera_force_culture_desc: "将[concept_organized_territory]的[concept_primary_cultures]更改为与其[concept_overlord]一致。" #deepl:3006522470
+ da_frontera_force_culture_action_name: "建立国民党政府" #deepl:2453814574
+ da_frontera_force_culture_action_notification_name: "[TARGET_COUNTRY.GetName] 采用[INITIATOR_COUNTRY.GetAdjective]管理" #deepl:495659015
+ da_frontera_force_culture_action_notification_desc: "[INITIATOR_COUNTRY.GetName] 已将 [TARGET_COUNTRY.GetName] 的 [concept_primary_cultures] 修改为与她自己的相匹配。" #deepl:1709253863
+ da_frontera_force_culture_action_notification_third_party_name: "[TARGET_COUNTRY.GetName] 采用[INITIATOR_COUNTRY.GetAdjective]管理" #deepl:495659015
+ da_frontera_force_culture_action_notification_third_party_desc: "[INITIATOR_COUNTRY.GetName] 已将 [TARGET_COUNTRY.GetName] 的 [concept_primary_cultures] 修改为与她自己的相匹配。" #deepl:1709253863
+ da_frontera_force_state_religion: "分享 $concept_religion$" #deepl:3780971767
+ da_frontera_force_state_religion_action_name: "分享 [concept_religion]" #deepl:1833652158
+ da_frontera_force_state_religion_desc: "此次[concept_organized_territory]将突出我们备受推崇的[concept_religion]，让代表和教育工作者能够与民众自由交流。" #deepl:2479916493
+ da_frontera_force_state_religion_action_notification_name: "[INITIATOR_COUNTRY.GetName] 派遣其[concept_religion]的代表" #deepl:3886297734
+ da_frontera_force_state_religion_action_notification_desc: "[INITIATOR_COUNTRY.GetName] 已邀请其[concept_religion]的代表来到我们的领土" #deepl:486204899
+ da_frontera_force_state_religion_action_notification_third_party_name: "[INITIATOR_COUNTRY.GetName] 派遣其[concept_religion]的代表" #deepl:3886297734
+ da_frontera_force_state_religion_action_notification_third_party_desc: "[INITIATOR_COUNTRY.GetName] 已邀请其[concept_religion]的代表加入[TARGET_COUNTRY.GetName]" #deepl:243943760
+ da_frontera_dissolve_ot: "解散领地" #deepl:1444142792
+ da_frontera_dissolve_ot_action_name: "[concept_organized_territory] 已解散" #deepl:3449086710
+ da_frontera_dissolve_ot_desc: "该[concept_organized_territory]文件将作为[Concept('concept_unincorporated_state','$concept_unincorporated_states$')]的附件。" #deepl:2143557788
+ da_frontera_dissolve_ot_action_notification_name: "[INITIATOR_COUNTRY.GetName] 附件 [TARGET_COUNTRY.GetName]" #deepl:3664093964
+ da_frontera_dissolve_ot_action_notification_desc: "[INITIATOR_COUNTRY.GetName] 已将我们吞并" #deepl:1307216587
+ da_frontera_dissolve_ot_action_notification_third_party_name: "[INITIATOR_COUNTRY.GetName] 附件：[concept_organized_territory]" #deepl:795772768
+ da_frontera_dissolve_ot_action_notification_third_party_desc: "[INITIATOR_COUNTRY.GetName] 已将 [TARGET_COUNTRY.GetName] 添加为子域名" #deepl:2142045709

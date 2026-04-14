@@ -1,0 +1,34 @@
+﻿l_korean:
+ frontera_ot.1: "미개척지" #deepl:770041530
+ frontera_ot.1.t: "미개척지" #deepl:770041530
+ frontera_ot.1.d: "[SCOPE.sCountry('overlord_scope').GetNameNoFlag] [SCOPE.sCountry('ot_scope').GetNameNoFlag]를 별도의 관리 기구 아래에서 유지하는 데 별다른 관심이 없다." #deepl:791967195
+ frontera_ot.1.f: "이 지역은 조직되지 않은, 자치권이 없는 미합병 영토([SCOPE.sCountry('overlord_scope').GetAdjectiveNoFlag])가 될 것입니다. 하지만 언젠가는 새로운 영토로 편입될 수도 있습니다." #deepl:2413213071
+ frontera_ot.1.a: "주지사는 아마 다른 직업을 찾게 될지도 모르겠네요..." #deepl:671175547
+ frontera_ot.2: "서쪽으로 가자!" #deepl:3523476864
+ frontera_ot.2.t: "서쪽으로 가자!" #deepl:3523476864
+ frontera_ot.2.d: "[SCOPE.sCountry('overlord_scope').GetAdjectiveNoFlag] 정착민들이 [SCOPE.sState('ot_state_scope').GetName]으로 이동하고 있습니다" #deepl:2987101877
+ frontera_ot.2.f: "개척지 이민자들은 각기 다른 역사와 신념을 지닌 독특한 집단을 형성할 것입니다. 새로운 땅으로의 여정은 그들의 정체성을 시험할 뿐만 아니라, 그들이 어떤 사람으로 성장할지 결정짓게 될 것입니다. \n \n #bold  이 새로운 정착민들은... #!" #deepl:4166109341
+ frontera_ot.2.a: "[SCOPE.sPop('pop_a_scope').GetCulture.GetName] [SCOPE.sPop('pop_a_scope').GetPopType.GetNameNoIcon], 종종 [SCOPE.sPoliticalMovement('movement_a_scope').GetNameNoIcon]에 대해 이야기하는 모습이 목격된다." #deepl:43556161
+ frontera_ot.2.b: "[SCOPE.sPop('pop_b_scope').GetCulture.GetName] [SCOPE.sPop('pop_b_scope').GetPopType.GetNameNoIcon], [SCOPE.sPoliticalMovement('movement_b_scope').GetNameNoIcon]을 둘러싼 내부 갈등." #deepl:1096300513
+ frontera_ot.2.c: "[SCOPE.sPop('pop_c_scope').GetCulture.GetName] [SCOPE.sPop('pop_c_scope').GetPopType.GetNameNoIcon], [SCOPE.sPoliticalMovement('movement_c_scope').GetNameNoIcon]에 대한 확고한 신념을 품고." #deepl:456112610
+ frontera_ot.3: "영토 조례" #deepl:2442298291
+ frontera_ot.3.t: "[SCOPE.sState('newly_formed_colonial_nation_anchor_state').GetNameNoFormatting] 조례" #deepl:64569039
+ frontera_ot.3.d: "오랜 고민 끝에 새로운 ‘[concept_organized_territory]’의 개요가 거의 확정 단계에 접어들었습니다. 이제 몇 가지 사소한 세부 사항만 정리하면 됩니다." #deepl:3662192004
+ frontera_ot.3.f: "[SCOPE.sState('newly_formed_colonial_nation_anchor_state').GetName]에 위치한 ‘[Concept('concept_unincorporated_state','$concept_unincorporated_state$')]’가 ‘[Concept('concept_capital_state','$concept_capital_state_short$')]’로 지정될 것으로 결정되었습니다. 경계가 확정되면, 해당 지역을 관리할 지방 정부가 임명될 수 있습니다. \n \n #bold  이 지역은 어디에 조성될 예정인가요? #!" #deepl:3332362391
+ frontera_ot.3.a: "[SCOPE.sState('newly_formed_colonial_nation_anchor_state').GetName] 주변 지역을 설정하십시오." #deepl:1584845668
+ frontera_ot.3.b: "[SCOPE.sStrategicRegion('region_scope').GetName] 지역에 거점을 확보하십시오." #deepl:236851503
+ frontera_ot.3.c: "다시 생각해보니, 이건 나중에 해도 되겠네요." #deepl:3045238605
+ frontera_acw_events.3.t: "[SCOPE.sCharacter('wilmot_proviso_ig_leader').GetLastName]의 부칙" #deepl:1352998344
+ frontera_acw_events.3.d: "미국 독립당([SCOPE.gsInterestGroup('wilmot_proviso_ig').GetName])의 당수인 조지 워싱턴([SCOPE.sCharacter('wilmot_proviso_ig_leader').GetFullName])은 모든 신규 영토에서 노예제를 전면 금지할 것을 제안했다. 일부 반대자들은 단순히 노예제를 완화할 것을 요구하는 반면, 다른 이들은 모든 신규 영토에서 노예제를 합법화할 것을 요구하고 있다." #deepl:3885920250
+ frontera_acw_events.3.f: ""이 참을 수 없는 제도는 더 이상 그 세력을 확장해서는 안 됩니다! 자유로운 국가가 번영하려면 자유로운 땅이 필요합니다!"" #deepl:3646320274
+ frontera_acw_events.3.a: "이 부칙을 기각하더라도, 이는 여전히 주별로 결정해야 할 문제입니다." #deepl:3123663819
+ frontera_acw_events.3.b: "이 조건을 수락하고, 영토 내의 노예제를 폐지하라." #deepl:2346190169
+ frontera_acw_events.3.c: "그 부칙을 거부하고, 영토 내 노예제를 확대하자." #deepl:2300651371
+ frontera_ot.4: "국경 분쟁" #deepl:988586463
+ frontera_ot.4.t: "국경 분쟁" #deepl:988586463
+ frontera_ot.4.d: "[SCOPE.sCountry('ot_1_scope').GetRuler.GetPrimaryRoleTitle] [SCOPE.sCountry('ot_1_scope').GetRuler.GetLastName] 는 [SCOPE.sCountry('ot_2_scope').GetNameNoFormatting]와의 경계가 불분명하다는 우려를 제기하며 정부에 건의했다. [SCOPE.sCountry('ot_2_scope').GetRuler.GetPrimaryRoleTitle]([SCOPE.sCountry('ot_2_scope').GetRuler.GetLastName])를 대표한다고 주장하는 세무 담당자들이 [SCOPE.sState('ot_1_state_scope').GetName] 내의 정착촌에서 세금을 징수하려 시도했다." #deepl:1034593519
+ frontera_ot.4.f: "이 지저분한 낡은 지도에서 작은 경계선과 주름을 누가 구분할 수 있겠는가?" #deepl:2316071882
+ frontera_ot.4.a: "[SCOPE.sCountry('ot_1_scope').GetNameNoFlag]에서 재측량을 신청하세요." #deepl:2273386938
+ frontera_ot.4.b: "[SCOPE.sCountry('ot_2_scope').GetNameNoFlag]의 ‘[SCOPE.sCountry('ot_2_scope').GetRuler.GetPrimaryRoleTitle]’는 [SCOPE.sCountry('ot_2_scope').GetRuler.GetHerHis]의 저작권 보호를 받습니다." #deepl:4240412277
+ frontera_ot.4.c: "그래! 대학살이다! ‘[ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle]’를 위한 피다!" #deepl:2183657101
+ frontera_ot.4.e: "그래! 대학살이다! ‘[ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle]’를 위한 피다!" #deepl:2183657101

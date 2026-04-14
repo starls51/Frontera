@@ -1,0 +1,22 @@
+﻿l_japanese:
+ da_frontera_force_culture: "国民党政権を樹立する" #deepl:2453814574
+ da_frontera_force_culture_desc: "[concept_organized_territory]の[concept_primary_cultures]を、その[concept_overlord]のと一致するように変更します。" #deepl:3006522470
+ da_frontera_force_culture_action_name: "国民党政権を樹立する" #deepl:2453814574
+ da_frontera_force_culture_action_notification_name: "[TARGET_COUNTRY.GetName] [INITIATOR_COUNTRY.GetAdjective]の管理を採用する" #deepl:495659015
+ da_frontera_force_culture_action_notification_desc: "[INITIATOR_COUNTRY.GetName] [TARGET_COUNTRY.GetName] の「[concept_primary_cultures]」を、自分のものに合わせて変更しました。" #deepl:1709253863
+ da_frontera_force_culture_action_notification_third_party_name: "[TARGET_COUNTRY.GetName] [INITIATOR_COUNTRY.GetAdjective]の管理を採用する" #deepl:495659015
+ da_frontera_force_culture_action_notification_third_party_desc: "[INITIATOR_COUNTRY.GetName] [TARGET_COUNTRY.GetName] の「[concept_primary_cultures]」を、自分のものに合わせて変更しました。" #deepl:1709253863
+ da_frontera_force_state_religion: "$concept_religion$ を広める" #deepl:3780971767
+ da_frontera_force_state_religion_action_name: "[concept_religion] を広める" #deepl:1833652158
+ da_frontera_force_state_religion_desc: "この[concept_organized_territory]は、当社の主力製品である[concept_religion]を際立たせ、担当者や教育関係者が来場者の間を自由に歩き回れるようにします。" #deepl:2479916493
+ da_frontera_force_state_religion_action_notification_name: "[INITIATOR_COUNTRY.GetName] [concept_religion]の代表者を派遣する" #deepl:3886297734
+ da_frontera_force_state_religion_action_notification_desc: "[INITIATOR_COUNTRY.GetName] は、自国の「[concept_religion]」の代表者を我々の領土に招いた" #deepl:486204899
+ da_frontera_force_state_religion_action_notification_third_party_name: "[INITIATOR_COUNTRY.GetName] [concept_religion]の代表者を派遣する" #deepl:3886297734
+ da_frontera_force_state_religion_action_notification_third_party_desc: "[INITIATOR_COUNTRY.GetName] は、[concept_religion]の代表者を[TARGET_COUNTRY.GetName]に招待しました" #deepl:243943760
+ da_frontera_dissolve_ot: "領土を解散する" #deepl:1444142792
+ da_frontera_dissolve_ot_action_name: "[concept_organized_territory] を溶かす" #deepl:3449086710
+ da_frontera_dissolve_ot_desc: "この[concept_organized_territory]は、[Concept('concept_unincorporated_state','$concept_unincorporated_states$')]として添付されます。" #deepl:2143557788
+ da_frontera_dissolve_ot_action_notification_name: "[INITIATOR_COUNTRY.GetName] 別紙 [TARGET_COUNTRY.GetName]" #deepl:3664093964
+ da_frontera_dissolve_ot_action_notification_desc: "[INITIATOR_COUNTRY.GetName] 私たちを併合した" #deepl:1307216587
+ da_frontera_dissolve_ot_action_notification_third_party_name: "[INITIATOR_COUNTRY.GetName] 添付ファイル：[concept_organized_territory]" #deepl:795772768
+ da_frontera_dissolve_ot_action_notification_third_party_desc: "[INITIATOR_COUNTRY.GetName] [TARGET_COUNTRY.GetName] を併合した" #deepl:2142045709

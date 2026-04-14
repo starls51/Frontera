@@ -1,0 +1,7 @@
+﻿l_german:
+ notification_ot_consolidated_frontera_notification_name: "[SCOPE.sCountry('overlord_scope').GetName] Anhang: [SCOPE.sCountry('ot_scope').GetName]" #deepl:1586765335
+ notification_ot_consolidated_frontera_notification_desc: "[SCOPE.sCountry('ot_scope').GetName] ist kein realistisches Szenario mehr: Alle Staaten unter [SCOPE.sCountry('ot_scope').GetAdjectiveNoFlag] befanden sich in Regionen, die vollständig von [SCOPE.sCountry('overlord_scope').GetName] kontrolliert wurden." #deepl:761137428
+ notification_ot_consolidated_frontera_notification_tooltip: "$notification_ot_consolidated_frontera_notification_name$\n$notification_ot_consolidated_frontera_notification_desc$" #deepl:4081520516
+ notification_ot_created_frontera_notification_name: "[concept_organized_territory] Gegründet" #deepl:3716142294
+ notification_ot_created_frontera_notification_desc: "[SCOPE.sCountry('overlord_scope').GetName] hat unter [SCOPE.sState('newly_formed_colonial_nation_anchor_state').GetName] ein „[concept_organized_territory]“ eingerichtet." #deepl:978047473
+ notification_ot_created_frontera_notification_tooltip: "$notification_ot_consolidated_frontera_notification_name$\n$notification_ot_consolidated_frontera_notification_desc$" #deepl:4081520516

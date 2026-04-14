@@ -1,0 +1,22 @@
+﻿l_korean:
+ da_frontera_force_culture: "민족주의 정부 수립" #deepl:2453814574
+ da_frontera_force_culture_desc: "[concept_organized_territory]의 [concept_primary_cultures]를 해당 [concept_overlord]의 와 일치하도록 변경합니다." #deepl:3006522470
+ da_frontera_force_culture_action_name: "민족주의 정부 수립" #deepl:2453814574
+ da_frontera_force_culture_action_notification_name: "[TARGET_COUNTRY.GetName] [INITIATOR_COUNTRY.GetAdjective] 관리 방식을 채택하다" #deepl:495659015
+ da_frontera_force_culture_action_notification_desc: "[INITIATOR_COUNTRY.GetName] [TARGET_COUNTRY.GetName]의 [concept_primary_cultures]를 자신의 것과 일치하도록 변경했습니다." #deepl:1709253863
+ da_frontera_force_culture_action_notification_third_party_name: "[TARGET_COUNTRY.GetName] [INITIATOR_COUNTRY.GetAdjective] 관리 방식을 채택하다" #deepl:495659015
+ da_frontera_force_culture_action_notification_third_party_desc: "[INITIATOR_COUNTRY.GetName] [TARGET_COUNTRY.GetName]의 [concept_primary_cultures]를 자신의 것과 일치하도록 변경했습니다." #deepl:1709253863
+ da_frontera_force_state_religion: "$concept_religion$ 게시물" #deepl:3780971767
+ da_frontera_force_state_religion_action_name: "[concept_religion] 게시물" #deepl:1833652158
+ da_frontera_force_state_religion_desc: "이번 ‘[concept_organized_territory]’ 행사는 우리의 대표적인 ‘[concept_religion]’를 부각시켜, 대표단과 교육자들이 참가자들 사이를 자유롭게 돌아다닐 수 있도록 할 것입니다." #deepl:2479916493
+ da_frontera_force_state_religion_action_notification_name: "[INITIATOR_COUNTRY.GetName] 자신의 지역 대표단([concept_religion])을 파견한다" #deepl:3886297734
+ da_frontera_force_state_religion_action_notification_desc: "[INITIATOR_COUNTRY.GetName] 그들의 ‘[concept_religion]’ 대표단을 우리 영토로 초청했다" #deepl:486204899
+ da_frontera_force_state_religion_action_notification_third_party_name: "[INITIATOR_COUNTRY.GetName] 자신의 지역 대표단([concept_religion])을 파견한다" #deepl:3886297734
+ da_frontera_force_state_religion_action_notification_third_party_desc: "[INITIATOR_COUNTRY.GetName] [concept_religion]의 대표들을 [TARGET_COUNTRY.GetName]에 초청했습니다" #deepl:243943760
+ da_frontera_dissolve_ot: "영토 해체" #deepl:1444142792
+ da_frontera_dissolve_ot_action_name: "[concept_organized_territory]을 녹입니다" #deepl:3449086710
+ da_frontera_dissolve_ot_desc: "이 문서([concept_organized_territory])는 [Concept('concept_unincorporated_state','$concept_unincorporated_states$')]에 첨부될 예정입니다." #deepl:2143557788
+ da_frontera_dissolve_ot_action_notification_name: "[INITIATOR_COUNTRY.GetName] 첨부 파일 [TARGET_COUNTRY.GetName]" #deepl:3664093964
+ da_frontera_dissolve_ot_action_notification_desc: "[INITIATOR_COUNTRY.GetName] 우리를 병합했다" #deepl:1307216587
+ da_frontera_dissolve_ot_action_notification_third_party_name: "[INITIATOR_COUNTRY.GetName] [concept_organized_territory] 파일을 첨부합니다" #deepl:795772768
+ da_frontera_dissolve_ot_action_notification_third_party_desc: "[INITIATOR_COUNTRY.GetName] [TARGET_COUNTRY.GetName]을 병합했습니다" #deepl:2142045709

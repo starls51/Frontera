@@ -3,21 +3,21 @@
  movement_frontera_mexican_federalist_short: "Federalista" #deepl:620747088
  movement_frontera_mexican_federalist_name: "Movimiento Federalista" #deepl:2788786836
  ideology_frontera_mexican_federalist: "Federalista mexicano" #deepl:2228111078
- ideology_frontera_mexican_federalist_desc: "Los federalistas abogan por un gobierno descentralizado, que otorgue una autonomía significativa a los estados individuales. Inspirados en el modelo de los Estados Unidos, los federalistas tienen como objetivo proteger las libertades locales y evitar el surgimiento de un dictador único en la capital." #deepl:3704296238
- movement_frontera_mexican_centralist: "Movimiento centralista" #deepl:2210180886
- movement_frontera_mexican_centralist_short: "Centralista" #deepl:1675741728
- movement_frontera_mexican_centralist_name: "Movimiento centralista" #deepl:2210180886
+ ideology_frontera_mexican_federalist_desc: "Los federalistas abogan por un gobierno descentralizado, que otorgue una autonomía significativa a cada uno de los estados. Inspirándose en el modelo de los Estados Unidos, los federalistas pretenden proteger las libertades locales y evitar el surgimiento de un único dictador en la capital." #deepl:3704296238
+ movement_frontera_mexican_centralist: "Movimiento Centralista" #deepl:2210180886
+ movement_frontera_mexican_centralist_short: "Operador de centralita" #deepl:1675741728
+ movement_frontera_mexican_centralist_name: "Movimiento Centralista" #deepl:2210180886
  ideology_frontera_mexican_centralist: "Centralista mexicano" #deepl:1986234739
- ideology_frontera_mexican_centralist_desc: "Los centralistas desean un gobierno nacional fuerte y unitario, normalmente a expensas de la autonomía regional. Buscan imponer el orden en una república incipiente y caótica imitando la estructura centralizada de la época colonial." #deepl:2906061988
+ ideology_frontera_mexican_centralist_desc: "Los centralistas aspiran a un gobierno nacional fuerte y unitario, normalmente a costa de la autonomía regional. Pretenden imponer el orden en una república incipiente y caótica imitando la estructura centralizada de la época colonial." #deepl:2906061988
  state_pop_support_movement_frontera_mexican_federalist_add: "$movement_frontera_mexican_federalist$ $concept_pop$ Atracción" #deepl:2340973415
- state_pop_support_movement_frontera_mexican_federalist_add_desc: "$movimiento_político_atracción_popular_mult_desc$" #deepl:424746024
- state_pop_support_movement_frontera_mexican_federalist_mult: "$apoyo_del_estado_al_movimiento_fronterizo_mexicano_federalista_añadir$" #deepl:3056203231
- state_pop_support_movement_frontera_mexican_federalist_mult_desc: "$movimiento_político_atracción_popular_mult_desc$" #deepl:424746024
+ state_pop_support_movement_frontera_mexican_federalist_add_desc: "$political_movement_pop_attraction_mult_desc$" #deepl:424746024
+ state_pop_support_movement_frontera_mexican_federalist_mult: "$state_pop_support_movement_frontera_mexican_federalist_add$" #deepl:3056203231
+ state_pop_support_movement_frontera_mexican_federalist_mult_desc: "$political_movement_pop_attraction_mult_desc$" #deepl:424746024
  state_pop_support_movement_frontera_mexican_centralist_add: "$movement_frontera_mexican_centralist$ $concept_pop$ Atracción" #deepl:2808064350
- state_pop_support_movement_frontera_mexican_centralist_add_desc: "$movimiento_político_atracción_popular_mult_desc$" #deepl:424746024
+ state_pop_support_movement_frontera_mexican_centralist_add_desc: "$political_movement_pop_attraction_mult_desc$" #deepl:424746024
  state_pop_support_movement_frontera_mexican_centralist_mult: "$state_pop_support_movement_frontera_mexican_centralist_add$" #deepl:999402151
- state_pop_support_movement_frontera_mexican_centralist_mult_desc: "$movimiento_político_atracción_popular_mult_desc$" #deepl:424746024
+ state_pop_support_movement_frontera_mexican_centralist_mult_desc: "$political_movement_pop_attraction_mult_desc$" #deepl:424746024
  generic_revolt_federalist_frontera: "Federalista $NAME$" #deepl:2886720149
  generic_revolt_federalist_frontera_adj: "$ADJECTIVE$ Federalista" #deepl:1698099802
- generic_revolt_centralist_frontera: "$NAME$ centralista" #deepl:394110082
- generic_revolt_centralist_frontera_adj: "$ADJECTIVE$ Centralista" #deepl:2543533519
+ generic_revolt_centralist_frontera: "Centralista $NAME$" #deepl:394110082
+ generic_revolt_centralist_frontera_adj: "$ADJECTIVE$ centralista" #deepl:2543533519

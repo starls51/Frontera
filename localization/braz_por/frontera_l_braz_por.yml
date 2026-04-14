@@ -4,68 +4,49 @@
  Armijo: "Armijo" #deepl:2904734236
  Hartnell: "Hartnell" #deepl:3013980238
  Sutter: "Sutter" #deepl:3431356359
- californio: "Californiano" #deepl:3509864768
- californio_adj: "Californiano" #deepl:3509864768
- californio_mestizo: "Mestiço californiano" #deepl:263075456
- californio_mestizo_adj: "Mestiço californiano" #deepl:263075456
+ Charles_Louis: "Carlos Luís" #deepl:3361948321
+ Charles_Albert: "Charles Albert" #deepl:3416553405
+ Ducommun: "Ducommun" #deepl:2623748770
+ Fargo: "Fargo" #deepl:785969634
+ dyn_c_british_california: "Nova Albion" #deepl:333256567
+ dyn_c_british_california_adj: "Novo Albioniano" #deepl:3132386340
+ dyn_c_russian_california: "Califórnia" #deepl:4081344775
+ dyn_c_russian_california_adj: "Californiano" #deepl:2302024145
  dyn_c_alta_california: "Alta Califórnia" #deepl:2718655753
  dyn_c_alta_california_adj: "californiano" #deepl:230681887
  dyn_michigan_territory: "Território de Michigan" #deepl:3433257000
  dyn_wisconsin_territory: "Território de Wisconsin" #deepl:2122556499
- dyn_wisconsin_territory_adj: "Wisconsinita" #deepl:1988775082
+ dyn_wisconsin_territory_adj: "morador de Wisconsin" #deepl:1988775082
  dyn_minnesota_territory: "Território de Minnesota" #deepl:2712883016
- dyn_minnesota_territory_adj: "Minnesotano" #deepl:2642244691
+ dyn_minnesota_territory_adj: "morador de Minnesota" #deepl:2642244691
  dyn_iowa_territory: "Território de Iowa" #deepl:2578029042
- dyn_iowa_territory_adj: "Iowan" #deepl:2527579376
- dyn_northwest_territory: "Território do Noroeste" #deepl:905356594
- dyn_northwest_territory_adj: "Território do Noroeste" #deepl:905356594
+ dyn_iowa_territory_adj: "habitante de Iowa" #deepl:2527579376
+ dyn_northwest_territory: "Território do Dakota" #deepl:1746554679
+ dyn_northwest_territory_adj: "Território do Dakota" #deepl:1746554679
  dyn_c_utah_territory: "Território de Utah" #deepl:1157070552
  dyn_c_utah_territory_adj: "Território de Utah" #deepl:1157070552
  dyn_florida_territory: "Território da Flórida" #deepl:246124055
- NMX: "Novo México" #deepl:27763770
- NMX_ADJ: "Novo Mexicano" #deepl:2909205373
- modifier_frontierlands_frontera: "Guias da Fronteira" #deepl:1536403044
- modifier_oregon_trail_frontera: "Trilha do Oregon" #deepl:1130619855
- modifier_santafe_trail_frontera: "Trilha de Santa Fé" #deepl:3532834792
+ geographic_region_american_west_frontera: "Oeste americano" #deepl:489080198
+ geographic_region_frontera_adams_onis_treatyline: "Região Fronteiriça de Adams-Onís" #deepl:1397985490
  geographic_region_louisiana_purchase: "Compra da Louisiana" #deepl:1628975508
+ geographic_region_sunset_route_frontera: "Rota do Pôr do Sol" #deepl:1965144848
  geographic_region_nebraska_territory: "Território do Nebraska" #deepl:245903829
  geographic_region_kansas_territory: "Território do Kansas" #deepl:2490102990
  geographic_region_mexican_north: "Norte do México" #deepl:1926221193
  geographic_region_rocky_mountains: "Montanhas Rochosas" #deepl:3487678637
- geographic_region_greater_columbia: "Grande Colômbia" #deepl:3068876322
+ geographic_region_greater_columbia: "Grande Columbia" #deepl:3068876322
  generic_organized_territory: "$NAME$" #deepl:1008351533
  generic_organized_territory_adj: "$ADJETIVO$" #deepl:1624419671
+ frontera_state_transfer_no_infamy: "$state_transfer$" #deepl:4033366297
+ frontera_state_transfer_no_infamy_desc: "$state_transfer_desc$" #deepl:3510072888
+ frontera_state_transfer_no_infamy_effects_desc: "$state_transfer_effects_desc$" #deepl:2538127184
+ frontera_state_transfer_no_infamy_article_short_desc: "$state_transfer_article_short_desc$" #deepl:185831997
+ TREATY_DRAFT_ARTICLE_FLAG_CAUSES_FRONTERA_STATE_TRANSFER_NO_INFAMY_EFFECT: "$TREATY_DRAFT_ARTICLE_FLAG_CAUSES_STATE_TRANSFER_EFFECT$" #deepl:72011276
+ TREATY_ARTICLE_FLAG_CAUSES_FRONTERA_STATE_TRANSFER_NO_INFAMY_EFFECT: "$TREATY_ARTICLE_FLAG_CAUSES_STATE_TRANSFER_EFFECT$" #deepl:2446753876
  eng_organized_territory: "$ADJECTIVE$ Território" #deepl:2924367184
  eng_organized_territory_adj: "$ADJECTIVE$ Território" #deepl:2924367184
- de_organized_territory: "Comissariado do Reich$NAME$" #deepl:2134933361
- de_organized_territory_adj: "$ADJECTIVE$ Comissariado" #deepl:1154235138
- creating_OT_frontera_tt: "#indent_newline:2 Um território organizado por #bold  #! receberá um [concept_capital_state] seguindo estas regras: \n $EFFECT_LIST_BULLET$ É [Concept('concept_unincorporated_state','$concept_unincorporated_state$')] \n $EFFECT_LIST_BULLET$ É #bold  não #! [ROOT.GetCountry.GetAdjectiveNoFormatting] [Concept('concept_homeland','$concept_homeland$')] \n $EFFECT_LIST_BULLET$ É #bold  adjacente #! a [ROOT.GetCountry.GetAdjectiveNoFormatting] [Concept('concept_incorporated_state','$concept_incorporated_state$')]. \n $EFFECT_LIST_BULLET$ Tem [GetDecreeType('decree_greener_grass_campaign').GetName] , ou [concept_state] com o maior [Concept('concept_gdp','$concept_gdp_short$')]" #deepl:2335454090
- creating_OT_frontera_2_tt: "#italic  Quaisquer estados que sigam as duas primeiras regras e compartilhem um [concept_strategic_region] com o novo [concept_capital_state] serão cedidos ao #bold  Território Organizado #! #!." #deepl:1399382270
- je_tooltip_no_homelands_frontera: "#bold  não é #! [ROOT.GetCountry.GetAdjectiveNoFormatting] [Concept('concept_homeland', '$concept_homeland$')]." #deepl:2389861123
- je_tooltip_homeland_required_frontera: "[ROOT.GetCountry.GetAdjectiveNoFormatting] [Concept('concept_homeland', '$concept_homeland$')]." #deepl:3505402040
- je_tooltip_incorporated_adjacency_frontera: "#bold  está adjacente a #! a [ROOT.GetCountry.GetAdjectiveNoFormatting] [Concept('concept_incorporated_state','$concept_incorporated_state$')]." #deepl:215185147
- je_organized_territories_frontera: "Estabelecer um território organizado" #deepl:1625332565
- je_organized_territories_frontera_reason: "Com o objetivo de expandir nossa nação, um Território Organizado #bold  #! pode ser estabelecido a partir de alguns de nossos [Concept('concept_unincorporated_state','$concept_unincorporated_states$')]. Estes se tornarão [Concept('concept_incorporated_state','$concept_incorporated_states$')] de propriedade do Território Organizado #bold  #!. \n \n Enquanto um Território Organizado #bold  #! tiver [GetLawType('law_homesteading').GetName] promulgado, seus dois [Concept('concept_incorporated_state','$concept_states$')] com o maior [Concept('concept_gdp','$concept_gdp_short$')] receberão um bônus anual para [Concept('concept_migration','$concept_migration$')]. Qualquer [Concept('concept_incorporated_state','$concept_incorporated_state$')] pertencente a um Território Organizado #bold  #! pode eventualmente se tornar um [Concept('concept_homeland','$concept_homeland$')] para um [Concept('concept_overlord','$concept_overlord_possessive$')] [Concept('concept_primary_cultures','$concept_primary_culture$')]. \n \n Um [concept_state] se tornará um [Concept('concept_homeland','$concept_homeland$')] se: \n $EFFECT_LIST_BULLET$ Tiver um [Concept('concept_cultural_community','$concept_cultural_community$')] de [Concept('concept_overlord','$concept_overlord_possessive$')] [Concept('concept_primary_cultures','$concept_primary_culture$')] \n $EFFECT_LIST_BULLET$ 60% do [Concept('concept_pop', '$concept_population$')] tiver um [concept_acceptance] de 65 ou mais \n $EFFECT_LIST_BULLET$ O [concept_state] [Concept('concept_pop', '$concept_population$')] for superior a 85.000 \n \n #lore  Colonos, comerciantes, missionários e soldados avançam em busca de terras e oportunidades, muitas vezes além do alcance fácil do governo central. Para que esses territórios distantes se integrem, a administração deve acompanhar a expansão. Onde os assentamentos crescem, novos estados podem um dia ser admitidos em nosso domínio. #!" #deepl:544344828
- je_organize_territory_button: "Estabelecer território" #deepl:4044636356
- je_organize_territory_button_desc: "Organize alguns dos nossos [Concept('concept_unincorporated_state','$concept_unincorporated_states$')] em um #bold  Território Organizado #!." #deepl:1558054720
- da_organize_territory_from_subject: "Estabelecer um governo de fronteira" #deepl:1624084733
- da_organize_territory_from_subject_desc: "Os [Concept('concept_law', '$concept_laws$')] e [Concept('concept_institution', '$concept_institutions$')] deste [concept_subject] serão alterados para se tornarem um #bold  Território Organizado #!. Os colonos estarão mais propensos a [Concept('concept_migration','$concept_migrate$')] aqui, mas o [Concept('concept_pop', '$Population$')] local se tornará mais [Concept('concept_radical','$concept_radicalized$')]." #deepl:2949097403
- da_organize_territory_from_subject_effect: "A Associação de Comércio de Peixes e Frutos do Mar ([concept_subject]) passará a ser um Território Organizado da Associação de Comércio de Peixes e Frutos do Mar (#bold ) #!." #deepl:1446860370
- da_organize_territory_from_subject_action_notification_third_party_name: "[INITIATOR_COUNTRY.GetAdjectiveNoFormatting] - [TARGET_COUNTRY.GetAdjectiveNoFormatting] Formado #bold  Território organizado #!" #deepl:3641017969
- da_organize_territory_from_subject_action_notification_third_party_desc: "[INITIATOR_COUNTRY.GetName] estabeleceu [TARGET_COUNTRY.GetName] como um Território Organizado da #bold  #!" #deepl:3647728949
- da_organize_territory_from_subject_action_notification_name: "[INITIATOR_COUNTRY.GetName] nos reorganizou em um Território Organizado#bold  #!" #deepl:1212072590
- da_organize_territory_from_subject_action_notification_desc: "[INITIATOR_COUNTRY.GetName] estabeleceu [TARGET_COUNTRY.GetName] como um Território Organizado da #bold  #!" #deepl:3647728949
- je_sunset_route_frontera: "A Rota do Pôr do Sol" #deepl:1011417108
- je_sunset_route_frontera_reason: "Uma conexão ferroviária para a Califórnia em climas quentes permitiria um fluxo sem precedentes de comércio e pessoas entre o leste e o oeste. No entanto, esse projeto requer uma coordenação significativa. Além de resolver as contínuas disputas entre proprietários de terras #italic  frog wars #!, também é imperativo padronizar bitolas, sinais e horários. Isso pode ser mais difícil se países estrangeiros controlarem áreas da ferrovia ao longo da rota proposta, mas a tarefa não é de forma alguma impossível." #deepl:1621464726
- je_sunset_route_frontera_button: "Conecte a Rota do Pôr do Sol" #deepl:317884082
- je_sunset_route_frontera_button_desc: "Mediar entre as várias partes interessadas para criar uma nova rota ferroviária para a Califórnia." #deepl:952386937
- je_gadsden_purchase_frontera_button: "Teste as Fronteiras" #deepl:2467056109
- je_gadsden_purchase_frontera_button_desc: "A expansão ferroviária para o oeste será mais fácil de gerir se controlarmos fisicamente o corredor terrestre necessário. Embora seja politicamente arriscado, provocar disputas fronteiriças com os nossos vizinhos poderá permitir mais opções diplomáticas ou militares para adquirir terrenos para o nosso projeto." #deepl:1391362877
- sunset_route_built_yes_tt: "A Rota do Pôr do Sol de #bold  #! existe" #deepl:4231881481
- sunset_route_built_no_tt: "A Rota do Pôr do Sol de #bold  #! não existe" #deepl:1689524445
- sunset_route_frontera: "Rota do Pôr do Sol" #deepl:1965144848
- sunset_route_reward_frontera: "Rota do Pôr do Sol" #deepl:1965144848
+ de_organized_territory: "Comissariado do Reich $NAME$" #deepl:2134933361
+ de_organized_territory_adj: "$ADJECTIVE$ Intendência" #deepl:1154235138
  treaty_name_treaty_of_mesilla: "Tratado de Mesilla" #deepl:3628424082
- mesilla_treaty_creation_tt: "Adicione uma oferta [concept_treaty] para vender qualquer terreno de sua propriedade no Arizona ou Novo México à [SCOPE.sCountry('buyer_scope').GetName] por um valor semanal de #bold £3500 #! por [concept_state]" #deepl:2192895926
- je_seminole_wars_removal_frontera: ""
- colonial_affairs_owner_is_discriminated_country_tt: "Qualquer [concept_state] adjacente a [GetPlayer.GetAdjective] [concept_homeland] pertence a um [concept_country] cujos [concept_primary_cultures] estão todos abaixo de [Concept('concept_discrimination','@acceptance_status_4! $second_rate_citizen$')] em [GetPlayer.GetName]." #deepl:525054957
+ treaty_name_frontera_treaty_of_limits: "Tratado de Fronteiras" #deepl:1311019191
+ treaty_name_frontera_nonintercourse_act_1834: "Lei de Proibição do Comércio de 1834" #deepl:3761781907

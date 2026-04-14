@@ -1,23 +1,23 @@
 ﻿l_simp_chinese:
- movement_frontera_mexican_federalist: "联邦主义者运动" #deepl:2788786836
- movement_frontera_mexican_federalist_short: "联邦党人" #deepl:620747088
- movement_frontera_mexican_federalist_name: "联邦主义者运动" #deepl:2788786836
- ideology_frontera_mexican_federalist: "墨西哥联邦党人" #deepl:2228111078
- ideology_frontera_mexican_federalist_desc: "联邦主义者主张建立分散式政府，赋予各州高度自治权。受美国模式启发，联邦主义者致力于保护地方自由，防止首都出现独裁者。" #deepl:3704296238
+ movement_frontera_mexican_federalist: "联邦主义运动" #deepl:2788786836
+ movement_frontera_mexican_federalist_short: "联邦主义者" #deepl:620747088
+ movement_frontera_mexican_federalist_name: "联邦主义运动" #deepl:2788786836
+ ideology_frontera_mexican_federalist: "《墨西哥联邦主义者》" #deepl:2228111078
+ ideology_frontera_mexican_federalist_desc: "联邦主义者主张实行分权制政府，赋予各州相当大的自治权。受美国模式的启发，联邦主义者致力于保护地方自由，并防止首都出现独裁者。" #deepl:3704296238
  movement_frontera_mexican_centralist: "中央主义运动" #deepl:2210180886
- movement_frontera_mexican_centralist_short: "中央集权主义者" #deepl:1675741728
+ movement_frontera_mexican_centralist_short: "中央主义者" #deepl:1675741728
  movement_frontera_mexican_centralist_name: "中央主义运动" #deepl:2210180886
  ideology_frontera_mexican_centralist: "墨西哥中央主义者" #deepl:1986234739
- ideology_frontera_mexican_centralist_desc: "中央集权主义者渴望建立强大而统一的国家政府，通常以牺牲地区自治为代价。他们试图通过效仿殖民时期的集中化结构，为混乱的早期共和国强加秩序。" #deepl:2906061988
- state_pop_support_movement_frontera_mexican_federalist_add: "$movement_frontera_mexican_federalist$ $concept_pop$ 吸引力" #deepl:2340973415
- state_pop_support_movement_frontera_mexican_federalist_add_desc: "$政治运动·流行吸引力·多重描述$" #deepl:424746024
+ ideology_frontera_mexican_centralist_desc: "中央集权主义者渴望建立一个强大、统一的中央政府，通常是以牺牲地区自治为代价的。他们试图通过效仿殖民时期的中央集权结构，来为混乱的早期共和国建立秩序。" #deepl:2906061988
+ state_pop_support_movement_frontera_mexican_federalist_add: "$movement_frontera_mexican_federalist$ $concept_pop$ 景点" #deepl:2340973415
+ state_pop_support_movement_frontera_mexican_federalist_add_desc: "$political_movement_pop_attraction_mult_desc$" #deepl:424746024
  state_pop_support_movement_frontera_mexican_federalist_mult: "$state_pop_support_movement_frontera_mexican_federalist_add$" #deepl:3056203231
- state_pop_support_movement_frontera_mexican_federalist_mult_desc: "$政治运动·流行吸引力·多重描述$" #deepl:424746024
- state_pop_support_movement_frontera_mexican_centralist_add: "$movement_frontera_mexican_centralist$ $concept_pop$ 吸引力" #deepl:2808064350
- state_pop_support_movement_frontera_mexican_centralist_add_desc: "$政治运动·流行吸引力·多重描述$" #deepl:424746024
+ state_pop_support_movement_frontera_mexican_federalist_mult_desc: "$political_movement_pop_attraction_mult_desc$" #deepl:424746024
+ state_pop_support_movement_frontera_mexican_centralist_add: "$movement_frontera_mexican_centralist$ $concept_pop$ 景点" #deepl:2808064350
+ state_pop_support_movement_frontera_mexican_centralist_add_desc: "$political_movement_pop_attraction_mult_desc$" #deepl:424746024
  state_pop_support_movement_frontera_mexican_centralist_mult: "$state_pop_support_movement_frontera_mexican_centralist_add$" #deepl:999402151
- state_pop_support_movement_frontera_mexican_centralist_mult_desc: "$政治运动·流行吸引力·多重描述$" #deepl:424746024
- generic_revolt_federalist_frontera: "联邦党人 $NAME$" #deepl:2886720149
+ state_pop_support_movement_frontera_mexican_centralist_mult_desc: "$political_movement_pop_attraction_mult_desc$" #deepl:424746024
+ generic_revolt_federalist_frontera: "Federalista $NAME$" #deepl:2886720149
  generic_revolt_federalist_frontera_adj: "$ADJECTIVE$ 联邦党人" #deepl:1698099802
- generic_revolt_centralist_frontera: "中央主义者 $NAME$" #deepl:394110082
+ generic_revolt_centralist_frontera: "Centralista $NAME$" #deepl:394110082
  generic_revolt_centralist_frontera_adj: "$ADJECTIVE$ 中央集权主义者" #deepl:2543533519

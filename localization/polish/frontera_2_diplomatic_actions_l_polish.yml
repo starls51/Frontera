@@ -1,0 +1,22 @@
+﻿l_polish:
+ da_frontera_force_culture: "Wprowadzić rząd nacjonalistyczny" #deepl:2453814574
+ da_frontera_force_culture_desc: "Zmienia adresy [concept_primary_cultures] serwisu [concept_organized_territory] tak, aby odpowiadały adresom serwisu [concept_overlord]." #deepl:3006522470
+ da_frontera_force_culture_action_name: "Wprowadzić rząd nacjonalistyczny" #deepl:2453814574
+ da_frontera_force_culture_action_notification_name: "[TARGET_COUNTRY.GetName] Przyjmuje system zarządzania „[INITIATOR_COUNTRY.GetAdjective]”" #deepl:495659015
+ da_frontera_force_culture_action_notification_desc: "[INITIATOR_COUNTRY.GetName] zmieniła adres [concept_primary_cultures] na [TARGET_COUNTRY.GetName], aby dopasować go do swojego." #deepl:1709253863
+ da_frontera_force_culture_action_notification_third_party_name: "[TARGET_COUNTRY.GetName] Przyjmuje system zarządzania „[INITIATOR_COUNTRY.GetAdjective]”" #deepl:495659015
+ da_frontera_force_culture_action_notification_third_party_desc: "[INITIATOR_COUNTRY.GetName] zmieniła adres [concept_primary_cultures] na [TARGET_COUNTRY.GetName], aby dopasować go do swojego." #deepl:1709253863
+ da_frontera_force_state_religion: "Spread $concept_religion$" #deepl:3780971767
+ da_frontera_force_state_religion_action_name: "Spread [concept_religion]" #deepl:1833652158
+ da_frontera_force_state_religion_desc: "Ta inicjatywa [concept_organized_territory] będzie wspierać nasz czołowy projekt [concept_religion], umożliwiając przedstawicielom i nauczycielom swobodne poruszanie się wśród społeczności." #deepl:2479916493
+ da_frontera_force_state_religion_action_notification_name: "[INITIATOR_COUNTRY.GetName] wysyła przedstawicieli swojej organizacji [concept_religion]" #deepl:3886297734
+ da_frontera_force_state_religion_action_notification_desc: "[INITIATOR_COUNTRY.GetName] zaprosiła przedstawicieli swojej organizacji „[concept_religion]” na nasze tereny" #deepl:486204899
+ da_frontera_force_state_religion_action_notification_third_party_name: "[INITIATOR_COUNTRY.GetName] wysyła przedstawicieli swojej organizacji [concept_religion]" #deepl:3886297734
+ da_frontera_force_state_religion_action_notification_third_party_desc: "[INITIATOR_COUNTRY.GetName] zaprosiło przedstawicieli swojej organizacji „[concept_religion]” do udziału w wydarzeniu „[TARGET_COUNTRY.GetName]”" #deepl:243943760
+ da_frontera_dissolve_ot: "Rozpuść terytorium" #deepl:1444142792
+ da_frontera_dissolve_ot_action_name: "Rozpuść tabletkę „[concept_organized_territory]”" #deepl:3449086710
+ da_frontera_dissolve_ot_desc: "Plik [concept_organized_territory] zostanie dołączony jako [Concept('concept_unincorporated_state','$concept_unincorporated_states$')]." #deepl:2143557788
+ da_frontera_dissolve_ot_action_notification_name: "[INITIATOR_COUNTRY.GetName] załączniki [TARGET_COUNTRY.GetName]" #deepl:3664093964
+ da_frontera_dissolve_ot_action_notification_desc: "[INITIATOR_COUNTRY.GetName] przejęło nas" #deepl:1307216587
+ da_frontera_dissolve_ot_action_notification_third_party_name: "[INITIATOR_COUNTRY.GetName] załączniki: [concept_organized_territory]" #deepl:795772768
+ da_frontera_dissolve_ot_action_notification_third_party_desc: "[INITIATOR_COUNTRY.GetName] załączył stronę [TARGET_COUNTRY.GetName]" #deepl:2142045709

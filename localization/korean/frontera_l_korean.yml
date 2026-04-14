@@ -4,68 +4,49 @@
  Armijo: "아르미호" #deepl:2904734236
  Hartnell: "하트넬" #deepl:3013980238
  Sutter: "서터" #deepl:3431356359
- californio: "캘리포니아인" #deepl:3509864768
- californio_adj: "캘리포니아인" #deepl:3509864768
- californio_mestizo: "캘리포니아 메스티소" #deepl:263075456
- californio_mestizo_adj: "캘리포니아 메스티소" #deepl:263075456
+ Charles_Louis: "샤를 루이" #deepl:3361948321
+ Charles_Albert: "찰스 앨버트" #deepl:3416553405
+ Ducommun: "듀커먼" #deepl:2623748770
+ Fargo: "파고" #deepl:785969634
+ dyn_c_british_california: "뉴 알비온" #deepl:333256567
+ dyn_c_british_california_adj: "뉴 알비오니안" #deepl:3132386340
+ dyn_c_russian_california: "캘리포니아" #deepl:4081344775
+ dyn_c_russian_california_adj: "캘리포니아" #deepl:2302024145
  dyn_c_alta_california: "알타 캘리포니아" #deepl:2718655753
- dyn_c_alta_california_adj: "캘리포니아인" #deepl:230681887
+ dyn_c_alta_california_adj: "캘리포니아 출신" #deepl:230681887
  dyn_michigan_territory: "미시간 준주" #deepl:3433257000
  dyn_wisconsin_territory: "위스콘신 준주" #deepl:2122556499
  dyn_wisconsin_territory_adj: "위스콘신 주민" #deepl:1988775082
  dyn_minnesota_territory: "미네소타 준주" #deepl:2712883016
- dyn_minnesota_territory_adj: "미네소타 주민" #deepl:2642244691
+ dyn_minnesota_territory_adj: "미네소타 출신" #deepl:2642244691
  dyn_iowa_territory: "아이오와 준주" #deepl:2578029042
- dyn_iowa_territory_adj: "아이오와 주민" #deepl:2527579376
- dyn_northwest_territory: "노스웨스트 준주" #deepl:905356594
- dyn_northwest_territory_adj: "노스웨스트 준주" #deepl:905356594
+ dyn_iowa_territory_adj: "아이오와주 출신" #deepl:2527579376
+ dyn_northwest_territory: "다코타 준주" #deepl:1746554679
+ dyn_northwest_territory_adj: "다코타 준주" #deepl:1746554679
  dyn_c_utah_territory: "유타 준주" #deepl:1157070552
  dyn_c_utah_territory_adj: "유타 준주" #deepl:1157070552
  dyn_florida_territory: "플로리다 준주" #deepl:246124055
- NMX: "뉴멕시코" #deepl:27763770
- NMX_ADJ: "뉴멕시코인" #deepl:2909205373
- modifier_frontierlands_frontera: "프론티어 가이드" #deepl:1536403044
- modifier_oregon_trail_frontera: "오리건 트레일" #deepl:1130619855
- modifier_santafe_trail_frontera: "산타페 트레일" #deepl:3532834792
+ geographic_region_american_west_frontera: "아메리칸 웨스트" #deepl:489080198
+ geographic_region_frontera_adams_onis_treatyline: "아담스-오니스 국경 지역" #deepl:1397985490
  geographic_region_louisiana_purchase: "루이지애나 매입" #deepl:1628975508
+ geographic_region_sunset_route_frontera: "선셋 루트" #deepl:1965144848
  geographic_region_nebraska_territory: "네브래스카 준주" #deepl:245903829
  geographic_region_kansas_territory: "캔자스 준주" #deepl:2490102990
  geographic_region_mexican_north: "멕시코 북부" #deepl:1926221193
- geographic_region_rocky_mountains: "록키 산맥" #deepl:3487678637
+ geographic_region_rocky_mountains: "로키 산맥" #deepl:3487678637
  geographic_region_greater_columbia: "그레이터 컬럼비아" #deepl:3068876322
  generic_organized_territory: "$NAME$" #deepl:1008351533
  generic_organized_territory_adj: "$형용사$" #deepl:1624419671
+ frontera_state_transfer_no_infamy: "$state_transfer$" #deepl:4033366297
+ frontera_state_transfer_no_infamy_desc: "$state_transfer_desc$" #deepl:3510072888
+ frontera_state_transfer_no_infamy_effects_desc: "$state_transfer_effects_desc$" #deepl:2538127184
+ frontera_state_transfer_no_infamy_article_short_desc: "$state_transfer_article_short_desc$" #deepl:185831997
+ TREATY_DRAFT_ARTICLE_FLAG_CAUSES_FRONTERA_STATE_TRANSFER_NO_INFAMY_EFFECT: "$TREATY_DRAFT_ARTICLE_FLAG_CAUSES_STATE_TRANSFER_EFFECT$" #deepl:72011276
+ TREATY_ARTICLE_FLAG_CAUSES_FRONTERA_STATE_TRANSFER_NO_INFAMY_EFFECT: "$TREATY_ARTICLE_FLAG_CAUSES_STATE_TRANSFER_EFFECT$" #deepl:2446753876
  eng_organized_territory: "$ADJECTIVE$ 영토" #deepl:2924367184
  eng_organized_territory_adj: "$ADJECTIVE$ 영토" #deepl:2924367184
- de_organized_territory: "제국 인민부($NAME$)" #deepl:2134933361
- de_organized_territory_adj: "$ADJECTIVE$ 군수부" #deepl:1154235138
- creating_OT_frontera_tt: "#indent_newline:2 #bold  조직화된 영토 #! 다음 규칙에 따라 [concept_capital_state]                                                                                                                   " #deepl:2335454090
- creating_OT_frontera_2_tt: "#italic  첫 두 규칙을 따르며 새로운 [concept_capital_state]와 [concept_strategic_region]를 공유하는 모든 주들은 #bold  조직된 영토 #! #!에 양도될 것이다." #deepl:1399382270
- je_tooltip_no_homelands_frontera: "#bold 가 아닌 #! [ROOT.GetCountry.GetAdjectiveNoFormatting] [Concept('concept_homeland', '$concept_homeland$')]." #deepl:2389861123
- je_tooltip_homeland_required_frontera: "[ROOT.GetCountry.GetAdjectiveNoFormatting][Concept('concept_homeland', '$concept_homeland$')]." #deepl:3505402040
- je_tooltip_incorporated_adjacency_frontera: "#bold 는 #!와 인접한가요? [ROOT.GetCountry.GetAdjectiveNoFormatting] [Concept('concept_incorporated_state','$concept_incorporated_state$')]." #deepl:215185147
- je_organized_territories_frontera: "조직화된 영토를 확립하다" #deepl:1625332565
- je_organized_territories_frontera_reason: "국가 확장을 위해 일부 [Concept('concept_unincorporated_state','$concept_unincorporated_states$')]에서 #bold  조직 영토 #!를 설립할 수 있습니다. 이는 #bold  조직 영토 #!가 소유하는 [Concept('concept_incorporated_state','$concept_incorporated_states$')]가 됩니다. \n \n #bold  조직 영토 #!에 [GetLawType('law_homesteading').GetName]가 제정되면, 가장 높은 [Concept('concept_gdp','$concept_gdp_short$')]를 보유한 두 [Concept('concept_incorporated_state','$concept_states$')]에게 [Concept('concept_migration','$concept_migration$')]에 대한 연간 보너스가 지급됩니다. #bold  조직 영토 #!에 속한 [Concept('concept_incorporated_state','$concept_incorporated_state$')]는 결국 [Concept('concept_overlord','$concept_overlord_possessive$')] [Concept('concept_primary_cultures','$concept_primary_culture$')]의 [Concept('concept_homeland','$concept_homeland$')]가 될 수 있습니다. \n #indent_newline:2 \n [concept_state]는 다음 조건을 충족할 경우 [Concept('concept_homeland','$concept_homeland$')]가 됩니다: \n $EFFECT_LIST_BULLET$ [Concept('concept_cultural_community','$concept_cultural_community$')]가 [Concept('concept_overlord','$concept_overlord_possessive$')] [Concept('concept_primary_cultures','$concept_primary_culture$')] \n $EFFECT_LIST_BULLET$ [Concept('concept_pop', '$concept_population$')]의 60%가 [concept_acceptance] 65 이상인 경우 \n $EFFECT_LIST_BULLET$ [concept_state][Concept('concept_pop', '$concept_population$')]가 85,000 이상인 경우 \n \n #lore  정착민, 상인, 선교사, 군인들은 땅과 기회를 찾아 중앙 정부의 손이 미치지 않는 먼 곳까지 진출합니다. 이러한 외딴 영토들이 통합되려면 행정도 확장에 따라야 합니다. 정착지가 성장하는 곳에는 언젠가 새로운 주가 우리 영토에 편입될 수 있습니다. #!" #deepl:544344828
- je_organize_territory_button: "영토 확립" #deepl:4044636356
- je_organize_territory_button_desc: "우리의 일부 '[Concept('concept_unincorporated_state','$concept_unincorporated_states$')]'를 '#bold '로 조직화하여 'Organized Territory'를 구성하십시오. #!." #deepl:1558054720
- da_organize_territory_from_subject: "개척 정부 수립" #deepl:1624084733
- da_organize_territory_from_subject_desc: "이 [concept_subject]의 [Concept('concept_law', '$concept_laws$')] 및 [Concept('concept_institution', '$concept_institutions$')]는 #bold  Organized Territory #!로 변경될 예정입니다. 정착민들은 이곳에서 [Concept('concept_migration','$concept_migrate$')]할 가능성이 높아지지만, 지역 [Concept('concept_pop', '$Population$')]는 더욱 [Concept('concept_radical','$concept_radicalized$')]해질 것입니다." #deepl:2949097403
- da_organize_territory_from_subject_effect: "[concept_subject]는 #bold 의 조직 관할 구역이 될 예정입니다. #!" #deepl:1446860370
- da_organize_territory_from_subject_action_notification_third_party_name: "[INITIATOR_COUNTRY.GetAdjectiveNoFormatting] - [TARGET_COUNTRY.GetAdjectiveNoFormatting] Formed #bold  Organized Territory #!" #deepl:3641017969
- da_organize_territory_from_subject_action_notification_third_party_desc: "[INITIATOR_COUNTRY.GetName] [TARGET_COUNTRY.GetName]를 #bold 의 조직된 지역으로 설립하였습니다. #!" #deepl:3647728949
- da_organize_territory_from_subject_action_notification_name: "[INITIATOR_COUNTRY.GetName] 미국을 재편하여 미국령 조직 지역으로 재편성했습니다 #!" #deepl:1212072590
- da_organize_territory_from_subject_action_notification_desc: "[INITIATOR_COUNTRY.GetName] [TARGET_COUNTRY.GetName]를 #bold 의 조직된 지역으로 설립하였습니다. #!" #deepl:3647728949
- je_sunset_route_frontera: "일몰 루트" #deepl:1011417108
- je_sunset_route_frontera_reason: "캘리포니아까지 이어지는 온난 기후 철도 연결은 동부와 서부 간 전례 없는 상업 및 인적 교류의 흐름을 가능케 할 것이다. 그러나 이 프로젝트는 상당한 조정이 필요하다. 지속적인 캘리포니아 철도 분쟁(#italic ) #! 을 해결하는 것 외에도, 궤간, 신호 체계, 운행 스케줄을 표준화하는 것이 필수적이다. 제안된 노선 상의 선로 구간을 외국이 통제하는 경우 이는 더 어려울 수 있으나, 결코 불가능한 과제는 아니다." #deepl:1621464726
- je_sunset_route_frontera_button: "일몰 루트 연결" #deepl:317884082
- je_sunset_route_frontera_button_desc: "다양한 이해관계자들 사이에서 중재하여 캘리포니아로 가는 새로운 철도 노선을 구축한다." #deepl:952386937
- je_gadsden_purchase_frontera_button: "경계를 시험하다" #deepl:2467056109
- je_gadsden_purchase_frontera_button_desc: "서부 철도 확장은 필요한 토지 통로를 물리적으로 장악할 경우 보다 수월하게 진행될 수 있다. 비록 정치적 위험이 따르지만, 이웃 국가들과의 국경 분쟁을 유발함으로써 우리 프로젝트를 위한 토지를 확보하기 위한 추가적인 외교적 또는 군사적 옵션을 모색할 수 있을 것이다." #deepl:1391362877
- sunset_route_built_yes_tt: "#bold  일몰 경로 #! 존재" #deepl:4231881481
- sunset_route_built_no_tt: "#bold  Sunset Route #!는 존재하지 않습니다" #deepl:1689524445
- sunset_route_frontera: "일몰 루트" #deepl:1965144848
- sunset_route_reward_frontera: "일몰 루트" #deepl:1965144848
+ de_organized_territory: "라이히 위원회 $NAME$" #deepl:2134933361
+ de_organized_territory_adj: "$ADJECTIVE$ 급식부" #deepl:1154235138
  treaty_name_treaty_of_mesilla: "메실라 조약" #deepl:3628424082
- mesilla_treaty_creation_tt: "애리조나 또는 뉴멕시코에 소유한 토지를 주간 3,500달러(#bold )에 미국 원주민 보호구역([SCOPE.sCountry('buyer_scope').GetName])에 매각하는 제안을 추가하십시오. 자세한 내용은 #! 또는 [concept_state]을 참조하십시오." #deepl:2192895926
- je_seminole_wars_removal_frontera: ""
- colonial_affairs_owner_is_discriminated_country_tt: "어떤 [concept_state]가 [GetPlayer.GetAdjective] [concept_homeland]에 인접해 있다면, 해당 는 [concept_country]에 속하며, 이 의 [concept_primary_cultures]는 모두 [GetPlayer.GetName]에서 [Concept('concept_discrimination','@acceptance_status_4! $second_rate_citizen$')] 아래에 위치한다." #deepl:525054957
+ treaty_name_frontera_treaty_of_limits: "경계 조약" #deepl:1311019191
+ treaty_name_frontera_nonintercourse_act_1834: "1834년 성관계 금지법" #deepl:3761781907

@@ -1,0 +1,34 @@
+﻿l_turkish:
+ frontera_ot.1: "Düzensiz Bölge" #deepl:770041530
+ frontera_ot.1.t: "Düzensiz Bölge" #deepl:770041530
+ frontera_ot.1.d: "[SCOPE.sCountry('overlord_scope').GetNameNoFlag] [SCOPE.sCountry('ot_scope').GetNameNoFlag]'ı ayrı bir yönetim organı altında muhafaza etmeye pek ilgi duymuyor." #deepl:791967195
+ frontera_ot.1.f: "Bu bölge, idari yapısı olmayan, belediye statüsü bulunmayan bir “[SCOPE.sCountry('overlord_scope').GetAdjectiveNoFlag]” bölgesi haline gelecektir. Ancak, bir gün yeni bir bölgeye dahil edilebilir." #deepl:2413213071
+ frontera_ot.1.a: "Belki de Vali başka bir iş bulur..." #deepl:671175547
+ frontera_ot.2: "Vagonlar Batıya!" #deepl:3523476864
+ frontera_ot.2.t: "Vagonlar Batıya!" #deepl:3523476864
+ frontera_ot.2.d: "[SCOPE.sCountry('overlord_scope').GetAdjectiveNoFlag] Yerleşimciler [SCOPE.sState('ot_state_scope').GetName]'a taşınıyor" #deepl:2987101877
+ frontera_ot.2.f: "Sınır bölgelerine gelen göçmenler, tarih ve inançların benzersiz bir karışımını beraberlerinde getirecekler. Yeni topraklara doğru çıktıkları bu yolculuk, sadece kim olduklarını sınamakla kalmayacak, aynı zamanda kim olacaklarını da şekillendirecek. \n \n #bold  Bu yeni yerleşimciler... #!" #deepl:4166109341
+ frontera_ot.2.a: "[SCOPE.sPop('pop_a_scope').GetCulture.GetName] [SCOPE.sPop('pop_a_scope').GetPopType.GetNameNoIcon], sık sık [SCOPE.sPoliticalMovement('movement_a_scope').GetNameNoIcon] hakkında konuşurken duyulur." #deepl:43556161
+ frontera_ot.2.b: "[SCOPE.sPop('pop_b_scope').GetCulture.GetName] [SCOPE.sPop('pop_b_scope').GetPopType.GetNameNoIcon], [SCOPE.sPoliticalMovement('movement_b_scope').GetNameNoIcon] ile ilgili iç çekişmeler." #deepl:1096300513
+ frontera_ot.2.c: "[SCOPE.sPop('pop_c_scope').GetCulture.GetName] [SCOPE.sPop('pop_c_scope').GetPopType.GetNameNoIcon], [SCOPE.sPoliticalMovement('movement_c_scope').GetNameNoIcon] hakkında içten bir inançla." #deepl:456112610
+ frontera_ot.3: "Bölge Yönetmeliği" #deepl:2442298291
+ frontera_ot.3.t: "[SCOPE.sState('newly_formed_colonial_nation_anchor_state').GetNameNoFormatting]'ın Yönetmeliği" #deepl:64569039
+ frontera_ot.3.d: "Uzun süren değerlendirmelerin ardından, yeni “[concept_organized_territory]”ın ana hatları netleşmek üzere. Geriye sadece birkaç küçük ayrıntının netleştirilmesi kaldı." #deepl:3662192004
+ frontera_ot.3.f: "[SCOPE.sState('newly_formed_colonial_nation_anchor_state').GetName]'daki "[Concept('concept_unincorporated_state','$concept_unincorporated_state$')]" bölgesinin, uygun bir "[Concept('concept_capital_state','$concept_capital_state_short$')]" olarak belirlendiği açıklanmıştır. Sınırlar kesinleştiğinde, bu bölgeyi yönetmek üzere bir yerel yönetim atanabilir. \n \n #bold  Bu bölge nerede kurulacak? #!" #deepl:3332362391
+ frontera_ot.3.a: "[SCOPE.sState('newly_formed_colonial_nation_anchor_state').GetName] çevresindeki bölgeyi belirleyin." #deepl:1584845668
+ frontera_ot.3.b: "[SCOPE.sStrategicRegion('region_scope').GetName] bölgesinde bir bölge kurun." #deepl:236851503
+ frontera_ot.3.c: "Düşündüm de, bu bekleyebilir." #deepl:3045238605
+ frontera_acw_events.3.t: "[SCOPE.sCharacter('wilmot_proviso_ig_leader').GetLastName]'ın Şartı" #deepl:1352998344
+ frontera_acw_events.3.d: "[SCOPE.gsInterestGroup('wilmot_proviso_ig').GetName]'ın lideri [SCOPE.sCharacter('wilmot_proviso_ig_leader').GetFullName], tüm yeni topraklarımızda köleliğin tamamen yasaklanmasını önerdi. Bazı muhalifler sadece ılımlı bir yaklaşım talep ederken, diğerleri ise tüm yeni topraklarda köleliğin yasallaştırılmasını istiyor." #deepl:3885920250
+ frontera_acw_events.3.f: ""Bu tahammül edilemez kurumun etkisini daha fazla genişletmesine izin verilemez! Özgür bir ulusun gelişip serpilebilmesi için özgür topraklara ihtiyacı vardır!"" #deepl:3646320274
+ frontera_acw_events.3.a: "Bu şartı reddedin; bu konu eyalet bazında ele alınmaya devam etmelidir." #deepl:3123663819
+ frontera_acw_events.3.b: "Bu şartı kabul edin ve bu bölgelerde köleliği kaldırın." #deepl:2346190169
+ frontera_acw_events.3.c: "Bu şartı reddedin ve eyaletlerdeki köleliği yaygınlaştırın." #deepl:2300651371
+ frontera_ot.4: "Sınır Anlaşmazlığı" #deepl:988586463
+ frontera_ot.4.t: "Sınır Anlaşmazlığı" #deepl:988586463
+ frontera_ot.4.d: "[SCOPE.sCountry('ot_1_scope').GetRuler.GetPrimaryRoleTitle] [SCOPE.sCountry('ot_1_scope').GetRuler.GetLastName] [SCOPE.sCountry('ot_2_scope').GetNameNoFormatting] ile olan sınırın belirsizliği konusunda endişelerini dile getirmek üzere hükümete başvurdu. [SCOPE.sCountry('ot_2_scope').GetRuler.GetPrimaryRoleTitle] [SCOPE.sCountry('ot_2_scope').GetRuler.GetLastName] adresini temsil ettiğini iddia eden vergi tahsildarları, [SCOPE.sState('ot_1_state_scope').GetName] adresindeki yerleşim yerlerinden vergi tahsil etmeye çalıştı." #deepl:1034593519
+ frontera_ot.4.f: "Bu kirli, eski haritada küçük sınır çizgilerini kırışıklıklardan kim ayırt edebilir ki?" #deepl:2316071882
+ frontera_ot.4.a: "[SCOPE.sCountry('ot_1_scope').GetNameNoFlag]'da yeniden ölçüm talebinde bulunun." #deepl:2273386938
+ frontera_ot.4.b: "[SCOPE.sCountry('ot_2_scope').GetNameNoFlag] adresindeki "[SCOPE.sCountry('ot_2_scope').GetRuler.GetPrimaryRoleTitle]" (Küçük Şeyler) adlı eser, [SCOPE.sCountry('ot_2_scope').GetRuler.GetHerHis] adresindeki telif hakları kapsamında yer almaktadır." #deepl:4240412277
+ frontera_ot.4.c: "Evet! Katliam! "[ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle]" için kan!" #deepl:2183657101
+ frontera_ot.4.e: "Evet! Katliam! "[ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle]" için kan!" #deepl:2183657101

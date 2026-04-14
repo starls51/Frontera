@@ -1,0 +1,34 @@
+﻿l_simp_chinese:
+ frontera_ot.1: "未划归的地区" #deepl:770041530
+ frontera_ot.1.t: "未划归的地区" #deepl:770041530
+ frontera_ot.1.d: "[SCOPE.sCountry('overlord_scope').GetNameNoFlag] 对在独立的管理机构下维持[SCOPE.sCountry('ot_scope').GetNameNoFlag]的运营兴趣不大。" #deepl:791967195
+ frontera_ot.1.f: "该地区将变成未设行政区划、未建制、由美国政府直接管辖（[SCOPE.sCountry('overlord_scope').GetAdjectiveNoFlag]）的土地。不过，它日后可能会被划入一个新的行政区。" #deepl:2413213071
+ frontera_ot.1.a: "也许州长会另谋高就……" #deepl:671175547
+ frontera_ot.2: "向西进发！" #deepl:3523476864
+ frontera_ot.2.t: "向西进发！" #deepl:3523476864
+ frontera_ot.2.d: "[SCOPE.sCountry('overlord_scope').GetAdjectiveNoFlag] 定居者正迁往 [SCOPE.sState('ot_state_scope').GetName]" #deepl:2987101877
+ frontera_ot.2.f: "边疆移民将带来独特交融的历史与信仰。他们踏上新大陆的旅程，不仅将考验他们的本真，更将塑造他们未来的模样。\n \n #bold  这些新定居者…… #!" #deepl:4166109341
+ frontera_ot.2.a: "[SCOPE.sPop('pop_a_scope').GetCulture.GetName] [SCOPE.sPop('pop_a_scope').GetPopType.GetNameNoIcon]，常被听到在讨论 [SCOPE.sPoliticalMovement('movement_a_scope').GetNameNoIcon]。" #deepl:43556161
+ frontera_ot.2.b: "[SCOPE.sPop('pop_b_scope').GetCulture.GetName] [SCOPE.sPop('pop_b_scope').GetPopType.GetNameNoIcon]，关于 [SCOPE.sPoliticalMovement('movement_b_scope').GetNameNoIcon] 的内讧。" #deepl:1096300513
+ frontera_ot.2.c: "[SCOPE.sPop('pop_c_scope').GetCulture.GetName] [SCOPE.sPop('pop_c_scope').GetPopType.GetNameNoIcon]，对 [SCOPE.sPoliticalMovement('movement_c_scope').GetNameNoIcon] 抱有坚定的信念。" #deepl:456112610
+ frontera_ot.3: "《领土条例》" #deepl:2442298291
+ frontera_ot.3.t: "《[SCOPE.sState('newly_formed_colonial_nation_anchor_state').GetNameNoFormatting]条例》" #deepl:64569039
+ frontera_ot.3.d: "经过反复斟酌，新版[concept_organized_territory]的框架已基本确定，仅剩一些细微之处尚待敲定。" #deepl:3662192004
+ frontera_ot.3.f: "位于[SCOPE.sState('newly_formed_colonial_nation_anchor_state').GetName]的[Concept('concept_unincorporated_state','$concept_unincorporated_state$')]已被确定为一个合适的[Concept('concept_capital_state','$concept_capital_state_short$')]。一旦边界最终确定，可能会任命一个地方政府来管理该领地。\n \n #bold  该领地将设立在何处？#!" #deepl:3332362391
+ frontera_ot.3.a: "划定[SCOPE.sState('newly_formed_colonial_nation_anchor_state').GetName]周边的区域。" #deepl:1584845668
+ frontera_ot.3.b: "在[SCOPE.sStrategicRegion('region_scope').GetName]地区建立领地。" #deepl:236851503
+ frontera_ot.3.c: "仔细想想，这事可以稍后再处理。" #deepl:3045238605
+ frontera_acw_events.3.t: "《[SCOPE.sCharacter('wilmot_proviso_ig_leader').GetLastName]》条款" #deepl:1352998344
+ frontera_acw_events.3.d: "“自由与平等党”（[SCOPE.gsInterestGroup('wilmot_proviso_ig').GetName]）领袖罗伯特·斯塔尔（[SCOPE.sCharacter('wilmot_proviso_ig_leader').GetFullName]）提议在所有新领地彻底废除奴隶制。一些反对者主张采取温和措施，但另一些人则要求在所有新领地将奴隶制合法化。" #deepl:3885920250
+ frontera_acw_events.3.f: "“这个令人无法容忍的制度绝不能再扩大其影响！一个自由的国家若要繁荣昌盛，就必须拥有自由的土地！”" #deepl:3646320274
+ frontera_acw_events.3.a: "驳回该附加条款，此事仍属各州自行决定的事项。" #deepl:3123663819
+ frontera_acw_events.3.b: "接受这一附加条件，并在各领地废除奴隶制。" #deepl:2346190169
+ frontera_acw_events.3.c: "否决该附加条款，并在各领地扩大奴隶制。" #deepl:2300651371
+ frontera_ot.4: "边界争端" #deepl:988586463
+ frontera_ot.4.t: "边界争端" #deepl:988586463
+ frontera_ot.4.d: "[SCOPE.sCountry('ot_1_scope').GetRuler.GetPrimaryRoleTitle] [SCOPE.sCountry('ot_1_scope').GetRuler.GetLastName] 已就与[SCOPE.sCountry('ot_2_scope').GetNameNoFormatting]之间的边界不明确一事向政府提出关切。自称代表[SCOPE.sCountry('ot_2_scope').GetRuler.GetPrimaryRoleTitle]（[SCOPE.sCountry('ot_2_scope').GetRuler.GetLastName]）的税务人员曾试图向[SCOPE.sState('ot_1_state_scope').GetName]的定居点征收税款。" #deepl:1034593519
+ frontera_ot.4.f: "在这张破旧肮脏的地图上，谁能分得清细小的边界线和褶皱呢？" #deepl:2316071882
+ frontera_ot.4.a: "在[SCOPE.sCountry('ot_1_scope').GetNameNoFlag]中申请重新测绘。" #deepl:2273386938
+ frontera_ot.4.b: "[SCOPE.sCountry('ot_2_scope').GetNameNoFlag] 网站上的《[SCOPE.sCountry('ot_2_scope').GetRuler.GetPrimaryRoleTitle]》受 [SCOPE.sCountry('ot_2_scope').GetRuler.GetHerHis] 版权保护。" #deepl:4240412277
+ frontera_ot.4.c: "没错！大屠杀！为[ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle]献血！" #deepl:2183657101
+ frontera_ot.4.e: "没错！大屠杀！为[ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle]献血！" #deepl:2183657101

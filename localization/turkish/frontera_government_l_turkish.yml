@@ -1,51 +1,61 @@
 ﻿l_turkish:
- gov_frontier_territory_frontera: "#bold  Organize Bölge#!" #deepl:906580571
- gov_occupied_territory_frontera: "#bold  Meslek Devlet#!" #deepl:1016260001
- gov_frontier_territory_frontera_desc: "Bu, topraklarının hükümdarı adına seçilmiş bir yasama organı tarafından yönetilen fiili bir devlettir. [concept_government_type] \n \n $TRANSFER_OF_POWER_NAME_DESC$" #deepl:2530168596
- gov_occupied_territory_frontera_desc: "Bu, topraklarının hükümdarı adına atanmış bir yönetim tarafından yönetilen fiili bir devlettir. [concept_government_type] \n \n $TRANSFER_OF_POWER_NAME_DESC$" #deepl:4281170394
- law_frontier_territorial_administration: "Bölgesel Konsey" #deepl:2715586447
- law_frontier_territorial_administration_desc: "Devlet, yasal olarak yabancı bir gücün alt birimi olup, kendi egemenliğine sahip değildir. Bölgesel mülkiyetlerin bir araya getirilmesinden oluşan bir yapıyı yönetmek için sınırlı yetki verilmiştir. Tasarım gereği, bölgesel hükümetin amacı göçü, nüfus artışını veya coğrafi kontrolü teşvik etmektir; işlevleri, üst makamla kademeli bir entegrasyona yol açabilir." #deepl:2928952332
+ subject_type_ot_frontera: "@colony! $subject_type_ot_frontera_no_icon$" #deepl:3253250556
+ subject_type_ot_frontera_no_icon: "$concept_organized_territory$" #deepl:313969428
+ concept_ot_frontera_desc: "$concept_organized_territory_desc$" #deepl:3873127522
+ gov_frontier_territory_frontera: "Organize Bölge" #deepl:2352668119
+ gov_occupied_territory_frontera: "Meslek: Devlet memuru" #deepl:3187887074
+ gov_frontier_territory_frontera_desc: "Burası, bölgedeki egemen güç adına seçilmiş bir yasama organı tarafından yönetilen, fiili bir devlettir. [concept_government_type] \n \n $TRANSFER_OF_POWER_NAME_DESC$" #deepl:2530168596
+ gov_occupied_territory_frontera_desc: "Burası, bölgedeki egemen güç adına atanmış bir yönetim tarafından yönetilen, fiili bir devlettir. [concept_government_type] \n \n $TRANSFER_OF_POWER_NAME_DESC$" #deepl:4281170394
+ law_frontier_territorial_administration: "Yerel Konsey" #deepl:2715586447
+ law_frontier_territorial_administration_desc: "Devlet, hukuken bir yabancı gücün alt birimidir ve kendi egemenliğine sahip değildir. Kendisine, dağınık bir toprak parçalarını yönetmek üzere sınırlı yetki verilmiştir. Tasarım gereği, bu bölgesel hükümetin amacı göçü, nüfus artışını veya coğrafi kontrolü teşvik etmektir; işlevi, üst devletle kademeli bir entegrasyona yol açabilir." #deepl:2928952332
+ da_organize_territory_from_subject: "Sınır Yönetimi Kurmak" #deepl:1624084733
+ da_organize_territory_from_subject_desc: "Bu [concept_subject] adresindeki [Concept('concept_law', '$concept_laws$')] ve [Concept('concept_institution', '$concept_institutions$')] uzantıları, [concept_organized_territory] olarak değiştirilecektir. Yerleşimcilerin buraya [Concept('concept_migration','$concept_migrate$')] adresinden erişme olasılığı artacak, ancak yerel [Concept('concept_pop', '$Population$')] adresi [Concept('concept_radical','$concept_radicalized$')] adresine dönüşecektir." #deepl:3012390034
+ da_organize_territory_from_subject_effect: "[concept_subject], [concept_organized_territory] adresine taşınacak." #deepl:2940174597
+ da_organize_territory_from_subject_action_notification_third_party_name: "[INITIATOR_COUNTRY.GetAdjectiveNoFormatting] - [TARGET_COUNTRY.GetAdjectiveNoFormatting] Kuruluş tarihi[concept_organized_territory]" #deepl:3127302275
+ da_organize_territory_from_subject_action_notification_third_party_desc: "[INITIATOR_COUNTRY.GetName] [TARGET_COUNTRY.GetName]'i [concept_organized_territory] adresinde kurmuştur" #deepl:2133792713
+ da_organize_territory_from_subject_action_notification_name: "[INITIATOR_COUNTRY.GetName] bizi [concept_organized_territory] adresinde yeniden düzenledi" #deepl:128971638
+ da_organize_territory_from_subject_action_notification_desc: "[INITIATOR_COUNTRY.GetName] [TARGET_COUNTRY.GetName]'i [concept_organized_territory] adresinde kurmuştur" #deepl:2133792713
  frontera_organized_territory: "Organize Bölge" #deepl:2352668119
- frontera_organized_territory_action_name: "[koloni_konusu]" #deepl:3251702515
- frontera_organized_territory_action_propose_name: "[concept_colony_subject] yapın" #deepl:3174115590
- frontera_organized_territory_action_break_name: "Bağımsızlık Vermek" #deepl:559759927
- frontera_organized_territory_action_ask_to_break_name: "Talep Bağımsızlığı" #deepl:2601711019
- frontera_organized_territory_desc: "[concept_colony_subject] [concept_subject_type] ile [Concept('concept_country', '$concept_countries$')] arasında bir ilişki kurar." #deepl:705416797
- frontera_organized_territory_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName] [concept_colony_subject]'in [SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName] adresindeki bir parçasıdır." #deepl:1373808063
- frontera_organized_territory_action_notification_name: "[concept_colony_subject] talebi" #deepl:1515811026
- frontera_organized_territory_action_notification_desc: "[INITIATOR_COUNTRY.GetName] bizden onlara boyun eğmemizi ve onların [concept_colony_subject]'u olmamızı talep ediyor." #deepl:2712539620
+ frontera_organized_territory_action_name: "[kavram_düzenlenmiş_bölge]" #deepl:2032668942
+ frontera_organized_territory_action_propose_name: "[concept_organized_territory]'a dönüştür" #deepl:4097128999
+ frontera_organized_territory_action_break_name: "Bağımsızlık Sağlamak" #deepl:559759927
+ frontera_organized_territory_action_ask_to_break_name: "Bağımsızlık Talebi" #deepl:2601711019
+ frontera_organized_territory_desc: "İki [Concept('concept_country', '$concept_countries$')] arasında bir [concept_organized_territory] [concept_subject_type] ilişkisi kurar." #deepl:71996272
+ frontera_organized_territory_pact_desc: "[SCOPE.GetRootScope.GetDiplomaticPact.GetSecondCountry.GetName] [SCOPE.GetRootScope.GetDiplomaticPact.GetFirstCountry.GetName]'un bir [concept_organized_territory]'sidir." #deepl:2631043201
+ frontera_organized_territory_action_notification_name: "[concept_organized_territory]'a olan talep" #deepl:1535292097
+ frontera_organized_territory_action_notification_desc: "[INITIATOR_COUNTRY.GetName] onlara boyun eğmemizi ve onların "[concept_organized_territory]"sı olmamızı talep ediyor." #deepl:2726039266
  frontera_organized_territory_action_notification_break_name: "Bağımsızlık Verildi" #deepl:2574177537
- frontera_organized_territory_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] [concept_colony_subject]'ın statüsünü sona erdirdik. Tekrar bağımsız hale geldik." #deepl:3957619773
+ frontera_organized_territory_action_notification_break_desc: "[INITIATOR_COUNTRY.GetName] [concept_organized_territory]'daki üyeliğimizi sonlandırdık. Artık yeniden bağımsız durumdayız." #deepl:321213479
  frontera_organized_territory_proposal_notification_break_name: "Bağımsızlık Talebi" #deepl:4186398139
- frontera_organized_territory_proposal_notification_break_desc: "[INITIATOR_COUNTRY.GetName] [concept_colony_subject]'ın statüsünü sona erdirilmesini talep ediyorlar." #deepl:1708328788
- frontera_organized_territory_proposal_notification_break_effects_desc: "Kabul edersek, tamamen bağımsız hale gelecekler." #deepl:2906517331
+ frontera_organized_territory_proposal_notification_break_desc: "[INITIATOR_COUNTRY.GetName] [concept_organized_territory]'daki statülerinin sona erdirilmesini talep ediyorlar." #deepl:1723243462
+ frontera_organized_territory_proposal_notification_break_effects_desc: "Eğer kabul edersek, tamamen bağımsız hale gelecekler." #deepl:2906517331
  frontera_organized_territory_proposal_break_accepted_name: "Bağımsızlık Verildi" #deepl:2574177537
- frontera_organized_territory_proposal_break_accepted_desc: "[TARGET_COUNTRY.GetName] [concept_colony_subject]'ın statüsünü sona erdirme talebini kabul etti. Bir kez daha bağımsız hale geldik." #deepl:1952871052
+ frontera_organized_territory_proposal_break_accepted_desc: "[TARGET_COUNTRY.GetName] [concept_organized_territory] statüsümüzün sona erdirilmesi talebini kabul ettik. Artık yeniden bağımsızız." #deepl:3078165425
  frontera_organized_territory_proposal_break_declined_name: "Bağımsızlık Reddedildi" #deepl:653698475
- frontera_organized_territory_proposal_break_declined_desc: "[TARGET_COUNTRY.GetName] [concept_colony_subject]'ın statüsünü sona erdirme talebini reddetti." #deepl:3746860557
+ frontera_organized_territory_proposal_break_declined_desc: "[TARGET_COUNTRY.GetName] [concept_organized_territory]i statümüzü sona erdirme talebini reddetti." #deepl:3407165481
  frontera_organized_territory_action_third_party_notification_break_name: "Bağımsızlık Verildi" #deepl:2574177537
- frontera_organized_territory_action_third_party_notification_break_desc: "[INITIATOR_COUNTRY.GetName] [TARGET_COUNTRY.GetName]'nin[concept_colony_subject] statüsünü sona erdirerek, onlara tam bağımsızlık verdi." #deepl:3771074568
+ frontera_organized_territory_action_third_party_notification_break_desc: "[INITIATOR_COUNTRY.GetName] [TARGET_COUNTRY.GetName]'nin "[concept_organized_territory]" statüsünü sona erdirerek, bu bölgeye tam bağımsızlık tanıdı." #deepl:305684714
  frontera_organized_territory_proposal_third_party_break_accepted_name: "Bağımsızlık Verildi" #deepl:2574177537
- frontera_organized_territory_proposal_third_party_break_accepted_desc: "[TARGET_COUNTRY.GetName] [INITIATOR_COUNTRY.GetName]'nin[concept_colony_subject] statüsünü sona erdirerek, onlara tam bağımsızlık verdi." #deepl:100521671
+ frontera_organized_territory_proposal_third_party_break_accepted_desc: "[TARGET_COUNTRY.GetName] [INITIATOR_COUNTRY.GetName]'nin "[concept_organized_territory]" statüsünü sona erdirerek, bu bölgeye tam bağımsızlık tanıdı." #deepl:1941904680
  frontera_organized_territory_proposal_third_party_break_declined_name: "Bağımsızlık Reddedildi" #deepl:653698475
- frontera_organized_territory_proposal_third_party_break_declined_desc: "[TARGET_COUNTRY.GetName] [INITIATOR_COUNTRY.GetName]'ın "[concept_colony_subject]" statüsünü sona erdirmeyi reddetti." #deepl:3590310999
- frontera_organized_territory_proposal_notification_name: "Boyun Eğdirme Talebi" #deepl:266272033
- frontera_organized_territory_proposal_notification_desc: "[INITIATOR_COUNTRY.GetName] bizden onlara boyun eğmemizi ve onların [concept_colony_subject]'u olmamızı talep ediyor." #deepl:2712539620
- frontera_organized_territory_proposal_notification_effects_desc: "Kabul edersek, onların tebası oluruz." #deepl:852371670
- frontera_organized_territory_proposal_accepted_name: "Boyun Eğme Kabul Edildi" #deepl:2584296030
- frontera_organized_territory_proposal_accepted_desc: "[TARGET_COUNTRY.GetName] [concept_colony_subject]'imiz olmaları talebini kabul ettiler." #deepl:1124690513
- frontera_organized_territory_proposal_declined_name: "Boyun Eğmeyi Reddetme" #deepl:3425793555
- frontera_organized_territory_proposal_declined_desc: "[TARGET_COUNTRY.GetName] [concept_colony_subject] olmamaları talebini reddettiler." #deepl:3198712008
- frontera_organized_territory_proposal_third_party_accepted_name: "Ülke Boyun Eğdirilmiş" #deepl:3333335653
- frontera_organized_territory_proposal_third_party_accepted_desc: "[TARGET_COUNTRY.GetName] [INITIATOR_COUNTRY.GetName]'ın "[concept_colony_subject]" (Yılın En İyi Erkek Oyuncusu) seçilmeyi kabul etti." #deepl:3618292710
- frontera_organized_territory_proposal_third_party_declined_name: "Boyun Eğmeyi Reddetme" #deepl:3425793555
- frontera_organized_territory_proposal_third_party_declined_desc: "[TARGET_COUNTRY.GetName] [INITIATOR_COUNTRY.GetName]'ın "[concept_colony_subject]"ı olmayı reddetti." #deepl:1144786411
- frontera_organized_territory_effect_desc_global: "[concept_colony_subject] olur" #deepl:2186263610
- frontera_organized_territory_effect_desc_first: "[TARGET_COUNTRY.GetName] [COUNTRY.GetAdjectiveNoFlag] olur [concept_colony_subject]" #deepl:812973629
- frontera_organized_territory_effect_desc_third: "[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)] [AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] [concept_colony_subject]'ın [COUNTRY.GetName]" #deepl:1164416506
- frontera_organized_territory_trigger_desc_global: "[concept_colony_subject] mı?" #deepl:281153964
- frontera_organized_territory_trigger_false_desc_global: "#b , #! değil mi? [concept_colony_subject]" #deepl:4120123678
- frontera_organized_territory_trigger_desc_first: "[TARGET_COUNTRY.GetName] [COUNTRY.GetAdjectiveNoFlag]'dir [concept_colony_subject]" #deepl:3100485644
- frontera_organized_territory_trigger_false_desc_first: "[TARGET_COUNTRY.GetName] #b  değil mi #! a [COUNTRY.GetAdjectiveNoFlag] [concept_colony_subject]" #deepl:3644228541
- frontera_organized_territory_trigger_desc_third: "[COUNTRY.GetName] [concept_colony_subject]'ın [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)] [AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]" #deepl:1872412249
- frontera_organized_territory_trigger_false_desc_third: "[COUNTRY.GetNameNoFlag] #b  değil mi #! [concept_colony_subject] [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetName)] [AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]" #deepl:2909402420
+ frontera_organized_territory_proposal_third_party_break_declined_desc: "[TARGET_COUNTRY.GetName] [INITIATOR_COUNTRY.GetName]'ın "[concept_organized_territory]" statüsünü sona erdirmeyi reddetti." #deepl:2589167366
+ frontera_organized_territory_proposal_notification_name: "Boyun eğme talebi" #deepl:266272033
+ frontera_organized_territory_proposal_notification_desc: "[INITIATOR_COUNTRY.GetName] onlara boyun eğmemizi ve onların "[concept_organized_territory]"sı olmamızı talep ediyor." #deepl:2726039266
+ frontera_organized_territory_proposal_notification_effects_desc: "Kabul edersek, onların boyunduruğu altına gireceğiz." #deepl:852371670
+ frontera_organized_territory_proposal_accepted_name: "Boyun eğme kabul edildi" #deepl:2584296030
+ frontera_organized_territory_proposal_accepted_desc: "[TARGET_COUNTRY.GetName] [concept_organized_territory]'mız olmaları yönündeki talebi kabul ettiler." #deepl:4169460010
+ frontera_organized_territory_proposal_declined_name: "Boyun Eğmeyi Reddettik" #deepl:3425793555
+ frontera_organized_territory_proposal_declined_desc: "[TARGET_COUNTRY.GetName] [concept_organized_territory]'ımız olmaları yönündeki talebi reddettiler." #deepl:3866933163
+ frontera_organized_territory_proposal_third_party_accepted_name: "Fethedilen Ülke" #deepl:3333335653
+ frontera_organized_territory_proposal_third_party_accepted_desc: "[TARGET_COUNTRY.GetName] [INITIATOR_COUNTRY.GetName]'un "[concept_organized_territory]"ı olmayı kabul etti." #deepl:1880742352
+ frontera_organized_territory_proposal_third_party_declined_name: "Boyun Eğmeyi Reddettik" #deepl:3425793555
+ frontera_organized_territory_proposal_third_party_declined_desc: "[TARGET_COUNTRY.GetName] [INITIATOR_COUNTRY.GetName]'ın "[concept_organized_territory]"si olmayı reddetti." #deepl:4249654475
+ frontera_organized_territory_effect_desc_global: "[concept_organized_territory]'a dönüşür" #deepl:687329912
+ frontera_organized_territory_effect_desc_first: "[TARGET_COUNTRY.GetName] [COUNTRY.GetAdjectiveNoFlag]'a dönüşür [concept_organized_territory]" #deepl:4022060011
+ frontera_organized_territory_effect_desc_third: "[AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)] [AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)] [COUNTRY.GetName]'un bir parçası olur" #deepl:550130030
+ frontera_organized_territory_trigger_desc_global: "[concept_organized_territory] mı?" #deepl:3062203235
+ frontera_organized_territory_trigger_false_desc_global: "#b , #! değil de [concept_organized_territory] mi?" #deepl:111525193
+ frontera_organized_territory_trigger_desc_first: "[TARGET_COUNTRY.GetName] [COUNTRY.GetAdjectiveNoFlag]'un bir parçasıdır [concept_organized_territory]" #deepl:1431207336
+ frontera_organized_territory_trigger_false_desc_first: "[TARGET_COUNTRY.GetName] #b  değil, #!, [COUNTRY.GetAdjectiveNoFlag], [concept_organized_territory]" #deepl:4246920251
+ frontera_organized_territory_trigger_desc_third: "[COUNTRY.GetName] [concept_organized_territory]'un bir parçasıdır: [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetNameNoFlag)] [AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]" #deepl:1737137617
+ frontera_organized_territory_trigger_false_desc_third: "[COUNTRY.GetNameNoFlag] #b  değil, #!, [concept_organized_territory], [AddTextIf(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self),TARGET_COUNTRY.GetName)], [AddTextIf(Not(ObjectsEqual(GetMetaPlayer.GetPlayedOrObservedCountry.Self, TARGET_COUNTRY.Self)),TARGET_COUNTRY.GetName)]" #deepl:1425883803

@@ -1,0 +1,34 @@
+﻿l_spanish:
+ frontera_ot.1: "Territorio sin organizar" #deepl:770041530
+ frontera_ot.1.t: "Territorio sin organizar" #deepl:770041530
+ frontera_ot.1.d: "[SCOPE.sCountry('overlord_scope').GetNameNoFlag] no tiene mucho interés en mantener «[SCOPE.sCountry('ot_scope').GetNameNoFlag]» bajo un órgano rector independiente." #deepl:791967195
+ frontera_ot.1.f: "Este territorio pasará a ser un territorio no organizado y no incorporado de la «[SCOPE.sCountry('overlord_scope').GetAdjectiveNoFlag]». Sin embargo, algún día podría incorporarse a un nuevo territorio." #deepl:2413213071
+ frontera_ot.1.a: "Quizás el gobernador encuentre otro trabajo..." #deepl:671175547
+ frontera_ot.2: "¡Hacia el Oeste!" #deepl:3523476864
+ frontera_ot.2.t: "¡Hacia el Oeste!" #deepl:3523476864
+ frontera_ot.2.d: "[SCOPE.sCountry('overlord_scope').GetAdjectiveNoFlag] Los colonos se están trasladando a [SCOPE.sState('ot_state_scope').GetName]" #deepl:2987101877
+ frontera_ot.2.f: "Los migrantes de la frontera aportarán una mezcla única de historias y creencias. Su viaje hacia nuevas tierras no solo pondrá a prueba quiénes son, sino que también determinará en quiénes se convertirán. \n \n #bold  Estos nuevos colonos son... #!" #deepl:4166109341
+ frontera_ot.2.a: "[SCOPE.sPop('pop_a_scope').GetCulture.GetName] [SCOPE.sPop('pop_a_scope').GetPopType.GetNameNoIcon], a quien a menudo se oye hablar de [SCOPE.sPoliticalMovement('movement_a_scope').GetNameNoIcon]." #deepl:43556161
+ frontera_ot.2.b: "[SCOPE.sPop('pop_b_scope').GetCulture.GetName] [SCOPE.sPop('pop_b_scope').GetPopType.GetNameNoIcon], disputas internas en torno a [SCOPE.sPoliticalMovement('movement_b_scope').GetNameNoIcon]." #deepl:1096300513
+ frontera_ot.2.c: "[SCOPE.sPop('pop_c_scope').GetCulture.GetName] [SCOPE.sPop('pop_c_scope').GetPopType.GetNameNoIcon], con firmes convicciones sobre el [SCOPE.sPoliticalMovement('movement_c_scope').GetNameNoIcon]." #deepl:456112610
+ frontera_ot.3: "Ordenanza territorial" #deepl:2442298291
+ frontera_ot.3.t: "La Ordenanza «[SCOPE.sState('newly_formed_colonial_nation_anchor_state').GetNameNoFormatting]»" #deepl:64569039
+ frontera_ot.3.d: "Tras muchas deliberaciones, el esbozo de un nuevo «[concept_organized_territory]» está a punto de concretarse. Solo quedan por aclarar algunos detalles menores." #deepl:3662192004
+ frontera_ot.3.f: "Se ha determinado que el «[Concept('concept_unincorporated_state','$concept_unincorporated_state$')]» de [SCOPE.sState('newly_formed_colonial_nation_anchor_state').GetName] es un «[Concept('concept_capital_state','$concept_capital_state_short$')]» adecuado. Una vez que se hayan definido los límites, se podrá designar a un gobierno local para que administre el territorio. \n \n #bold  ¿Dónde se creará este territorio? #!" #deepl:3332362391
+ frontera_ot.3.a: "Delimita el territorio que rodea a [SCOPE.sState('newly_formed_colonial_nation_anchor_state').GetName]." #deepl:1584845668
+ frontera_ot.3.b: "Establecer el territorio en la región de[SCOPE.sStrategicRegion('region_scope').GetName]." #deepl:236851503
+ frontera_ot.3.c: "Ahora que lo pienso, esto puede esperar." #deepl:3045238605
+ frontera_acw_events.3.t: "La cláusula de «[SCOPE.sCharacter('wilmot_proviso_ig_leader').GetLastName]»" #deepl:1352998344
+ frontera_acw_events.3.d: "[SCOPE.sCharacter('wilmot_proviso_ig_leader').GetFullName]a, líder de la «[SCOPE.gsInterestGroup('wilmot_proviso_ig').GetName]», ha propuesto prohibir totalmente la esclavitud en todos nuestros nuevos territorios. Algunos opositores abogan por una simple moderación, pero otros exigen la legalización de la esclavitud en todos los nuevos territorios." #deepl:3885920250
+ frontera_acw_events.3.f: "«¡Esta institución intolerable no puede seguir extendiendo su influencia! ¡Una nación libre necesita un territorio libre para prosperar!»" #deepl:3646320274
+ frontera_acw_events.3.a: "Si se rechaza la cláusula, esto seguirá siendo una cuestión que compete a cada estado." #deepl:3123663819
+ frontera_acw_events.3.b: "Aceptad la cláusula y abolid la esclavitud en los territorios." #deepl:2346190169
+ frontera_acw_events.3.c: "Rechazar la cláusula y ampliar la esclavitud en los territorios." #deepl:2300651371
+ frontera_ot.4: "Conflicto fronterizo" #deepl:988586463
+ frontera_ot.4.t: "Conflicto fronterizo" #deepl:988586463
+ frontera_ot.4.d: "[SCOPE.sCountry('ot_1_scope').GetRuler.GetPrimaryRoleTitle] [SCOPE.sCountry('ot_1_scope').GetRuler.GetLastName] se ha puesto en contacto con el Gobierno para expresar su preocupación por la falta de claridad en la frontera con [SCOPE.sCountry('ot_2_scope').GetNameNoFormatting]. Algunos recaudadores de impuestos que afirman representar a [SCOPE.sCountry('ot_2_scope').GetRuler.GetPrimaryRoleTitle] [SCOPE.sCountry('ot_2_scope').GetRuler.GetLastName] han intentado cobrar impuestos a los asentamientos de [SCOPE.sState('ot_1_state_scope').GetName]." #deepl:1034593519
+ frontera_ot.4.f: "¿Quién podría distinguir los pequeños bordes de las arrugas en este viejo mapa manchado?" #deepl:2316071882
+ frontera_ot.4.a: "Solicite una nueva medición en [SCOPE.sCountry('ot_1_scope').GetNameNoFlag]." #deepl:2273386938
+ frontera_ot.4.b: "El contenido de [SCOPE.sCountry('ot_2_scope').GetRuler.GetPrimaryRoleTitle], disponible en [SCOPE.sCountry('ot_2_scope').GetNameNoFlag], está protegido por los derechos de [SCOPE.sCountry('ot_2_scope').GetRuler.GetHerHis]." #deepl:4240412277
+ frontera_ot.4.c: "¡Sí! ¡Carnicería! ¡Sangre para los «[ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle]»!" #deepl:2183657101
+ frontera_ot.4.e: "¡Sí! ¡Carnicería! ¡Sangre para los «[ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle]»!" #deepl:2183657101

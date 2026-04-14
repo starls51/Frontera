@@ -129,3 +129,101 @@ cal_william_hartnell_template = {
 }
 
 #Narciso Durán
+
+# Characters for companies
+cal_levi_strauss_template = {
+    first_name = Levi
+    last_name =  Strauss
+    historical = yes
+    birth_date = 1829.2.26
+    dna = dna_cal_levi_strauss
+    culture = cu:south_german
+    religion = rel:jewish
+    interest_group = ig_petty_bourgeoisie
+    ideology = ideology_liberal_leader
+    traits = {
+        innovative
+        pious
+        basic_entrepreneur
+    }
+    executive_usage = {
+		company_trigger = {
+			is_company_type = company_type:company_levi_frontera
+		}
+	    earliest_usage_date = 1847.1.1
+	    latest_usage_date = 1902.09.26
+		chance = 100
+	}
+}
+cal_charles_louis_ducommun_template = {
+    first_name = Charles_Louis
+    last_name =  Ducommun
+    historical = yes
+    birth_date = 1820.11.15
+    dna = dna_cal_charles_louis_ducommun
+    culture = cu:francoprovencal
+    religion = rel:catholic
+    interest_group = ig_petty_bourgeoisie
+    ideology = ideology_moderate
+    traits = {
+        persistent
+        brave
+        basic_entrepreneur
+    }
+    executive_usage = {
+		company_trigger = {
+			is_company_type = company_type:company_ducommun_frontera
+		}
+	    earliest_usage_date = 1838.1.1
+	    latest_usage_date = 1896.04.04
+		chance = 100
+	}
+}
+cal_charles_albert_ducommun_template = {
+    first_name = Charles_Albert
+    last_name =  Ducommun
+    historical = yes
+    birth_date = 1870.1.1
+    dna = dna_cal_charles_albert_ducommun
+    culture = primary_culture
+    religion = rel:catholic
+    interest_group = ig_industrialists
+    ideology = ideology_moderate
+    traits = {
+        ambitious
+        innovative
+        basic_entrepreneur
+    }
+    executive_usage = {
+		company_trigger = {
+			is_company_type = company_type:company_ducommun_frontera
+		}
+	    earliest_usage_date = 1888.01.01
+	    latest_usage_date = 1934.04.04
+		chance = 100
+	}
+}
+cal_william_fargo_template = {
+    first_name = William
+    last_name =  Fargo
+    historical = yes
+    birth_date = 1818.5.20
+    dna = dna_cal_william_fargo
+    culture = cu:yankee
+    religion = rel:protestant
+    interest_group = ig_industrialists
+    ideology = ideology_jacksonian_democrat
+    traits = {
+        tactful
+        honorable
+        basic_entrepreneur
+    }
+    executive_usage = {
+		company_trigger = {
+			is_company_type = company_type:company_wells_fargo_frontera
+		}
+	    earliest_usage_date = 1836.1.1
+	    latest_usage_date = 1881.08.03
+		chance = 100
+	}
+}

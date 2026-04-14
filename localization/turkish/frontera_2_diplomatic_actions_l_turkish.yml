@@ -1,0 +1,22 @@
+﻿l_turkish:
+ da_frontera_force_culture: "Milliyetçi Yönetimi Yerleştirin" #deepl:2453814574
+ da_frontera_force_culture_desc: "Bir [concept_organized_territory]'ın [concept_primary_cultures] değerini, [concept_overlord]'daki değerlerle uyumlu hale getirir." #deepl:3006522470
+ da_frontera_force_culture_action_name: "Milliyetçi Yönetimi Yerleştirin" #deepl:2453814574
+ da_frontera_force_culture_action_notification_name: "[TARGET_COUNTRY.GetName] [INITIATOR_COUNTRY.GetAdjective]'ın yönetimini benimser" #deepl:495659015
+ da_frontera_force_culture_action_notification_desc: "[INITIATOR_COUNTRY.GetName] [TARGET_COUNTRY.GetName] adresindeki [concept_primary_cultures] alan adını kendi alan adıyla aynı hale getirdi." #deepl:1709253863
+ da_frontera_force_culture_action_notification_third_party_name: "[TARGET_COUNTRY.GetName] [INITIATOR_COUNTRY.GetAdjective]'ın yönetimini benimser" #deepl:495659015
+ da_frontera_force_culture_action_notification_third_party_desc: "[INITIATOR_COUNTRY.GetName] [TARGET_COUNTRY.GetName] adresindeki [concept_primary_cultures] alan adını kendi alan adıyla aynı hale getirdi." #deepl:1709253863
+ da_frontera_force_state_religion: "$concept_religion$'ın bahis oranı" #deepl:3780971767
+ da_frontera_force_state_religion_action_name: "[concept_religion]'ın bahis oranı" #deepl:1833652158
+ da_frontera_force_state_religion_desc: "Bu [concept_organized_territory] adresi, önde gelen [concept_religion] adresimizi öne çıkaracak ve temsilciler ile eğitimcilerin halkın arasına karışmasına olanak sağlayacaktır." #deepl:2479916493
+ da_frontera_force_state_religion_action_notification_name: "[INITIATOR_COUNTRY.GetName] [concept_religion]'ın temsilcilerini gönderir" #deepl:3886297734
+ da_frontera_force_state_religion_action_notification_desc: "[INITIATOR_COUNTRY.GetName] [concept_religion]'ın temsilcilerini topraklarımıza davet etti" #deepl:486204899
+ da_frontera_force_state_religion_action_notification_third_party_name: "[INITIATOR_COUNTRY.GetName] [concept_religion]'ın temsilcilerini gönderir" #deepl:3886297734
+ da_frontera_force_state_religion_action_notification_third_party_desc: "[INITIATOR_COUNTRY.GetName] [concept_religion]'ın temsilcilerini [TARGET_COUNTRY.GetName] adresine davet etti" #deepl:243943760
+ da_frontera_dissolve_ot: "Bölgeyi feshet" #deepl:1444142792
+ da_frontera_dissolve_ot_action_name: "[concept_organized_territory]'i eritin" #deepl:3449086710
+ da_frontera_dissolve_ot_desc: "Bu belge ([concept_organized_territory]) [Concept('concept_unincorporated_state','$concept_unincorporated_states$')] adresine ek olarak eklenecektir." #deepl:2143557788
+ da_frontera_dissolve_ot_action_notification_name: "[INITIATOR_COUNTRY.GetName] ekler [TARGET_COUNTRY.GetName]" #deepl:3664093964
+ da_frontera_dissolve_ot_action_notification_desc: "[INITIATOR_COUNTRY.GetName] bizi ilhak etti" #deepl:1307216587
+ da_frontera_dissolve_ot_action_notification_third_party_name: "[INITIATOR_COUNTRY.GetName] [concept_organized_territory] adresine ekler" #deepl:795772768
+ da_frontera_dissolve_ot_action_notification_third_party_desc: "[INITIATOR_COUNTRY.GetName] [TARGET_COUNTRY.GetName] adresini eklemiştir" #deepl:2142045709
