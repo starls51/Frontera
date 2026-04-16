@@ -38,12 +38,20 @@ frontera_ot.1 = {
 			}
 			scope:overlord_scope = { post_notification = ot_consolidated_frontera_notification }
 			play_as = scope:overlord_scope
-			scope:overlord_scope = { annex = scope:ot_scope }
+			scope:ot_scope = {
+				every_scope_state = {
+					set_state_owner = scope:overlord_scope
+					set_state_type = unincorporated
+				}
+			}
 		}
 		else = {
-			scope:overlord_scope = {
-				post_notification = ot_consolidated_frontera_notification
-				annex = scope:ot_scope
+			scope:overlord_scope = { post_notification = ot_consolidated_frontera_notification }
+			scope:ot_scope = {
+				every_scope_state = {
+					set_state_owner = scope:overlord_scope
+					set_state_type = unincorporated
+				}
 			}
 		}
 	}

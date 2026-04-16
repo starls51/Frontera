@@ -10,7 +10,8 @@
 	show_effect_in_tooltip = yes
 
 	potential = {
-		scope:target_country = { has_law = law_type:law_frontier_colonization }
+		scope:target_country = { is_subject_type = subject_type_ot_frontera }
+		#scope:target_country = { has_law = law_type:law_frontier_colonization }
 	}
 
 	possible = {
@@ -24,21 +25,30 @@
 
 	accept_effect = {
 		hidden_effect = {
-			scope:target_country = {
-				every_scope_state = {
-					set_state_owner = ROOT
-					set_state_type = unincorporated
-				}
-			}
+			scope:target_country = { trigger_event = { id = frontera_ot.1 } }
+			#scope:target_country = {
+			#	every_scope_state = {
+			#		set_state_owner = ROOT
+			#		set_state_type = unincorporated
+			#	}
+			#}
 		}
-		# looks cleaner as tt
-		scope:target_country ?= { ROOT = { annex = prev } }
+		show_as_tooltip = {
+			scope:target_country ?= { ROOT = { annex = prev } }
+		}
 	}
 
-	# This is a player affordance, no AI logic, for now
+	# AI should annex 
 	ai = {
 		evaluation_chance = {
 			value = 0.0
+			if = {
+				limit = {
+					has_journal_entry = je_organized_territories_frontera
+					any_subject_or_below = { is_subject_type = subject_type_ot_frontera }
+				}
+				add = 0.25
+			}
 		}
 
 		propose_score = {
@@ -46,7 +56,23 @@
 		}
 
 		will_propose = {
-			always = no
+			#always = no
+			scope:target_country = {
+				#NOT = { is_player = yes }
+				overlord ?= ROOT
+				is_subject_type = subject_type_ot_frontera
+				any_scope_state = {
+					OR = {
+						NOT = { is_split_state = yes }
+						is_under_colonization = yes
+						#any_neighbouring_state = {
+						#	state_region = prev.state_region
+						#	owner = { is_country_type = decentralized }
+						#}
+					}
+					count < 1
+				}
+			}
 		}
 	}
 }

@@ -55,7 +55,6 @@
 
 	on_yearly_pulse = {
 		effect = {
-			country_OT_consolidate_split_states = yes
 			if = {
 				limit = {
 					root.overlord = {
