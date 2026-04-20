@@ -98,7 +98,15 @@ frontera_ot_homeland.1 = {
 				set_state_owner = scope:overlord_scope
 				set_state_type = unincorporated
 				remove_variable = becoming_state_frontera
-				state_region = { add_claim = scope:overlord_scope }
+				#state_region = { add_claim = scope:overlord_scope }
+				state_region = {
+					if = {
+						limit = {
+							any_scope_country = { is_country_type = decentralized }
+						}
+						add_claim = scope:overlord_scope
+					}
+				}
 			}
 		}
 	}
@@ -139,8 +147,15 @@ frontera_ot_homeland.2 = {
 		default_option = yes
 		scope:ascendent_state = {
 			set_state_owner = scope:overlord_scope
-			state_region = { add_claim = scope:overlord_scope }
+			state_region = {
+				if = {
+					limit = {
+						any_scope_country = { is_country_type = decentralized }
+					}
+					add_claim = scope:overlord_scope
+				}
 			}
+		}
 		custom_tooltip = {
 			text = frontera_ot_homeland_gained_homeland
 			scope:ascendent_state = {

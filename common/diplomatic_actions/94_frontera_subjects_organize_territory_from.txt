@@ -28,7 +28,10 @@
 		NOT = { is_subject_type = subject_type_ot_frontera }
 		scope:target_country = {
 			liberty_desire <= 25
-			NOT = { can_have_subjects = yes }
+			OR = {
+				is_subject_type = subject_type_colony
+				NOT = { can_have_subjects = yes }
+			}
 			is_revolutionary = no
 			any_scope_state = {
 				is_incorporated = yes

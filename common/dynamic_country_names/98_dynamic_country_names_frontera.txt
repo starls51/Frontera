@@ -175,6 +175,20 @@ REPLACE:CAL = {
 			}
 		}
 	}
+
+	dynamic_country_name = {
+		name = dyn_c_british_california
+		adjective = dyn_c_british_california_adj
+
+		is_main_tag_only = no
+		priority = 1
+
+		trigger = {
+			scope:actor ?= {
+				NOT = { has_state_in_state_region = STATE_CALIFORNIA }
+			}
+		}
+	}
 }
 
 UOM = {

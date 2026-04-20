@@ -17,11 +17,28 @@
 		income_transfer_based_on_second_country = yes
 
 		relations_progress_per_day = 1
-		relations_improvement_max = 50
+		relations_improvement_max = 75
 
 		subject_type = subject_type_ot_frontera
 
 		second_modifier = {
+			country_law_enactment_imposition_success_add = 0.3
+			country_institution_size_change_speed_institution_colonial_affairs_mult = 0.15
+			country_officers_pol_str_mult = 1
+			country_soldiers_pol_str_mult = 1
+			country_mass_migration_attraction_mult = -1
+			country_political_strength_violent_hostility_mult = -0.3
+			country_political_strength_cultural_erasure_mult = -0.3
+			country_political_strength_open_prejudice_mult = -0.3
+			country_political_strength_second_rate_citizen_mult = -0.15
+			country_wage_violent_hostility_mult = -0.4
+			country_wage_cultural_erasure_mult = -0.2
+			country_wage_open_prejudice_mult = -0.1
+			country_assimilation_full_acceptance_mult = -1
+			# Demographic damage from frontier colonization for both colonists and natives
+			# 1 in 5 infant mortality and 1 in 10 death in transit
+			state_birth_rate_mult = -0.2
+			state_mortality_mult = 0.1
 		}
 
 		actor_can_break = {

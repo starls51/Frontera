@@ -1,12 +1,12 @@
 {
   "name" : "Frontera",
-  "id" : "com.github.starls51.Frontera",
-  "version" : "0.2.2",
+  "id" : "frontera0351",
+  "version" : "0.2.3",
   "game_id" : "victoria3",
   "picture" : "thumbnail.png",
   "supported_game_version" : "1.12.5",
-  "short_description" : "Frontera expands upon Victoria 3's North American frontier.",
-  "tags" : ["migration", "frontier", "expansion", "western", "California"],
+  "short_description" : "Expansion of frontier mechanics with a focal point in 19th century California",
+  "tags" : [],
   "relationships" : [],
   "game_custom_data" : {
     "multiplayer_synchronized" : true

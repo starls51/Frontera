@@ -414,203 +414,203 @@
 }
 
 
-je_south_american_national_identity = {
-	icon = "gfx/interface/icons/event_icons/event_map.dds"
-
-	group = je_group_internal_affairs
-
-	# Now activated by event
-
-	modifiers_while_active = {
-		modifier_assimilation_nnc
-	}
-
-	immediate = {
-		if = {
-			limit = {
-				c:ARG ?= this
-			}
-			cu:platinean = {
-				save_scope_as = old_national_culture
-			}
-			cu:argentine = {
-				save_scope_as = new_national_culture
-			}
-		}
-		if = {
-			limit = {
-				c:PEU ?= this
-			}
-			cu:south_andean = {
-				save_scope_as = old_national_culture
-			}
-			cu:peruvian = {
-				save_scope_as = new_national_culture
-			}
-		}
-		if = {
-			limit = {
-				c:NPU ?= this
-			}
-			cu:south_andean = {
-				save_scope_as = old_national_culture
-			}
-			cu:peruvian = {
-				save_scope_as = new_national_culture
-			}
-		}
-		if = {
-			limit = {
-				c:SPU ?= this
-			}
-			cu:south_andean = {
-				save_scope_as = old_national_culture
-			}
-			cu:peruvian = {
-				save_scope_as = new_national_culture
-			}
-		}
-		if = {
-			limit = {
-				c:BOL ?= this
-			}
-			cu:south_andean = {
-				save_scope_as = old_national_culture
-			}
-			cu:bolivian = {
-				save_scope_as = new_national_culture
-			}
-		}
-		if = {
-			limit = {
-				c:ECU ?= this
-			}
-			cu:north_andean = {
-				save_scope_as = old_national_culture
-			}
-			cu:ecuadorian = {
-				save_scope_as = new_national_culture
-			}
-		}
-		if = {
-			limit = {
-				c:CHL ?= this
-			}
-			cu:south_andean = {
-				save_scope_as = old_national_culture
-			}
-			cu:chilean = {
-				save_scope_as = new_national_culture
-			}
-		}
-		if = {
-			limit = {
-				c:VNZ ?= this
-			}
-			cu:north_andean = {
-				save_scope_as = old_national_culture
-			}
-			cu:venezuelan = {
-				save_scope_as = new_national_culture
-			}
-		}
-		if = {
-			limit = {
-				c:URU ?= this
-			}
-			cu:platinean = {
-				save_scope_as = old_national_culture
-			}
-			cu:uruguayan = {
-				save_scope_as = new_national_culture
-			}
-		}
-		if = {
-			limit = {
-				c:PRG ?= this
-			}
-			cu:platinean = {
-				save_scope_as = old_national_culture
-			}
-			cu:paraguayan = {
-				save_scope_as = new_national_culture
-			}
-		}
-		if = {
-			limit = {
-				c:CLM ?= this
-			}
-			cu:north_andean = {
-				save_scope_as = old_national_culture
-			}
-			cu:colombian = {
-				save_scope_as = new_national_culture
-			}
-		}
-	}
-
-	complete = {
-		NOR = {
-			trigger_if = {
-				limit = {
-					OR = {
-						c:ARG ?= this
-						c:URU ?= this
-						c:PRG ?= this
-					}
-				}
-				any_scope_state = {
-					state_region = {
-						is_homeland = cu:platinean
-					}
-				}
-			}
-			trigger_if = {
-				limit = {
-					OR = {
-						c:PEU ?= this
-						c:NPU ?= this
-						c:SPU ?= this
-						c:BOL ?= this
-						c:CHL ?= this
-					}
-				}
-				any_scope_state = {
-					state_region = {
-						is_homeland = cu:south_andean
-					}
-				}
-			}
-			trigger_if = {
-				limit = {
-					OR = {
-						c:ECU ?= this
-						c:VNZ ?= this
-						c:CLM ?= this
-					}
-				}
-				any_scope_state = {
-					state_region = {
-						is_homeland = cu:north_andean
-					}
-				}
-			}
-		}
-	}
-
-	on_complete = {
-		trigger_event = {
-			id = culture_south_america.3
-		}
-		add_loyalists = {
-			value = large_radicals
-			culture = scope:new_national_culture
-		}
-	}
-
-	scripted_button = je_south_american_national_identity_integrate_a_state
-
-	weight = 100
-
-	should_be_pinned_by_default = yes
-}
+#REPLACE:je_south_american_national_identity = {
+#	icon = "gfx/interface/icons/event_icons/event_map.dds"
+#
+#	group = je_group_internal_affairs
+#
+#	# Now activated by event
+#
+#	modifiers_while_active = {
+#		modifier_assimilation_nnc
+#	}
+#
+#	immediate = {
+#		if = {
+#			limit = {
+#				c:ARG ?= this
+#			}
+#			cu:platinean = {
+#				save_scope_as = old_national_culture
+#			}
+#			cu:argentine = {
+#				save_scope_as = new_national_culture
+#			}
+#		}
+#		if = {
+#			limit = {
+#				c:PEU ?= this
+#			}
+#			cu:south_andean = {
+#				save_scope_as = old_national_culture
+#			}
+#			cu:peruvian = {
+#				save_scope_as = new_national_culture
+#			}
+#		}
+#		if = {
+#			limit = {
+#				c:NPU ?= this
+#			}
+#			cu:south_andean = {
+#				save_scope_as = old_national_culture
+#			}
+#			cu:peruvian = {
+#				save_scope_as = new_national_culture
+#			}
+#		}
+#		if = {
+#			limit = {
+#				c:SPU ?= this
+#			}
+#			cu:south_andean = {
+#				save_scope_as = old_national_culture
+#			}
+#			cu:peruvian = {
+#				save_scope_as = new_national_culture
+#			}
+#		}
+#		if = {
+#			limit = {
+#				c:BOL ?= this
+#			}
+#			cu:south_andean = {
+#				save_scope_as = old_national_culture
+#			}
+#			cu:bolivian = {
+#				save_scope_as = new_national_culture
+#			}
+#		}
+#		if = {
+#			limit = {
+#				c:ECU ?= this
+#			}
+#			cu:north_andean = {
+#				save_scope_as = old_national_culture
+#			}
+#			cu:ecuadorian = {
+#				save_scope_as = new_national_culture
+#			}
+#		}
+#		if = {
+#			limit = {
+#				c:CHL ?= this
+#			}
+#			cu:south_andean = {
+#				save_scope_as = old_national_culture
+#			}
+#			cu:chilean = {
+#				save_scope_as = new_national_culture
+#			}
+#		}
+#		if = {
+#			limit = {
+#				c:VNZ ?= this
+#			}
+#			cu:north_andean = {
+#				save_scope_as = old_national_culture
+#			}
+#			cu:venezuelan = {
+#				save_scope_as = new_national_culture
+#			}
+#		}
+#		if = {
+#			limit = {
+#				c:URU ?= this
+#			}
+#			cu:platinean = {
+#				save_scope_as = old_national_culture
+#			}
+#			cu:uruguayan = {
+#				save_scope_as = new_national_culture
+#			}
+#		}
+#		if = {
+#			limit = {
+#				c:PRG ?= this
+#			}
+#			cu:platinean = {
+#				save_scope_as = old_national_culture
+#			}
+#			cu:paraguayan = {
+#				save_scope_as = new_national_culture
+#			}
+#		}
+#		if = {
+#			limit = {
+#				c:CLM ?= this
+#			}
+#			cu:north_andean = {
+#				save_scope_as = old_national_culture
+#			}
+#			cu:colombian = {
+#				save_scope_as = new_national_culture
+#			}
+#		}
+#	}
+#
+#	complete = {
+#		NOR = {
+#			trigger_if = {
+#				limit = {
+#					OR = {
+#						c:ARG ?= this
+#						c:URU ?= this
+#						c:PRG ?= this
+#					}
+#				}
+#				any_scope_state = {
+#					state_region = {
+#						is_homeland = cu:platinean
+#					}
+#				}
+#			}
+#			trigger_if = {
+#				limit = {
+#					OR = {
+#						c:PEU ?= this
+#						c:NPU ?= this
+#						c:SPU ?= this
+#						c:BOL ?= this
+#						c:CHL ?= this
+#					}
+#				}
+#				any_scope_state = {
+#					state_region = {
+#						is_homeland = cu:south_andean
+#					}
+#				}
+#			}
+#			trigger_if = {
+#				limit = {
+#					OR = {
+#						c:ECU ?= this
+#						c:VNZ ?= this
+#						c:CLM ?= this
+#					}
+#				}
+#				any_scope_state = {
+#					state_region = {
+#						is_homeland = cu:north_andean
+#					}
+#				}
+#			}
+#		}
+#	}
+#
+#	on_complete = {
+#		trigger_event = {
+#			id = culture_south_america.3
+#		}
+#		add_loyalists = {
+#			value = large_radicals
+#			culture = scope:new_national_culture
+#		}
+#	}
+#
+#	scripted_button = je_south_american_national_identity_integrate_a_state
+#
+#	weight = 100
+#
+#	should_be_pinned_by_default = yes
+#}

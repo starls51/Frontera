@@ -67,6 +67,16 @@
 					}
 				}
 			}
+			remove_claim = ROOT
+			if = {
+				limit = {
+					#c:CAL ?= ROOT
+					ROOT = {
+						is_subject = yes
+						is_subject_type = subject_type_ot_frontera }
+					}
+				add_claim = ROOT.overlord
+			}
 		}
 		# If california is split between non-decentralized countries, give the JE to the country with the most states in california.
 		# Otherwise, trigger the sutters fort event in the owner of california 

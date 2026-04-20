@@ -759,6 +759,12 @@ GLOBAL = {
 		}
 		remove_homeland = cu:yankee
 		region_state:UOM = { set_state_type = incorporated }
+		region_state:USA = {
+			add_modifier = {
+				name = modifier_frontierlands_frontera
+				years = 1
+			}
+		}
 	}
 	s:STATE_NEVADA = {
 		set_owner_of_provinces = {
@@ -1769,6 +1775,14 @@ GLOBAL = {
 		set_strategy = ai_strategy_subject_overlord_compliance
 		set_strategy = ai_strategy_resource_expansion
 		set_strategy = ai_strategy_conservative_agenda
+	}
+	c:ORG = {
+		create_unidirectional_truce = { country = c:ATB months = 2 }
+		create_unidirectional_truce = { country = c:SLS months = 2 }
+		create_unidirectional_truce = { country = c:NZP months = 2 }
+		create_unidirectional_truce = { country = c:BNN months = 2 }
+		create_unidirectional_truce = { country = c:F24 months = 2 }
+		activate_law = law_type:law_frontier_colonization
 	}
 	# Mexican centralists vs federalists
 	c:MEX  = {

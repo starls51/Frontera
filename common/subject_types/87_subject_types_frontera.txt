@@ -4,15 +4,15 @@
 	use_overlord_ruler = no
 	annex_on_country_formation = no
 	can_start_own_diplomatic_plays = no
-	breaks_if_subject_not_protected = yes
+	breaks_if_subject_not_protected = no
 	join_overlord_wars = yes
 	can_have_subjects = no
-	overlord_must_be_higher_rank = yes
+	overlord_must_be_higher_rank = no
 	overlord_must_be_same_country_type = no
 	use_for_release_country = yes
 	gives_prestige_to_overlord = yes
 
-	diplomatic_action = colony
+	diplomatic_action = frontera_organized_territory
 
     autonomy_level = 1
     category = same_as_puppet
@@ -35,6 +35,7 @@
 
 	valid_subject_country_types = {
 		colonial
+		unrecognized
 	}
 
 	valid_overlord_ranks = {

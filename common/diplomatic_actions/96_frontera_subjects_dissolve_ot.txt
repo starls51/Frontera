@@ -15,6 +15,7 @@
 	}
 
 	possible = {
+		is_diplomatic_play_committed_participant = no
 		scope:target_country = {
 			is_subject_type = subject_type_ot_frontera
 			is_diplomatic_play_committed_participant = no
@@ -61,14 +62,11 @@
 				#NOT = { is_player = yes }
 				overlord ?= ROOT
 				is_subject_type = subject_type_ot_frontera
+				relations:ROOT < -25
 				any_scope_state = {
 					OR = {
 						NOT = { is_split_state = yes }
 						is_under_colonization = yes
-						#any_neighbouring_state = {
-						#	state_region = prev.state_region
-						#	owner = { is_country_type = decentralized }
-						#}
 					}
 					count < 1
 				}

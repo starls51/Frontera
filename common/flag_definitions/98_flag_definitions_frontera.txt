@@ -69,11 +69,23 @@
 		}
 	}
 	flag_definition = {
-		coa = CAL
+		coa = CAL_frontera
 		allow_overlord_canton = no
 		priority = 50
 		trigger = {
 			coa_def_american_ensign_trigger = yes
+		}
+	}
+	flag_definition = {
+		coa = CAL_star
+		allow_overlord_canton = no
+		subject_canton = CAL_star
+		coa_with_overlord_canton = CAL_subject_star
+		priority = 1000
+		trigger = {
+			scope:actor ?= {
+				NOT = { has_state_in_state_region = STATE_CALIFORNIA }
+			}
 		}
 	}
 }

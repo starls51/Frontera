@@ -171,7 +171,12 @@
 		}
 		state_region = {
 			add_homeland = scope:new_homelander_culture
-			add_claim = root.overlord
+			if = {
+				limit = {
+					any_scope_country = { is_country_type = decentralized }
+				}
+				add_claim = root.overlord
+			}
 		}
 	}
 }

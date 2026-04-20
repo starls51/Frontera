@@ -708,8 +708,7 @@ frontera_ot.3 = {
 					state_region = {
 						NOT = {
 							any_scope_country = {
-								NOT = { owner = ROOT }
-								NOT = { owner = { is_subject_of = ROOT } }
+								is_country_type = decentralized
 							}
 						}
 					}
@@ -727,8 +726,7 @@ frontera_ot.3 = {
 					state_region = {
 						NOT = {
 							any_scope_country = {
-								NOT = { owner = ROOT }
-								NOT = { owner = { is_subject_of = ROOT } }
+								is_country_type = decentralized
 							}
 						}
 					}
@@ -794,8 +792,7 @@ frontera_ot.3 = {
 					state_region = {
 						NOT = {
 							any_scope_country = {
-								NOT = { owner = ROOT }
-								NOT = { owner = { is_subject_of = ROOT } }
+								is_country_type = decentralized
 							}
 						}
 					}
@@ -1020,11 +1017,16 @@ frontera_ot.3 = {
 							every_scope_state = {
 								limit = {
 									NOT = { scope:frontera_new_ot ?= owner }
-									NOT = { is_capital = yes }
-									NOT = { is_incorporated = yes }
+									OR = {
+										is_capital = yes
+										NOT = { is_incorporated = yes }
+									}
 									owner = {
 										is_direct_subject_of = ROOT
-										NOT = { can_have_subjects = yes }
+										OR = {
+											is_subject_type = subject_type_colony
+											NOT = { can_have_subjects = yes }
+										}
 									}
 									#owner = { NOT = { has_law = law_type:law_frontier_territorial_administration } }
 								}
@@ -1134,11 +1136,16 @@ frontera_ot.3 = {
 							every_scope_state = {
 								limit = {
 									NOT = { scope:frontera_new_ot ?= owner }
-									NOT = { is_capital = yes }
-									NOT = { is_incorporated = yes }
+									OR = {
+										is_capital = yes
+										NOT = { is_incorporated = yes }
+									}
 									owner = {
 										is_direct_subject_of = ROOT
-										NOT = { can_have_subjects = yes }
+										OR = {
+											is_subject_type = subject_type_colony
+											NOT = { can_have_subjects = yes }
+										}
 									}
 								}
 								set_state_owner = scope:frontera_new_ot

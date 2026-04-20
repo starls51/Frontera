@@ -64,18 +64,18 @@ frontera_manifest_destiny = {
 				multiplier = -1
 			}
 		}
-		s:STATE_OKLAHOMA = {
-			if = {
-				limit = {
-					any_scope_state = {
-						NOT = {
-							owner = ROOT
-						}
-					}
-				}
-				add_claim = ROOT
-			}
-		}
+		#s:STATE_OKLAHOMA = {
+		#	if = {
+		#		limit = {
+		#			any_scope_state = {
+		#				NOT = {
+		#					owner = ROOT
+		#				}
+		#			}
+		#		}
+		#		add_claim = ROOT
+		#	}
+		#}
 		s:STATE_NEBRASKA = {
 			if = {
 				limit = {
