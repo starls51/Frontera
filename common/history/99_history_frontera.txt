@@ -1777,11 +1777,11 @@ GLOBAL = {
 		set_strategy = ai_strategy_conservative_agenda
 	}
 	c:ORG = {
-		create_unidirectional_truce = { country = c:ATB months = 2 }
-		create_unidirectional_truce = { country = c:SLS months = 2 }
-		create_unidirectional_truce = { country = c:NZP months = 2 }
-		create_unidirectional_truce = { country = c:BNN months = 2 }
-		create_unidirectional_truce = { country = c:F24 months = 2 }
+		create_unidirectional_truce = { country = c:ATB months = 1 }
+		create_unidirectional_truce = { country = c:SLS months = 1 }
+		create_unidirectional_truce = { country = c:NZP months = 1 }
+		create_unidirectional_truce = { country = c:BNN months = 1 }
+		create_unidirectional_truce = { country = c:F24 months = 1 }
 		activate_law = law_type:law_frontier_colonization
 	}
 	# Mexican centralists vs federalists
@@ -1923,18 +1923,11 @@ GLOBAL = {
 		create_unidirectional_truce = { country = c:SML months = 36 }
 	}
 	c:MEX ?= {
+		set_institution_investment_level = {
+			institution = institution_colonial_affairs
+			level = 2
+		}
 		set_tax_level = high
-		start_enactment = law_type:law_elected_bureaucrats
-		add_enactment_phase = 2
-		add_enactment_modifier = {
-			name = successful_law_focus
-		}
-		add_modifier = {
-			name = low_electoral_confidence
-			days = short_modifier_time
-			multiplier = 1
-			is_decaying = yes
-		}
 		set_secret_goal = {
 			country = c:CAL
 			secret_goal = protect
@@ -1943,44 +1936,16 @@ GLOBAL = {
 			country = c:NMX
 			secret_goal = protect
 		}
-		random_scope_general = {
-			limit = { has_variable = is_santa_anna }
-			prev = {
-				create_coup_from_character = {
-					CHARACTER = prev
-				}
-			}
-			add_modifier = {
-				name = coup_supported
-				days = normal_modifier_time
-				multiplier = 3
-				is_decaying = yes
-			}
-			add_modifier = {
-				name = hero_of_the_people
-				days = normal_modifier_time
-				multiplier = 7
-				is_decaying = yes
-			}
+		py:military_party = {
+			add_momentum = 1
 		}
-		every_interest_group = {
-			limit = {
-				NOT = { is_interest_group_type = ig_armed_forces }
-				NOT = { is_interest_group_type = ig_intelligentsia }
-			}
-			add_modifier = {
-				name = util_colonial_admin_fail
-				days = normal_modifier_time
-				multiplier = 8
-				is_decaying = yes
-			}
+		py:conservative_party = {
+			add_momentum = 0.5
 		}
-		set_ruling_interest_groups = { ig_armed_forces ig_landowners }
-		py:military_party ?= {
-			set_ruling_party = yes
-			add_momentum = 1.5 # Adjusted for historical election results
+		py:liberal_party = {
+			add_momentum = 0.15
 		}
-		# prevents mexico from colonizing right out of the gate
+		## prevents mexico from colonizing where it shouldnt at game start
 		create_unidirectional_truce = { country = c:COM months = 1 }
 		create_unidirectional_truce = { country = c:APC months = 1 }
 		create_unidirectional_truce = { country = c:LKT months = 1 }
