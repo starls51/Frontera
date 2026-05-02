@@ -12,6 +12,7 @@ cal_carlos_antonio_carrillo_template = {
     interest_group = ig_landowners
     ideology = ideology_liberal_leader
     birth_date = 1783.12.24
+    home_region = STATE_CALIFORNIA
     dna = dna_cal_carlos_carillo
     traits = {
         brave # Military, joined expeditions north
@@ -31,6 +32,7 @@ cal_nicolas_gutierrez_template = {
     ideology = ideology_authoritarian
     # Guessing age based on rank as LtCol would put him somewhere between 30-50 years old, possibly younger
     birth_date = 1793.6.1
+    home_region = STATE_OLD_CASTILE
     dna = dna_cal_nicolas_gutierrez
     traits = {
         reserved # Accused of being two faced, he was surrounded by enemies and seen as an outsider loyal to spain
@@ -50,6 +52,7 @@ cal_juan_batista_alverado_template = {
     interest_group = ig_armed_forces
     ideology = ideology_sovereignist_leader
     birth_date = 1809.2.14
+    home_region = STATE_CALIFORNIA
     dna = dna_cal_juan_bautista_alvarado
     traits = {
         ambitious # desires an independent california, willing to revolt
@@ -69,6 +72,7 @@ cal_isaac_graham_template = {
     ideology = ideology_republican_leader
     birth_date = 1800.4.15
     dna = dna_cal_isaac_graham
+    home_region = STATE_ARKANSAS
     traits = {
         persistent
         tactful
@@ -85,6 +89,7 @@ cal_pio_pico_template = {
     interest_group = ig_rural_folk
     ideology = ideology_market_liberal
     birth_date = 1801.5.5
+    home_region = STATE_CALIFORNIA
     dna = dna_cal_pio_pico
     traits = {
         ambitious #accrued wealth, supported autonomy, but also advocated to become british protectorate, complicated guy
@@ -102,6 +107,7 @@ cal_john_sutter_template = {
     interest_group = ig_industrialists
     ideology = ideology_slaver
     birth_date = 1803.2.23
+    home_region = STATE_BADEN
     dna = dna_cal_john_sutter
     traits = {
         charismatic # helpful to and liked by colonists
@@ -121,6 +127,7 @@ cal_william_hartnell_template = {
     interest_group = ig_intelligentsia
     ideology = ideology_liberal_leader
     birth_date = 1798.4.24
+    home_region = STATE_LANCASHIRE
     dna = dna_cal_william_hartnell
     traits = {
         honorable #seemed to be well liked, requested as representative for various organizations, including russian american co
@@ -137,6 +144,7 @@ cal_levi_strauss_template = {
     historical = yes
     birth_date = 1829.2.26
     dna = dna_cal_levi_strauss
+    home_region = STATE_FRANCONIA
     culture = cu:south_german
     religion = rel:jewish
     interest_group = ig_petty_bourgeoisie
@@ -161,6 +169,7 @@ cal_charles_louis_ducommun_template = {
     historical = yes
     birth_date = 1820.11.15
     dna = dna_cal_charles_louis_ducommun
+    home_region = STATE_WEST_SWITZERLAND
     culture = cu:francoprovencal
     religion = rel:catholic
     interest_group = ig_petty_bourgeoisie
@@ -185,6 +194,7 @@ cal_charles_albert_ducommun_template = {
     historical = yes
     birth_date = 1870.1.1
     dna = dna_cal_charles_albert_ducommun
+    home_region = STATE_CALIFORNIA
     culture = primary_culture
     religion = rel:catholic
     interest_group = ig_industrialists
@@ -209,6 +219,7 @@ cal_william_fargo_template = {
     historical = yes
     birth_date = 1818.5.20
     dna = dna_cal_william_fargo
+    home_region = STATE_NEW_YORK
     culture = cu:yankee
     religion = rel:protestant
     interest_group = ig_industrialists

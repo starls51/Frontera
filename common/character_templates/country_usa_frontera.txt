@@ -9,7 +9,8 @@
 	ig_leader = yes
 	interest_group = ig_armed_forces
 	ideology = ideology_moderate
-	hq = region_new_england
+	home_region = STATE_VIRGINIA
+	hq = region_atlantic_coast
 	traits = {
 		innovative
 		basic_diplomat

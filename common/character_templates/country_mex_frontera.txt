@@ -5,11 +5,12 @@
     historical = yes
     birth_date = 1794.2.21
     dna = dna_antonio_lopez
-    hq = region_mexico
+    hq = region_central_america
     ig_leader = yes
     is_general = yes
     interest_group = ig_armed_forces
     ideology = ideology_moderate
+    home_region = STATE_VERACRUZ
     commander_rank = commander_rank_2
     traits = {
         ambitious
@@ -27,6 +28,7 @@ REPLACE:mex_miguel_barragan_template = {
     #ig_leader = yes
     interest_group = ig_armed_forces
     ideology = ideology_moderate
+    home_region = STATE_BAJIO
     birth_date = 1789.3.8
     dna = dna_miguel_barragan
     traits = {

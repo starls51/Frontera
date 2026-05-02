@@ -16,6 +16,7 @@ nmx_albino_perez_template = {
     ideology = ideology_authoritarian
     #estimating age as Col makes him around 50
     birth_date = 1785.1.1
+    home_region = STATE_MEXICO
     dna = dna_nmx_albino_perez
     traits = {
         imperious
@@ -35,6 +36,7 @@ nmx_manuel_armijo_template = {
     ig_leader = yes
     ideology = ideology_traditionalist
     birth_date = 1793.9.21
+    home_region = STATE_MEXICO
     dna = dna_nmx_manuel_armijo
     traits = {
         meticulous
